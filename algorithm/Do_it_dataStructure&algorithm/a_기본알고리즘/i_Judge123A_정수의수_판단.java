@@ -8,6 +8,7 @@ class i_Judge123A_정수의수_판단 {
 
 		System.out.print("1~3사이의 정수를 입력하세요.：");
 		int n = stdIn.nextInt();
+		
 
 		if (n == 1)
 			System.out.println("이 수는 1입니다.");
