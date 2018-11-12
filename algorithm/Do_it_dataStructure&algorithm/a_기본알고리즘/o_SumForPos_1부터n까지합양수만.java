@@ -11,7 +11,7 @@ class o_SumForPos_1부터n까지합양수만 {
 		do {
 			System.out.print("n의 값：");
 			n = stdIn.nextInt();
-		} while (n <= 0);
+		} while (n <= 0);//do while 은 끝에 세미콜론!붙임
 
 		int sum = 0;		// 합
 
