@@ -1,2 +1,4 @@
-# picksell
-picksell
+
+알고리즘
+1. 백준 알고리즘
+2. do it 
