@@ -11,4 +11,4 @@ public class s_Multi99Table_°ö¼ÀÇ¥ {
 			System.out.println();
 		}
 	}
-}//1
+}
