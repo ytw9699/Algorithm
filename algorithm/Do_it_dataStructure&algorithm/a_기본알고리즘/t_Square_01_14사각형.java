@@ -2,7 +2,7 @@ package a_기본알고리즘;
 import java.util.Scanner;
 // 정사각형 모양을 나타냄
 
-public class t_Square_01_14 {
+public class t_Square_01_14사각형 {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 		int n;
