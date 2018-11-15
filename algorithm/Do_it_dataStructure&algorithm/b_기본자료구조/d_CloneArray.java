@@ -1,6 +1,6 @@
 package b_기본자료구조;
 
-class CloneArray {//배열을 복제합니다.
+class d_CloneArray {//배열을 복제합니다.
 	public static void main(String[] args) {
 		int[] a = {1, 2, 3, 4, 5};
 		int[] b = a.clone();			// b는 a의 복제를 참조
