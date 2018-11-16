@@ -8,10 +8,8 @@ class l_CardConvRev기수변환_반대로출력1 {
 		String dchar = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		
 		int length = d.length;
-		System.out.println("legth="+length);
 		do {
 			d[--length] = dchar.charAt(x % r);	// r로 나눈 나머지를 저장
-			System.out.println("legth="+length);
 			x /= r;
 	  System.out.println("x는"+x);
 		} while (x != 0);
@@ -40,7 +38,7 @@ class l_CardConvRev기수변환_반대로출력1 {
 			dno = cardConvR(no, cd, cno);		// no를 cd진수로 변환
 
 			System.out.print(cd + "진수로는 ");
-			for (int i = 0; i < cno.length; i++)	// 윗자리부터 차례로 나타냄
+			for (int i = dno; i < cno.length; i++)
 				System.out.print(cno[i]);
 			System.out.println("입니다.");
 
