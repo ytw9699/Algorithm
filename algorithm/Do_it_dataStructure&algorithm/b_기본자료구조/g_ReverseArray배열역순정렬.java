@@ -1,7 +1,7 @@
 package b_기본자료구조;
 import java.util.Scanner;
 // 배열 요소에 값을 읽어 들여 역순으로 정렬합니다.
-class g_ReverseArray {
+class g_ReverseArray배열역순정렬 {
 	// 배열 요소 a[idx1]과 a[idx2]의 값을 바꿈
 	static void swap(int[] a, int idx1, int idx2) {
 		int t = a[idx1];  
