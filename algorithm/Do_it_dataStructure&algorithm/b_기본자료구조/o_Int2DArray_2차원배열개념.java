@@ -1,6 +1,6 @@
 package b_기본자료구조;
 // 2행 4열의 2차원 배열
-class m_Int2DArray_2차원배열개념 {
+class o_Int2DArray_2차원배열개념 {
 	public static void main(String[] args) {
 		
 		int[][] x = new int[2][4];		// 2차원 배열을 선언
