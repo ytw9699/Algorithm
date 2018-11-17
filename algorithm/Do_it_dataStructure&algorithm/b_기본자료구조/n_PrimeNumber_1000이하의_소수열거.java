@@ -21,7 +21,7 @@ class n_PrimeNumber_1000이하의_소수열거 {
 			}
 		}
 		
-		System.out.println("나눗셈을 수행한 횟수：" + counter);
+		System.out.println("나눗셈을 수행한 횟수：" + counter);//78000
 	}
 	
 }
