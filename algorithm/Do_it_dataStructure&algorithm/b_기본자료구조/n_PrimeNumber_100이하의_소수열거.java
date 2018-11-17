@@ -16,7 +16,7 @@ class n_PrimeNumber_100이하의_소수열거 {
 			}
 			//System.out.println("i="+i);
 			//System.out.println("n="+n);
-			if (n == i) {		
+			if (n == i) {		// 마지막까지 나누어떨어지지 않는다면
 				System.out.println(n);
 			}
 		}
