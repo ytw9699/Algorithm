@@ -1,11 +1,11 @@
 package b_기본자료구조;
-// 1,00 이하의 소수를 열거(버전 1)
-class n_PrimeNumber_100이하의_소수열거 {
+// 1,000 이하의 소수를 열거(버전 1)
+class n_PrimeNumber_1000이하의_소수열거 {
 	
 	public static void main(String[] args) {
 		int counter = 0;			// 나눗셈의 횟수
 
-		for (int n = 2; n <= 100; n++) {
+		for (int n = 2; n <= 1000; n++) {
 			
 			int i;
 			
