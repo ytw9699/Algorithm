@@ -14,7 +14,7 @@ public class Question09_1 {
 	    
 	    if (len == s2.length() && len > 0) { //s1과 s2의 길이가 같고 빈문자열이 아닌지 확인
 	    	
-	    	String s1s1 = s1 + s1;
+	    	String s1s1 = s1 + s1;//s1을 2개를 합치면 s2가 이안에 포함된다는 특성을 생각해내야함..
 	    	
 	    	return isSubstring(s1s1, s2);
 	    }
