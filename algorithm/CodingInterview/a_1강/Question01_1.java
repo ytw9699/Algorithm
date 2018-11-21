@@ -3,7 +3,7 @@ package a_1강;
 import java.util.Arrays;
 import java.util.Scanner;
 //https://blog.naver.com/zozokjs/221206994617 아스키와 유니코드에대한 설명
-public class Question01 {
+public class Question01_1 {
     public static void main(String[] args) {
     	
     	Scanner StringValue = new Scanner(System.in);
