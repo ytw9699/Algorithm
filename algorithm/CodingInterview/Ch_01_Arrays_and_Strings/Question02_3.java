@@ -1,6 +1,6 @@
 package Ch_01_Arrays_and_Strings;
 
-public class Question02_3 {	//입력값 모든 순열 구하기
+public class Question02_3 {	//문자열 입력값 모든 순열 구하기
 	
 	public static void permutation(String str) { 
 	    permutation("", str); 
