@@ -1,9 +1,8 @@
-package a_1강;
+package Ch_01_Arrays_and_Strings;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
-public class Question01_2 {
+public class Question01_3 {
     public static void main(String[] args) {
     	
     	Scanner StringValue = new Scanner(System.in);
@@ -21,18 +20,16 @@ public class Question01_2 {
     	}
     }
     
-    static boolean isUniqueChars(String str) {  //정렬로 푸는 방법(아스키,유니코드문자열 모두)
+    static boolean isUniqueChars(String str) {
+    	//문자열 내의 각 문자를 다른 모든 문자와 비교(아스키,유니코드문자열 모두)
 
     	String[] strings = str.split("");//스트링값 받아서 배열로 나눠주고
         
         //System.out.println(Arrays.toString(strings));
-        
-        Arrays.sort(strings);//스트링 배열을 오름차순 정렬
-        
-        //System.out.println(Arrays.toString(strings));
 
-        for(int i=0; i<strings.length-1; i++) {//정렬된것중 연속적인 값들을 비교해서 중복여부 확인
-            if(strings[i].equals(strings[i+1])) {
+        for(int i=0; i<strings.length-1; i++) {
+          for(int j=i+1; j<strings.length; j++ )
+        	if(strings[i].equals(strings[j])) {
                 return false;//false는 중복되는것
             }
         }

@@ -1,8 +1,8 @@
-package a_1강;
+package Ch_01_Arrays_and_Strings;
 
 import java.util.Scanner;
-
-public class Question01_3 {
+//https://cjh5414.github.io/bit-vector/
+public class Question01_4 {//비트벡터 이용
     public static void main(String[] args) {
     	
     	Scanner StringValue = new Scanner(System.in);

@@ -1,4 +1,4 @@
-package a_1°­;
+package Ch_01_Arrays_and_Strings;
 
 import java.util.Arrays;
 import java.util.Scanner;
