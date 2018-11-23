@@ -130,7 +130,9 @@ public class AssortedMethods {
 
 	public static void printMatrix(int[][] matrix) {
 		for (int i = 0; i < matrix.length; i++) {
+			//System.out.println(matrix.length);
 			for (int j = 0; j < matrix[i].length; j++) {
+				//System.out.println(matrix[i].length);
 				if (matrix[i][j] < 10 && matrix[i][j] > -10) {
 					System.out.print(" ");
 				}
