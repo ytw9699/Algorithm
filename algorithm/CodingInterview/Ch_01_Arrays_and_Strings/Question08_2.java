@@ -19,86 +19,54 @@ public class Question08_2 {
 		boolean rowHasZero = false;
 		boolean colHasZero = false;		
 		
-		// Check if first row has a zero
 		for (int j = 0; j < matrix[0].length; j++) {
-			if (matrix[0][j] == 0) {
+			if (matrix[0][j] == 0) {//첫번째 행에 0이있는지 확인
 				rowHasZero = true;
 				break;
 			}
 		}		
 		
-		// Check if first column has a zero
 		for (int i = 0; i < matrix.length; i++) {
-			if (matrix[i][0] == 0) {
+			if (matrix[i][0] == 0) {//첫번째 열에 0이있는지 확인
 				colHasZero = true;
 				break;
 			}
 		}		
 		
-		// Check for zeros in the rest of the array
 		for (int i = 1; i < matrix.length; i++) {
 			for (int j = 1; j < matrix[0].length;j++) {
-				if (matrix[i][j] == 0) {
-					matrix[i][0] = 0;
+				if (matrix[i][j] == 0) {//나머지 배열에 0이있는지 확인후
+					matrix[i][0] = 0; //0으로 바꾼다..
 					matrix[0][j] = 0;
+				     //System.out.println();
+					//AssortedMethods.printMatrix(matrix);
+					//System.out.println();
 		 		}
 			}
 		}		
-		
-		// Nullify rows based on values in first column
 		for (int i = 1; i < matrix.length; i++) {
-			if (matrix[i][0] == 0) {
+			if (matrix[i][0] == 0) {//첫번째 열에서 0이있는 행을 모두 0으로 바꾼다
 				nullifyRow(matrix, i);
 			}
 		}		
-		
-		// Nullify columns based on values in first row
 		for (int j = 1; j < matrix[0].length; j++) {
-			if (matrix[0][j] == 0) {
+			if (matrix[0][j] == 0) {//첫번째 행에서 0이있는 열을 모두 0으로 바꾼다
 				nullifyColumn(matrix, j);
 			}
 		}	
 		
-		// Nullify first row
 		if (rowHasZero) {
-			nullifyRow(matrix, 0);
+			nullifyRow(matrix, 0);//첫번째 행을 0으로 바꾼다
 		}
 		
-		// Nullify first column
-		if (colHasZero) {
+		if (colHasZero) {//첫번째 열을 0으로 바꾼다
 			nullifyColumn(matrix, 0);
 		}
 	}	
-	
-	public static boolean matricesAreEqual(int[][] m1, int[][] m2) {
-		if (m1.length != m2.length || m1[0].length != m2[0].length) {
-			return false;
-		}
-		
-		for (int k = 0; k < m1.length; k++) {
-			for (int j = 0; j < m1[0].length; j++) {
-				if (m1[k][j] != m2[k][j]) {
-					return false;
-				}
-			}
-		}	
-		return true;
-	}
-	
-	public static int[][] cloneMatrix(int[][] matrix) {
-		int[][] c = new int[matrix.length][matrix[0].length];
-		for (int i = 0; i < matrix.length; i++) {
-			for (int j = 0; j < matrix[0].length; j++) {
-				c[i][j] = matrix[i][j];
-			}
-		}
-		return c;
-	}
-	
 	public static void main(String[] args) {
-		int nrows = 10;
-		int ncols = 15;
-		int[][] matrix = AssortedMethods.randomMatrix(nrows, ncols, -10, 10);		
+		int nrows = 4;
+		int ncols = 4;
+		int[][] matrix = AssortedMethods.randomMatrix(nrows, ncols, -3, 3);		
 
 		AssortedMethods.printMatrix(matrix);
 		
