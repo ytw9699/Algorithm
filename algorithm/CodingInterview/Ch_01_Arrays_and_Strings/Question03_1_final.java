@@ -11,11 +11,9 @@ public class Question03_1_final {
 			}
 		}
 		index = trueLength + spaceCount * 2;//13+2*2=17//7.그 공백을 포함해서 배열의 인덱스를만들어주고 
-		
 		/*if (trueLength < str.length) {
 			str[trueLength] = '\0';//배열의끝
 		}*/
-		
 		for (i = trueLength - 1; i >= 0; i--) {
 			if (str[i] == ' ') {
 				str[index - 1] = '0';//9.공백과 함께 채워온다
@@ -40,7 +38,6 @@ public class Question03_1_final {
 		String str = "Mr John Smith    ";//1.최종적으로 모든 문자를 다 담을수 있을 만큼 충분한 공간 확보
 					//"Mr%20John%20Smith"
 		char[] arr = str.toCharArray();//2.문자 배열 이용
-		
 		
 		int trueLength = findLastCharacter(arr) + 1;//3.뒤 공백을 제외한 실제적인 배열의 크기
 		

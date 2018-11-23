@@ -8,13 +8,11 @@ public class Question08_2 {
 			matrix[row][j] = 0;
 		}		
 	}
-
 	public static void nullifyColumn(int[][] matrix, int col) {
 		for (int i = 0; i < matrix.length; i++) {
 			matrix[i][col] = 0;
 		}		
 	}		
-	
 	public static void setZeros(int[][] matrix) {
 		boolean rowHasZero = false;
 		boolean colHasZero = false;		
@@ -41,9 +39,8 @@ public class Question08_2 {
 		 		}
 			}
 		}		
-		
-		System.out.println();
-		AssortedMethods.printMatrix(matrix);
+			System.out.println();
+			AssortedMethods.printMatrix(matrix);
 		
 		for (int i = 1; i < matrix.length; i++) {
 			if (matrix[i][0] == 0) {
@@ -59,15 +56,15 @@ public class Question08_2 {
 			}
 		}	
 		
-		System.out.println();
-	 	AssortedMethods.printMatrix(matrix);
+			System.out.println();
+		 	AssortedMethods.printMatrix(matrix);
 		
 		if (rowHasZero) {//12.첫번째행에 0이 하나라도있었다면
 			nullifyRow(matrix, 0);//13. 첫번째 행을 모두 0으로 바꾼다
 		}
 		
-		System.out.println();
-	 	AssortedMethods.printMatrix(matrix);
+			System.out.println();
+		 	AssortedMethods.printMatrix(matrix);
 		
 		if (colHasZero) {//14.첫번째 열에 0이 하나라도 있다면 
 			nullifyColumn(matrix, 0);//15. 첫번째 열을 모두 0으로 바꾼다
@@ -87,6 +84,5 @@ public class Question08_2 {
 		AssortedMethods.printMatrix(matrix);//16.최종출력
 	}
 }
-
 //이러한 순서로해야 모든 곳이 다 0으로 안바뀐다
 //공간복잡도는 O(1) 배열이아닌 변수를 사용해서?

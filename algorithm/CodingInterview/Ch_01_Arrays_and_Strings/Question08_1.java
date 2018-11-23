@@ -1,5 +1,4 @@
 package Ch_01_Arrays_and_Strings;
-
 import java.util.Arrays;
 import CtCILibrary.AssortedMethods;
 
@@ -46,7 +45,6 @@ public class Question08_1 {
 		int[][] matrix = AssortedMethods.randomMatrix(nrows, ncols, -3, 3);	//1.
 		
 		//System.out.println(matrix[0][0]);
-		
 		AssortedMethods.printMatrix(matrix);
 		
 		setZeros(matrix);//2. 0으로 바꾸기 위한 작업
@@ -56,7 +54,6 @@ public class Question08_1 {
 		AssortedMethods.printMatrix(matrix);//7.최종출력
 	}
 }
-
 /*0. m*n 행렬의 한 원소가 0일경우 해당 원소가 속한 행과 열의 모든 원소를 0으로 설 정하는 알고리즘
 1. 행렬전체가 0으로 바꾸게 되는점이있으니
 2. 0의 위치를 기록할 행렬(배열2개) 하나를 더두자

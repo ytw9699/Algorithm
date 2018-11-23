@@ -40,7 +40,6 @@ public class Question09_1 {
 		}
 	}
 }
-
 /*문자열 회전: 
 두 문자열이 주어지면 s2가 s1을 회전시킨 결과인지 판별해보자
 abc de  > de abc
