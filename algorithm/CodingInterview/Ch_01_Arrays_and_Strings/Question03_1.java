@@ -67,3 +67,35 @@ public class Question03_1 {
 		System.out.println("\"" + AssortedMethods.charArrayToString(arr) + "\"");//9.최종 문자배열 스트링으로 변환 출력
 	}
 }
+
+/*0.문자열에 들어있는 모든 공백을 '%20'으로 바꾸는 메소드를 만들라
+1.최종적으로 모든 문자를 다 담을수 있을 만큼 충분한 공간 확보
+2.문자열의 최종 길이가 함께주어진다고 가정(문자 배열 이용)
+
+Mr John      Smith
+1. i = 16
+2. i= 12
+3. trueLength = 13
+4. spacecount = 2
+5. index = 17 
+6. str.length = 17
+7. i=12
+8.str[16]=str[12]
+9. index = 16
+10. i=11
+11.str[15]=str[11]
+12. index = 15
+13. i=10
+14.str[14]=str[10]
+15. index = 14
+16. i=9
+17.str[13]=str[9]
+18. index = 13
+19. i=8
+20. str[12]=str[8]
+21. index= 12
+22. i=7, 
+23. str[11]='0'
+24. str[10]='2'
+25. str[9]='%'
+26. index=9*/
