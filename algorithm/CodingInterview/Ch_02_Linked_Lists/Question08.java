@@ -18,7 +18,7 @@ public class Question08 {
 		if(result == null){//순환 구조가 맞는 검사
 			System.out.println("No Cycle.");
 		}else {
-			System.out.println(result);//순환 시작 부분 노드 반환
+			System.out.println(result);//3출력 //순환 시작 부분 노드 반환
 		}
 	}
 }
