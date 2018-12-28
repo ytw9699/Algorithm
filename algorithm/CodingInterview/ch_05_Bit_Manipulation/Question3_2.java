@@ -9,9 +9,8 @@ public class Question3_2 {
 		ArrayList<Integer> sequences = getAlternatingSequences(n);
 		return findLongestSequence(sequences);
 	}	
-	
 	//각 수열의 길이 리스트를 반환한다, 수열은 항상 0수열부터 시작한다.
-//	각수열의 길이를 번갈아서 배열에 저장한다.
+	//각 수열의 길이를 번갈아서 배열에 저장한다.
 	public static ArrayList<Integer> getAlternatingSequences(int n) {
 		ArrayList<Integer> sequences = new ArrayList<Integer>();
 		
@@ -20,18 +19,20 @@ public class Question3_2 {
 		
 		for (int i = 0; i < Integer.BYTES * 8; i++) {
 			if ((n & 1) != searchingFor) {
+			//	System.out.println(counter);
 				sequences.add(counter);
-				searchingFor = n & 1; // Flip 1 to 0 or 0 to 1
+				searchingFor = n & 1; // 1을  0으로 혹은 0을 1로 뒤집기
 				counter = 0;	
 			}
 			counter++;
 			n >>>= 1;
 		}
+		//System.out.println(counter);
 		sequences.add(counter);
 		
 		return sequences;
 	}
-	
+	//0수열과 1수열의 길이 값이 번갈아 저장된 배열이 주어졌을때 만들수 있는 가장 긴수열 찾기
 	public static int findLongestSequence(ArrayList<Integer> seq) {
 		int maxSeq = 1;
 		
@@ -41,11 +42,11 @@ public class Question3_2 {
 			int onesSeqNext = i + 1 < seq.size() ? seq.get(i + 1) : 0;
 			
 			int thisSeq = 0;
-			if (zerosSeq == 1) { // Can merge
+			if (zerosSeq == 1) { // 합치자
 				thisSeq = onesSeqNext + 1 + onesSeqPrev; 
-			} else if (zerosSeq > 1) { // Just add a one to either side
+			} else if (zerosSeq > 1) { // 0하나를 뒤집은뒤 양쪽중 하나에 더한다
 				thisSeq = 1 + Math.max(onesSeqPrev, onesSeqNext);
-			} else if (zerosSeq == 0) { // No zero, but take either side
+			} else if (zerosSeq == 0) { // 0수열이 없으므로 양쪽중 하나를 택한다
 				thisSeq = Math.max(onesSeqPrev, onesSeqNext);
 			}
 			maxSeq = Math.max(thisSeq, maxSeq);
