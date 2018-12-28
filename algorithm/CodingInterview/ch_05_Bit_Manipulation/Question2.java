@@ -6,7 +6,9 @@ public class Question2 {
 			return "error";
 		}
 		StringBuilder binary = new StringBuilder();
+		
 		binary.append(".");
+		
 		while (num > 0) {
 			if (binary.length() > 32) {
 				return "error";
