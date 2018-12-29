@@ -25,7 +25,7 @@ public class Question2 {
 		return binary.toString();
 	}
 	public static void main(String[] args) {
-		String bs = printBinary(0.75);
+		String bs = printBinary(0.25);
 		System.out.println(bs);
 	}
 }

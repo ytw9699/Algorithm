@@ -21,7 +21,7 @@ public class Question3_2 {
 			if ((n & 1) != searchingFor) {
 			//	System.out.println(counter);
 				sequences.add(counter);
-				searchingFor = n & 1; // 1을  0으로 혹은 0을 1로 뒤집기
+				searchingFor = n & 1; // 1을  0을 계속 바꿔주기
 				counter = 0;	
 			}
 			counter++;
@@ -29,7 +29,6 @@ public class Question3_2 {
 		}
 		//System.out.println(counter);
 		sequences.add(counter);
-		
 		return sequences;
 	}
 	//0수열과 1수열의 길이 값이 번갈아 저장된 배열이 주어졌을때 만들수 있는 가장 긴수열 찾기
@@ -44,9 +43,9 @@ public class Question3_2 {
 			int thisSeq = 0;
 			if (zerosSeq == 1) { // 합치자
 				thisSeq = onesSeqNext + 1 + onesSeqPrev; 
-			} else if (zerosSeq > 1) { // 0하나를 뒤집은뒤 양쪽중 하나에 더한다
+			} else if (zerosSeq > 1) { // 0하나를 뒤집은뒤 앞뒤중 하나에 더한다
 				thisSeq = 1 + Math.max(onesSeqPrev, onesSeqNext);
-			} else if (zerosSeq == 0) { // 0수열이 없으므로 양쪽중 하나를 택한다
+			} else if (zerosSeq == 0) { // 0수열이 없으므로 앞뒤중 하나를 택한다
 				thisSeq = Math.max(onesSeqPrev, onesSeqNext);
 			}
 			maxSeq = Math.max(thisSeq, maxSeq);
@@ -54,7 +53,6 @@ public class Question3_2 {
 		
 		return maxSeq;
 	}	
-	
 	public static void main(String[] args) {
 		int original_number = 20;
 		int new_number = longestSequence(original_number);
