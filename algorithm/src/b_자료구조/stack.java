@@ -1,7 +1,6 @@
 package b_자료구조;
 import java.util.*;
 public class stack {
-
 	public static void main(String[] args) {
 		
 		 Scanner sc = new Scanner(System.in);
@@ -15,11 +14,11 @@ public class stack {
 			 
 			 input = sc.next(); 
 			 
-			 if (input.equals("push")) { // 정수 X를 스택에 넣는 연산이다. 
+			 if (input.equals("push")) { // push X: 정수 X를 스택에 넣는 연산이다.
 				 top++; 
 				 arr[top] = sc.nextInt(); 
 				 } 
-			else if (input.equals("pop")) { // 스택에서 가장 위에 있는 정수를 빼고, 그 수를 출력한다. (없는 경우에는 -1)  
+			 else if (input.equals("pop")) { //pop: 스택에서 가장 위에 있는 정수를 빼고, 그 수를 출력한다. 만약 스택에 들어있는 정수가 없는 경우에는 -1을 출력한다.  
 			 if (top == -1) {
 			  System.out.println(-1); 
 			 }else { 
