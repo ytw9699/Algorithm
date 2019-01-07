@@ -2,7 +2,7 @@ package a_1158;
 
 import java.util.LinkedList;
 import java.util.Scanner;
-public class ss {
+public class Main2 {
     static int N;
     static int M;
     static StringBuilder sb;

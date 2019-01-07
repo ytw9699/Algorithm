@@ -5,22 +5,20 @@ import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) {
 		
-	     int n;//원형 연결 리스트 크기 n=7 N 은 전체 사람 수
-	     int m;// M번째 사람마다 제거
+	     int n;//원형 연결 리스트 크기  N 은 전체 사람 수
+	     int m;//M번째 사람마다 제거
 		
 		Scanner sc = new Scanner(System.in);
 		
-        
 		n = sc.nextInt();
 		m = sc.nextInt();
-			
 		
 		circular_linked_list cyclelist = new circular_linked_list();//원형 연결  리스트 생성
 		
 		for (int i = 1; i <= n; i++) {
 			cyclelist.addLast(i);//노드 생성
 		}
-		cyclelist.startDelete(n,m);
+		cyclelist.startDelete(n,m);//삭제 시작
 	}
 }
 
@@ -78,7 +76,7 @@ public class Main {
         return size;
     }
 
-	public void startDelete(int n, int m) {//조세퍼스
+	public void startDelete(int n, int m) {//조세퍼스 삭제 시작
 		
 		StringBuilder sb;
 		sb = new StringBuilder();
@@ -92,7 +90,7 @@ public class Main {
 			if(size() == n) {
 				currentNode = head;
 			}
-			if(m == 1 || m == 0) {
+			if(m == 1) {
 				for(int b=1; b < size(); b++) {
 				currentNode = currentNode.next;
 				}
@@ -105,14 +103,12 @@ public class Main {
 				Node todoDeleted = currentNode.next;
 				Object returnData = todoDeleted.data;
 				if(todoDeleted == tail){//삭제할려는데이터가 마지막값이라면
-					//System.out.println(currentNode.data);
 		            tail = currentNode;
-		          //  System.out.println(head.data);
 		            tail.next = head;
 		         }
 				else {
 					currentNode.next = currentNode.next.next;
-					if(todoDeleted == head) {
+					if(todoDeleted == head) {//삭제할려는 데이터가 헤드라면
 						head = currentNode.next;
 					}
 				}
