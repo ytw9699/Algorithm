@@ -28,12 +28,17 @@ public class ss {
         while(N>0){
             for(int i=0; i<M-1; ++i){
                 ++kill;
-                if(kill > N-1) { kill=0;}
+                
+                if(kill > N-1) { 
+                	kill=0;
+                	}
             }
             sb.append(list.get(kill)+", ");
             list.remove(kill);
-            if(kill==list.size()) kill=0;
             
+            if(kill==list.size()) { 
+            	kill=0;
+            }
             N--;
         }
     }

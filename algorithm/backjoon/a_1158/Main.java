@@ -5,11 +5,12 @@ import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) {
 		
-		int n;//원형 연결 리스트 크기 n=7 N 은 전체 사람 수
-		int m;// M번째 사람마다 제거
+	     int n;//원형 연결 리스트 크기 n=7 N 은 전체 사람 수
+	     int m;// M번째 사람마다 제거
 		
 		Scanner sc = new Scanner(System.in);
 		
+        
 		n = sc.nextInt();
 		m = sc.nextInt();
 			
@@ -21,19 +22,18 @@ public class Main {
 		}
 		cyclelist.startDelete(n,m);
 	}
-	
 }
 
  class circular_linked_list {//원현 연결 리스트
-    private Node head;// 첫번째 노드를 가리키는 필드,변수,참조값
-    private Node tail;// 마지막 노드를 가리키는 필드,변수
-    private int size = 0; // 엘리먼트 갯수
+     Node head;// 첫번째 노드를 가리키는 필드,변수,참조값
+     Node tail;// 마지막 노드를 가리키는 필드,변수
+     int size = 0; // 엘리먼트 갯수
     
-    private class Node{
+     class Node{
     	
-        private Object data;//데이터가 저장될 변수-실제 저장값
+         Object data;//데이터가 저장될 변수-실제 저장값
        
-        private Node next;//다음 노드를 가리키는 변수,참조값
+         Node next;//다음 노드를 가리키는 변수,참조값
         
         public Node(Object input) {//객체생성 초기화
             this.data = input;
@@ -78,34 +78,53 @@ public class Main {
         return size;
     }
 
-	public void startDelete(int m, int n) {//조세퍼스
-		int[] arr = new int[m];
+	public void startDelete(int n, int m) {//조세퍼스
+		
+		StringBuilder sb;
+		sb = new StringBuilder();
+        sb.append("<");
+        
+		int[] arr = new int[n];
 		int i=0;
 		Node currentNode = null;
 		
 		while(size > 0) {
-			if(size == m ) {
+			if(size() == n) {
 				currentNode = head;
 			}
-				for(int j=1; j<n-1; j++) {
+			if(m == 1 || m == 0) {
+				for(int b=1; b < size(); b++) {
+				currentNode = currentNode.next;
+				}
+			}
+			else if(m > 2){
+				for(int j=1; j<m-1; j++) {
 					currentNode = currentNode.next;
 				}
+			}
 				Node todoDeleted = currentNode.next;
 				Object returnData = todoDeleted.data;
-					
 				if(todoDeleted == tail){//삭제할려는데이터가 마지막값이라면
+					//System.out.println(currentNode.data);
 		            tail = currentNode;
+		          //  System.out.println(head.data);
 		            tail.next = head;
 		         }
 				else {
 					currentNode.next = currentNode.next.next;
+					if(todoDeleted == head) {
+						head = currentNode.next;
+					}
 				}
 				currentNode = currentNode.next;
 				size--;
 				arr[i++] = (int)returnData;
+				
 			}
-		for(int k=0; k<m; k++) {
-			System.out.print(arr[k]);
+		for(int k=0; k<n; k++) {
+			sb.append(arr[k]+", ");
+			//System.out.println(k+"="+arr[k]);
 		}
+		System.out.println(sb.toString().substring(0,sb.length()-2)+">");
 	}
  }	
