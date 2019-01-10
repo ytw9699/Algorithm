@@ -1,7 +1,7 @@
 package b_2957;
-import java.util.Scanner;
-import java.util.HashMap;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Scanner;
 public class main4 {
 	
 	public static void main(String[] args) {
@@ -15,6 +15,8 @@ public class main4 {
 	HashMap.put(0,0);
 	HashMap.put(-1,0);
 	HashMap.put(3000001,0);
+	
+	
 	Scanner sc = new Scanner(System.in);	
 	
 	int arrCount = sc.nextInt();//8
@@ -36,19 +38,28 @@ public class main4 {
 			arr2[k]=arr[k];
 			Arrays.sort(arr2);
 		}
-		else {
-			arr2[0]=arr[k];
-			Arrays.sort(arr2);
-			int[] key = binarySearch(arr2,arr[k]);
-			int first = (int)HashMap.get(key[0]);
-			int second = (int)HashMap.get(key[1]);
-			if(first>second) {
-				HashMap.put((arr[k]),first+1);
-			}else {
-				HashMap.put((arr[k]),second+1);
-			}
+	else {
+		arr2[0]=arr[k];
+		Arrays.sort(arr2);
+		
+		int key1;
+		int mid = Arrays.binarySearch(arr2, arr[k]);
+		if(mid == arr2.length-1) {
+			 key1 = -1;
+		}else {
+			 key1 = arr2[mid+1];
+		}
+		int key2 = arr2[Arrays.binarySearch(arr2, arr[k])-1];
+		int first = (int)HashMap.get(key1);
+		int second = (int)HashMap.get(key2);
+		if(first>second) {
+			HashMap.put((arr[k]),first+1);
+		}else {
+			HashMap.put((arr[k]),second+1);
 		}
 	}
+}
+	
 	for (int i = 0; i < arr.length; i++) {
 		count = count +HashMap.get(arr[i]);
 		System.out.println(count);
@@ -60,7 +71,7 @@ public class main4 {
 	System.out.println("used memory is " + used2 + " bytes");
 
 }
-	private static int[] binarySearch(int searchArr[], int target) {
+	/*private static int[] binarySearch(int searchArr[], int target) {
 		int start = 0;
 		int end = searchArr.length;
 		int mid=0;
@@ -84,5 +95,5 @@ public class main4 {
 			}
 		}
 		return keyArr;
-}
+}*/
 }
