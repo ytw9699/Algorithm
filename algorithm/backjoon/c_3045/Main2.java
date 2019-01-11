@@ -3,9 +3,9 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class Main {
+public class Main2 {
 	
-	static DoublyLinkedList dobleLink = new DoublyLinkedList();
+	static DoublyLinkedList2 dobleLink = new DoublyLinkedList2();
 	
 	public static void main(String[] args) throws Exception {
 			
@@ -24,16 +24,21 @@ public class Main {
 		for(int i =0; i<nodes; i++) {
 			dobleLink.addLast(i+1);
 		}
+		//System.out.println(dobleLink.toString());
 		
 		for(int i =0; i<count; i++) {
 			String action[] = order[i].split(" ");
 			change(action[0],action[1],action[2]);
 		}
+		//System.out.println(dobleLink.toString());
 		
 		int max=0;
 		int maxindex=0;
 		int[] dp = new int[nodes];// 인덱스마다 각 증가 수열의 길이//dp 배열은 증가 수열의 길이를 넣을 것이다.
 		int[] array = dobleLink.toIntArr(nodes);// 인덱스마다 각 입력값
+	/*	for (int i = 0; i < nodes; i++) {
+					System.out.println(array[i]);
+		}*/
 		String[] sequence = new String[nodes];//증가 수열 
 		int ans = 0;
 		
@@ -57,15 +62,24 @@ public class Main {
 		    }
 		  }
 		    sequence[i] = temp+array[i];
+		  //System.out.println(sequence[i]);
 		}
 		for(int i=1;i<nodes;i++) {
 		  if (ans < dp[i]) {
 		    ans = dp[i];
 		  }
 		}
+		/*for(int i=0;i<nodes;i++) {
+			    System.out.print(dp[i]);
+			}*/
+		//System.out.println();
 		System.out.println(nodes - ans);
 		
+		//System.out.println(Arrays.toString(array));
+		
 		Arrays.sort(array); 
+		
+		//System.out.println(Arrays.toString(array)); 
 		 
 		String[] output = sequence[maxindex].split("");
 		
@@ -77,11 +91,14 @@ public class Main {
 		for(int i=0;i<idx0.length;i++) {
 			array[idx0[i]]=0;
 		}
+		//System.out.println(Arrays.toString(array));
+		
 		for(int i=0; i<nodes; i++) {
 			if(array[i] > 0 && array[i]<nodes) {
 				int a=array[i];
 				int b=array[i]+1;
 				System.out.println("A"+" "+a+" "+b);
+		//change("A" ,  Integer.toString(idx0[i]) ,  Integer.toString(idx0[i]+1));	
 				}
 			else if( array[i] == nodes){
 				int a=array[i];
@@ -101,7 +118,8 @@ public class Main {
 		}
 	}
 }
-   class DoublyLinkedList {
+
+   class DoublyLinkedList2 {
     private Node head;// 첫번째 노드를 가리키는 필드,변수,참조값
     private Node tail;// 마지막 노드를 가리키는 필드,변수
     private int size = 0; // 몇개의 엘리먼트

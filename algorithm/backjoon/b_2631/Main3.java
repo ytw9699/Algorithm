@@ -2,10 +2,12 @@ package b_2631;
 
 import java.util.Scanner;
 import java.util.Arrays;
-public class Main {
+
+public class Main3 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();//7
+		
 		int max=0;
 		int maxindex=0;
 		int[] dp = new int[n];// 인덱스마다 각 증가 수열의 길이//dp 배열은 증가 수열의 길이를 넣을 것이다.
