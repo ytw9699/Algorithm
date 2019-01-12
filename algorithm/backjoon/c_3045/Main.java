@@ -1,7 +1,7 @@
 package c_3045;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.Arrays;
+import java.util.ArrayList;
 
 public class Main {
 	
@@ -10,9 +10,12 @@ public class Main {
 	public static void main(String[] args) throws Exception {
 			
 	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	
+		String firstinput =br.readLine();
+		String nodesCount[] = firstinput.split(" ");
 		
-		int nodes = Integer.parseInt(br.readLine());
-		int count = Integer.parseInt(br.readLine());
+		int nodes = Integer.parseInt(nodesCount[0]);
+		int count = Integer.parseInt(nodesCount[1]);
 	
 	 String[] order= new String[count];
 	
@@ -34,50 +37,44 @@ public class Main {
 		int maxindex=0;
 		int[] dp = new int[nodes];// 인덱스마다 각 증가 수열의 길이//dp 배열은 증가 수열의 길이를 넣을 것이다.
 		int[] array = dobleLink.toIntArr(nodes);// 인덱스마다 각 입력값
-		String[] sequence = new String[nodes];//증가 수열 
 		int ans = 0;
+		int k=0;
+		ArrayList sequence = new ArrayList<>();//증가 수열 인덱스
 		
 		dp[0] = 1;
-		sequence[0] = Integer.toString(array[0]);
-
-		for (int i = 1; i < nodes; i++) {
-		  dp[i] = 1;
-		  String temp="";
-		  // i 를 기준으로 인덱스 0 에서부터 i-1까지 체크한다 
-		    // 길이를 기준
-		  for (int j = 0; j < i; j++) {
-		    if ( array[i] > array[j] && dp[i] < dp[j] + 1 ) { // 증가 수열 이라면
-		      dp[i] = dp[j] + 1;//길이 1증가
-		      if(dp[j] + 1 > max) {
-		    	  max = dp[j] + 1 ;
-		    	  maxindex = i;
-		      }
-		      
-		      temp = temp+Integer.toString(array[j]);
-		    }
-		  }
-		    sequence[i] = temp+array[i];
-		}
-		for(int i=1;i<nodes;i++) {
-		  if (ans < dp[i]) {
-		    ans = dp[i];
-		  }
-		}
-		System.out.println(nodes - ans);
+			
+			for (int i = 1; i < nodes; i++) {
+			  k=0;
+			  dp[i] = 1;
+			  int[] temp = new int[i+1];
+			  for (int j = 0; j < i; j++) {
+			    if (array[j] < array[i] && dp[j] + 1 > dp[i]) {
+			      dp[i] = dp[j] + 1;
+			      temp[k++] = j;
+			      if(dp[j] + 1 > max) {
+			    	  max = dp[j] + 1 ;
+			    	  maxindex = i;
+			      }
+			    }
+			  }
+			  temp[k++] = i;
+			  sequence.add(temp);
+			}
+			  for(int i=1;i<nodes;i++) {
+				  if (ans < dp[i]) {
+				    ans = dp[i];
+				  }
+				}
+				System.out.println(nodes - ans);//실행해야할 연산수 출력
+				if(maxindex > 0) {
+					int[] changearr = (int[])sequence.get(maxindex-1);
+					
+					for(int i=0; i<changearr.length; i++) {
+						array[changearr[i]]=0;
+					}
+				}
 		
-		Arrays.sort(array); 
-		 
-		String[] output = sequence[maxindex].split("");
-		
-		int[] idx0 = new int[output.length];
-		
-		for(int i=0;i<output.length;i++) {
-			idx0[i]=Arrays.binarySearch(array, Integer.parseInt(output[i]) );
-		}
-		for(int i=0;i<idx0.length;i++) {
-			array[idx0[i]]=0;
-		}
-		for(int i=0; i<nodes; i++) {
+		for(int i=0; i<nodes-1; i++) {
 			if(array[i] > 0 && array[i]<nodes) {
 				int a=array[i];
 				int b=array[i]+1;
@@ -140,7 +137,10 @@ public class Main {
             addFirst(input);
         } else {
             Node temp1 = node(k).prev;
-           
+            if(temp1 == null){
+            	addFirst(input);
+            }
+            else {
             Node temp2 = temp1.next;//k번째 노드를 temp2로 지정
         
             Node newNode = new Node(input);//새로운 노드를 생성.
@@ -154,6 +154,7 @@ public class Main {
             newNode.prev = temp1;//새로운 노드의 이전 노드로 temp1
             
             size++;
+            }
         }
     }
     public void addRear(int k, Object input){// 특정 위치 값 추가
@@ -243,7 +244,7 @@ public class Main {
             arr[i++]=(int)temp.data;
         	temp = temp.next;
         }
-        arr[i]=(int)temp.data;
+        arr[i++]=(int)temp.data;
         return arr;
     }
     
@@ -269,6 +270,7 @@ public class Main {
     	
         if(node(k).prev == null) {//삭제할려는값이 첫번째값이라면
         	todoDeleted = head;
+        	returnData = todoDeleted.data;
         	head.next.prev = null;
        	 	head = head.next;
         }else {
