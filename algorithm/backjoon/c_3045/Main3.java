@@ -1,136 +1,37 @@
 package c_3045;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
 
-public class Main {
-	//static long beforeTime = System.currentTimeMillis(); //코드 실행 전에 시간 받아오기
-	static DoublyLinkedList dobleLink = new DoublyLinkedList();
-	
-	public static void main(String[] args) throws Exception {
-			
-	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-	
-		String firstinput =br.readLine();//7 2 
-		String nodesCount[] = firstinput.split(" ");
-		
-		int nodes = Integer.parseInt(nodesCount[0]);//7 
-		int count = Integer.parseInt(nodesCount[1]);//2
-	
-	  String[] order= new String[count];
-	
-		for(int i =0; i<count; i++) {//COUNT 2
-			order[i]= br.readLine();//A 1 4 // B 3 5
-		}
-			br.close();
-		
-		for(int i =0; i<nodes; i++) {//1~7
-			dobleLink.addLast(i+1);
-		}
-		
-		DoublyLinkedList.ListIterator iterator = dobleLink.listIterator();
-		
-		for(int i =0; i<count; i++) {// 순서 뒤바꿈
-			String action[] = order[i].split(" ");//A 1 4 // B 3 5
-			
-			int x= Integer.parseInt(action[1]);
-	   		int y= Integer.parseInt(action[2]);
-	   		
-	   		if(action[0].equals("A")) {
-	   			while(iterator.hasNext()) {
-			    	int currentNextValue = (int)iterator.next();
-		       	 if(currentNextValue == x){
-		       		System.out.println(dobleLink);
-		       		iterator.remove();
-		       	 }
-		       	 if(currentNextValue == y){
-		       		iterator.addfront(x);//앞에값에 추가
-		           	System.out.println(dobleLink);
-		     	 }
-		        }
-	   		}else {
-	   			while(iterator.hasNext()) {
-			    	int currentNextValue = (int)iterator.next();
-		       	 if(currentNextValue == x){
-		       		iterator.remove();
-		       	    System.out.println(dobleLink);
-		       	 }
-		       	 if(currentNextValue==y){
-		       		iterator.add(x);//뒤에 추가
-		           	System.out.println(dobleLink);
-		     	 }
-		        }
-	   		}
-			iterator.nextIndex();
-		}
-		
-		int max=0;
-		int maxindex=0;
-		int[] dp = new int[nodes];// 인덱스마다 각 증가 수열의 길이//dp 배열은 증가 수열의 길이를 넣을 것이다.
-		int[] array = new int[nodes];// 인덱스마다 각 입력값
-		int ans = 0;
-		int k=0;
-		int iteratorIndex=0;
-		
-		ArrayList sequence = new ArrayList<>();//증가 수열 인덱스
-		
-		
-		while(iterator.hasNext()){
-			array[iteratorIndex++]=(int)iterator.next();
+public class Main3 {
+
+	public static void main(String[] args) {
+		DoublyLinkedList5 numbers = new DoublyLinkedList5();
+		numbers.addLast(1);
+	    numbers.addLast(2);
+	    numbers.addLast(3);
+	    numbers.addLast(4);
+	    numbers.addLast(5);
+	    numbers.addLast(6);
+	    numbers.addLast(7);
+	    
+	    System.out.println(numbers);
+	    
+	    DoublyLinkedList5.ListIterator i = numbers.listIterator();
+	    
+	    while(i.hasNext()) {
+	    	int currentNextValue = (int)i.next();
+       	 if(currentNextValue == 2){
+       	       i.remove();
+       	    System.out.println(numbers);
+       	 }
+       	 if(currentNextValue==4){//의 뒤의 값
+       		i.addfront(2);//앞에값에 추가
+           	System.out.println(numbers);
      	 }
-		
-		dp[0] = 1;
-			
-			for (int i = 1; i < nodes; i++) {
-			  k=0;
-			  dp[i] = 1;
-			  int[] temp = new int[i+1];
-			  for (int j = 0; j < i; j++) {
-			    if (array[j] < array[i] && dp[j] + 1 > dp[i]) {
-			      dp[i] = dp[j] + 1;
-			      temp[k++] = j;
-			      if(dp[j] + 1 > max) {
-			    	  max = dp[j] + 1 ;
-			    	  maxindex = i;
-			      }
-			    }
-			  }
-			  temp[k++] = i;
-			  sequence.add(temp);
-			}
-			  for(int i=1;i<nodes;i++) {
-				  if (ans < dp[i]) {
-				    ans = dp[i];
-				  }
-				}
-				System.out.println(nodes - ans);//실행해야할 연산수 출력
-				if(maxindex > 0) {
-					int[] changearr = (int[])sequence.get(maxindex-1);
-					
-					for(int i=0; i<changearr.length; i++) {
-						array[changearr[i]]=0;
-					}
-				}
-		
-		for(int i=0; i<nodes-1; i++) {
-			if(array[i] > 0 && array[i]<nodes) {
-				int a=array[i];
-				int b=array[i]+1;
-				System.out.println("A"+" "+a+" "+b);
-				}
-			else if( array[i] == nodes){
-				int a=array[i];
-				int b=array[i]-1;
-				System.out.println("B"+" "+a+" "+b);	
-			}
-		}
-		/*long afterTime = System.currentTimeMillis(); // 코드 실행 후에 시간 받아오기
-		long secDiffTime = (afterTime - beforeTime)/1000; //두 시간에 차 계산
-		System.out.println("시간차이(m) : "+secDiffTime);
-		*/
-		}
+        }
+       // System.out.println(numbers);
+	}
 }
-	class DoublyLinkedList {
+
+ class DoublyLinkedList5 {
 	
     private Node head;// 첫번째 노드를 가리키는 필드,변수,참조값
     private Node tail;// 마지막 노드를 가리키는 필드,변수
@@ -342,12 +243,8 @@ public class Main {
             nextIndex = 0;
         }
          
-        public void nextIndex() {
-        	next = head;
-        	nextIndex=0;
-		}
-
-		public boolean hasNext() {//다음 노드가 있는가
+      
+        public boolean hasNext() {//다음 노드가 있는가
             return nextIndex < size();
         }
         
@@ -398,17 +295,10 @@ public class Main {
         	//이 로직은 더좋은 로직이 있을수 있음 전체적인 흐름,어레이 리스트랑 뭐가 다른지 비교차원 접근
             Node newNode = new Node(input);
             	
-            if(lastReturned == null || lastReturned == head) {
-            	head.prev= newNode;
-            	newNode.next=head;
-            
-            }else {
             	lastReturned.prev.next = newNode;
             	newNode.prev = lastReturned.prev;
             	newNode.next = lastReturned;
             	lastReturned.prev=newNode;
-            }
-            lastReturned = newNode;
             nextIndex++;
             size++;
         }
@@ -424,8 +314,6 @@ public class Main {
     	    if (p == null) {//next메소드 한번실행후 맨앞에것을 삭제할경우
     	        head = n;
     	        head.prev = null;//연결끊기
-    	        System.out.println("lastReturned");
-    	        System.out.println(lastReturned.data);
     	        lastReturned = null;
     	    } else {//중간과 끝의 삭제경우
     	        p.next = next;
@@ -446,4 +334,4 @@ public class Main {
     	    nextIndex--;
     	}
     	}
-}
+	}
