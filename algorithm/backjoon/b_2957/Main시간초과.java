@@ -1,7 +1,7 @@
 package b_2957;
 
 import java.util.Scanner;
-public class Main {
+public class Main시간초과 {
 	public static void main(String[] args) {
 	
 	Scanner sc = new Scanner(System.in);	
@@ -55,7 +55,6 @@ public class Main {
 			}
 		}
 	}
-	
 	public class Node{
 	    private Object data;//데이터가 저장될 변수-실제 저장값
 	    private Node left;//왼쪽 노드를 가리키는 변수,참조값
