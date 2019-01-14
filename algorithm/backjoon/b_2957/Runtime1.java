@@ -1,6 +1,6 @@
 package b_2957;
 
-public class aaa {
+public class Runtime1 {
 
 	public static void main(String[] args) {
 		Runtime.getRuntime().gc();
