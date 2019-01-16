@@ -1,4 +1,4 @@
-package algorithm;
+package b_자료구조;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
