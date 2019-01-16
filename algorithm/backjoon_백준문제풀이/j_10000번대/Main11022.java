@@ -1,7 +1,7 @@
-package j_11022;
+package j_10000¹ø´ë;
 
 import java.util.Scanner;
-public class Main {
+public class Main11022 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		 int count = sc.nextInt();

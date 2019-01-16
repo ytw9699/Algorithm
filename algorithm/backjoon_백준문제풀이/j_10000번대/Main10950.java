@@ -1,6 +1,6 @@
-package j_10950;
+package j_10000¹ø´ë;
 import java.util.Scanner;
-public class Main {
+public class Main10950 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int count = sc.nextInt();

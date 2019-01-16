@@ -1,13 +1,14 @@
-package j_10951;
+package j_10000¹ø´ë;
 
 import java.util.Scanner;
-public class Main {
+public class Main11021 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		while (sc.hasNextInt()) {
+		 int count = sc.nextInt();
+		 for(int i=1; i<=count; i++) {
 			 int a= sc.nextInt();
 			 int b= sc.nextInt();
-			 System.out.println(a+b);
+			 System.out.println("Case #"+i+": "+(a+b));
 		}
 	}
 }
