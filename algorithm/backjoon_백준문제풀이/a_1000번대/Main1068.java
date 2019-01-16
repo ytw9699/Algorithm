@@ -1,6 +1,6 @@
-package a_1068;
+package a_1000¹ø´ë;
 import java.util.Scanner;
-public class Main2 {
+public class Main1068 {
 	public static Node tree[];
 	public static int n;
 	public static int delList[];

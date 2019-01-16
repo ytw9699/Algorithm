@@ -1,14 +1,15 @@
-package a_10845;
-import java.util.LinkedList;
+package a_10828;
+
 import java.util.Scanner;
-public class Main {
-	public static void main(String[] args) {
+import java.util.Stack;
+public class Main10828 {
+	public static void main2(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
 		
         int n = sc.nextInt();
         
-        LinkedList<Integer> queue = new LinkedList();
+        Stack<Integer> stack = new Stack<Integer>();
         
         for (int i = 0; i <= n; i++) {
             String str = sc.nextLine();
@@ -17,46 +18,38 @@ public class Main {
  
             switch (instruction[0]) {
             case "push":
-            	queue.offer(Integer.parseInt(instruction[1]));
+                stack.push(Integer.parseInt(instruction[1]));
                 break;
  
             case "pop":
-                if(queue.isEmpty()){
+                if(stack.isEmpty()){
                     System.out.println(-1);
                 }
                 else{
-                    System.out.println(queue.poll());
+                    System.out.println(stack.pop());
                 }
                 break;
  
             case "size":
-                    System.out.println(queue.size());
+ 
+                    System.out.println(stack.size());
                     break;
  
             case "empty":
-                if(queue.isEmpty()){
+                if(stack.isEmpty()){
                     System.out.println(1);
                 }
                 else{
                     System.out.println(0);
                 }
                 break;
-                
-            case "front":
-                if(queue.isEmpty()){
+ 
+            case "top":
+                if(stack.isEmpty()){
                     System.out.println(-1);
                 }
                 else{
-                    System.out.println(queue.peek());
-                }
-                break;
-                
-            case "back":
-                if(queue.isEmpty()){
-                    System.out.println(-1);
-                }
-                else{
-                    System.out.println(queue.get(queue.size()-1));
+                    System.out.println(stack.peek());
                 }
                 break;
 	}

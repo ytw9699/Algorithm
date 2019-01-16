@@ -1,15 +1,14 @@
-package a_10828;
-
+package a_10845;
+import java.util.LinkedList;
 import java.util.Scanner;
-import java.util.Stack;
-public class Main2 {
-	public static void main2(String[] args) {
+public class Main10845 {
+	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
 		
         int n = sc.nextInt();
         
-        Stack<Integer> stack = new Stack<Integer>();
+        LinkedList<Integer> queue = new LinkedList();
         
         for (int i = 0; i <= n; i++) {
             String str = sc.nextLine();
@@ -18,38 +17,46 @@ public class Main2 {
  
             switch (instruction[0]) {
             case "push":
-                stack.push(Integer.parseInt(instruction[1]));
+            	queue.offer(Integer.parseInt(instruction[1]));
                 break;
  
             case "pop":
-                if(stack.isEmpty()){
+                if(queue.isEmpty()){
                     System.out.println(-1);
                 }
                 else{
-                    System.out.println(stack.pop());
+                    System.out.println(queue.poll());
                 }
                 break;
  
             case "size":
- 
-                    System.out.println(stack.size());
+                    System.out.println(queue.size());
                     break;
  
             case "empty":
-                if(stack.isEmpty()){
+                if(queue.isEmpty()){
                     System.out.println(1);
                 }
                 else{
                     System.out.println(0);
                 }
                 break;
- 
-            case "top":
-                if(stack.isEmpty()){
+                
+            case "front":
+                if(queue.isEmpty()){
                     System.out.println(-1);
                 }
                 else{
-                    System.out.println(stack.peek());
+                    System.out.println(queue.peek());
+                }
+                break;
+                
+            case "back":
+                if(queue.isEmpty()){
+                    System.out.println(-1);
+                }
+                else{
+                    System.out.println(queue.get(queue.size()-1));
                 }
                 break;
 	}

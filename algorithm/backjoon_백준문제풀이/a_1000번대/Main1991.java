@@ -1,6 +1,6 @@
-package a_1991;
+package a_1000¹ø´ë;
 import java.util.Scanner;
-public class Main {
+public class Main1991 {
 	public static void main(String[] args) {
 		
 		int nodes;
