@@ -1,4 +1,4 @@
-package a_2905;
+package b_2905;
 
 import java.util.LinkedList;
 import java.util.Scanner;
