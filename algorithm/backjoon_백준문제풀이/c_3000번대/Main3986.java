@@ -1,8 +1,8 @@
-package c_3986;
+package c_3000번대;
 
 import java.util.Scanner;
 import java.util.Stack;
-public class Main {
+public class Main3986 {
 public static void main(String[] args) {
 		
 		int goodWordCount=0;//좋은단어 카운트
