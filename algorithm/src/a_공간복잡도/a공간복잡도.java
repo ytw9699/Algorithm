@@ -1,4 +1,4 @@
-package aa;
+package a_공간복잡도;
 import java.util.Scanner;
 public class a공간복잡도 {
 
