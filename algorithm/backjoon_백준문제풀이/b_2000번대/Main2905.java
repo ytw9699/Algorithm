@@ -1,8 +1,8 @@
-package b_2905;
+package b_2000¹ø´ë;
 
 import java.util.LinkedList;
 import java.util.Scanner;
-public class Main {
+public class Main2905 {
 public static void main(String[] args) {
 	
 	Scanner sc = new Scanner(System.in);
