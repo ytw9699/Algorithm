@@ -1,6 +1,6 @@
 package aa;
 import java.util.Scanner;
-public class aa {
+public class a공간복잡도 {
 
 	public static void main(String[] args) {
 		Runtime.getRuntime().gc();
