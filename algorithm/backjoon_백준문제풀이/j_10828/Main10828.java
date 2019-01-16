@@ -1,4 +1,4 @@
-package a_10828;
+package j_10828;
 
 import java.util.Scanner;
 import java.util.Stack;

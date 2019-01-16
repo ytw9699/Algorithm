@@ -1,4 +1,4 @@
-package a_10845;
+package j_10845;
 import java.util.LinkedList;
 import java.util.Scanner;
 public class Main10845 {
