@@ -1,4 +1,4 @@
-package a_3986;
+package c_3986;
 
 import java.util.Scanner;
 import java.util.Stack;
