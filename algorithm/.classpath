@@ -5,5 +5,7 @@
 	<classpathentry kind="src" path="Do_it_dataStructure&amp;algorithm"/>
 	<classpathentry kind="src" path="CodingInterview코딩인터뷰"/>
 	<classpathentry kind="src" path="backjoon_백준문제풀이"/>
+	<classpathentry kind="src" path="DataStructure"/>
+	<classpathentry kind="src" path="Yoon_DataStructure"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
