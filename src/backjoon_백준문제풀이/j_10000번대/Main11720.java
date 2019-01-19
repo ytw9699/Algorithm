@@ -1,7 +1,7 @@
-package A_1_testing;
+package j_10000¹ø´ë;
 
 import java.util.Scanner;
-public class Main {
+public class Main11720 {
     public static void main(String[] args) {
        
        int output = 0;
