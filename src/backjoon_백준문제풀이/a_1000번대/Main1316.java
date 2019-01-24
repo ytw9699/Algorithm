@@ -1,7 +1,7 @@
-package A_1_testing;
+package a_1000¹ø´ë;
 
 import java.util.Scanner;
-public class Main {
+public class Main1316 {
     public static void main(String[] args) {
     	
 	    Scanner sc= new Scanner(System.in);
