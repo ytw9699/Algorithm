@@ -1,6 +1,6 @@
-package A_1_testing;
+package a_1000¹ø´ë;
 import java.util.Scanner;
-public class Main {
+public class Main1152 {
 	public static void main(String[] args)
 	{
 		String words = new String();
