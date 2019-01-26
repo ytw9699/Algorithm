@@ -24,7 +24,7 @@ import java.util.Scanner;
 					   for (int f=e+1; f<9; f++) { 
 						   for (int g=f+1; g<9; g++) { 
 							   if(arr[a]+arr[b]+arr[c]+arr[d]+arr[e]+arr[f]+arr[g] == 100) {
-								   //합이 100이라면 출력후
+								   //합이 100이라면 
 			 System.out.println(arr[a]);
 			 System.out.println(arr[b]);
 			 System.out.println(arr[c]);
