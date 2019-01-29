@@ -1,4 +1,5 @@
-package A_1_testing;
+package source;
+
  public class Main {
 	public static void main(String[] args) {
 		int[] capacities=new int[]{10,10,10};//전체 병의 크기
