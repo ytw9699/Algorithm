@@ -1,6 +1,6 @@
-package source;
+package a_시뮬레이션;
 
- public class KiwiJuiceEasy2 {
+ public class KiwiJuiceEasy3 {
 	public static void main(String[] args) {
 		int[] capacities=new int[]{10,10,10};//전체 병의 크기
 		int[] bottles=new int[]{3,7,3};//현재들어있는 용량
@@ -13,16 +13,14 @@ package source;
 			System.out.println(a[i]);
 		}
 }
-	
 	public static int[] thePouring(int[] capacities, int[] bottles, int[] fromld, int[] told){
+	
 		for (int i = 0; i < fromld.length; i++){
-			 int from = fromld[i];
-			 int to = told[i];
 			
-			 int vol = Math.min(bottles[from], capacities[to]-bottles[to]);//최소값을 구해서
-			 
-			 bottles[from] -= vol; //빼주고
-			 bottles[to] += vol;  //더해주자
+			int sum = bottles[fromld[i]] + bottles[told[i]];
+			bottles[told[i]] = Math.min(sum,capacities[told[i]]);
+			bottles[fromld[i]] = sum-bottles[told[i]];
+			
 		}
 			 return bottles;
 }
