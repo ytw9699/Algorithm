@@ -1,10 +1,10 @@
 package b_ÀüÃ¼Å½»ö;
 
- public class KiwiJuiceEasy1 {
+ public class bestInvitation1 {
 	public static void main(String[] args) {
 		
-		String[] first=new String[]{"1","2","3","3","3"};
-		String[] second=new String[]{"2","3","5","6","7"};
+		String[] first=new String[]{"1","2","3","3","3","3"};
+		String[] second=new String[]{"2","3","5","6","7","8"};
 		
 		System.out.println(bestInvitation(first,second));
 		
