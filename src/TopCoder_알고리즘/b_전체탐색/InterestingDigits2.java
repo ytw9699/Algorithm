@@ -1,11 +1,10 @@
-package A_1_testing;
+package b_ÀüÃ¼Å½»ö;
 import java.util.*;
- public class Main3 {
+ public class InterestingDigits2 {
 	public static void main(String[] args) {
 		int base=10;
 		
 		int[] a = digits(base);
-		System.out.println(1);
 		for(int i=0; i<a.length; i++) {
 			System.out.println(a[i]);
 		}
@@ -17,9 +16,8 @@ import java.util.*;
 			 
 			 for(int i = 2; i<base; i++)
 			 {
-				 if(( base-1 % i) == 0 ) {
+				 if(( (base-1) % i) == 0 ) {
 					 v.add(i);
-					 System.out.println(1);
 				 }
 			 }
 			 

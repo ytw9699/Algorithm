@@ -1,6 +1,6 @@
-package A_1_testing;
+package b_ÀüÃ¼Å½»ö;
 import java.util.*;
- public class Main2 {
+ public class InterestingDigits {
 	public static void main(String[] args) {
 		int base=10;
 		
