@@ -1,4 +1,4 @@
-package a_basic;
+package Chapter01;
 
 public class a01_array_sum {
 	
