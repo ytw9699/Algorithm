@@ -3,10 +3,10 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="src" path="a_기타"/>
 	<classpathentry kind="src" path="Do_it_DataStructure &amp; Algorithm"/>
-	<classpathentry kind="src" path="CodingInterview_코딩인터뷰_완전분석"/>
-	<classpathentry kind="src" path="Backjoon_백준문제풀이"/>
+	<classpathentry kind="src" path="CodingInterview_Problem_Solving"/>
+	<classpathentry kind="src" path="Backjoon_Problem_Solving"/>
 	<classpathentry kind="src" path="DataStructure"/>
 	<classpathentry kind="src" path="Yoon_DataStructure"/>
-	<classpathentry kind="src" path="TopCoder_알고리즘"/>
+	<classpathentry kind="src" path="TopCoder_Algorithm_Problem_Solving"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
