@@ -1,8 +1,8 @@
-package a_1158;
+package a_1000¹ø´ë;
 
 import java.util.LinkedList;
 import java.util.Scanner;
-public class Main2 {
+public class Main1158_2 {
     static int N;
     static int M;
     static StringBuilder sb;

@@ -1,9 +1,9 @@
-package a_1874;
+package a_1000¹ø´ë;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
  
-public class Main2 {
+public class Main1874_2 {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();

@@ -1,7 +1,7 @@
-package a_1874;
+package a_1000¹ø´ë;
 import java.util.Scanner;
 import java.util.Stack;
-public class Main {
+public class Main1874 {
 public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);

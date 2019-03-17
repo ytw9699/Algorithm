@@ -1,8 +1,8 @@
-package a_1158;
+package a_1000번대;
 
 import java.util.Scanner;
 
-public class Main {
+public class Main1158 {
 	public static void main(String[] args) {
 		
 	     int n;//원형 연결 리스트 크기  N 은 전체 사람 수
