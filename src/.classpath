@@ -3,7 +3,7 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="src" path="a_기타"/>
 	<classpathentry kind="src" path="Do_it_dataStructure&amp;algorithm"/>
-	<classpathentry kind="src" path="CodingInterview코딩인터뷰"/>
+	<classpathentry kind="src" path="CodingInterview_코딩인터뷰_완전분석"/>
 	<classpathentry kind="src" path="backjoon_백준문제풀이"/>
 	<classpathentry kind="src" path="DataStructure"/>
 	<classpathentry kind="src" path="Yoon_DataStructure"/>
