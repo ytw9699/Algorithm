@@ -1,4 +1,4 @@
-package list.arraylist.implementation;
+package Arraylist;
 /*인덱스를 이용해서 데이터를 가져오는 것이 빈번하다면 ArrayList가 훨씬 빠릅니다.
  하지만 데이터의 추가/삭제가 빈번하다면 LinkedList가 훨씬 효과적입니다.
  처리하고자 하는 데이터에 따라서 어떤 데이터 스트럭쳐를 선택할지를 잘 판단하는 것은

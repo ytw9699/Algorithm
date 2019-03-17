@@ -1,4 +1,4 @@
-package list.array.api;
+package Array;
 	public class arrray01 {
 	    public static void main(String[] args) {
 	    

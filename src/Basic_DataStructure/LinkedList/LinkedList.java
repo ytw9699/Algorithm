@@ -1,4 +1,4 @@
-package list.linkedlist.implementation;
+package LinkedList;
 public class LinkedList {
    private Node head;// 첫번째 노드를 가리키는 필드,변수,참조값
    private Node tail;// 마지막 노드를 가리키는 필드,변수

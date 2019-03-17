@@ -1,6 +1,7 @@
 package Stack;
-import list.arraylist.implementation.ArrayList;
 import java.util.EmptyStackException;
+
+import Arraylist.ArrayList;
 public class MyStack3 extends ArrayList{//직접 구현 ArrayList기반
 	public Object push(Object data) {
 		add(data);

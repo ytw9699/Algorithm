@@ -1,4 +1,4 @@
-package list.arraylist.implementation;
+package Arraylist;
 	import java.util.ArrayList;//임포트 해주자
 	import java.util.Iterator;//임포트 해주자
 	

@@ -1,4 +1,4 @@
-package list.arraylist.implementation;
+package Arraylist;
   public class ArrayListMain {
   public static void main(String[] args) {
 	ArrayList numbers = new ArrayList();

@@ -1,4 +1,4 @@
-package list.array.api;
+package Array;
 
 public class a01_array_sum {
 	

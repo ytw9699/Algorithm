@@ -1,4 +1,4 @@
-package list.doublylinkedlist.implementation;
+package DoublyLinkedList;
 
 public class DoublyLinkedList {
     private Node head;// 첫번째 노드를 가리키는 필드,변수,참조값

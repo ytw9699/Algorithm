@@ -1,7 +1,7 @@
 package zList_compare;
 
-import list.arraylist.implementation.ArrayList;
-import list.linkedlist.implementation.LinkedList;
+import Arraylist.ArrayList;
+import LinkedList.LinkedList;
 
 public class Main {//어레이리스트와 vs 단방향 연결 리스트
 	public static void main(String[] args) {

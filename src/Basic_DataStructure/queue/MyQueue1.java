@@ -1,6 +1,7 @@
 package queue;
-import list.doublylinkedlist.implementation.DoublyLinkedList;
 import java.util.EmptyStackException;
+
+import DoublyLinkedList.DoublyLinkedList;
 public class MyQueue1 extends DoublyLinkedList{//직접구현 더블 링크드 리스트 기반 큐
 	public Object offer(Object data) {
 		addFirst(data);

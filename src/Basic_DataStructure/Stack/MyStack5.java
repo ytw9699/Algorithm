@@ -1,6 +1,7 @@
 package Stack;
-import list.doublylinkedlist.implementation.DoublyLinkedList;
 import java.util.EmptyStackException;
+
+import DoublyLinkedList.DoublyLinkedList;
 
 public class MyStack5 extends DoublyLinkedList{//직접구현 더블 링크드 리스트 기반 스택
 	
