@@ -6,6 +6,6 @@
 	<classpathentry kind="src" path="Backjoon_Problem_Solving"/>
 	<classpathentry kind="src" path="CodingInterview_Problem_Solving"/>
 	<classpathentry kind="src" path="TopCoder_Algorithm_Problem_Solving"/>
-	<classpathentry kind="src" path="기타자료"/>
+	<classpathentry kind="src" path="and many other things"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
