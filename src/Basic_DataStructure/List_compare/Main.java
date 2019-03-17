@@ -1,4 +1,4 @@
-package zList_compare;
+package List_compare;
 
 import Arraylist.ArrayList;
 import LinkedList.LinkedList;

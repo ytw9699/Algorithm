@@ -1,4 +1,4 @@
-package zList_compare;
+package List_compare;
 import java.util.Scanner;
 import java.util.Comparator;
 // 원형 이중 연결 리스트 클래스 DblLinkedList<E>의 사용 예
