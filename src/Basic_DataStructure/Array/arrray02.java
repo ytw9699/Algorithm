@@ -1,5 +1,4 @@
 package Array;
-
 	public class arrray02 {
 	public static void main(String[] args) {
 	    
@@ -13,9 +12,7 @@ package Array;
 	    student[3] = null;
 	    
 	    for(int i = 0; i < student.length; i++){
-	    	if(student[i] != null) {
-	        System.out.println(student[i]);
+	    	System.out.println(student[i]);
 	    }
-	    }
-	}
-	}
+}
+}
