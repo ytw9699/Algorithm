@@ -31,6 +31,7 @@ package Arraylist;
 	        for (int value : numbers) {//조금 더 편리한 방법으로 탐색
 	            System.out.println(value);
 	        }
+	        
         System.out.println("for");//조금 더 편리한 방법으로 탐색
 	        for (int i = 0; i < numbers.size(); i++) {
 	            System.out.println(numbers.get(i));
