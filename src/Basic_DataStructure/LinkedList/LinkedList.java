@@ -2,10 +2,10 @@ package LinkedList;
 public class LinkedList {
    private Node head;// 첫번째 노드를 가리키는 필드,변수,참조값
    private Node tail;// 마지막 노드를 가리키는 필드,변수
-   private int size = 0; // 몇개의 엘리먼트
+   private int size = 0; //엘리먼트 갯수
    
    private class Node{//링크드 리스트에서는 하나의 엘리먼트가(노드)하나의 객체다
-   	//그객체를 LinkedList의 innerclass로 정의
+   	//그객체를 LinkedList의 innerclass로 정의했다.
    	
        private Object data;//데이터가 저장될 변수-실제 저장값
       
@@ -70,8 +70,7 @@ public class LinkedList {
            size++;
            
            if(newNode.next == null){//마지막 꼬리에 추가시 검사사항
-               tail = newNode;
-        //혹시나 새로운 노드의 다음 노드가 없다면 새로운 노드가 마지막 노드이기 때문에 tail로 지정.
+               tail = newNode;//추가한 노드가 마지막 노드이기 때문에 tail로 지정.
            }
        }
    }
@@ -84,8 +83,8 @@ public class LinkedList {
        while(temp.next != null){//head의 다음 노드가 없을 때까지 반복문을 실행
            str += temp.data + ",";
            temp = temp.next;
-       }//마지막 노드는 다음 노드가 없기 때문에 아래의 구문은 마지막 노드는 제외.
-       str += temp.data;// 마지막 노드를 출력결과에 포함
+       }
+       str += temp.data;//마지막 노드를 출력결과에 포함
        return str+"]";
    }
    
@@ -111,7 +110,7 @@ public class LinkedList {
        Node todoDeleted = temp.next;// 삭제 노드를 todoDeleted에 기록
        // 삭제 노드를 지금 제거하면 삭제 앞 노드와 삭제 뒤 노드를 연결할 수 없다.  
        
-       temp.next = temp.next.next;
+       temp.next = temp.next.next;//삭제노드 전과 후를 연결
        
        // 삭제된 데이터를 리턴하기 위해서 returnData에 데이터를 저장합니다.
        Object returnData = todoDeleted.data; 
@@ -126,11 +125,9 @@ public class LinkedList {
    
    public Object removeLast(){
        return remove(size-1);
-       //tail값만 삭제해서는 안됨
-       //이렇게 처음부터 노드 값을 찾아가서 복잡하게 삭제를 해줘야한다 
-       //왜냐면 삭제하기 전 노드의 링크 연결을 끊어줘야하니까..
-       //이거는 어레이리스트랑 장단점이 반대인거다//추가삭제시 노드를 계속찾아가야함..
-       //그래서 양방향 연결리스트가 나온거
+       //tail값만 삭제해서는 안되고 삭제전 노드를 tail로 지정해야한다.
+       //이거는 어레이리스트랑 반대로 추가가 삭제시 노드를 계속 탐색 해가야한다.
+       //이러한 단점때문에 양방향 연결리스트가 나왔다.
    }
    public int size(){//리스트가 가진 데이터의수
        return size;
@@ -167,7 +164,7 @@ public class LinkedList {
         
        ListIterator(){
            next = head;//next변수 초기화
-           nextIndex = 0;
+           nextIndex = 0;//인덱스 초기화
        }
         
        public Object next() {
@@ -182,12 +179,12 @@ public class LinkedList {
        }
         
        public void add(Object input){//이터레이터 반복 과정중 노드를 추가하는 경우
-       	//이 로직은 더좋은 로직이 있을수 있음 전체적인 흐름,어레이 리스트랑 뭐가 다른지 비교차원 접근
+       	//이 로직은 더좋은 로직이 있을수 있다. 전체적인 흐름차원에서 어레이 리스트랑 뭐가 다른지 비교차원 접근해보자
            Node newNode = new Node(input);
            
            if(lastReturned == null){//처음위치 추가//한번도 next메소드 실행 안한상태
            	head= newNode;//추가노드를 헤드로 지정
-           	newNode.next = next;//원래 헤드를 추가한 노드의 네스트로 지정
+           	newNode.next = next;//원래 헤드를 추가한 노드의 next로 지정
            } else {//lastReturned가 설정되었다면 중간 또는 끝에 추가하는경우
                lastReturned.next = newNode;
                if(next != null) {//마지막까지 탐색을 안했다면
@@ -207,8 +204,7 @@ public class LinkedList {
            }
            LinkedList.this.remove(nextIndex-1);//LinkedList 클래스의 remove임
            //그러나 이 remove를 이용하면 node 메소드를 통해 또 반복적으로 순회를 해서 찾아가서 비효율적
-           nextIndex--;//단방향 연결리스트에서는 prev가없어서 이렇게 비효
-           
+           nextIndex--;//단방향 연결리스트에서는 prev가 없어서 이렇게 비효율적이다.
        }
 	}
 }
