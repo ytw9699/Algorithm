@@ -89,16 +89,19 @@ public class LinkedList {
    }
    
    public Object removeFirst(){//첫번째 노드 삭제
-       Node temp = head;//첫번째 노드를 temp로 지정
-       head = temp.next;//head의 값을 두번째 노드로 변경.
-       
-       Object returnData = temp.data;//데이터 삭제 전에 리턴할 값을 임시 변수에 담자.
-       
-       temp = null;
-       
-       size--;
-       
-       return returnData;
+	   if(head != null) {
+	       Node temp = head;//첫번째 노드를 temp로 지정
+	       head = temp.next;//head의 값을 두번째 노드로 변경.
+	       
+	       Object returnData = temp.data;//데이터 삭제 전에 리턴할 값을 임시 변수에 담자.
+	       
+	       temp = null;//null로 지정해서 가비지 컬렌션이 됨
+	       
+	       size--;
+	       
+	       return returnData;
+	   }else 
+		   return (Object)"삭제할 노드가 없습니다";
    }
    
    public Object remove(int k){
@@ -167,15 +170,15 @@ public class LinkedList {
            nextIndex = 0;//인덱스 초기화
        }
         
+       public boolean hasNext() {//다음 노드가 있는가
+           return nextIndex < size();
+       }
+       
        public Object next() {
            lastReturned = next;
            next = next.next; //next의 참조값이 기존 next.next로 변경. 
            nextIndex++;
            return lastReturned.data;
-       }
-        
-       public boolean hasNext() {//다음 노드가 있는가
-           return nextIndex < size();
        }
         
        public void add(Object input){//이터레이터 반복 과정중 노드를 추가하는 경우

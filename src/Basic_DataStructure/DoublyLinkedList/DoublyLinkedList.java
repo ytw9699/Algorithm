@@ -3,13 +3,12 @@ package DoublyLinkedList;
 public class DoublyLinkedList {
     private Node head;// 첫번째 노드를 가리키는 필드,변수,참조값
     private Node tail;// 마지막 노드를 가리키는 필드,변수
-    private int size = 0; // 몇개의 엘리먼트
+    private int size = 0; //엘리먼트 갯수
     
     public class Node{//링크드 리스트에서는 하나의 엘리먼트가(노드)하나의 객체다
     	//그객체를 LinkedList의 innerclass로 정의
     	
         private Object data;//데이터가 저장될 변수-실제 저장값
-       
         private Node next;//다음 노드를 가리키는 변수,참조값
         private Node prev;//이전 노드
         
@@ -54,10 +53,8 @@ public class DoublyLinkedList {
         }
     }
     Node node(int index) {//이 메소드가 양방향연결리스트의 장점을 보여줌 탐색의 효율성!
-    	//인덱스의 위치에 따라서 탐색 방향을 달리 함. 덕분에 탐색 시간을 두배로 향상
-    	//여러곳에서 내부적으로 node를 조회하기 위해 씀
-    	//원하는 인덱스의 노드를 가져오기는 하지만 외부에서 가져다쓰지는 못하게 public하지말자
-	    if (index < size / 2) {//노드의 인덱스가 전체 노드 수의 반보다 큰지 작은지 계산
+    	//인덱스의 위치에 따라서 탐색 방향을 달리 함. 탐색 시간을 두배로 향상
+	    if (index < size / 2) {//노드의 인덱스가 전체 노드 수의 반보다 작다면
 	        Node x = head;//head부터 next를 이용해서 인덱스에 해당하는 노드 탐색 시작 
 	        for (int i = 0; i < index; i++) {
 	            x = x.next;
@@ -95,8 +92,8 @@ public class DoublyLinkedList {
             size++;
             
             if(newNode.next == null){//마지막 꼬리에 추가시 검사사항
+            	//추가한 노드가 마지막 노드이기 때문에 tail로 지정.
                 tail = newNode;
-         //혹시나 새로운 노드의 다음 노드가 없다면 새로운 노드가 마지막 노드이기 때문에 tail로 지정.
             }
         }
     }
@@ -109,25 +106,28 @@ public class DoublyLinkedList {
         while(temp.next != null){//head의 다음 노드가 없을 때까지 반복문을 실행
             str += temp.data + ",";
             temp = temp.next;
-        }//마지막 노드는 다음 노드가 없기 때문에 아래의 구문은 마지막 노드는 제외.
+        }
         str += temp.data;// 마지막 노드를 출력결과에 포함
         return str+"]";
     }
     
     public Object removeFirst(){//첫번째 노드 삭제
-        Node temp = head;//첫번째 노드를 temp로 지정
-        head = temp.next;//head의 값을 두번째 노드로 변경.
-        
-        Object returnData = temp.data;//데이터 삭제 전에 리턴할 값을 임시 변수에 담자.
-        
-        temp = null;//null로 지정해서 가비지 컬렌션이 됨
-        
-        if(head != null) {
-        	head.prev = null;//새로운 헤드가 됬으니 이전노드를 삭제해주는거
-        }
-        size--;
-        
-        return returnData;
+    	if(head != null) {
+	        Node temp = head;//첫번째 노드를 temp로 지정
+	        head = temp.next;//head의 값을 두번째 노드로 변경.
+	        
+	        Object returnData = temp.data;//데이터 삭제 전에 리턴할 값을 임시 변수에 담자.
+	        
+	        temp = null;//null로 지정해서 가비지 컬렌션이 됨
+	        
+	        if(head != null) {
+	        	head.prev = null;//새로운 헤드가 됬으니 이전노드를 삭제해주는거
+	        }
+	        size--;
+	        
+	        return returnData;
+    	}else 
+    		return (Object)"삭제할 노드가 없습니다";
     }
     
     public Object remove(int k){
@@ -155,15 +155,16 @@ public class DoublyLinkedList {
         return returnData;
     }
     
-    public Object removeLast(){//테일값만 찾아서 간단히 삭제 상수시간걸림
+    public Object removeLast(){//테일값만 찾아서 간단히 삭제하면 상수시간 걸린다.
+     if(tail != null){
     	Node todoDeleted = tail;
     	tail = tail.prev;
-    	if(tail != null){
-    	tail.next = null;
-    	}
-    	else {
-    		head = null;
-    	}
+	    	if(tail != null){
+	    		tail.next = null;
+	    	}
+	    	else {
+	    		head = null;
+	    	}
         Object returnData = todoDeleted.data; 
     	 
     	todoDeleted = null;
@@ -171,6 +172,10 @@ public class DoublyLinkedList {
     	size--;
     	 
         return returnData;
+        
+     }else {
+    	 return (Object)"삭제할 노드가 없습니다";
+     }
     }
     public int size(){//리스트가 가진 데이터의수
         return size;
@@ -237,7 +242,7 @@ public class DoublyLinkedList {
         }
          
         public void add(Object input){//이터레이터 반복 과정중 노드를 추가하는 경우
-        	//이 로직은 더좋은 로직이 있을수 있음 전체적인 흐름,어레이 리스트랑 뭐가 다른지 비교차원 접근
+       //이 로직은 더좋은 로직이 있을수 있다. 전체적인 흐름차원에서 어레이 리스트랑 뭐가 다른지 비교차원 접근해보자
             Node newNode = new Node(input);
             
             if(lastReturned == null){//처음위치 추가//한번도 next메소드 실행 안한상태
@@ -271,19 +276,19 @@ public class DoublyLinkedList {
     	        head = n;
     	        head.prev = null;//연결끊기
     	        lastReturned = null;
-    	    } else {//중간과 끝의 삭제경우
+    	    }else {//중간과 끝의 삭제경우
     	        p.next = next;
     	        lastReturned.prev = null;//연결끊기
     	    }
     	    if (n == null) {//맨끝에것을 삭제할경우 null이됨
     	        tail = p;
     	        tail.next = null;
-    	    } else {//처음과 중간의 삭제경우
+    	    }else {//처음과 중간의 삭제경우
     	        n.prev = p;
     	    }
     	    if (next == null) {//맨끝에것을 삭제할경우 null이됨
     	        lastReturned = tail;
-    	    } else {//처음과 중간의 삭제경우
+    	    }else {//처음과 중간의 삭제경우
     	        lastReturned = next.prev;
     	    }
     	    size--;

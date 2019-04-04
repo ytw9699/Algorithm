@@ -5,13 +5,13 @@ public class LinkedListMain {
         LinkedList numbers = new LinkedList();
         
          numbers.addFirst(30);//맨 앞에 추가 
-         	System.out.println(numbers);//출력
          numbers.addFirst(20);
          numbers.addFirst(10);
+         	System.out.println(numbers);//출력
+         numbers.addLast(40);//맨 뒤에 추가
+         numbers.addLast(50);
+         numbers.addLast(60);
          	System.out.println(numbers);
-         numbers.addLast(10);//맨 뒤에 추가
-         numbers.addLast(20);
-         numbers.addLast(30);
          
          numbers.add(2,25);//인덱스 2위치에 25추가
          System.out.println(numbers.node(2));//인덱스 2번째값을가져와보자
