@@ -4,7 +4,7 @@
 int main(void)
 {
 	// List의 생성 및 초기화 /////////////////////////////
-	List list;//
+	List list;
 	int data;
 	ListInit(&list);
 
