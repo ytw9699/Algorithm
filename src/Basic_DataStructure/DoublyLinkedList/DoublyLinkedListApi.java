@@ -1,5 +1,6 @@
 package DoublyLinkedList;
 
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.ListIterator;
 
@@ -14,7 +15,8 @@ public class DoublyLinkedListApi {
 		LinkedList.add(2);
 		LinkedList.add(4);
 		LinkedList.add(5);
-	
+		
+		//Collections.sort(LinkedList);//정렬기능
 		ListIterator i = LinkedList.listIterator();
 		
 		while(i.hasNext()){
