@@ -4,7 +4,7 @@ public class ArrayStack {
 	
 	int topIndex = -1;//현재 탑의 인덱스를 -1 초기화//데이터가 없는 상태
 	
-    private Object[] StackArr = new Object[100];
+    private Object[] StackArr = new Object[100];//배열의 크기는 100으로 일단 제한
     
 	public Object push(Object data) {
 		StackArr[++topIndex] = data;

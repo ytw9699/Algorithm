@@ -5,7 +5,7 @@ public class ArrayStackMain {
     	
     	ArrayStack st = new ArrayStack();
     	
-    	st.push("0");
+    	st.push("0");//삽입
 		st.push("1");
 		st.push("2");
 		
@@ -16,7 +16,7 @@ public class ArrayStackMain {
 		System.out.println("= MyStack1 pop=");
 		
 		while(!st.empty()) {
-			System.out.println(st.pop());
+			System.out.println(st.pop());//삭제후 리턴
 		}
 		
     }
