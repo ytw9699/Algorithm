@@ -1,9 +1,9 @@
 package Stack;
 
-public class Main1 {
+public class ArrayStackMain {
     public static void main(String[] args) {
     	
-    	MyStack1 st = new MyStack1();
+    	ArrayStack st = new ArrayStack();
     	
     	st.push("0");
 		st.push("1");
