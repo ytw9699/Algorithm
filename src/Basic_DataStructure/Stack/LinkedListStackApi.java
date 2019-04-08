@@ -1,8 +1,7 @@
 package Stack;
 import java.util.LinkedList;
-
 public class LinkedListStackApi {
-    public static void main(String[] args) {//기존의 더블링크드 리스트 api를 활용한 stack
+    public static void main(String[] args) {//기존의 더블링크드 리스트 api를 이용한 stack
     	LinkedList<String> st = new LinkedList();
     	
     	st.addFirst("1");
