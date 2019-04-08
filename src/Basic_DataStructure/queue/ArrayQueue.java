@@ -1,8 +1,8 @@
 package queue;
 public class ArrayQueue {//배열 기반 원형 큐
 
-		int front=0;//입구 0으로 초기화
-		int rear=0;//출구 0으로 초기화
+		int front=0;//출구 0으로 초기화
+		int rear=0;//입구 0으로 초기화
 		int QUE_LEN=4;//배열 크기
 		
 		Object[] queArr = new Object[QUE_LEN];
