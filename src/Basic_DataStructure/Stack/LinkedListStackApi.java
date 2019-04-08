@@ -16,6 +16,7 @@ public class LinkedListStackApi {
 		
 		while(!(st.size()==0)) {
 			System.out.println(st.removeFirst());
+			//Stack에 저장된 첫번째 요소를 읽어오고 삭제한다
 		}
 		
     	st.push("1");
