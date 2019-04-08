@@ -1,6 +1,5 @@
 package Stack;
 import java.util.EmptyStackException;
-
 import LinkedList.LinkedList;
 public class MyStack4 extends LinkedList{
 	//직접 구현 링크드 리스트 기반
