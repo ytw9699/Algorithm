@@ -2,7 +2,7 @@ package Stack;
 
 import java.util.Stack;
 
-public class Main0 {
+public class StackApi {
     public static void main(String[] args) {
     	Stack<String> st = new Stack();//벡터를 구현한 스택
     	
