@@ -1,11 +1,9 @@
 package queue;
-
 import java.util.LinkedList;
-
-public class Main0 {
+public class LinkedListQueueApi {
     public static void main(String[] args) {
-    	LinkedList<String> queue = new LinkedList();//큐 인터페이스를 구현한 LinkedList
-    	
+    	LinkedList<String> queue = new LinkedList();
+    	//큐 인터페이스를 구현한 LinkedList
     	queue.offer("0");
     	queue.offer("1");
     	queue.offer("2");

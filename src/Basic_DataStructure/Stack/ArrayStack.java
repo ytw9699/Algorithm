@@ -16,7 +16,6 @@ public class ArrayStack {
 		Object data = peek();// Stack에 저장된 마지막 요소를 읽어온다.
 		
 		topIndex--;//탑 인덱스의 연산을 통해 삭제를 해주는것과 같은 결과를 낸다
-			//어레이 리스트 기반으로 하면 삭제를 위해 앞뒤땡겨주는 연산까지하게된다.
 		return data;
 	}
 	
