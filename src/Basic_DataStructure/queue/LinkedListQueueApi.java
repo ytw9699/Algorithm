@@ -1,5 +1,6 @@
 package queue;
 import java.util.LinkedList;
+
 public class LinkedListQueueApi {
     public static void main(String[] args) {
     	LinkedList<String> queue = new LinkedList();
