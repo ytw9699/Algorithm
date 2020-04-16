@@ -1,14 +1,14 @@
-package b_±âº»ÀÚ·á±¸Á¶;
+ï»¿package b_ê¸°ë³¸ìë£Œêµ¬ì¡°;
 import java.util.Scanner;
-// ÀÔ·Â ¹ŞÀº 10Áø¼ö¸¦ 2Áø¼ö ~36Áø¼ö·Î ±â¼öº¯È¯ÇÏ¿© ³ªÅ¸³¿(À­ÀÚ¸®ºÎÅÍ ¹è¿­¿¡ ÀúÀå)
-class l_CardConv_02_06_¹İ´ë·ÎÃâ·Â2 {
-	// Á¤¼ö x¸¦ rÁø¼ö·Î º¯È¯ÇÏ¿© ¹è¿­ d¿¡ À­ÀÚ¸®ºÎÅÍ ÀúÀåÇÏ°í ÀÚ¸´¼ö¸¦ ¹İÈ¯
+// ì…ë ¥ ë°›ì€ 10ì§„ìˆ˜ë¥¼ 2ì§„ìˆ˜ ~36ì§„ìˆ˜ë¡œ ê¸°ìˆ˜ë³€í™˜í•˜ì—¬ ë‚˜íƒ€ëƒ„(ìœ—ìë¦¬ë¶€í„° ë°°ì—´ì— ì €ì¥)
+class l_CardConv_02_06_ë°˜ëŒ€ë¡œì¶œë ¥2 {
+	// ì •ìˆ˜ xë¥¼ rì§„ìˆ˜ë¡œ ë³€í™˜í•˜ì—¬ ë°°ì—´ dì— ìœ—ìë¦¬ë¶€í„° ì €ì¥í•˜ê³  ìë¦¿ìˆ˜ë¥¼ ë°˜í™˜
 	static int cardConv(int x, int r, char[] d) {
-		int digits = 0;// º¯È¯ µÚÀÇ ÀÚ¸´¼ö
+		int digits = 0;// ë³€í™˜ ë’¤ì˜ ìë¦¿ìˆ˜
 		String dchar = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 		do {
-			d[digits++] = dchar.charAt(x % r); // r·Î ³ª´« ³ª¸ÓÁö¸¦ ÀúÀå
+			d[digits++] = dchar.charAt(x % r); // rë¡œ ë‚˜ëˆˆ ë‚˜ë¨¸ì§€ë¥¼ ì €ì¥
 			x /= r;
 		} while (x != 0);
 
@@ -22,32 +22,32 @@ class l_CardConv_02_06_¹İ´ë·ÎÃâ·Â2 {
 
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
-		int no; // º¯È¯ÇÏ´Â Á¤¼ö
-		int cd; // ±â¼ö
-		int dno; // º¯È¯ µÚÀÇ ÀÚ¸´¼ö
-		int retry; // ÇÑ ¹ø ´õ?
-		char[] cno = new char[32]; // º¯È¯ µÚÀÇ °¢ ÀÚ¸®¸¦ ÀúÀåÇÏ´Â ¹®ÀÚÀÎ ¹è¿­
+		int no; // ë³€í™˜í•˜ëŠ” ì •ìˆ˜
+		int cd; // ê¸°ìˆ˜
+		int dno; // ë³€í™˜ ë’¤ì˜ ìë¦¿ìˆ˜
+		int retry; // í•œ ë²ˆ ë”?
+		char[] cno = new char[32]; // ë³€í™˜ ë’¤ì˜ ê° ìë¦¬ë¥¼ ì €ì¥í•˜ëŠ” ë¬¸ìì¸ ë°°ì—´
 
-		System.out.println("10Áø¼ö¸¦ ±â¼öº¯È¯ÇÕ´Ï´Ù.");
+		System.out.println("10ì§„ìˆ˜ë¥¼ ê¸°ìˆ˜ë³€í™˜í•©ë‹ˆë‹¤.");
 		do {
 			do {
-				System.out.print("º¯È¯ÇÏ´Â À½ÀÌ ¾Æ´Ñ Á¤¼ö£º");
+				System.out.print("ë³€í™˜í•˜ëŠ” ìŒì´ ì•„ë‹Œ ì •ìˆ˜ï¼š");
 				no = stdIn.nextInt();
 			} while (no < 0);
 
 			do {
-				System.out.print("¾î¶² Áø¼ö·Î º¯È¯ÇÒ±î¿ä? (2~36)£º");
+				System.out.print("ì–´ë–¤ ì§„ìˆ˜ë¡œ ë³€í™˜í• ê¹Œìš”? (2~36)ï¼š");
 				cd = stdIn.nextInt();
 			} while (cd < 2 || cd > 36);
 
-			dno = cardConv(no, cd, cno); // no¸¦ cdÁø¼ö·Î º¯È¯
+			dno = cardConv(no, cd, cno); // noë¥¼ cdì§„ìˆ˜ë¡œ ë³€í™˜
 
-			System.out.print(cd + "Áø¼ö·Î´Â ");
-			for (int i = 0; i < dno; i++) // À­ÀÚ¸®ºÎÅÍ Â÷·Ê·Î ³ªÅ¸³¿
+			System.out.print(cd + "ì§„ìˆ˜ë¡œëŠ” ");
+			for (int i = 0; i < dno; i++) // ìœ—ìë¦¬ë¶€í„° ì°¨ë¡€ë¡œ ë‚˜íƒ€ëƒ„
 				System.out.print(cno[i]);
-			System.out.println("ÀÔ´Ï´Ù.");
+			System.out.println("ì…ë‹ˆë‹¤.");
 
-			System.out.print("ÇÑ¹ø ´õ ÇÒ±î¿ä? (1.¿¹/0.¾Æ´Ï¿À)£º");
+			System.out.print("í•œë²ˆ ë” í• ê¹Œìš”? (1.ì˜ˆ/0.ì•„ë‹ˆì˜¤)ï¼š");
 			retry = stdIn.nextInt();
 		} while (retry == 1);
 	}

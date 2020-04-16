@@ -1,4 +1,4 @@
-package b_2957;
+ï»¿package b_2957;
 
 import java.util.Scanner;
 public class Main9 {
@@ -7,16 +7,16 @@ public class Main9 {
    
    private static int insert(int num, int idx) {
        c++;
-       if (num < binaryTree[idx]) { // »õ·Î µé¾î¿Â ¼ıÀÚ°¡ ³ëµåº¸´Ù ÀÛ´Ù¸é
-           if (binaryTree[idx * 2] == 0) { // ¿ŞÂÊ ÀÚ½ÄÀÌ ¾ø´Ù¸é
+       if (num < binaryTree[idx]) { // ìƒˆë¡œ ë“¤ì–´ì˜¨ ìˆ«ìê°€ ë…¸ë“œë³´ë‹¤ ì‘ë‹¤ë©´
+           if (binaryTree[idx * 2] == 0) { // ì™¼ìª½ ìì‹ì´ ì—†ë‹¤ë©´
                binaryTree[idx * 2] = num;
-           } else { //¿ŞÂÊ ÀÚ½ÄÀÌ ÀÖÀ¸¹Ç·Î ¿ŞÂÊÀÚ½ÄÀ» ±âÁØÀ¸·Î ÇÔ¼ö È£Ãâ
+           } else { //ì™¼ìª½ ìì‹ì´ ìˆìœ¼ë¯€ë¡œ ì™¼ìª½ìì‹ì„ ê¸°ì¤€ìœ¼ë¡œ í•¨ìˆ˜ í˜¸ì¶œ
                insert(num, idx * 2);
            }
-       } else if (num > binaryTree[idx]) { // »õ·Î µé¾î¿Â ¼ıÀÚ°¡ ³ëµåº¸´Ù Å©´Ù¸é
-           if (binaryTree[idx * 2 + 1] == 0) { // ¿À¸¥ÂÊ ÀÚ½ÄÀÌ ¾ø´Ù¸é
+       } else if (num > binaryTree[idx]) { // ìƒˆë¡œ ë“¤ì–´ì˜¨ ìˆ«ìê°€ ë…¸ë“œë³´ë‹¤ í¬ë‹¤ë©´
+           if (binaryTree[idx * 2 + 1] == 0) { // ì˜¤ë¥¸ìª½ ìì‹ì´ ì—†ë‹¤ë©´
                binaryTree[idx * 2 + 1] = num;
-           } else { //¿À¸¥ÂÊ ÀÚ½ÄÀÌ ÀÖÀ¸¹Ç·Î ¿À¸¥ÂÊ ÀÚ½ÄÀ» ±âÁØÀ¸·Î ÇÔ¼ö È£Ãâ
+           } else { //ì˜¤ë¥¸ìª½ ìì‹ì´ ìˆìœ¼ë¯€ë¡œ ì˜¤ë¥¸ìª½ ìì‹ì„ ê¸°ì¤€ìœ¼ë¡œ í•¨ìˆ˜ í˜¸ì¶œ
                insert(num, idx * 2 + 1);
            }
        }
@@ -25,7 +25,7 @@ public class Main9 {
    public static void main(String[] args) {
        Scanner sc = new Scanner(System.in);
        StringBuilder sb = new StringBuilder();
-       int N = sc.nextInt(); // ¼ö¿­ÀÇ Å©±â
+       int N = sc.nextInt(); // ìˆ˜ì—´ì˜ í¬ê¸°
        
        binaryTree = new int[30000];
        

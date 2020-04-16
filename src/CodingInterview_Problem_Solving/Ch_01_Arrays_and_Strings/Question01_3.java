@@ -1,4 +1,4 @@
-package Ch_01_Arrays_and_Strings;
+ï»¿package Ch_01_Arrays_and_Strings;
 
 import java.util.Scanner;
 
@@ -7,33 +7,33 @@ public class Question01_3 {
     	
     	Scanner StringValue = new Scanner(System.in);
     	
-    	System.out.println("¹®ÀÚ¿­À» ÀÔ·ÂÇØÁÖ¼¼¿ä");
+    	System.out.println("ë¬¸ìì—´ì„ ì…ë ¥í•´ì£¼ì„¸ìš”");
     	
     	String value = StringValue.nextLine();
     			
     	boolean result = isUniqueChars(value);
     	
     	if (result) {
-    		System.out.println("¹®ÀÚ¿­ÀÌ Áßº¹µÇÁö ¾Ê¾Ò½À´Ï´Ù.");
+    		System.out.println("ë¬¸ìì—´ì´ ì¤‘ë³µë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
     	}else {
-    		System.out.println("¹®ÀÚ¿­ÀÌ Áßº¹ µÇ¾ú½À´Ï´Ù.");
+    		System.out.println("ë¬¸ìì—´ì´ ì¤‘ë³µ ë˜ì—ˆìŠµë‹ˆë‹¤.");
     	}
     }
     
     static boolean isUniqueChars(String str) {
-    	//¹®ÀÚ¿­ ³»ÀÇ °¢ ¹®ÀÚ¸¦ ´Ù¸¥ ¸ğµç ¹®ÀÚ¿Í ºñ±³(¾Æ½ºÅ°,À¯´ÏÄÚµå¹®ÀÚ¿­ ¸ğµÎ)
+    	//ë¬¸ìì—´ ë‚´ì˜ ê° ë¬¸ìë¥¼ ë‹¤ë¥¸ ëª¨ë“  ë¬¸ìì™€ ë¹„êµ(ì•„ìŠ¤í‚¤,ìœ ë‹ˆì½”ë“œë¬¸ìì—´ ëª¨ë‘)
 
-    	String[] strings = str.split("");//½ºÆ®¸µ°ª ¹Ş¾Æ¼­ ¹è¿­·Î ³ª´²ÁÖ°í
+    	String[] strings = str.split("");//ìŠ¤íŠ¸ë§ê°’ ë°›ì•„ì„œ ë°°ì—´ë¡œ ë‚˜ëˆ ì£¼ê³ 
         
         //System.out.println(Arrays.toString(strings));
 
         for(int i=0; i<strings.length-1; i++) {
           for(int j=i+1; j<strings.length; j++ )
         	if(strings[i].equals(strings[j])) {
-                return false;//false´Â Áßº¹µÇ´Â°Í
+                return false;//falseëŠ” ì¤‘ë³µë˜ëŠ”ê²ƒ
             }
         }
-        return true;//Áßº¹¾ÈµÊ
+        return true;//ì¤‘ë³µì•ˆë¨
     }
 
 }

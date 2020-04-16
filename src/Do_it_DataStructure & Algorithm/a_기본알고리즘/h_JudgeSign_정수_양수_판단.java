@@ -1,19 +1,19 @@
-package a_±âº»¾Ë°í¸®Áò;
+ï»¿package a_ê¸°ë³¸ì•Œê³ ë¦¬ì¦˜;
 import java.util.Scanner;
-// ÀÔ·ÂÇÑ Á¤¼ı°ªÀÌ ¾ç¼öÀÎÁö À½¼öÀÎÁö 0ÀÎÁö ÆÇ´ÜÇÕ´Ï´Ù.
+// ì…ë ¥í•œ ì •ìˆ«ê°’ì´ ì–‘ìˆ˜ì¸ì§€ ìŒìˆ˜ì¸ì§€ 0ì¸ì§€ íŒë‹¨í•©ë‹ˆë‹¤.
 
-class h_JudgeSign_Á¤¼ö_¾ç¼ö_ÆÇ´Ü {
+class h_JudgeSign_ì •ìˆ˜_ì–‘ìˆ˜_íŒë‹¨ {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		System.out.print("Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä.£º");
+		System.out.print("ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”.ï¼š");
 		int n = stdIn.nextInt();
 
 		if (n > 0)
-			System.out.println("ÀÌ ¼ö´Â ¾ç¼öÀÔ´Ï´Ù.");
+			System.out.println("ì´ ìˆ˜ëŠ” ì–‘ìˆ˜ì…ë‹ˆë‹¤.");
 		else if (n < 0)
-			System.out.println("ÀÌ ¼ö´Â À½¼öÀÔ´Ï´Ù.");
+			System.out.println("ì´ ìˆ˜ëŠ” ìŒìˆ˜ì…ë‹ˆë‹¤.");
 		else
-			System.out.println("ÀÌ ¼ö´Â 0ÀÔ´Ï´Ù.");
+			System.out.println("ì´ ìˆ˜ëŠ” 0ì…ë‹ˆë‹¤.");
 	}
 }

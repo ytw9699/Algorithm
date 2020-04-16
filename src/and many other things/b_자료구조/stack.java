@@ -1,38 +1,38 @@
-package b_ÀÚ·á±¸Á¶;
+ï»¿package b_ìë£Œêµ¬ì¡°;
 import java.util.*;
 public class stack {
 	public static void main(String[] args) {
 		
 		 Scanner sc = new Scanner(System.in);
 		 
-		 int n = sc.nextInt(); // ¸í·ÉÀÇ ¼ö
-		 int[] arr = new int[n]; // ÀÛ¾÷À» À§ÇÑ ¹è¿­ 
-		 int top = -1; // ¹è¿­ À§Ä¡ 
-		 String input; // ¸í·É
+		 int n = sc.nextInt(); // ëª…ë ¹ì˜ ìˆ˜
+		 int[] arr = new int[n]; // ì‘ì—…ì„ ìœ„í•œ ë°°ì—´ 
+		 int top = -1; // ë°°ì—´ ìœ„ì¹˜ 
+		 String input; // ëª…ë ¹
 		 
 		 for (int i=0; i<n; i++) { 
 			 
 			 input = sc.next(); 
 			 
-			 if (input.equals("push")) { // push X: Á¤¼ö X¸¦ ½ºÅÃ¿¡ ³Ö´Â ¿¬»êÀÌ´Ù.
+			 if (input.equals("push")) { // push X: ì •ìˆ˜ Xë¥¼ ìŠ¤íƒì— ë„£ëŠ” ì—°ì‚°ì´ë‹¤.
 				 top++; 
 				 arr[top] = sc.nextInt(); 
 				 } 
-			 else if (input.equals("pop")) { //pop: ½ºÅÃ¿¡¼­ °¡Àå À§¿¡ ÀÖ´Â Á¤¼ö¸¦ »©°í, ±× ¼ö¸¦ Ãâ·ÂÇÑ´Ù. ¸¸¾à ½ºÅÃ¿¡ µé¾îÀÖ´Â Á¤¼ö°¡ ¾ø´Â °æ¿ì¿¡´Â -1À» Ãâ·ÂÇÑ´Ù.  
+			 else if (input.equals("pop")) { //pop: ìŠ¤íƒì—ì„œ ê°€ì¥ ìœ„ì— ìˆëŠ” ì •ìˆ˜ë¥¼ ë¹¼ê³ , ê·¸ ìˆ˜ë¥¼ ì¶œë ¥í•œë‹¤. ë§Œì•½ ìŠ¤íƒì— ë“¤ì–´ìˆëŠ” ì •ìˆ˜ê°€ ì—†ëŠ” ê²½ìš°ì—ëŠ” -1ì„ ì¶œë ¥í•œë‹¤.  
 			 if (top == -1) {
 			  System.out.println(-1); 
 			 }else { 
 			System.out.println(arr[top]);
 			top--; 
 			} 
-			} else if (input.equals("size")) { // ½ºÅÃ¿¡ µé¾îÀÖ´Â Á¤¼öÀÇ °³¼ö¸¦ Ãâ·ÂÇÑ´Ù. 
+			} else if (input.equals("size")) { // ìŠ¤íƒì— ë“¤ì–´ìˆëŠ” ì •ìˆ˜ì˜ ê°œìˆ˜ë¥¼ ì¶œë ¥í•œë‹¤. 
 			 System.out.println(top+1); } 
-			else if (input.equals("empty")) // ½ºÅÃÀÌ ºñ¾îÀÖÀ¸¸é 1, ¾Æ´Ï¸é 0À» Ãâ·ÂÇÑ´Ù. 
+			else if (input.equals("empty")) // ìŠ¤íƒì´ ë¹„ì–´ìˆìœ¼ë©´ 1, ì•„ë‹ˆë©´ 0ì„ ì¶œë ¥í•œë‹¤. 
 				{ if (top == -1){
 					System.out.println(1); 
 					} else {
 						System.out.println(0); } 
-				} else if (input.equals("top")) // ½ºÅÃÀÇ °¡Àå À§¿¡ ÀÖ´Â Á¤¼ö¸¦ Ãâ·ÂÇÑ´Ù. (¾ø´Â °æ¿ì¿¡´Â -1) 
+				} else if (input.equals("top")) // ìŠ¤íƒì˜ ê°€ì¥ ìœ„ì— ìˆëŠ” ì •ìˆ˜ë¥¼ ì¶œë ¥í•œë‹¤. (ì—†ëŠ” ê²½ìš°ì—ëŠ” -1) 
 					{ if (top == -1){
 						System.out.println(-1); } else { System.out.println(arr[top]); 
 						}

@@ -1,22 +1,22 @@
-package a_±âº»¾Ë°í¸®Áò;
+ï»¿package a_ê¸°ë³¸ì•Œê³ ë¦¬ì¦˜;
 import java.util.Scanner;
-//1, 2, ¡¦, nÀÇ ÇÕÀ» ±¸ÇÕ´Ï´Ù  (½Ä1 + 2 + ¡¦ + n = 999¶ó°í Ãâ·ÂÇÔ)
-class l_SumForEx_01_07_1ºÎÅÍn±îÁöÀÇÇÕ {
+//1, 2, â€¦, nì˜ í•©ì„ êµ¬í•©ë‹ˆë‹¤  (ì‹1 + 2 + â€¦ + n = 999ë¼ê³  ì¶œë ¥í•¨)
+class l_SumForEx_01_07_1ë¶€í„°nê¹Œì§€ì˜í•© {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		System.out.println("1ºÎÅÍ n±îÁöÀÇ ÇÕÀ» ±¸ÇÕ´Ï´Ù.");
-		System.out.print("nÀÇ °ª£º");
+		System.out.println("1ë¶€í„° nê¹Œì§€ì˜ í•©ì„ êµ¬í•©ë‹ˆë‹¤.");
+		System.out.print("nì˜ ê°’ï¼š");
 		int n = stdIn.nextInt();
 
-		int sum = 0; // ÇÕ
+		int sum = 0; // í•©
 
 		for (int i = 1; i <= n; i++) {
 			if(i < n)
 				System.out.print(i + " + ");
 			else
 				System.out.print(i);
-			sum += i; // sum¿¡ i¸¦ ´õÇÔ
+			sum += i; // sumì— ië¥¼ ë”í•¨
 		}
 		System.out.println(" = " + sum);
 	}

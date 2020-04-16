@@ -1,31 +1,31 @@
-package Ch_01_Arrays_and_Strings;
+ï»¿package Ch_01_Arrays_and_Strings;
 
 public class Question04_1 {	
-	public static boolean checkMaxOneOdd(int[] table) {//È¦¼ö ¹®ÀÚ°¡ ÇÑ°³ÀÌ»óÀÎÁö È®ÀÎÇÑ´Ù
+	public static boolean checkMaxOneOdd(int[] table) {//í™€ìˆ˜ ë¬¸ìê°€ í•œê°œì´ìƒì¸ì§€ í™•ì¸í•œë‹¤
 		boolean foundOdd = false;
 		for (int count : table) {
 			if (count % 2 == 1) {
-				if (foundOdd) {//¶Ç ¹ß°ßµÇ¸é ¸®ÅÏ Æú½ºÇÏÀÚ
+				if (foundOdd) {//ë˜ ë°œê²¬ë˜ë©´ ë¦¬í„´ í´ìŠ¤í•˜ì
 					return false;
 				}
-				foundOdd = true;//È¦¼ö°³ÀÇ Ã³À½À¸·Î ¹®ÀÚ°¡ ¹ß°ßµÇ¸é Åõ¸£·Î ÁÖ°í
+				foundOdd = true;//í™€ìˆ˜ê°œì˜ ì²˜ìŒìœ¼ë¡œ ë¬¸ìê°€ ë°œê²¬ë˜ë©´ íˆ¬ë¥´ë¡œ ì£¼ê³ 
 			}
 		}
 		return true;
 	}
 	
 	public static boolean isPermutationOfPalindrome(String phrase) {
-		int[] table = Common.buildCharFrequencyTable(phrase);//°¢ ¹®ÀÚ¿¡ ´ëÇÑ Ä«¿îÆ®¸¦ ´ãÀº ÀÎÆ®¹è¿­À» ¸®ÅÏÇÑ´Ù
+		int[] table = Common.buildCharFrequencyTable(phrase);//ê° ë¬¸ìì— ëŒ€í•œ ì¹´ìš´íŠ¸ë¥¼ ë‹´ì€ ì¸íŠ¸ë°°ì—´ì„ ë¦¬í„´í•œë‹¤
 		return checkMaxOneOdd(table);
 	}
 	
 	public static void main(String[] args) {
 		String pali = "aabbc";
 		if(isPermutationOfPalindrome(pali)) {
-			System.out.println(pali+"´Â È¸¹® ¼ø¿­ÀÔ´Ï´Ù");
+			System.out.println(pali+"ëŠ” íšŒë¬¸ ìˆœì—´ì…ë‹ˆë‹¤");
 		}
 		else {
-			System.out.println(pali+"´Â È¸¹® ¼ø¿­ÀÌ ¾Æ´Õ´Ï´Ù");
+			System.out.println(pali+"ëŠ” íšŒë¬¸ ìˆœì—´ì´ ì•„ë‹™ë‹ˆë‹¤");
 		}
 		
 		

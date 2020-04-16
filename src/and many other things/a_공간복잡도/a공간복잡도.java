@@ -1,6 +1,6 @@
-package a_°ø°£º¹Àâµµ;
+ï»¿package a_ê³µê°„ë³µì¡ë„;
 import java.util.Scanner;
-public class a°ø°£º¹Àâµµ {
+public class aê³µê°„ë³µì¡ë„ {
 
 	public static void main(String[] args) {
 		Runtime.getRuntime().gc();

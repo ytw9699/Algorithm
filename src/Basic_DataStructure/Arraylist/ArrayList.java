@@ -1,31 +1,31 @@
-package Arraylist;
+ï»¿package Arraylist;
 public class ArrayList {
-    private int size = 0;//¸î°³ÀÇ µ¥ÀÌÅÍ°¡ ¸®½ºÆ®¾È¿¡ µé¾îÀÖ´ÂÁö 0À¸·Î ÃÊ±âÈ­
+    private int size = 0;//ëª‡ê°œì˜ ë°ì´í„°ê°€ ë¦¬ìŠ¤íŠ¸ì•ˆì— ë“¤ì–´ìˆëŠ”ì§€ 0ìœ¼ë¡œ ì´ˆê¸°í™”
     
     private Object[] elementData = new Object[100];
-    //Array List´Â ¹è¿­À» ÀÌ¿ëÇØ¼­ ¸®½ºÆ®¸¦ ±¸ÇöÇÑ´Ù.
-    //ÀÚ¹ÙÀÇ ArrayList´Â °¹¼ö¸¦ ´Ã¸®¸é ÀÚµ¿À¸·Î ´Ã¾î³ªÁö¸¸ 
-    //¿©±â¼­´Â ÆíÀÇ»ó [100]À¸·Î¸¸ ±¸ÇöÇØº¸ÀÚ
-    public boolean add(Object element) {//¹è¿­ ¸¶Áö¸·¿¡ °ªÀ» Ãß°¡
+    //Array ListëŠ” ë°°ì—´ì„ ì´ìš©í•´ì„œ ë¦¬ìŠ¤íŠ¸ë¥¼ êµ¬í˜„í•œë‹¤.
+    //ìë°”ì˜ ArrayListëŠ” ê°¯ìˆ˜ë¥¼ ëŠ˜ë¦¬ë©´ ìë™ìœ¼ë¡œ ëŠ˜ì–´ë‚˜ì§€ë§Œ 
+    //ì—¬ê¸°ì„œëŠ” í¸ì˜ìƒ [100]ìœ¼ë¡œë§Œ êµ¬í˜„í•´ë³´ì
+    public boolean add(Object element) {//ë°°ì—´ ë§ˆì§€ë§‰ì— ê°’ì„ ì¶”ê°€
         elementData[size] = element;
         size++;
         return true;
     }
     public boolean add(int index, Object element) {
-        // ¹è¿­ÀÇ ¿¤¸®¸ÕÆ® Áß°£¿¡ µ¥ÀÌÅÍ¸¦ Ãß°¡ÇÏ±â À§ÇØ¼­´Â 
+        // ë°°ì—´ì˜ ì—˜ë¦¬ë¨¼íŠ¸ ì¤‘ê°„ì— ë°ì´í„°ë¥¼ ì¶”ê°€í•˜ê¸° ìœ„í•´ì„œëŠ” 
 	        for (int i = size - 1; i >= index; i--) {
 	            elementData[i + 1] = elementData[i];
-	          //³¡ÀÇ ¿¤¸®¸ÕÆ® ºÎÅÍ indexÀÇ ¿¤¸®¸ÕÆ®±îÁö µÚ·Î ÇÑÄ­¾¿ ÀÌµ¿½ÃÅ²ÈÄ
+	          //ëì˜ ì—˜ë¦¬ë¨¼íŠ¸ ë¶€í„° indexì˜ ì—˜ë¦¬ë¨¼íŠ¸ê¹Œì§€ ë’¤ë¡œ í•œì¹¸ì”© ì´ë™ì‹œí‚¨í›„
 	        }
-        elementData[index] = element;//¿øÇÏ´Â À§Ä¡¿¡ µ¤¾î¾º¿ì±â
-        size++;// ¿¤¸®¸ÕÆ®ÀÇ ¼ıÀÚ¸¦ 1 Áõ°¡
+        elementData[index] = element;//ì›í•˜ëŠ” ìœ„ì¹˜ì— ë®ì–´ì”Œìš°ê¸°
+        size++;// ì—˜ë¦¬ë¨¼íŠ¸ì˜ ìˆ«ìë¥¼ 1 ì¦ê°€
         return true;
     }
-    public String toString(){//toString °´Ã¼¸¦ »ó¼ÓÇØ¼­ ±¸Çö
+    public String toString(){//toString ê°ì²´ë¥¼ ìƒì†í•´ì„œ êµ¬í˜„
         String str = "[";
 	        for(int i=0; i < size; i++){
 	            str += elementData[i];
-	            if(i < size-1){//¸¶Áö¸·¿¡´Â ÄŞ¸¶ ¾ÈºÙÀÌ±â À§ÇØ
+	            if(i < size-1){//ë§ˆì§€ë§‰ì—ëŠ” ì½¤ë§ˆ ì•ˆë¶™ì´ê¸° ìœ„í•´
 	                str += ",";
 	            }
 	        }
@@ -33,55 +33,55 @@ public class ArrayList {
     }
     public Object remove(int index) {
         Object removed = elementData[index];
-        // ¿¤¸®¸ÕÆ®¸¦ »èÁ¦ÇÏ±â Àü¿¡ »èÁ¦ÇÒ µ¥ÀÌÅÍ¸¦ removed º¯¼ö¿¡ ÀúÀå.
+        // ì—˜ë¦¬ë¨¼íŠ¸ë¥¼ ì‚­ì œí•˜ê¸° ì „ì— ì‚­ì œí•  ë°ì´í„°ë¥¼ removed ë³€ìˆ˜ì— ì €ì¥.
 	        for(int i = index + 1; i <= size - 1; i++) {
 	            elementData[i - 1] = elementData[i];
-	        } /*»èÁ¦µÈ ¿¤¸®¸ÕÆ® ´ÙÀ½ ¿¤¸®¸ÕÆ®ºÎÅÍ ¸¶Áö¸· 
-	    	¿¤¸®¸ÕÆ®±îÁö ¼øÂ÷ÀûÀ¸·Î ÀÌµ¿ÇØ¼­ ºóÀÚ¸®¸¦ Ã¤¿î´Ù.*/
-        size--;//Å©±â¸¦ ÁÙÀÎ´Ù.
-        elementData[size] = null;//¸¶Áö¸· À§Ä¡ÀÇ ¿¤¸®¸ÕÆ®¸¦ »èÁ¦. 
-        return removed;//»èÁ¦µÈ µ¥ÀÌÅÍ ¸®ÅÏ
+	        } /*ì‚­ì œëœ ì—˜ë¦¬ë¨¼íŠ¸ ë‹¤ìŒ ì—˜ë¦¬ë¨¼íŠ¸ë¶€í„° ë§ˆì§€ë§‰ 
+	    	ì—˜ë¦¬ë¨¼íŠ¸ê¹Œì§€ ìˆœì°¨ì ìœ¼ë¡œ ì´ë™í•´ì„œ ë¹ˆìë¦¬ë¥¼ ì±„ìš´ë‹¤.*/
+        size--;//í¬ê¸°ë¥¼ ì¤„ì¸ë‹¤.
+        elementData[size] = null;//ë§ˆì§€ë§‰ ìœ„ì¹˜ì˜ ì—˜ë¦¬ë¨¼íŠ¸ë¥¼ ì‚­ì œ. 
+        return removed;//ì‚­ì œëœ ë°ì´í„° ë¦¬í„´
     }   
-    public Object get(int index) {//¾î·¹ÀÌ ¸®½ºÆ®ÀÇ ÀåÁ¡ : ¹è¿­À» »ç¿ëÇØ °ªÀ» ½±°Ô °¡Á®¿È
+    public Object get(int index) {//ì–´ë ˆì´ ë¦¬ìŠ¤íŠ¸ì˜ ì¥ì  : ë°°ì—´ì„ ì‚¬ìš©í•´ ê°’ì„ ì‰½ê²Œ ê°€ì ¸ì˜´
     	return elementData[index];
-    //¹è¿­Àº ¸Ş¸ğ¸®ÀÇ ÁÖ¼Ò¿¡ Á÷Á¢ Á¢±ÙÇÏ´Â ·£´ı¿¢¼¼½º(random access)¿©¼­ ¸Å¿ì ºü¸£°Ô Ã³¸®
+    //ë°°ì—´ì€ ë©”ëª¨ë¦¬ì˜ ì£¼ì†Œì— ì§ì ‘ ì ‘ê·¼í•˜ëŠ” ëœë¤ì—‘ì„¸ìŠ¤(random access)ì—¬ì„œ ë§¤ìš° ë¹ ë¥´ê²Œ ì²˜ë¦¬
     }
-    public int size() {//¿ÜºÎ¿¡¼­ »çÀÌÁî¸¦ Á¶Á¤ ¸øÇÏ°Ô ÀÌ·¸°Ô ¿ìÈ¸ÀûÀ¸·Î ¸®ÅÏÇÔ
-    	return size;//¸®½ºÆ®°¡ ¸î°³ÀÇ ¿¤¸®¸ÕÆ®¸¦ °¡Á³´ÂÁö
+    public int size() {//ì™¸ë¶€ì—ì„œ ì‚¬ì´ì¦ˆë¥¼ ì¡°ì • ëª»í•˜ê²Œ ì´ë ‡ê²Œ ìš°íšŒì ìœ¼ë¡œ ë¦¬í„´í•¨
+    	return size;//ë¦¬ìŠ¤íŠ¸ê°€ ëª‡ê°œì˜ ì—˜ë¦¬ë¨¼íŠ¸ë¥¼ ê°€ì¡ŒëŠ”ì§€
     }
-    public int indexOf(Object o){//¾î¶²°ªÀÇ ÀÎµ¦½º¸¦ Ã£¾Æ¶ó
+    public int indexOf(Object o){//ì–´ë–¤ê°’ì˜ ì¸ë±ìŠ¤ë¥¼ ì°¾ì•„ë¼
 	        for(int i=0; i < size; i++){
-	            if(o.equals(elementData[i]))//°ªÀÌ °°ÀºÁö ºñ±³
+	            if(o.equals(elementData[i]))//ê°’ì´ ê°™ì€ì§€ ë¹„êµ
 	                return i;
 	        }
-        return -1;//¾øÀ¸¸é -1¸®ÅÏ
+        return -1;//ì—†ìœ¼ë©´ -1ë¦¬í„´
     }
-    public ListIterator listIterator() {//¸®ÅÏµ¥ÀÌÅÍÅ¸ÀÔÀÌ ListIterator
+    public ListIterator listIterator() {//ë¦¬í„´ë°ì´í„°íƒ€ì…ì´ ListIterator
     	return new ListIterator();
     }
-    //ListIterator °´Ã¼´Â ¹İº¹ÀÛ¾÷À» À§ÇØ ¸¸µç°Í
-    public class ListIterator{//ArrayListÅ¬·¡½º¾È¿¡ ListIteratorÅ¬·¡½º¸¸µë
-    	private int nextIndex = 0;// ÇöÀç Å½»öÇÏ°í ÀÖ´Â ¼ø¼­¸¦ °¡¸®Å°´Â ÀÎµ¦½º °ª
+    //ListIterator ê°ì²´ëŠ” ë°˜ë³µì‘ì—…ì„ ìœ„í•´ ë§Œë“ ê²ƒ
+    public class ListIterator{//ArrayListí´ë˜ìŠ¤ì•ˆì— ListIteratorí´ë˜ìŠ¤ë§Œë“¬
+    	private int nextIndex = 0;// í˜„ì¬ íƒìƒ‰í•˜ê³  ìˆëŠ” ìˆœì„œë¥¼ ê°€ë¦¬í‚¤ëŠ” ì¸ë±ìŠ¤ ê°’
 		
-    	public boolean hasNext() {// next ¸Ş¼Òµå¸¦ È£ÃâÇÒ ¼ö ÀÖ´ÂÁö¸¦ ¸ÕÀú Ã¼Å©
+    	public boolean hasNext() {// next ë©”ì†Œë“œë¥¼ í˜¸ì¶œí•  ìˆ˜ ìˆëŠ”ì§€ë¥¼ ë¨¼ì € ì²´í¬
     		return nextIndex < size();
     	}
-    	public Object next() {//´ÙÀ½ ¿¤¸®¸ÕÆ® ¼øÂ÷Àû ¸®ÅÏ
+    	public Object next() {//ë‹¤ìŒ ì—˜ë¦¬ë¨¼íŠ¸ ìˆœì°¨ì  ë¦¬í„´
     		return elementData[nextIndex++];
     	}
         public boolean hasPrevious() {
-    	return nextIndex > 0;//0º¸´Ù Å©¸é ÀÌÀü ¿¤¸®¸ÕÆ®°¡ Á¸ÀçÇÑ´Ù´Â ÀÇ¹Ì
+    	return nextIndex > 0;//0ë³´ë‹¤ í¬ë©´ ì´ì „ ì—˜ë¦¬ë¨¼íŠ¸ê°€ ì¡´ì¬í•œë‹¤ëŠ” ì˜ë¯¸
     	}
-    	public Object previous() {//ÀÌÀü ¿¤¸®¸ÕÆ® ¼øÂ÷Àû ¸®ÅÏ
+    	public Object previous() {//ì´ì „ ì—˜ë¦¬ë¨¼íŠ¸ ìˆœì°¨ì  ë¦¬í„´
     		return elementData[--nextIndex];
     	} 
-    	public void add(Object element){//ÇöÀç ¿¤¸®¸ÕÆ®ÀÇ ´ÙÀ½ ¿¤¸®¸ÕÆ®¿¡ Ãß°¡
-    	    ArrayList.this.add(nextIndex++, element);//°°Àº ÀÌ¸§ÀÇ ¸Ş¼Òµå¿©¼­ Ãæµ¹¹æÁö¸¦ À§ÇØ
-    	   //ArrayListÅ¬·¡½ºÀÇ add¸Ş¼Òµå¸¦ °¡¸®Å°±â À§ÇØ this¸¦ ¾¸
-    	}  //this´Â ¸ŞÀÎ¿¡¼­ ¸¸µç numbers ÀÎ½ºÅÏ½º¸¦ °¡¸®Å´
-    	//¿Ö add¸Ş¼Òµå¸¦ »õ·Î Ãß°¡ÇØ¼­ ÀÛ¾÷Çß³Ä¸é nextIndexº¯¼ö¸¦ È°¿ëÇÏ±â À§ÇÑ°ÍÀÌ´Ù.
-    	//nextIndex´Â ÀÌ ListIterator¾È¿¡¸¸ ÀÖ±â¶§¹®ÀÌ´Ù.
-    	public void remove(){//ÇöÀç ¿¤¸®¸ÕÆ® »èÁ¦
+    	public void add(Object element){//í˜„ì¬ ì—˜ë¦¬ë¨¼íŠ¸ì˜ ë‹¤ìŒ ì—˜ë¦¬ë¨¼íŠ¸ì— ì¶”ê°€
+    	    ArrayList.this.add(nextIndex++, element);//ê°™ì€ ì´ë¦„ì˜ ë©”ì†Œë“œì—¬ì„œ ì¶©ëŒë°©ì§€ë¥¼ ìœ„í•´
+    	   //ArrayListí´ë˜ìŠ¤ì˜ addë©”ì†Œë“œë¥¼ ê°€ë¦¬í‚¤ê¸° ìœ„í•´ thisë¥¼ ì”€
+    	}  //thisëŠ” ë©”ì¸ì—ì„œ ë§Œë“  numbers ì¸ìŠ¤í„´ìŠ¤ë¥¼ ê°€ë¦¬í‚´
+    	//ì™œ addë©”ì†Œë“œë¥¼ ìƒˆë¡œ ì¶”ê°€í•´ì„œ ì‘ì—…í–ˆëƒë©´ nextIndexë³€ìˆ˜ë¥¼ í™œìš©í•˜ê¸° ìœ„í•œê²ƒì´ë‹¤.
+    	//nextIndexëŠ” ì´ ListIteratorì•ˆì—ë§Œ ìˆê¸°ë•Œë¬¸ì´ë‹¤.
+    	public void remove(){//í˜„ì¬ ì—˜ë¦¬ë¨¼íŠ¸ ì‚­ì œ
     	    ArrayList.this.remove(--nextIndex);
     	}
     }

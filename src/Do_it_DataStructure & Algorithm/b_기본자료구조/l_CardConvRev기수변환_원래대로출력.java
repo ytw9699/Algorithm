@@ -1,50 +1,50 @@
-package b_±âº»ÀÚ·á±¸Á¶;
+ï»¿package b_ê¸°ë³¸ìë£Œêµ¬ì¡°;
 import java.util.Scanner;
-// ÀÔ·Â ¹ŞÀº 10Áø¼ö¸¦ 2Áø¼ö~36Áø¼ö·Î ±â¼ö º¯È¯ÇÏ¿© ³ªÅ¸³¿
-class l_CardConvRev±â¼öº¯È¯_¿ø·¡´ë·ÎÃâ·Â {
-	// Á¤¼ı°ª x¸¦ rÁø¼ö·Î º¯È¯ÇÏ¿© ¹è¿­ d¿¡ ¾Æ·§ÀÚ¸®ºÎÅÍ ³Ö¾îµÎ°í ÀÚ¸´¼ö¸¦ ¹İÈ¯ÇÕ´Ï´Ù.
+// ì…ë ¥ ë°›ì€ 10ì§„ìˆ˜ë¥¼ 2ì§„ìˆ˜~36ì§„ìˆ˜ë¡œ ê¸°ìˆ˜ ë³€í™˜í•˜ì—¬ ë‚˜íƒ€ëƒ„
+class l_CardConvRevê¸°ìˆ˜ë³€í™˜_ì›ë˜ëŒ€ë¡œì¶œë ¥ {
+	// ì •ìˆ«ê°’ xë¥¼ rì§„ìˆ˜ë¡œ ë³€í™˜í•˜ì—¬ ë°°ì—´ dì— ì•„ë«ìë¦¬ë¶€í„° ë„£ì–´ë‘ê³  ìë¦¿ìˆ˜ë¥¼ ë°˜í™˜í•©ë‹ˆë‹¤.
 	static int cardConvR(int x, int r, char[] d) {
-		int digits = 0;						// º¯È¯ ÈÄÀÇ ÀÚ¸´¼ö
+		int digits = 0;						// ë³€í™˜ í›„ì˜ ìë¦¿ìˆ˜
 		String dchar = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 		do {
-			d[digits++] = dchar.charAt(x % r);	// r·Î ³ª´« ³ª¸ÓÁö¸¦ ÀúÀå
+			d[digits++] = dchar.charAt(x % r);	// rë¡œ ë‚˜ëˆˆ ë‚˜ë¨¸ì§€ë¥¼ ì €ì¥
 		//System.out.println(d[--digits]);
 		//System.out.println("["+digits+"]");
 			//digits++;
 			x /= r;
-	  //System.out.println("x´Â"+x);
+	  //System.out.println("xëŠ”"+x);
 		} while (x != 0);
 		return digits;
 	}
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
-		int no;							// º¯È¯ÇÏ´Â Á¤¼ö
-		int cd;							// ±â¼ö
-		int dno;						// º¯È¯ ÈÄÀÇ ÀÚ¸´¼ö
-		int retry;						// ´Ù½Ã ÇÑ ¹ø?
-		char[] cno = new char[32];		// º¯È¯ ÈÄ °¢ ÀÚ¸®ÀÇ ¼ıÀÚ¸¦ ³Ö¾îµÎ´Â ¹®ÀÚÀÇ ¹è¿­
+		int no;							// ë³€í™˜í•˜ëŠ” ì •ìˆ˜
+		int cd;							// ê¸°ìˆ˜
+		int dno;						// ë³€í™˜ í›„ì˜ ìë¦¿ìˆ˜
+		int retry;						// ë‹¤ì‹œ í•œ ë²ˆ?
+		char[] cno = new char[32];		// ë³€í™˜ í›„ ê° ìë¦¬ì˜ ìˆ«ìë¥¼ ë„£ì–´ë‘ëŠ” ë¬¸ìì˜ ë°°ì—´
 
-		System.out.println("10Áø¼ö¸¦ ±â¼ö º¯È¯ÇÕ´Ï´Ù.");
+		System.out.println("10ì§„ìˆ˜ë¥¼ ê¸°ìˆ˜ ë³€í™˜í•©ë‹ˆë‹¤.");
 		do {
 			do {
-				System.out.print("º¯È¯ÇÏ´Â À½ÀÌ ¾Æ´Ñ Á¤¼ö£º");
+				System.out.print("ë³€í™˜í•˜ëŠ” ìŒì´ ì•„ë‹Œ ì •ìˆ˜ï¼š");
 				no = stdIn.nextInt();
 			} while (no < 0);
 
 			do {
-				System.out.print("¾î¶² Áø¼ö·Î º¯È¯ÇÒ±î¿ä? (2~36)£º");
+				System.out.print("ì–´ë–¤ ì§„ìˆ˜ë¡œ ë³€í™˜í• ê¹Œìš”? (2~36)ï¼š");
 				cd = stdIn.nextInt();
 			} while (cd < 2 || cd > 36);
 
-			dno = cardConvR(no, cd, cno);		// no¸¦ cdÁø¼ö·Î º¯È¯
+			dno = cardConvR(no, cd, cno);		// noë¥¼ cdì§„ìˆ˜ë¡œ ë³€í™˜
 
-			System.out.print(cd + "Áø¼ö·Î´Â ");
-			for (int i = dno - 1; i >= 0; i--)	// À­ÀÚ¸®ºÎÅÍ Â÷·Ê·Î ³ªÅ¸³¿
+			System.out.print(cd + "ì§„ìˆ˜ë¡œëŠ” ");
+			for (int i = dno - 1; i >= 0; i--)	// ìœ—ìë¦¬ë¶€í„° ì°¨ë¡€ë¡œ ë‚˜íƒ€ëƒ„
 				System.out.print(cno[i]);
-			System.out.println("ÀÔ´Ï´Ù.");
+			System.out.println("ì…ë‹ˆë‹¤.");
 
-			System.out.print("ÇÑ ¹ø ´õ ÇÒ±î¿ä? (1.¿¹£¯0.¾Æ´Ï¿À)£º");
+			System.out.print("í•œ ë²ˆ ë” í• ê¹Œìš”? (1.ì˜ˆï¼0.ì•„ë‹ˆì˜¤)ï¼š");
 			retry = stdIn.nextInt();
 		} while (retry == 1);
 	}

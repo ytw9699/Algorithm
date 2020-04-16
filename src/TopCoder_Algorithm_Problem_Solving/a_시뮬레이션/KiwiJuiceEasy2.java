@@ -1,11 +1,11 @@
-package a_½Ã¹Ä·¹ÀÌ¼Ç;
+ï»¿package a_ì‹œë®¬ë ˆì´ì…˜;
 
  public class KiwiJuiceEasy2 {
 	public static void main(String[] args) {
-		int[] capacities=new int[]{10,10,10};//ÀüÃ¼ º´ÀÇ Å©±â
-		int[] bottles=new int[]{3,7,3};//ÇöÀçµé¾îÀÖ´Â ¿ë·®
-		int[] fromld=new int[]{1,0,1};//¿Å±â°í ½ÍÀº°÷ÀÇ º´
-		int[] told=new int[]{0,1,0};//¿Å±èÀ» ¹Ş¾Æ¾ßÇÏ´Â °÷ÀÇ º´
+		int[] capacities=new int[]{10,10,10};//ì „ì²´ ë³‘ì˜ í¬ê¸°
+		int[] bottles=new int[]{3,7,3};//í˜„ì¬ë“¤ì–´ìˆëŠ” ìš©ëŸ‰
+		int[] fromld=new int[]{1,0,1};//ì˜®ê¸°ê³  ì‹¶ì€ê³³ì˜ ë³‘
+		int[] told=new int[]{0,1,0};//ì˜®ê¹€ì„ ë°›ì•„ì•¼í•˜ëŠ” ê³³ì˜ ë³‘
 		
 		int[] a = thePouring(capacities,bottles,fromld,told);
 		
@@ -19,10 +19,10 @@ package a_½Ã¹Ä·¹ÀÌ¼Ç;
 			 int from = fromld[i];
 			 int to = told[i];
 			
-			 int vol = Math.min(bottles[from], capacities[to]-bottles[to]);//ÃÖ¼Ò°ªÀ» ±¸ÇØ¼­
+			 int vol = Math.min(bottles[from], capacities[to]-bottles[to]);//ìµœì†Œê°’ì„ êµ¬í•´ì„œ
 			 
-			 bottles[from] -= vol; //»©ÁÖ°í
-			 bottles[to] += vol;  //´õÇØÁÖÀÚ
+			 bottles[from] -= vol; //ë¹¼ì£¼ê³ 
+			 bottles[to] += vol;  //ë”í•´ì£¼ì
 		}
 			 return bottles;
 }

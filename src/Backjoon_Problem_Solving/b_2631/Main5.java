@@ -1,4 +1,4 @@
-package b_2631;
+ï»¿package b_2631;
 import java.util.Scanner;
 import java.util.Arrays;
 public class Main5 {
@@ -7,9 +7,9 @@ public class Main5 {
 		int n = sc.nextInt();//7
 		int max=0;
 		int maxindex=0;
-		int[] dp = new int[n];// ÀÎµ¦½º¸¶´Ù °¢ Áõ°¡ ¼ö¿­ÀÇ ±æÀÌ//dp ¹è¿­Àº Áõ°¡ ¼ö¿­ÀÇ ±æÀÌ¸¦ ³ÖÀ» °ÍÀÌ´Ù.
-		int[] array = new int[n];// ÀÎµ¦½º¸¶´Ù °¢ ÀÔ·Â°ª
-		String[] sequence = new String[n];//Áõ°¡ ¼ö¿­ 
+		int[] dp = new int[n];// ì¸ë±ìŠ¤ë§ˆë‹¤ ê° ì¦ê°€ ìˆ˜ì—´ì˜ ê¸¸ì´//dp ë°°ì—´ì€ ì¦ê°€ ìˆ˜ì—´ì˜ ê¸¸ì´ë¥¼ ë„£ì„ ê²ƒì´ë‹¤.
+		int[] array = new int[n];// ì¸ë±ìŠ¤ë§ˆë‹¤ ê° ì…ë ¥ê°’
+		String[] sequence = new String[n];//ì¦ê°€ ìˆ˜ì—´ 
 		int ans = 0;
 
 		for (int i = 0; i < n; i++) {
@@ -21,10 +21,10 @@ public class Main5 {
 		for (int i = 1; i < n; i++) {
 		  dp[i] = 1;
 		  String temp="";
-		  // i ¸¦ ±âÁØÀ¸·Î ÀÎµ¦½º 0 ¿¡¼­ºÎÅÍ i-1±îÁö Ã¼Å©ÇÑ´Ù  // ±æÀÌ¸¦ ±âÁØ
+		  // i ë¥¼ ê¸°ì¤€ìœ¼ë¡œ ì¸ë±ìŠ¤ 0 ì—ì„œë¶€í„° i-1ê¹Œì§€ ì²´í¬í•œë‹¤  // ê¸¸ì´ë¥¼ ê¸°ì¤€
 		  for (int j = 0; j < i; j++) {
-		    if ( array[i] > array[j] && dp[i] < dp[j] + 1 ) { // Áõ°¡ ¼ö¿­ ÀÌ¶ó¸é
-		      dp[i] = dp[j] + 1;//±æÀÌ 1Áõ°¡
+		    if ( array[i] > array[j] && dp[i] < dp[j] + 1 ) { // ì¦ê°€ ìˆ˜ì—´ ì´ë¼ë©´
+		      dp[i] = dp[j] + 1;//ê¸¸ì´ 1ì¦ê°€
 		      if(dp[j] + 1 > max) {
 		    	  max = dp[j] + 1 ;
 		    	  maxindex = i;
@@ -32,7 +32,7 @@ public class Main5 {
 		      temp = temp+Integer.toString(array[j]);
 		    }
 		  }
-		    sequence[i] = temp+array[i];//¼ö¿­ ºÙÀÌ±â
+		    sequence[i] = temp+array[i];//ìˆ˜ì—´ ë¶™ì´ê¸°
 		}
 		for(int i=1;i<n;i++) {
 		  if (ans < dp[i]) {
@@ -44,18 +44,18 @@ public class Main5 {
 		
 		Arrays.sort(array); 
 		
-		String[] output = sequence[maxindex].split("");//ÃÖÀå±æÀÌÀÇ ¼ö¿­À» ½ºÇÃ¸´À¸·Î »Ì´Â´Ù
+		String[] output = sequence[maxindex].split("");//ìµœì¥ê¸¸ì´ì˜ ìˆ˜ì—´ì„ ìŠ¤í”Œë¦¿ìœ¼ë¡œ ë½‘ëŠ”ë‹¤
 		
 		int[] idxArr = new int[output.length];
 		
 		for(int i=0; i<output.length; i++) {
 			idxArr[i]=Arrays.binarySearch(array, Integer.parseInt(output[i]) );
 		}
-		for(int i=0; i<idxArr.length; i++) {//·±Å¸ÀÓ ¿¡·¯ ¹ß»ı ºÎºĞ
+		for(int i=0; i<idxArr.length; i++) {//ëŸ°íƒ€ì„ ì—ëŸ¬ ë°œìƒ ë¶€ë¶„
 			System.out.println("temp");
 			int temp = idxArr[i];
 			System.out.println("temp");
-			array[temp]=0;//¿Å±âÁö ¸»¾Æ¾ßÇÒ ºÎºĞÀÇ ¼ö¿­°ªÀ» ÀüºÎ 0À¸·Î ¹Ù²Û´Ù
+			array[temp]=0;//ì˜®ê¸°ì§€ ë§ì•„ì•¼í•  ë¶€ë¶„ì˜ ìˆ˜ì—´ê°’ì„ ì „ë¶€ 0ìœ¼ë¡œ ë°”ê¾¼ë‹¤
 		}
 		
 	}

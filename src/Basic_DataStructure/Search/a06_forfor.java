@@ -1,17 +1,17 @@
-package Search;
-public class a06_forfor {//ÁßÃ¸ for¹®
+ï»¿package Search;
+public class a06_forfor {//ì¤‘ì²© forë¬¸
 	static String forSearch(int ar[])	{
-		int count = 0;//¿¬»êÈ½¼ö
+		int count = 0;//ì—°ì‚°íšŸìˆ˜
 		for(int i=0; i<ar.length; i++) {
 			for(int j=0; j<ar.length; j++) {
-				count++;//¿¬»êÈ½¼ö Áõ°¡
-				if(ar[i]+ar[j]>100) { //Áß½ÉÀÌ µÇ´Â ¿¬»ê!
-				return "ar["+i+"]+ar["+j+"]ÀÇ ÇÕÀÌ 100À» ³Ñ½À´Ï´Ù";
+				count++;//ì—°ì‚°íšŸìˆ˜ ì¦ê°€
+				if(ar[i]+ar[j]>100) { //ì¤‘ì‹¬ì´ ë˜ëŠ” ì—°ì‚°!
+				return "ar["+i+"]+ar["+j+"]ì˜ í•©ì´ 100ì„ ë„˜ìŠµë‹ˆë‹¤";
 				}
 			}
 		}
-		System.out.println("ºñ±³¿¬»êÈ½¼ö="+count+"È¸ÀÔ´Ï´Ù.");//81
-		return "¹è¿­ ÀÇ ¿ø¼ÒµéÁß 100ÀÇ ÇÕÀ» ³Ñ´Â Á¶ÇÕÀÌ ¾ø½À´Ï´Ù.";
+		System.out.println("ë¹„êµì—°ì‚°íšŸìˆ˜="+count+"íšŒì…ë‹ˆë‹¤.");//81
+		return "ë°°ì—´ ì˜ ì›ì†Œë“¤ì¤‘ 100ì˜ í•©ì„ ë„˜ëŠ” ì¡°í•©ì´ ì—†ìŠµë‹ˆë‹¤.";
 	}
 	public static void main(String[] args) {
 		int arr[]={1, 3, 5, 7, 9, 12, 21, 23, 47};

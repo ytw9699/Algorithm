@@ -1,4 +1,4 @@
-package c_3045;
+ï»¿package c_3045;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -8,7 +8,7 @@ import java.util.ListIterator;
 
 public class Main8 {
 
-	//static long beforeTime = System.currentTimeMillis(); //ÄÚµå ½ÇÇà Àü¿¡ ½Ã°£ ¹Ş¾Æ¿À±â
+	//static long beforeTime = System.currentTimeMillis(); //ì½”ë“œ ì‹¤í–‰ ì „ì— ì‹œê°„ ë°›ì•„ì˜¤ê¸°
 
 	static LinkedList dobleLink = new LinkedList();
 	
@@ -40,13 +40,13 @@ public class Main8 {
 		
 		int max=0;
 		int maxindex=0;
-		int[] dp = new int[nodes];// ÀÎµ¦½º¸¶´Ù °¢ Áõ°¡ ¼ö¿­ÀÇ ±æÀÌ//dp ¹è¿­Àº Áõ°¡ ¼ö¿­ÀÇ ±æÀÌ¸¦ ³ÖÀ» °ÍÀÌ´Ù.
-		int[] array = new int[nodes];// ÀÎµ¦½º¸¶´Ù °¢ ÀÔ·Â°ª
+		int[] dp = new int[nodes];// ì¸ë±ìŠ¤ë§ˆë‹¤ ê° ì¦ê°€ ìˆ˜ì—´ì˜ ê¸¸ì´//dp ë°°ì—´ì€ ì¦ê°€ ìˆ˜ì—´ì˜ ê¸¸ì´ë¥¼ ë„£ì„ ê²ƒì´ë‹¤.
+		int[] array = new int[nodes];// ì¸ë±ìŠ¤ë§ˆë‹¤ ê° ì…ë ¥ê°’
 		int ans = 0;
 		int k=0;
 		int iteratorIndex=0;
 		
-		ArrayList sequence = new ArrayList<>();//Áõ°¡ ¼ö¿­ ÀÎµ¦½º
+		ArrayList sequence = new ArrayList<>();//ì¦ê°€ ìˆ˜ì—´ ì¸ë±ìŠ¤
 		
 		ListIterator iterator = dobleLink.listIterator();
 		
@@ -78,7 +78,7 @@ public class Main8 {
 				    ans = dp[i];
 				  }
 				}
-				System.out.println(nodes - ans);//½ÇÇàÇØ¾ßÇÒ ¿¬»ê¼ö Ãâ·Â
+				System.out.println(nodes - ans);//ì‹¤í–‰í•´ì•¼í•  ì—°ì‚°ìˆ˜ ì¶œë ¥
 				if(maxindex > 0) {
 					int[] changearr = (int[])sequence.get(maxindex-1);
 					
@@ -99,26 +99,26 @@ public class Main8 {
 				System.out.println("B"+" "+a+" "+b);	
 			}
 		}
-		/*long afterTime = System.currentTimeMillis(); // ÄÚµå ½ÇÇà ÈÄ¿¡ ½Ã°£ ¹Ş¾Æ¿À±â
-		long secDiffTime = (afterTime - beforeTime)/1000; //µÎ ½Ã°£¿¡ Â÷ °è»ê
-		System.out.println("½Ã°£Â÷ÀÌ(m) : "+secDiffTime);
+		/*long afterTime = System.currentTimeMillis(); // ì½”ë“œ ì‹¤í–‰ í›„ì— ì‹œê°„ ë°›ì•„ì˜¤ê¸°
+		long secDiffTime = (afterTime - beforeTime)/1000; //ë‘ ì‹œê°„ì— ì°¨ ê³„ì‚°
+		System.out.println("ì‹œê°„ì°¨ì´(m) : "+secDiffTime);
 		*/
 		}
 	private static void change(String selection, String X, String Y) {
 		int x= Integer.parseInt(X);
    		int y= Integer.parseInt(Y);
    		
-		if(selection.equals("A")) {//x³ëµå¸¦ y³ëµåÀÇ ¾ÕÀ¸·Î ÀÌµ¿
-			dobleLink.remove((Object)x);//x³ëµå »èÁ¦ÈÄ
+		if(selection.equals("A")) {//xë…¸ë“œë¥¼ yë…¸ë“œì˜ ì•ìœ¼ë¡œ ì´ë™
+			dobleLink.remove((Object)x);//xë…¸ë“œ ì‚­ì œí›„
 			
-			int index = dobleLink.indexOf(y);//y°ªÀÇ ÀÎµ¦½º¸¦ ¹İÈ¯
+			int index = dobleLink.indexOf(y);//yê°’ì˜ ì¸ë±ìŠ¤ë¥¼ ë°˜í™˜
 			
-			dobleLink.add(index,x);//yÀÎµ¦½º ¿¡ ÇØ´çÇÏ´Â °ªÀÇ ¾ÕÂÊ¿¡ x¸¦ Ãß°¡
+			dobleLink.add(index,x);//yì¸ë±ìŠ¤ ì— í•´ë‹¹í•˜ëŠ” ê°’ì˜ ì•ìª½ì— xë¥¼ ì¶”ê°€
 		}else if(selection.equals("B")){ 
-			dobleLink.remove((Object)x);//x³ëµå »èÁ¦ÈÄ
+			dobleLink.remove((Object)x);//xë…¸ë“œ ì‚­ì œí›„
 			
-			int index = dobleLink.indexOf(y);//y°ªÀÇ ÀÎµ¦½º¸¦ ¹İÈ¯
-			dobleLink.add(index+1,x);//yÀÎµ¦½º ¿¡ ÇØ´çÇÏ´Â °ªÀÇ µÚÂÊ¿¡ x¸¦ Ãß°¡
+			int index = dobleLink.indexOf(y);//yê°’ì˜ ì¸ë±ìŠ¤ë¥¼ ë°˜í™˜
+			dobleLink.add(index+1,x);//yì¸ë±ìŠ¤ ì— í•´ë‹¹í•˜ëŠ” ê°’ì˜ ë’¤ìª½ì— xë¥¼ ì¶”ê°€
 		}
 	}
 }

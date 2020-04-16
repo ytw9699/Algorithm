@@ -1,11 +1,11 @@
-package Search;
+ï»¿package Search;
 
 public class a02_OneSearch {
 	
 static boolean OneSearch(int[] arr, int n) {
 		
-		return (arr[n] == 1) ? true:false;//Áß½ÉÀÌµÇ´Â ¿¬»ê
-		//n¿¡ °ü°è¾øÀÌ ¶È°°Àº ½Ã°£ÀÌ ¼Ò¿äµÈ´Ù. 
+		return (arr[n] == 1) ? true:false;//ì¤‘ì‹¬ì´ë˜ëŠ” ì—°ì‚°
+		//nì— ê´€ê³„ì—†ì´ ë˜‘ê°™ì€ ì‹œê°„ì´ ì†Œìš”ëœë‹¤. 
 	}
 public static void main(String[] args) {
 	

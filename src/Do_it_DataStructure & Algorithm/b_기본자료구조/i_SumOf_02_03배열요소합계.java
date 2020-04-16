@@ -1,7 +1,7 @@
-package b_±âº»ÀÚ·á±¸Á¶;
+ï»¿package b_ê¸°ë³¸ìë£Œêµ¬ì¡°;
 import java.util.Scanner;
-// ¹è¿­ aÀÇ ¿ä¼ÒÀÇ ÇÕÀ» Ãâ·Â
-class i_SumOf_02_03¹è¿­¿ä¼ÒÇÕ°è {
+// ë°°ì—´ aì˜ ìš”ì†Œì˜ í•©ì„ ì¶œë ¥
+class i_SumOf_02_03ë°°ì—´ìš”ì†Œí•©ê³„ {
 	static int sumOf(int[] a) {
 		int sum = 0;
 		for (int i = 0; i < a.length; i++)
@@ -12,16 +12,16 @@ class i_SumOf_02_03¹è¿­¿ä¼ÒÇÕ°è {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		System.out.print("¿ä¼Ú¼ö´Â£º");
-		int num = stdIn.nextInt();	 // ¿ä¼Ú¼ö
+		System.out.print("ìš”ì†Ÿìˆ˜ëŠ”ï¼š");
+		int num = stdIn.nextInt();	 // ìš”ì†Ÿìˆ˜
 
-		int[] a = new int[num]; 	// ±æÀÌ°¡ numÀÎ ¹è¿­
+		int[] a = new int[num]; 	// ê¸¸ì´ê°€ numì¸ ë°°ì—´
 
 		for (int i = 0; i < num; i++) {
 			System.out.print("a[" + i + "] : ");
 			a[i] = stdIn.nextInt();
 		}
 
-		System.out.println("Àü ¿ä¼ÒÀÇ ÇÕ°è´Â " + sumOf(a) + "ÀÔ´Ï´Ù.");
+		System.out.println("ì „ ìš”ì†Œì˜ í•©ê³„ëŠ” " + sumOf(a) + "ì…ë‹ˆë‹¤.");
 	}
 }

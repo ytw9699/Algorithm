@@ -1,26 +1,26 @@
-package Tree;
+ï»¿package Tree;
 
 public class BinaryTree {
 	
 	 public class Node{
-	        private Object data;//µ¥ÀÌÅÍ°¡ ÀúÀåµÉ º¯¼ö-½ÇÁ¦ ÀúÀå°ª
+	        private Object data;//ë°ì´í„°ê°€ ì €ì¥ë  ë³€ìˆ˜-ì‹¤ì œ ì €ì¥ê°’
 	       
-	        private Node left;//¿ŞÂÊ ³ëµå¸¦ °¡¸®Å°´Â º¯¼ö,ÂüÁ¶°ª
-	        private Node right;//¿À¸¥ÂÊ ³ëµå
+	        private Node left;//ì™¼ìª½ ë…¸ë“œë¥¼ ê°€ë¦¬í‚¤ëŠ” ë³€ìˆ˜,ì°¸ì¡°ê°’
+	        private Node right;//ì˜¤ë¥¸ìª½ ë…¸ë“œ
 	        
-	        public Node(Object input) {//°´Ã¼»ı¼º ÃÊ±âÈ­
+	        public Node(Object input) {//ê°ì²´ìƒì„± ì´ˆê¸°í™”
 	            this.data = input;
-	            this.left = null;//»ı¼º½Ã´Â ¹ÌÁ¤
+	            this.left = null;//ìƒì„±ì‹œëŠ” ë¯¸ì •
 	            this.right = null;
 	        }
-	      /*  public String toString(){//³ëµåÀÇ °ªÀ» ½±°Ô Ãâ·ÂÀ§ÇØ
+	      /*  public String toString(){//ë…¸ë“œì˜ ê°’ì„ ì‰½ê²Œ ì¶œë ¥ìœ„í•´
 	            return String.valueOf(this.data);
 	        }*/
 	    
 	 }
-	 public Node MakeNode(Object input){//¸Ó¸®¿¡ Ãß°¡
+	 public Node MakeNode(Object input){//ë¨¸ë¦¬ì— ì¶”ê°€
 	       
-	        Node newNode = new Node(input);//³ëµå¸¦ »ı¼º
+	        Node newNode = new Node(input);//ë…¸ë“œë¥¼ ìƒì„±
 	        
 	        return newNode;
 	   }
@@ -33,7 +33,7 @@ public class BinaryTree {
 		main.right = sub;
 	}
 	
-	public Object GetData(Node temp){//Æ¯Á¤ ¿¤¸®¸ÕÆ® °ª Á¶È¸
+	public Object GetData(Node temp){//íŠ¹ì • ì—˜ë¦¬ë¨¼íŠ¸ ê°’ ì¡°íšŒ
         return temp.data;
     }
 	
@@ -46,27 +46,27 @@ public class BinaryTree {
 		return temp.right;
 	}
 	
-	public void InorderTraverse(Node temp)//ÁßÀ§¼øÈ¸
+	public void InorderTraverse(Node temp)//ì¤‘ìœ„ìˆœíšŒ
 	{
-		if(temp == null) {   // temp°¡ NULLÀÌ¸é Àç±Í Å»Ãâ!
+		if(temp == null) {   // tempê°€ NULLì´ë©´ ì¬ê·€ íƒˆì¶œ!
 			return;
 	  }
 		InorderTraverse(temp.left); 
 		System.out.println(temp.data);
 		InorderTraverse(temp.right); 
 	}
-	public void PreorderTraverse(Node temp)//ÀüÀ§¼øÈ¸
+	public void PreorderTraverse(Node temp)//ì „ìœ„ìˆœíšŒ
 	{
-		if(temp == null) {   // temp°¡ NULLÀÌ¸é Àç±Í Å»Ãâ!
+		if(temp == null) {   // tempê°€ NULLì´ë©´ ì¬ê·€ íƒˆì¶œ!
 			return;
 	   }
 		System.out.println(temp.data);
 		PreorderTraverse(temp.left); 
 		PreorderTraverse(temp.right); 
 	}
-	public void PostorderTraverse(Node temp)//ÈÄÀ§¼øÈ¸
+	public void PostorderTraverse(Node temp)//í›„ìœ„ìˆœíšŒ
 	{
-		if(temp == null) {   // temp°¡ NULLÀÌ¸é Àç±Í Å»Ãâ!
+		if(temp == null) {   // tempê°€ NULLì´ë©´ ì¬ê·€ íƒˆì¶œ!
 			return;
 	   }
 		PostorderTraverse(temp.left); 

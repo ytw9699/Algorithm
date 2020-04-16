@@ -1,4 +1,4 @@
-package ch_05_Bit_Manipulation;
+ï»¿package ch_05_Bit_Manipulation;
 
 import java.util.ArrayList;
 
@@ -9,8 +9,8 @@ public class Question3_2 {
 		ArrayList<Integer> sequences = getAlternatingSequences(n);
 		return findLongestSequence(sequences);
 	}	
-	//°¢ ¼ö¿­ÀÇ ±æÀÌ ¸®½ºÆ®¸¦ ¹İÈ¯ÇÑ´Ù, ¼ö¿­Àº Ç×»ó 0¼ö¿­ºÎÅÍ ½ÃÀÛÇÑ´Ù.
-	//°¢ ¼ö¿­ÀÇ ±æÀÌ¸¦ ¹ø°¥¾Æ¼­ ¹è¿­¿¡ ÀúÀåÇÑ´Ù.
+	//ê° ìˆ˜ì—´ì˜ ê¸¸ì´ ë¦¬ìŠ¤íŠ¸ë¥¼ ë°˜í™˜í•œë‹¤, ìˆ˜ì—´ì€ í•­ìƒ 0ìˆ˜ì—´ë¶€í„° ì‹œì‘í•œë‹¤.
+	//ê° ìˆ˜ì—´ì˜ ê¸¸ì´ë¥¼ ë²ˆê°ˆì•„ì„œ ë°°ì—´ì— ì €ì¥í•œë‹¤.
 	public static ArrayList<Integer> getAlternatingSequences(int n) {
 		ArrayList<Integer> sequences = new ArrayList<Integer>();
 		
@@ -21,7 +21,7 @@ public class Question3_2 {
 			if ((n & 1) != searchingFor) {
 			//	System.out.println(counter);
 				sequences.add(counter);
-				searchingFor = n & 1; // 1À»  0À» °è¼Ó ¹Ù²ãÁÖ±â
+				searchingFor = n & 1; // 1ì„  0ì„ ê³„ì† ë°”ê¿”ì£¼ê¸°
 				counter = 0;	
 			}
 			counter++;
@@ -31,7 +31,7 @@ public class Question3_2 {
 		sequences.add(counter);
 		return sequences;
 	}
-	//0¼ö¿­°ú 1¼ö¿­ÀÇ ±æÀÌ °ªÀÌ ¹ø°¥¾Æ ÀúÀåµÈ ¹è¿­ÀÌ ÁÖ¾îÁ³À»¶§ ¸¸µé¼ö ÀÖ´Â °¡Àå ±ä¼ö¿­ Ã£±â
+	//0ìˆ˜ì—´ê³¼ 1ìˆ˜ì—´ì˜ ê¸¸ì´ ê°’ì´ ë²ˆê°ˆì•„ ì €ì¥ëœ ë°°ì—´ì´ ì£¼ì–´ì¡Œì„ë•Œ ë§Œë“¤ìˆ˜ ìˆëŠ” ê°€ì¥ ê¸´ìˆ˜ì—´ ì°¾ê¸°
 	public static int findLongestSequence(ArrayList<Integer> seq) {
 		int maxSeq = 1;
 		
@@ -41,11 +41,11 @@ public class Question3_2 {
 			int onesSeqNext = i + 1 < seq.size() ? seq.get(i + 1) : 0;
 			
 			int thisSeq = 0;
-			if (zerosSeq == 1) { // ÇÕÄ¡ÀÚ
+			if (zerosSeq == 1) { // í•©ì¹˜ì
 				thisSeq = onesSeqNext + 1 + onesSeqPrev; 
-			} else if (zerosSeq > 1) { // 0ÇÏ³ª¸¦ µÚÁıÀºµÚ ¾ÕµÚÁß ÇÏ³ª¿¡ ´õÇÑ´Ù
+			} else if (zerosSeq > 1) { // 0í•˜ë‚˜ë¥¼ ë’¤ì§‘ì€ë’¤ ì•ë’¤ì¤‘ í•˜ë‚˜ì— ë”í•œë‹¤
 				thisSeq = 1 + Math.max(onesSeqPrev, onesSeqNext);
-			} else if (zerosSeq == 0) { // 0¼ö¿­ÀÌ ¾øÀ¸¹Ç·Î ¾ÕµÚÁß ÇÏ³ª¸¦ ÅÃÇÑ´Ù
+			} else if (zerosSeq == 0) { // 0ìˆ˜ì—´ì´ ì—†ìœ¼ë¯€ë¡œ ì•ë’¤ì¤‘ í•˜ë‚˜ë¥¼ íƒí•œë‹¤
 				thisSeq = Math.max(onesSeqPrev, onesSeqNext);
 			}
 			maxSeq = Math.max(thisSeq, maxSeq);

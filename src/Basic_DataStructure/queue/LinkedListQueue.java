@@ -1,8 +1,8 @@
-package queue;
+﻿package queue;
 
 public class LinkedListQueue {
-    private Node head;//�ⱸ
-    private Node tail;//�Ա�
+    private Node head;//출구
+    private Node tail;//입구
     private int size = 0;
 	
     public class Node{

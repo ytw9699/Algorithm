@@ -1,23 +1,23 @@
-package a_±âº»¾Ë°í¸®Áò;
+ï»¿package a_ê¸°ë³¸ì•Œê³ ë¦¬ì¦˜;
 import java.util.Scanner;
-// Á¤¼ö b¿¡¼­ Á¤¼ö a¸¦ »« °ªÀ» ±¸ÇÕ´Ï´Ù(b > a°¡ µÇµµ·Ï ÀÔ·Â ¹ŞÀ½)
+// ì •ìˆ˜ bì—ì„œ ì •ìˆ˜ aë¥¼ ëº€ ê°’ì„ êµ¬í•©ë‹ˆë‹¤(b > aê°€ ë˜ë„ë¡ ì…ë ¥ ë°›ìŒ)
 class p_Difference_01_10 {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		System.out.print("aÀÇ °ª£º");
+		System.out.print("aì˜ ê°’ï¼š");
 		int a = stdIn.nextInt();
 
 		int b=0;
 		while (true) {
-			System.out.print("bÀÇ °ª£º");
+			System.out.print("bì˜ ê°’ï¼š");
 			b = stdIn.nextInt();
 			if (b > a) {
 				break;
 			}
-			System.out.println("aº¸´Ù Å« °ªÀ» ÀÔ·ÂÇÏ¼¼¿ä!");
+			System.out.println("aë³´ë‹¤ í° ê°’ì„ ì…ë ¥í•˜ì„¸ìš”!");
 		}
 
-		System.out.println("b - a´Â " + (b - a) + "ÀÔ´Ï´Ù.");
+		System.out.println("b - aëŠ” " + (b - a) + "ì…ë‹ˆë‹¤.");
 	}
 }

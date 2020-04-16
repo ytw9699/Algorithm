@@ -1,9 +1,9 @@
-package a_±âº»¾Ë°í¸®Áò;
-//3°³ÀÇ Á¤¼ı°ª °¡¿îµ¥ ÃÖ´ñ°ªÀ» ±¸ÇÏ¿© Ãâ·ÂÇÕ´Ï´Ù.
-class b_Max3m_Á¤¼öÃÖ´ñ°ª±¸ÇÏ±â {
-	// a, b, cÀÇ ÃÖ´ñ°ªÀ» ±¸ÇÏ¿© ¹İÈ¯ÇÕ´Ï´Ù.
-	static int max3(int a, int b, int c) {//int a, int b, int c ÀÌ°ÍµéÀ» ¸Å°³º¯¼ö,parameter¶ó ÇÔ
-		int max = a;						// ÃÖ´ñ°ª
+ï»¿package a_ê¸°ë³¸ì•Œê³ ë¦¬ì¦˜;
+//3ê°œì˜ ì •ìˆ«ê°’ ê°€ìš´ë° ìµœëŒ“ê°’ì„ êµ¬í•˜ì—¬ ì¶œë ¥í•©ë‹ˆë‹¤.
+class b_Max3m_ì •ìˆ˜ìµœëŒ“ê°’êµ¬í•˜ê¸° {
+	// a, b, cì˜ ìµœëŒ“ê°’ì„ êµ¬í•˜ì—¬ ë°˜í™˜í•©ë‹ˆë‹¤.
+	static int max3(int a, int b, int c) {//int a, int b, int c ì´ê²ƒë“¤ì„ ë§¤ê°œë³€ìˆ˜,parameterë¼ í•¨
+		int max = a;						// ìµœëŒ“ê°’
 		if (b > max) 
 			max = b;
 		if (c > max) 
@@ -12,20 +12,20 @@ class b_Max3m_Á¤¼öÃÖ´ñ°ª±¸ÇÏ±â {
 		return max;
 	}
 	public static void main(String[] args) {
-		System.out.println("max3(3,2,1) = " + max3(3, 2, 1));//¸Å°³º¯¼öÀÇ°ª 3,2,1À» ½ÇÀÎ¼ö¶óÇÔ actual argument
-		// [A] a£¾b£¾c
-		System.out.println("max3(3,2,2) = " + max3(3, 2, 2));		// [B] a£¾b£½c
-		System.out.println("max3(3,1,2) = " + max3(3, 1, 2));		// [C] a£¾c£¾b
-		System.out.println("max3(3,2,3) = " + max3(3, 2, 3));		// [D] a£½c£¾b
-		System.out.println("max3(2,1,3) = " + max3(2, 1, 3));		// [E] c£¾a£¾b
-		System.out.println("max3(3,3,2) = " + max3(3, 3, 2));		// [F] a£½b£¾c
-		System.out.println("max3(3,3,3) = " + max3(3, 3, 3));		// [G] a£½b£½c
-		System.out.println("max3(2,2,3) = " + max3(2, 2, 3));		// [H] c£¾a£½b
-		System.out.println("max3(2,3,1) = " + max3(2, 3, 1));		// [I] b£¾a£¾c
-		System.out.println("max3(2,3,2) = " + max3(2, 3, 2));		// [J] b£¾a£½c
-		System.out.println("max3(1,3,2) = " + max3(1, 3, 2));		// [K] b£¾c£¾a
-		System.out.println("max3(2,3,3) = " + max3(2, 3, 3));		// [L] b£½c£¾a
-		System.out.println("max3(1,2,3) = " + max3(1, 2, 3));		// [M] c£¾b£¾a
+		System.out.println("max3(3,2,1) = " + max3(3, 2, 1));//ë§¤ê°œë³€ìˆ˜ì˜ê°’ 3,2,1ì„ ì‹¤ì¸ìˆ˜ë¼í•¨ actual argument
+		// [A] aï¼bï¼c
+		System.out.println("max3(3,2,2) = " + max3(3, 2, 2));		// [B] aï¼bï¼c
+		System.out.println("max3(3,1,2) = " + max3(3, 1, 2));		// [C] aï¼cï¼b
+		System.out.println("max3(3,2,3) = " + max3(3, 2, 3));		// [D] aï¼cï¼b
+		System.out.println("max3(2,1,3) = " + max3(2, 1, 3));		// [E] cï¼aï¼b
+		System.out.println("max3(3,3,2) = " + max3(3, 3, 2));		// [F] aï¼bï¼c
+		System.out.println("max3(3,3,3) = " + max3(3, 3, 3));		// [G] aï¼bï¼c
+		System.out.println("max3(2,2,3) = " + max3(2, 2, 3));		// [H] cï¼aï¼b
+		System.out.println("max3(2,3,1) = " + max3(2, 3, 1));		// [I] bï¼aï¼c
+		System.out.println("max3(2,3,2) = " + max3(2, 3, 2));		// [J] bï¼aï¼c
+		System.out.println("max3(1,3,2) = " + max3(1, 3, 2));		// [K] bï¼cï¼a
+		System.out.println("max3(2,3,3) = " + max3(2, 3, 3));		// [L] bï¼cï¼a
+		System.out.println("max3(1,2,3) = " + max3(1, 2, 3));		// [M] cï¼bï¼a
 		System.out.println(2<<2);
 	}
 }

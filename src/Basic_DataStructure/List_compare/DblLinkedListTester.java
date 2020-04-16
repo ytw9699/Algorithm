@@ -1,39 +1,39 @@
-package List_compare;
+ï»¿package List_compare;
 import java.util.Scanner;
 import java.util.Comparator;
-// ¿øÇü ÀÌÁß ¿¬°á ¸®½ºÆ® Å¬·¡½º DblLinkedList<E>ÀÇ »ç¿ë ¿¹
+// ì›í˜• ì´ì¤‘ ì—°ê²° ë¦¬ìŠ¤íŠ¸ í´ë˜ìŠ¤ DblLinkedList<E>ì˜ ì‚¬ìš© ì˜ˆ
 
 class DblLinkedListTester {
 	static Scanner stdIn = new Scanner(System.in);
 
-	// µ¥ÀÌÅÍ (È¸¿ø¹øÈ£ + ÀÌ¸§)
+	// ë°ì´í„° (íšŒì›ë²ˆí˜¸ + ì´ë¦„)
 	static class Data {
-		static final int NO   = 1;		// ¹øÈ£¸¦ ÀĞ¾î µéÀÏ±î¿ä?
-		static final int NAME = 2;		// ÀÌ¸§À» ÀĞ¾î µéÀÏ±î¿ä?
+		static final int NO   = 1;		// ë²ˆí˜¸ë¥¼ ì½ì–´ ë“¤ì¼ê¹Œìš”?
+		static final int NAME = 2;		// ì´ë¦„ì„ ì½ì–´ ë“¤ì¼ê¹Œìš”?
 
-		private Integer no;				// È¸¿ø¹øÈ£
-		private String  name;			// ÀÌ¸§
+		private Integer no;				// íšŒì›ë²ˆí˜¸
+		private String  name;			// ì´ë¦„
 
-		// Ãâ·ÂÇÒ ¹®ÀÚ¿­À» ¹İÈ¯
+		// ì¶œë ¥í•  ë¬¸ìì—´ì„ ë°˜í™˜
 		public String toString() {
 			return "(" + no + ") " + name;
 		}
 
-		// µ¥ÀÌÅÍ¸¦ ÀÔ·Â
+		// ë°ì´í„°ë¥¼ ì…ë ¥
 		void scanData(String guide, int sw) {
-			System.out.println(guide + "ÇÒ µ¥ÀÌÅÍ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+			System.out.println(guide + "í•  ë°ì´í„°ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 
 			if ((sw & NO) == NO) {
-				System.out.print("¹øÈ££º");
+				System.out.print("ë²ˆí˜¸ï¼š");
 				no = stdIn.nextInt();
 			}
 			if ((sw & NAME) == NAME) {
-				System.out.print("ÀÌ¸§£º");
+				System.out.print("ì´ë¦„ï¼š");
 				name = stdIn.next();
 			}
 		}
 
-		// È¸¿ø¹øÈ£·Î ¼ø¼­¸¦ ¸Å±â´Â comparator
+		// íšŒì›ë²ˆí˜¸ë¡œ ìˆœì„œë¥¼ ë§¤ê¸°ëŠ” comparator
 		public static final Comparator<Data> NO_ORDER =
 											 new NoOrderComparator();
 
@@ -43,7 +43,7 @@ class DblLinkedListTester {
 			}
 		}
 
-		// ÀÌ¸§À¸·Î ¼ø¼­¸¦ ¸Å±â´Â comparator
+		// ì´ë¦„ìœ¼ë¡œ ìˆœì„œë¥¼ ë§¤ê¸°ëŠ” comparator
 		public static final Comparator<Data> NAME_ORDER =
 											 new NameOrderComparator();
 
@@ -54,42 +54,42 @@ class DblLinkedListTester {
 		}
 	}
 
-	// ¸Ş´º ¿­°ÅÇü
+	// ë©”ë‰´ ì—´ê±°í˜•
 	enum Menu {
-		ADD_FIRST(  "¸Ó¸®¿¡ ³ëµå¸¦ »ğÀÔ"),
-		ADD_LAST(   "²¿¸®¿¡ ³ëµå¸¦ »ğÀÔ"),
-		ADD(        "¼±ÅÃ ³ëµåÀÇ ¹Ù·Î µÚ¿¡ »ğÀÔ"),
-		RMV_FIRST(  "¸Ó¸® ³ëµå¸¦ »èÁ¦"),
-		RMV_LAST(   "²¿¸® ³ëµå¸¦ »èÁ¦"),
-		RMV_CRNT(   "¼±ÅÃ ³ëµå¸¦ »èÁ¦"),
-		CLEAR(      "¸ğµç ³ëµå¸¦ »èÁ¦"),
-		SEARCH_NO(  "¹øÈ£·Î °Ë»ö"),
-		SEARCH_NAME("ÀÌ¸§À¸·Î °Ë»ö"),
-		NEXT(       "¼±ÅÃ ³ëµå¸¦ µÚÂÊÀ¸·Î"),
-		PREV(       "¼±ÅÃ ³ëµå¸¦ ¾ÕÂÊÀ¸·Î"),
-		PRINT_CRNT( "¼±ÅÃ ³ëµå¸¦ Ãâ·Â"),
-		DUMP(       "¸ğµç ³ëµå¸¦ Ãâ·Â"),
-		TERMINATE(  "Á¾·á");
+		ADD_FIRST(  "ë¨¸ë¦¬ì— ë…¸ë“œë¥¼ ì‚½ì…"),
+		ADD_LAST(   "ê¼¬ë¦¬ì— ë…¸ë“œë¥¼ ì‚½ì…"),
+		ADD(        "ì„ íƒ ë…¸ë“œì˜ ë°”ë¡œ ë’¤ì— ì‚½ì…"),
+		RMV_FIRST(  "ë¨¸ë¦¬ ë…¸ë“œë¥¼ ì‚­ì œ"),
+		RMV_LAST(   "ê¼¬ë¦¬ ë…¸ë“œë¥¼ ì‚­ì œ"),
+		RMV_CRNT(   "ì„ íƒ ë…¸ë“œë¥¼ ì‚­ì œ"),
+		CLEAR(      "ëª¨ë“  ë…¸ë“œë¥¼ ì‚­ì œ"),
+		SEARCH_NO(  "ë²ˆí˜¸ë¡œ ê²€ìƒ‰"),
+		SEARCH_NAME("ì´ë¦„ìœ¼ë¡œ ê²€ìƒ‰"),
+		NEXT(       "ì„ íƒ ë…¸ë“œë¥¼ ë’¤ìª½ìœ¼ë¡œ"),
+		PREV(       "ì„ íƒ ë…¸ë“œë¥¼ ì•ìª½ìœ¼ë¡œ"),
+		PRINT_CRNT( "ì„ íƒ ë…¸ë“œë¥¼ ì¶œë ¥"),
+		DUMP(       "ëª¨ë“  ë…¸ë“œë¥¼ ì¶œë ¥"),
+		TERMINATE(  "ì¢…ë£Œ");
 
-		private final String message;			// ³ªÅ¸³¾ ¹®ÀÚ¿­ 
+		private final String message;			// ë‚˜íƒ€ë‚¼ ë¬¸ìì—´ 
 
-		static Menu MenuAt(int idx) {			// ¼­¼ö°¡ idxÀÎ ¿­°Å¸¦ ¹İÈ¯
+		static Menu MenuAt(int idx) {			// ì„œìˆ˜ê°€ idxì¸ ì—´ê±°ë¥¼ ë°˜í™˜
 			for (Menu m : Menu.values())
 				if (m.ordinal() == idx)
 					return m;
 			return null;
 		}
 
-		Menu(String string) {					// »ı¼ºÀÚ
+		Menu(String string) {					// ìƒì„±ì
 			message = string;
 		}
 
-		String getMessage() {					// ³ªÅ¸³¾ ¹®ÀÚ¿­À» ¹İÈ¯
+		String getMessage() {					// ë‚˜íƒ€ë‚¼ ë¬¸ìì—´ì„ ë°˜í™˜
 			return message;
 		}
 	}
 
-	// ¸Ş´º ¼±ÅÃ
+	// ë©”ë‰´ ì„ íƒ
 	static Menu SelectMenu() {
 		int key;
 		do {
@@ -99,7 +99,7 @@ class DblLinkedListTester {
 					  m.ordinal() != Menu.TERMINATE.ordinal())
 					System.out.println();
 			}
-			System.out.print("£º");
+			System.out.print("ï¼š");
 			key = stdIn.nextInt();
 		} while (key < Menu.ADD_FIRST.ordinal() || 
 											key > Menu.TERMINATE.ordinal());
@@ -107,81 +107,81 @@ class DblLinkedListTester {
 	}
 
 	public static void main(String[] args) {
-		Menu menu;								// ¸Ş´º
-		Data data;								// Ãß°¡¿ë µ¥ÀÌÅÍ ÂüÁ¶
-		Data ptr;								// °Ë»ö¿ë µ¥ÀÌÅÍ ÂüÁ¶
-		Data temp = new Data();					// ÀÔ·Â¿ë µ¥ÀÌÅÍ
+		Menu menu;								// ë©”ë‰´
+		Data data;								// ì¶”ê°€ìš© ë°ì´í„° ì°¸ì¡°
+		Data ptr;								// ê²€ìƒ‰ìš© ë°ì´í„° ì°¸ì¡°
+		Data temp = new Data();					// ì…ë ¥ìš© ë°ì´í„°
 
-		DblLinkedList<Data> list = new DblLinkedList<Data>(); // ¸®½ºÆ®¸¦ »ı¼º
+		DblLinkedList<Data> list = new DblLinkedList<Data>(); // ë¦¬ìŠ¤íŠ¸ë¥¼ ìƒì„±
 
 		do {
 			switch (menu = SelectMenu()) {
 
-			 case ADD_FIRST :						// ¸Ó¸®¿¡ ³ëµå¸¦ »ğÀÔ
+			 case ADD_FIRST :						// ë¨¸ë¦¬ì— ë…¸ë“œë¥¼ ì‚½ì…
 					data = new Data();
-				 	data.scanData("¸Ó¸®¿¡ »ğÀÔ", Data.NO | Data.NAME);
+				 	data.scanData("ë¨¸ë¦¬ì— ì‚½ì…", Data.NO | Data.NAME);
 					list.addFirst(data);
 		 			break;
 
-			 case ADD_LAST :						// ²¿¸®¿¡ ³ëµå¸¦ »ğÀÔ
+			 case ADD_LAST :						// ê¼¬ë¦¬ì— ë…¸ë“œë¥¼ ì‚½ì…
 					data = new Data();
-				 	data.scanData("²¿¸®¿¡ »ğÀÔ", Data.NO | Data.NAME);
+				 	data.scanData("ê¼¬ë¦¬ì— ì‚½ì…", Data.NO | Data.NAME);
 			 		list.addLast(data);
 			 		break;
 
-			 case ADD :								// ¼±ÅÃ ³ëµåÀÇ ¹Ù·Î µÚ¿¡ ³ëµå¸¦ »ğÀÔ
+			 case ADD :								// ì„ íƒ ë…¸ë“œì˜ ë°”ë¡œ ë’¤ì— ë…¸ë“œë¥¼ ì‚½ì…
 					data = new Data();
-				 	data.scanData("¼±ÅÃ ³ëµåÀÇ ¹Ù·Î µÚ¿¡ »ğÀÔ", Data.NO | Data.NAME);
+				 	data.scanData("ì„ íƒ ë…¸ë“œì˜ ë°”ë¡œ ë’¤ì— ì‚½ì…", Data.NO | Data.NAME);
 			 		list.add(data);
 			 		break;
 
-			 case RMV_FIRST :						// ¸Ó¸® ³ëµå¸¦ »èÁ¦
+			 case RMV_FIRST :						// ë¨¸ë¦¬ ë…¸ë“œë¥¼ ì‚­ì œ
 					list.removeFirst();
 					break;
 
-			 case RMV_LAST :						// ²¿¸® ³ëµå¸¦ »èÁ¦
+			 case RMV_LAST :						// ê¼¬ë¦¬ ë…¸ë“œë¥¼ ì‚­ì œ
 					list.removeLast();
 					break;
 
-			 case RMV_CRNT :						// ¼±ÅÃ ³ëµå¸¦ »èÁ¦
+			 case RMV_CRNT :						// ì„ íƒ ë…¸ë“œë¥¼ ì‚­ì œ
 					list.removeCurrentNode();
 					break;
 
-			 case SEARCH_NO :						// È¸¿ø¹øÈ£·Î °Ë»ö
-				 	temp.scanData("°Ë»ö", Data.NO);
+			 case SEARCH_NO :						// íšŒì›ë²ˆí˜¸ë¡œ ê²€ìƒ‰
+				 	temp.scanData("ê²€ìƒ‰", Data.NO);
 					ptr = list.search(temp, Data.NO_ORDER);
 					if (ptr == null)
-						System.out.println("±× ¹øÈ£ÀÇ µ¥ÀÌÅÍ°¡ ¾ø½À´Ï´Ù.");
+						System.out.println("ê·¸ ë²ˆí˜¸ì˜ ë°ì´í„°ê°€ ì—†ìŠµë‹ˆë‹¤.");
 					else
-						System.out.println("°Ë»ö ¼º°ø£º" + ptr);
+						System.out.println("ê²€ìƒ‰ ì„±ê³µï¼š" + ptr);
 			 		break;
 
-			 case SEARCH_NAME :						// ÀÌ¸§À¸·Î °Ë»ö
-				 	temp.scanData("°Ë»ö", Data.NAME);
+			 case SEARCH_NAME :						// ì´ë¦„ìœ¼ë¡œ ê²€ìƒ‰
+				 	temp.scanData("ê²€ìƒ‰", Data.NAME);
 					ptr = list.search(temp, Data.NAME_ORDER);
 					if (ptr == null)
-						System.out.println("±× ÀÌ¸§ÀÇ µ¥ÀÌÅÍ°¡ ¾ø½À´Ï´Ù.");
+						System.out.println("ê·¸ ì´ë¦„ì˜ ë°ì´í„°ê°€ ì—†ìŠµë‹ˆë‹¤.");
 					else
-						System.out.println("°Ë»ö ¼º°ø£º" + ptr);
+						System.out.println("ê²€ìƒ‰ ì„±ê³µï¼š" + ptr);
 			 		break;
 
-			 case NEXT :							// ¼±ÅÃ ³ëµå¸¦ µÚÂÊÀ¸·Î ÀÌµ¿
+			 case NEXT :							// ì„ íƒ ë…¸ë“œë¥¼ ë’¤ìª½ìœ¼ë¡œ ì´ë™
 					list.next();
 			 		break;
 
-			 case PREV :							// ¼±ÅÃ ³ëµå¸¦ ¾ÕÂÊÀ¸·Î ÀÌµ¿
+			 case PREV :							// ì„ íƒ ë…¸ë“œë¥¼ ì•ìª½ìœ¼ë¡œ ì´ë™
 					list.prev();
 			 		break;
 
-			 case PRINT_CRNT :						// ¼±ÅÃ ³ëµåÀÇ µ¥ÀÌÅÍ¸¦ Ãâ·Â
+			 case PRINT_CRNT :						// ì„ íƒ ë…¸ë“œì˜ ë°ì´í„°ë¥¼ ì¶œë ¥
 					list.printCurrentNode();
 			 		break;
 
-			 case DUMP :							// ¸ğµç µ¥ÀÌÅÍ¸¦ ¸®½ºÆ® ¼ø¼­·Î Ãâ·Â
+			 case DUMP :							// ëª¨ë“  ë°ì´í„°ë¥¼ ë¦¬ìŠ¤íŠ¸ ìˆœì„œë¡œ ì¶œë ¥
 					list.dump();
 			 		break;
 
-			 case CLEAR :							// ¸ğµç ³ëµå¸¦ »èÁ¦
+			 case CLEAR :							// ëª¨ë“  ë…¸ë“œë¥¼ ì‚­ì œ
 					list.clear();
 			 		break;
 			}

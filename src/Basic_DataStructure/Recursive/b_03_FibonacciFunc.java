@@ -1,14 +1,14 @@
-package Recursive;
+ï»¿package Recursive;
 public class b_03_FibonacciFunc 
 {
 	static int Fibo(int n) 
 	{
-		if(n==1)//¼ö¿­ÀÇ 1¹øÂ° À§Ä¡ÀÇ °ªÀº 0À» ¹İÈ¯
+		if(n==1)//ìˆ˜ì—´ì˜ 1ë²ˆì§¸ ìœ„ì¹˜ì˜ ê°’ì€ 0ì„ ë°˜í™˜
 			return 0;
-		else if(n==2)//¼ö¿­ÀÇ 2¹øÂ° À§Ä¡ÀÇ °ªÀº 1À» ¹İÈ¯
+		else if(n==2)//ìˆ˜ì—´ì˜ 2ë²ˆì§¸ ìœ„ì¹˜ì˜ ê°’ì€ 1ì„ ë°˜í™˜
 			return 1;
-		else//3¹øÂ° ÀÌ»ó n¹øÂ° ºÎÅÍ´Â n-1¹øÂ°+n-2¹øÂ°ÀÇ °ªÀÇ ÇÕÀ» ¹İÈ¯ ÇÑ´Ù.
-			return Fibo(n-1)+Fibo(n-2);//ÀÚ±âÀÚ½ÅÀ» ´Ù½Ã È£Ãâ
+		else//3ë²ˆì§¸ ì´ìƒ në²ˆì§¸ ë¶€í„°ëŠ” n-1ë²ˆì§¸+n-2ë²ˆì§¸ì˜ ê°’ì˜ í•©ì„ ë°˜í™˜ í•œë‹¤.
+			return Fibo(n-1)+Fibo(n-2);//ìê¸°ìì‹ ì„ ë‹¤ì‹œ í˜¸ì¶œ
 	}
 		public static void main(String[] args) 
 		{

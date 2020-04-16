@@ -1,21 +1,21 @@
-package Recursive;
+ï»¿package Recursive;
 public class b_05_HanoiTowerSolu {
-							//from¿¡ ²ÉÇôÀÖ´Â num°³ÀÇ ¿ø¹İÀ» by¸¦ °ÅÃÄ¼­ to·Î ÀÌµ¿ 
+							//fromì— ê½ƒí˜€ìˆëŠ” numê°œì˜ ì›ë°˜ì„ byë¥¼ ê±°ì³ì„œ toë¡œ ì´ë™ 
 	static void HanoiTowerMove(int num, char from, char by, char to)
 	{
-		if(num==1)    // ÀÌµ¿ÇÒ ¿ø¹İÀÇ ¼ö°¡ 1°³¶ó¸é
+		if(num==1)    // ì´ë™í•  ì›ë°˜ì˜ ìˆ˜ê°€ 1ê°œë¼ë©´
 		{
-			System.out.printf("¿ø¹İ1À» %c¿¡¼­ %c·Î ÀÌµ¿ \n", from, to);
+			System.out.printf("ì›ë°˜1ì„ %cì—ì„œ %cë¡œ ì´ë™ \n", from, to);
 		}
 		else
 		{   
-			HanoiTowerMove(num-1, from, to, by);// 3´Ü°è Áß 1´Ü°è 
-			System.out.printf("¿ø¹İ%dÀ»(¸¦) %c¿¡¼­ %c·Î ÀÌµ¿ \n", num, from, to);// 3´Ü°è Áß 2´Ü°è
-			HanoiTowerMove(num-1, by, from, to);// 3´Ü°è Áß 3´Ü°è
+			HanoiTowerMove(num-1, from, to, by);// 3ë‹¨ê³„ ì¤‘ 1ë‹¨ê³„ 
+			System.out.printf("ì›ë°˜%dì„(ë¥¼) %cì—ì„œ %cë¡œ ì´ë™ \n", num, from, to);// 3ë‹¨ê³„ ì¤‘ 2ë‹¨ê³„
+			HanoiTowerMove(num-1, by, from, to);// 3ë‹¨ê³„ ì¤‘ 3ë‹¨ê³„
 		}
 	}
 	public static void main(String[] args) {
-		// ¸·´ëAÀÇ ¿ø¹İ 3°³¸¦ ¸·´ëB¸¦ °æÀ¯ÇÏ¿© ¸·´ëC·Î ¿Å±â±â
+		// ë§‰ëŒ€Aì˜ ì›ë°˜ 3ê°œë¥¼ ë§‰ëŒ€Bë¥¼ ê²½ìœ í•˜ì—¬ ë§‰ëŒ€Cë¡œ ì˜®ê¸°ê¸°
 		HanoiTowerMove(3, 'A', 'B', 'C');
 }
 }

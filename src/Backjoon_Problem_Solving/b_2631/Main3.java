@@ -1,4 +1,4 @@
-package b_2631;
+ï»¿package b_2631;
 
 import java.util.Scanner;
 import java.util.Arrays;
@@ -10,9 +10,9 @@ public class Main3 {
 		
 		int max=0;
 		int maxindex=0;
-		int[] dp = new int[n];// ÀÎµ¦½º¸¶´Ù °¢ Áõ°¡ ¼ö¿­ÀÇ ±æÀÌ//dp ¹è¿­Àº Áõ°¡ ¼ö¿­ÀÇ ±æÀÌ¸¦ ³ÖÀ» °ÍÀÌ´Ù.
-		int[] array = new int[n];// ÀÎµ¦½º¸¶´Ù °¢ ÀÔ·Â°ª
-		String[] sequence = new String[n];//Áõ°¡ ¼ö¿­ 
+		int[] dp = new int[n];// ì¸ë±ìŠ¤ë§ˆë‹¤ ê° ì¦ê°€ ìˆ˜ì—´ì˜ ê¸¸ì´//dp ë°°ì—´ì€ ì¦ê°€ ìˆ˜ì—´ì˜ ê¸¸ì´ë¥¼ ë„£ì„ ê²ƒì´ë‹¤.
+		int[] array = new int[n];// ì¸ë±ìŠ¤ë§ˆë‹¤ ê° ì…ë ¥ê°’
+		String[] sequence = new String[n];//ì¦ê°€ ìˆ˜ì—´ 
 		int ans = 0;
 
 		for (int i = 0; i < n; i++) {
@@ -24,11 +24,11 @@ public class Main3 {
 		for (int i = 1; i < n; i++) {
 		  dp[i] = 1;
 		  String temp="";
-		  // i ¸¦ ±âÁØÀ¸·Î ÀÎµ¦½º 0 ¿¡¼­ºÎÅÍ i-1±îÁö Ã¼Å©ÇÑ´Ù 
-		    // ±æÀÌ¸¦ ±âÁØ
+		  // i ë¥¼ ê¸°ì¤€ìœ¼ë¡œ ì¸ë±ìŠ¤ 0 ì—ì„œë¶€í„° i-1ê¹Œì§€ ì²´í¬í•œë‹¤ 
+		    // ê¸¸ì´ë¥¼ ê¸°ì¤€
 		  for (int j = 0; j < i; j++) {
-		    if ( array[i] > array[j] && dp[i] < dp[j] + 1 ) { // Áõ°¡ ¼ö¿­ ÀÌ¶ó¸é
-		      dp[i] = dp[j] + 1;//±æÀÌ 1Áõ°¡
+		    if ( array[i] > array[j] && dp[i] < dp[j] + 1 ) { // ì¦ê°€ ìˆ˜ì—´ ì´ë¼ë©´
+		      dp[i] = dp[j] + 1;//ê¸¸ì´ 1ì¦ê°€
 		      if(dp[j] + 1 > max) {
 		    	  max = dp[j] + 1 ;
 		    	  maxindex = i;

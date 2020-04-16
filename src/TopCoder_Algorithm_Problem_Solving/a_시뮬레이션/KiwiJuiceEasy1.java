@@ -1,11 +1,11 @@
-package a_½Ã¹Ä·¹ÀÌ¼Ç;
+ï»¿package a_ì‹œë®¬ë ˆì´ì…˜;
 
  public class KiwiJuiceEasy1 {
 	public static void main(String[] args) {
-		int[] capacities=new int[]{10,10,10};//ÀüÃ¼ º´ÀÇ Å©±â
-		int[] bottles=new int[]{3,7,3};//ÇöÀçµé¾îÀÖ´Â ¿ë·®
-		int[] fromld=new int[]{1,0,1,0};//¿Å±â°í ½ÍÀº°÷ÀÇ º´
-		int[] told=new int[]{0,1,0,1};//¿Å±èÀ» ¹Ş¾Æ¾ßÇÏ´Â °÷ÀÇ º´
+		int[] capacities=new int[]{10,10,10};//ì „ì²´ ë³‘ì˜ í¬ê¸°
+		int[] bottles=new int[]{3,7,3};//í˜„ì¬ë“¤ì–´ìˆëŠ” ìš©ëŸ‰
+		int[] fromld=new int[]{1,0,1,0};//ì˜®ê¸°ê³  ì‹¶ì€ê³³ì˜ ë³‘
+		int[] told=new int[]{0,1,0,1};//ì˜®ê¹€ì„ ë°›ì•„ì•¼í•˜ëŠ” ê³³ì˜ ë³‘
 		
 		int[] a = thePouring(capacities,bottles,fromld,told);
 		
@@ -18,11 +18,11 @@ package a_½Ã¹Ä·¹ÀÌ¼Ç;
 		for (int i = 0; i < fromld.length; i++){
 			 int from = fromld[i];
 			 int to = told[i];
-			 int toSpace = capacities[to] - bottles[to];//¿Å±æ·Á´Â°÷ÀÇ ³²Àº°ø°£
+			 int toSpace = capacities[to] - bottles[to];//ì˜®ê¸¸ë ¤ëŠ”ê³³ì˜ ë‚¨ì€ê³µê°„
 			 
-			 if (toSpace >= bottles[from]) { //¿Å±â·Á´Â ¾çÀÌ ³ÑÄ¡Áö ¾Ê´Â´Ù¸é
+			 if (toSpace >= bottles[from]) { //ì˜®ê¸°ë ¤ëŠ” ì–‘ì´ ë„˜ì¹˜ì§€ ì•ŠëŠ”ë‹¤ë©´
 				 bottles[to] += bottles[from];
-				 bottles[from] -= bottles[from];//º´À» ºñ¿ìÀÚ
+				 bottles[from] -= bottles[from];//ë³‘ì„ ë¹„ìš°ì
 			 }else{
 				 bottles[to] += toSpace;
 				 bottles[from] -= toSpace;

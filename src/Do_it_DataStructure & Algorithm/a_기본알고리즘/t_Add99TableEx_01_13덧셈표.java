@@ -1,6 +1,6 @@
-package a_±âº»¾Ë°í¸®Áò;
+ï»¿package a_ê¸°ë³¸ì•Œê³ ë¦¬ì¦˜;
 
-class t_Add99TableEx_01_13µ¡¼ÀÇ¥ {
+class t_Add99TableEx_01_13ë§ì…ˆí‘œ {
 	public static void main(String[] args) {
 
 		System.out.print("   |");

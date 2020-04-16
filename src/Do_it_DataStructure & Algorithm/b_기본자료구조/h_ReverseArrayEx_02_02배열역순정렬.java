@@ -1,24 +1,24 @@
-package b_±âº»ÀÚ·á±¸Á¶;
+ï»¿package b_ê¸°ë³¸ìë£Œêµ¬ì¡°;
 import java.util.Scanner;
-// ¹è¿­ ¿ä¼Ú°ªÀ» ÀĞ¾î µé¿© ¿ª¼øÀ¸·Î Á¤·Ä
-class h_ReverseArrayEx_02_02¹è¿­¿ª¼øÁ¤·Ä {
-	// ¹è¿­ÀÇ ¿ä¼Ò a[idx1]¿Í a[idx2]¸¦ ±³È¯
+// ë°°ì—´ ìš”ì†Ÿê°’ì„ ì½ì–´ ë“¤ì—¬ ì—­ìˆœìœ¼ë¡œ ì •ë ¬
+class h_ReverseArrayEx_02_02ë°°ì—´ì—­ìˆœì •ë ¬ {
+	// ë°°ì—´ì˜ ìš”ì†Œ a[idx1]ì™€ a[idx2]ë¥¼ êµí™˜
 	static void swap(int[] a, int idx1, int idx2) {
 		int t = a[idx1];
 		a[idx1] = a[idx2];
 		a[idx2] = t;
 	}
-	// ¹è¿­ aÀÇ ¿ä¼Ò °ªÀ» ³ªÅ¸³¿
+	// ë°°ì—´ aì˜ ìš”ì†Œ ê°’ì„ ë‚˜íƒ€ëƒ„
 	static void print(int[] a) {
 		for (int i = 0; i < a.length; i++)
 			System.out.print(a[i] + " ");
 		System.out.println();
 	}
-	// ¹è¿­ aÀÇ ¿ä¼Ò¸¦ ¿ª¼øÀ¸·Î Á¤·Ä
+	// ë°°ì—´ aì˜ ìš”ì†Œë¥¼ ì—­ìˆœìœ¼ë¡œ ì •ë ¬
 	static void reverse(int[] a) {
 			print(a);
 		for (int i = 0; i < a.length / 2; i++) {
-			System.out.println("a[" + i + "]¿Í a[" + (a.length - i - 1) + "]¸¦ ±³È¯ÇÕ´Ï´Ù.");
+			System.out.println("a[" + i + "]ì™€ a[" + (a.length - i - 1) + "]ë¥¼ êµí™˜í•©ë‹ˆë‹¤.");
 			swap(a, i, a.length - i - 1);
 			print(a);
 		}
@@ -26,18 +26,18 @@ class h_ReverseArrayEx_02_02¹è¿­¿ª¼øÁ¤·Ä {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		System.out.print("¿ä¼Ú¼ö´Â £º");
-		int num = stdIn.nextInt(); // ¿ä¼Ú¼ö
+		System.out.print("ìš”ì†Ÿìˆ˜ëŠ” ï¼š");
+		int num = stdIn.nextInt(); // ìš”ì†Ÿìˆ˜
 
-		int[] x = new int[num]; // ¿ä¼Ú¼ö numÀÎ ¹è¿­
+		int[] x = new int[num]; // ìš”ì†Ÿìˆ˜ numì¸ ë°°ì—´
 
 		for (int i = 0; i < num; i++) {
 			System.out.print("x[" + i + "] : ");
 			x[i] = stdIn.nextInt();
 		}
-		reverse(x); // ¹è¿­ aÀÇ ¿ä¼Ò¸¦ ¿ª¼øÀ¸·Î Á¤·Ä
+		reverse(x); // ë°°ì—´ aì˜ ìš”ì†Œë¥¼ ì—­ìˆœìœ¼ë¡œ ì •ë ¬
 
-		System.out.println("¿ª¼ø Á¤·ÄÀ» ¸¶ÃÆ½À´Ï´Ù.");
+		System.out.println("ì—­ìˆœ ì •ë ¬ì„ ë§ˆì³¤ìŠµë‹ˆë‹¤.");
 //		for (int i = 0; i < num; i++)
 //			System.out.println("x[" + i + "] = " + x[i]);
 	}

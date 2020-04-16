@@ -1,4 +1,4 @@
-package b_ÀüÃ¼Å½»ö;
+ï»¿package b_ì „ì²´íƒìƒ‰;
 import java.util.HashMap;
  public class bestInvitation3 {
 	public static void main(String[] args) {

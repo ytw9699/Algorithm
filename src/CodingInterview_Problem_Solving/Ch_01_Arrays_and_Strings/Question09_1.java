@@ -1,22 +1,22 @@
-package Ch_01_Arrays_and_Strings;
+ï»¿package Ch_01_Arrays_and_Strings;
 
 public class Question09_1 {
 	public static boolean isSubstring(String big, String small) {
-		if (big.indexOf(small) >= 0) {//6. 0º¸´Ù Å©´Ù´Â°Ç big¾È¿¡ smallÀÌ ÀÖ´Ù´Â°Å
-			//System.out.println(big.indexOf(small));//big¿¡¼­ smallÀÌ ½ÃÀÛÇÏ´Â ÀÎµ¦½º À§Ä¡¸¦ ¾Ë·ÁÁÜ
+		if (big.indexOf(small) >= 0) {//6. 0ë³´ë‹¤ í¬ë‹¤ëŠ”ê±´ bigì•ˆì— smallì´ ìžˆë‹¤ëŠ”ê±°
+			//System.out.println(big.indexOf(small));//bigì—ì„œ smallì´ ì‹œìž‘í•˜ëŠ” ì¸ë±ìŠ¤ ìœ„ì¹˜ë¥¼ ì•Œë ¤ì¤Œ
 			return true;
-		} else {// ÀÎµ¦½º À§Ä¡¸¦ ¸øÃ£¾Æ³»¸é -1¸®ÅÏ
+		} else {// ì¸ë±ìŠ¤ ìœ„ì¹˜ë¥¼ ëª»ì°¾ì•„ë‚´ë©´ -1ë¦¬í„´
 			return false;
 		}
 	}
 	public static boolean isRotation(String s1, String s2) {
 	    int len = s1.length();
 	    
-	    if (len == s2.length() && len > 0) { //3. s1°ú s2ÀÇ ±æÀÌ°¡ °°°í ºó¹®ÀÚ¿­ÀÌ ¾Æ´ÑÁö È®ÀÎ
-	    	//4.±æ4ÀÌ°¡ °°¾Æ¾ß È¸ÀüÇÑ°ÍÀÌ±â¶§¹®¿¡
-	    	String s1s1 = s1 + s1;//s1À» 2°³¸¦ ÇÕÄ¡¸é s2°¡ ÀÌ¾È¿¡ Æ÷ÇÔµÈ´Ù´Â Æ¯¼ºÀ» »ý°¢ÇØ³»¾ßÇÔ..
+	    if (len == s2.length() && len > 0) { //3. s1ê³¼ s2ì˜ ê¸¸ì´ê°€ ê°™ê³  ë¹ˆë¬¸ìžì—´ì´ ì•„ë‹Œì§€ í™•ì¸
+	    	//4.ê¸¸4ì´ê°€ ê°™ì•„ì•¼ íšŒì „í•œê²ƒì´ê¸°ë•Œë¬¸ì—
+	    	String s1s1 = s1 + s1;//s1ì„ 2ê°œë¥¼ í•©ì¹˜ë©´ s2ê°€ ì´ì•ˆì— í¬í•¨ëœë‹¤ëŠ” íŠ¹ì„±ì„ ìƒê°í•´ë‚´ì•¼í•¨..
 	    	
-	    	return isSubstring(s1s1, s2);//5. s2°¡ s1s1ÀÇ ºÎºÎ ¹®ÀÚ¿­ÀÎÁö È®ÀÎ
+	    	return isSubstring(s1s1, s2);//5. s2ê°€ s1s1ì˜ ë¶€ë¶€ ë¬¸ìžì—´ì¸ì§€ í™•ì¸
 	    }
 	    return false;
 	}
@@ -25,29 +25,29 @@ public class Question09_1 {
 		String[][] pairs =
 		{{"abcde", "deabc"}, {"abcde", "edabc"}};
 		
-		for (String[] pair : pairs) {//1. ¹Ýº¹¹® ÅëÇØ 2°³ÀÇ ¹®ÀÚ¿­À» »Ì¾Æ³»°í
+		for (String[] pair : pairs) {//1. ë°˜ë³µë¬¸ í†µí•´ 2ê°œì˜ ë¬¸ìžì—´ì„ ë½‘ì•„ë‚´ê³ 
 			
 			String s1 = pair[0];
 			String s2 = pair[1];
 			
-			boolean is_rotation = isRotation(s1, s2); //2. ºÒ¸°°ªÀ» ¾òÀÚ
+			boolean is_rotation = isRotation(s1, s2); //2. ë¶ˆë¦°ê°’ì„ ì–»ìž
 			
-			if(is_rotation == true) {//8.ÃÖÁ¾ È¸Àü °á°ú Ãâ·Â
-				System.out.println(s2 + "´Â " + s1 + "À» È¸Àü½ÃÅ² °á°úÀÔ´Ï´Ù.");
+			if(is_rotation == true) {//8.ìµœì¢… íšŒì „ ê²°ê³¼ ì¶œë ¥
+				System.out.println(s2 + "ëŠ” " + s1 + "ì„ íšŒì „ì‹œí‚¨ ê²°ê³¼ìž…ë‹ˆë‹¤.");
 			}
 			else
-				System.out.println(s2 + "´Â " + s1 + "À» È¸Àü½ÃÅ² °á°ú°¡ ¾Æ´Õ´Ï´Ù.");
+				System.out.println(s2 + "ëŠ” " + s1 + "ì„ íšŒì „ì‹œí‚¨ ê²°ê³¼ê°€ ì•„ë‹™ë‹ˆë‹¤.");
 		}
 	}
 }
-/*¹®ÀÚ¿­ È¸Àü: 
-µÎ ¹®ÀÚ¿­ÀÌ ÁÖ¾îÁö¸é s2°¡ s1À» È¸Àü½ÃÅ² °á°úÀÎÁö ÆÇº°ÇØº¸ÀÚ
+/*ë¬¸ìžì—´ íšŒì „: 
+ë‘ ë¬¸ìžì—´ì´ ì£¼ì–´ì§€ë©´ s2ê°€ s1ì„ íšŒì „ì‹œí‚¨ ê²°ê³¼ì¸ì§€ íŒë³„í•´ë³´ìž
 abc de  > de abc
 abc de  > ed abc 
 abcde+abcde  = abcdeabcde   
-ÀÌ ¾È¿¡¼­ deabc´Â ºÎºÐ¹®ÀÚ¿­ÀÌ´Ù ±×·¯¸é È¸Àü½ÃÅ² °á°ú·Î ÆÇº°ÇÒ ¼ö ÀÖ´Ù
+ì´ ì•ˆì—ì„œ deabcëŠ” ë¶€ë¶„ë¬¸ìžì—´ì´ë‹¤ ê·¸ëŸ¬ë©´ íšŒì „ì‹œí‚¨ ê²°ê³¼ë¡œ íŒë³„í•  ìˆ˜ ìžˆë‹¤
 
-¾Ë°í¸®Áò ¼öÇà½Ã°£
-issubstringÀÇ ¼öÇà½Ã°£¿¡µû¶ó ´Þ¶óÁø´Ù
-¼öÇà½Ã°£ÀÌ O(A+B) ±æÀÌ°¡ A¿Í BÀÎ ¹®ÀÚ¿­ÀÌ¶ó°í °¡Á¤ÇÏ¸é 
-isRotation ÀÇ ¼öÇà½Ã°£Àº O(N) ÀÌ µÈ´Ù*/
+ì•Œê³ ë¦¬ì¦˜ ìˆ˜í–‰ì‹œê°„
+issubstringì˜ ìˆ˜í–‰ì‹œê°„ì—ë”°ë¼ ë‹¬ë¼ì§„ë‹¤
+ìˆ˜í–‰ì‹œê°„ì´ O(A+B) ê¸¸ì´ê°€ Aì™€ Bì¸ ë¬¸ìžì—´ì´ë¼ê³  ê°€ì •í•˜ë©´ 
+isRotation ì˜ ìˆ˜í–‰ì‹œê°„ì€ O(N) ì´ ëœë‹¤*/

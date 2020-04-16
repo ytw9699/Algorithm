@@ -1,4 +1,4 @@
-package b_2000¹ø´ë;
+ï»¿package b_2000ë²ˆëŒ€;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.PriorityQueue;
@@ -17,14 +17,14 @@ public class Main2252 {
 		Student[] s = new Student[n];
 		
 		for(int i =0; i<n; i++) {
-			s[i] = new Student(i+1,0);//ÇĞ»ı¹øÈ£¿Í Å° ÃÊ±â°ª
+			s[i] = new Student(i+1,0);//í•™ìƒë²ˆí˜¸ì™€ í‚¤ ì´ˆê¸°ê°’
 		}
 		
 		for(int i =0; i<m; i++) {
 			String second[] = br.readLine().split(" ");
 			int a = Integer.parseInt(second[0]);
 			int b = Integer.parseInt(second[1]);
-			s[b-1].addOrder(s[a-1].height);//Å°ºñ±³¸¦ ¿©±â¼­ ³¡³»°í 
+			s[b-1].addOrder(s[a-1].height);//í‚¤ë¹„êµë¥¼ ì—¬ê¸°ì„œ ëë‚´ê³  
 		}
 		br.close();
 		
@@ -33,7 +33,7 @@ public class Main2252 {
 			PriorityQueue.offer(s[i]);
 		}
 		
-		while(!PriorityQueue.isEmpty()) {//¿ì¼±¼øÀ§¸¦ ¸Å°Ü¼­ Ãâ·Â ¿ì¼±¼øÀ§´Â Å°°¡ ÀÛÀº¼ø¼­´ë·Î
+		while(!PriorityQueue.isEmpty()) {//ìš°ì„ ìˆœìœ„ë¥¼ ë§¤ê²¨ì„œ ì¶œë ¥ ìš°ì„ ìˆœìœ„ëŠ” í‚¤ê°€ ì‘ì€ìˆœì„œëŒ€ë¡œ
 			output = output+PriorityQueue.poll().number+" "; 
 		}
 		System.out.println(output);
@@ -44,8 +44,8 @@ class Student implements Comparable<Student>{
 	int height;
 	
 	public Student(int number, int height) {
-		this.number = number;//ÇĞ»ı¹øÈ£
-		this.height = height;//Å°
+		this.number = number;//í•™ìƒë²ˆí˜¸
+		this.height = height;//í‚¤
 	}
 	public void addOrder(int otherheight) {
 		if(otherheight == 0)
@@ -57,12 +57,12 @@ class Student implements Comparable<Student>{
 	}
 	@Override
 	public int compareTo(Student target) {
-		if(this.height > target.height) {//Ã¹¹øÂ° ÀÎÀÚÀÇ ¿ì¼±¼øÀ§°¡ ³ôÀ¸¸é 0º¸´ÙÅ«°ª ¹İÈ¯
+		if(this.height > target.height) {//ì²«ë²ˆì§¸ ì¸ìì˜ ìš°ì„ ìˆœìœ„ê°€ ë†’ìœ¼ë©´ 0ë³´ë‹¤í°ê°’ ë°˜í™˜
 			return 1;
 		}
-		else if(this.height < target.height) {//µÎ¹øÀç ÀÎÀÚÀÇ ¿ì¼±¼øÀ§°¡ ³ôÀ¸¸é 0º¸´ÙÀÛÀº°ª ¹İÈ¯
+		else if(this.height < target.height) {//ë‘ë²ˆì¬ ì¸ìì˜ ìš°ì„ ìˆœìœ„ê°€ ë†’ìœ¼ë©´ 0ë³´ë‹¤ì‘ì€ê°’ ë°˜í™˜
 			return -1;
 		}
-		return 0;//¿ì¼±¼øÀ§°¡ µ¿ÀÏÇÏ´Ù¸é 0¹İÈ¯
+		return 0;//ìš°ì„ ìˆœìœ„ê°€ ë™ì¼í•˜ë‹¤ë©´ 0ë°˜í™˜
 	}
 }

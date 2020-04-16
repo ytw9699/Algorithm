@@ -1,4 +1,4 @@
-package b_�ڷᱸ��;
+﻿package b_자료구조;
 import java.util.Scanner;
 
 public class Main3 {

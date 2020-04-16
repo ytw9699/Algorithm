@@ -1,10 +1,10 @@
-package b_ÀüÃ¼Å½»ö;
+ï»¿package b_ì „ì²´íƒìƒ‰;
 public class Cryptography2 {
 	
 	public static void main(String[] args) {
 		
-		int[] numbers=new int[]{1,2,3};//ÀÔ·Â°ª
-		System.out.println(encrypt(numbers));//Ãâ·Â
+		int[] numbers=new int[]{1,2,3};//ì…ë ¥ê°’
+		System.out.println(encrypt(numbers));//ì¶œë ¥
 		
 	}
 	
@@ -18,12 +18,12 @@ public class Cryptography2 {
 			
 			for( int j = 0; j<numbers.length; j++ ) {
 				if( i ==j )
-					temp *= (numbers[j] + 1);//°¢ ¿ä¼Ò¸¶´Ù ¹ø°¥¾Æ°¡¸ç 1¾¿ ³ôÀº°ªÀ» °öÇØÁÜ
+					temp *= (numbers[j] + 1);//ê° ìš”ì†Œë§ˆë‹¤ ë²ˆê°ˆì•„ê°€ë©° 1ì”© ë†’ì€ê°’ì„ ê³±í•´ì¤Œ
 				else 
-				temp *= numbers[j];//³ª¸ÓÁö ¿ä¼Ò ¸ğµÎ °öÇØÁÜ
+				temp *= numbers[j];//ë‚˜ë¨¸ì§€ ìš”ì†Œ ëª¨ë‘ ê³±í•´ì¤Œ
 			}
-				ans = Math.max(ans, temp);//ÃÖ´ë°ªÀ» °»½Å
+				ans = Math.max(ans, temp);//ìµœëŒ€ê°’ì„ ê°±ì‹ 
 			}
-		return ans;//°¡Àå Å« °öÀÇ °æ¿ì ¸®ÅÏ
+		return ans;//ê°€ì¥ í° ê³±ì˜ ê²½ìš° ë¦¬í„´
 	}
 }		

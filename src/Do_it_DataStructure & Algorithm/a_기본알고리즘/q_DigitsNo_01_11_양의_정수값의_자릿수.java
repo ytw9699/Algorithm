@@ -1,22 +1,22 @@
-package a_±âº»¾Ë°í¸®Áò;
+ï»¿package a_ê¸°ë³¸ì•Œê³ ë¦¬ì¦˜;
 import java.util.Scanner;
-// ¾çÀÇ Á¤¼ö°ªÀÇ ÀÚ¸´¼ö¸¦ ±¸ÇÏ¿© ³ªÅ¸³¿
-class q_DigitsNo_01_11_¾çÀÇ_Á¤¼ö°ªÀÇ_ÀÚ¸´¼ö {
+// ì–‘ì˜ ì •ìˆ˜ê°’ì˜ ìë¦¿ìˆ˜ë¥¼ êµ¬í•˜ì—¬ ë‚˜íƒ€ëƒ„
+class q_DigitsNo_01_11_ì–‘ì˜_ì •ìˆ˜ê°’ì˜_ìë¦¿ìˆ˜ {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		System.out.println("¾çÀÇ Á¤¼ö°ªÀÇ ÀÚ¸´¼ö¸¦ ±¸ÇÕ´Ï´Ù.");
+		System.out.println("ì–‘ì˜ ì •ìˆ˜ê°’ì˜ ìë¦¿ìˆ˜ë¥¼ êµ¬í•©ë‹ˆë‹¤.");
 		int n;
 		do {
-			System.out.print("Á¤¼ö°ª£º");
+			System.out.print("ì •ìˆ˜ê°’ï¼š");
 			n = stdIn.nextInt();
 		} while (n <= 0);
 
-		int count = 0; 			// ÀÚ¸´¼ö
+		int count = 0; 			// ìë¦¿ìˆ˜
 		while (n > 0) {
-			n /= 10; 			// nÀ» 10À¸·Î ³ª´®
+			n /= 10; 			// nì„ 10ìœ¼ë¡œ ë‚˜ëˆ”
 			count++;
 		}
-		System.out.println("±× ¼ö´Â " + count + "ÀÚ¸®ÀÔ´Ï´Ù.");
+		System.out.println("ê·¸ ìˆ˜ëŠ” " + count + "ìë¦¬ì…ë‹ˆë‹¤.");
 	}
 }

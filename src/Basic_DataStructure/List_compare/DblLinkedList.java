@@ -1,21 +1,21 @@
-package List_compare;
+ï»¿package List_compare;
 import java.util.Comparator;
-// ¿øÇü ÀÌÁß ¿¬°á ¸®½ºÆ® Å¬·¡½º
+// ì›í˜• ì´ì¤‘ ì—°ê²° ë¦¬ìŠ¤íŠ¸ í´ë˜ìŠ¤
 
 public class DblLinkedList<E> {
-	// ³ëµå
+	// ë…¸ë“œ
 	class Node<E> {
-		private E data;			// µ¥ÀÌÅÍ
-		private Node<E> prev;	// ¾ÕÂÊ Æ÷ÀÎÅÍ (¾ÕÂÊ ³ëµå¿¡ ´ëÇÑ ÂüÁ¶)
-		private Node<E> next;	// µÚÂÊ Æ÷ÀÎÅÍ (´ÙÀ½ ³ëµå¿¡ ´ëÇÑ ÂüÁ¶)
+		private E data;			// ë°ì´í„°
+		private Node<E> prev;	// ì•ìª½ í¬ì¸í„° (ì•ìª½ ë…¸ë“œì— ëŒ€í•œ ì°¸ì¡°)
+		private Node<E> next;	// ë’¤ìª½ í¬ì¸í„° (ë‹¤ìŒ ë…¸ë“œì— ëŒ€í•œ ì°¸ì¡°)
 
-		// »ı¼ºÀÚ
+		// ìƒì„±ì
 		Node() {
 			data = null;
 			prev = next = this;
 		}
 
-		// »ı¼ºÀÚ
+		// ìƒì„±ì
 		Node(E obj, Node<E> prev, Node<E> next) {
 			data = obj;
 			this.prev = prev;
@@ -23,44 +23,44 @@ public class DblLinkedList<E> {
 		}
 	}
 
-	private Node<E> head;					// ¸Ó¸® ³ëµå (´õ¹Ì ³ëµå)
-	private Node<E> crnt;					// ¼±ÅÃ ³ëµå
+	private Node<E> head;					// ë¨¸ë¦¬ ë…¸ë“œ (ë”ë¯¸ ë…¸ë“œ)
+	private Node<E> crnt;					// ì„ íƒ ë…¸ë“œ
 
-	// »ı¼ºÀÚ
+	// ìƒì„±ì
 	public DblLinkedList() {
-		head = crnt = new Node<E>();		// ´õ¹Ì ³ëµå¸¦ »ı¼º
+		head = crnt = new Node<E>();		// ë”ë¯¸ ë…¸ë“œë¥¼ ìƒì„±
 	}
 
-	// ¸®½ºÆ®°¡ ºñ¾îÀÖ´Â°¡?
+	// ë¦¬ìŠ¤íŠ¸ê°€ ë¹„ì–´ìˆëŠ”ê°€?
 	public boolean isEmpty() {
 		return head.next == head;
 	}
 
-	// ³ëµå¸¦ °Ë»ö
+	// ë…¸ë“œë¥¼ ê²€ìƒ‰
 	public E search(E obj, Comparator<? super E> c) {
-		Node<E> ptr = head.next;			// ÇöÀç ½ºÄµ ÁßÀÎ  ³ëµå
+		Node<E> ptr = head.next;			// í˜„ì¬ ìŠ¤ìº” ì¤‘ì¸  ë…¸ë“œ
 
 		while (ptr != head) {
 			if (c.compare(obj, ptr.data) == 0) {
 				crnt = ptr;
-				return ptr.data;			// °Ë»ö ¼º°ø
+				return ptr.data;			// ê²€ìƒ‰ ì„±ê³µ
 			}
-			ptr = ptr.next;					// ´ÙÀ½ ³ëµå·Î ¼±ÅÃ
+			ptr = ptr.next;					// ë‹¤ìŒ ë…¸ë“œë¡œ ì„ íƒ
 		}
-		return null;						// °Ë»ö ½ÇÆĞ
+		return null;						// ê²€ìƒ‰ ì‹¤íŒ¨
 	}
 
-	// ¼±ÅÃ ³ëµå¸¦ Ãâ·Â 
+	// ì„ íƒ ë…¸ë“œë¥¼ ì¶œë ¥ 
 	public void printCurrentNode() {
 		if (isEmpty())
-			System.out.println("¼±ÅÃ ³ëµå°¡ ¾ø½À´Ï´Ù.");
+			System.out.println("ì„ íƒ ë…¸ë“œê°€ ì—†ìŠµë‹ˆë‹¤.");
 		else
 			System.out.println(crnt.data);
 	}
 
-	// ¸ğµç ³ëµå¸¦ Ãâ·Â
+	// ëª¨ë“  ë…¸ë“œë¥¼ ì¶œë ¥
 	public void dump() {
-		Node<E> ptr = head.next;			// ´õ¹Ì ³ëµåÀÇ ´ÙÀ½ ³ëµå
+		Node<E> ptr = head.next;			// ë”ë¯¸ ë…¸ë“œì˜ ë‹¤ìŒ ë…¸ë“œ
 
 		while (ptr != head) {
 			System.out.println(ptr.data);
@@ -68,9 +68,9 @@ public class DblLinkedList<E> {
 		}
 	}
 
-	// ¸ğµç ³ëµå¸¦ °Å²Ù·Î Ãâ·Â
+	// ëª¨ë“  ë…¸ë“œë¥¼ ê±°ê¾¸ë¡œ ì¶œë ¥
 	public void dumpReverse() {
-		Node<E> ptr = head.prev;			// ´õ¹Ì ³ëµåÀÇ ¾ÕÂÊ ³ëµå
+		Node<E> ptr = head.prev;			// ë”ë¯¸ ë…¸ë“œì˜ ì•ìª½ ë…¸ë“œ
 
 		while (ptr != head) {
 			System.out.println(ptr.data);
@@ -78,42 +78,42 @@ public class DblLinkedList<E> {
 		}
 	}
 
-	// ¼±ÅÃ ³ëµå¸¦ ÇÏ³ª µÚÂÊÀ¸·Î ÀÌµ¿
+	// ì„ íƒ ë…¸ë“œë¥¼ í•˜ë‚˜ ë’¤ìª½ìœ¼ë¡œ ì´ë™
 	public boolean next() {
 		if (isEmpty() || crnt.next == head)
-			return false;					// ÀÌµ¿ÇÒ ¼ö ¾øÀ½
+			return false;					// ì´ë™í•  ìˆ˜ ì—†ìŒ
 		crnt = crnt.next;
 		return true;
 	}
 
-	// ¼±ÅÃ ³ëµå¸¦ ÇÏ³ª ¾ÕÂÊÀ¸·Î ÀÌµ¿
+	// ì„ íƒ ë…¸ë“œë¥¼ í•˜ë‚˜ ì•ìª½ìœ¼ë¡œ ì´ë™
 	public boolean prev() {
 		if (isEmpty() || crnt.prev == head)
-			return false;					// ÀÌµ¿ÇÒ ¼ö ¾øÀ½
+			return false;					// ì´ë™í•  ìˆ˜ ì—†ìŒ
 		crnt = crnt.prev;
 		return true;
 	}
 
-	// ¼±ÅÃ ³ëµåÀÇ ¹Ù·Î µÚ¿¡ ³ëµå¸¦ »ğÀÔ
+	// ì„ íƒ ë…¸ë“œì˜ ë°”ë¡œ ë’¤ì— ë…¸ë“œë¥¼ ì‚½ì…
 	public void add(E obj) {
 		Node<E> node = new Node<E>(obj, crnt, crnt.next);
 		crnt.next = crnt.next.prev = node;
 		crnt = node;
 	}
 
-	// ¸Ó¸®¿¡ ³ëµå¸¦ »ğÀÔ 
+	// ë¨¸ë¦¬ì— ë…¸ë“œë¥¼ ì‚½ì… 
 	public void addFirst(E obj) {
-		crnt = head;				// ´õ¹Ì ³ëµå headÀÇ ¹Ù·Î µÚ¿¡ »ğÀÔ
+		crnt = head;				// ë”ë¯¸ ë…¸ë“œ headì˜ ë°”ë¡œ ë’¤ì— ì‚½ì…
 		add(obj);
 	}
 
-	// ²¿¸®¿¡ ³ëµå¸¦ »ğÀÔ
+	// ê¼¬ë¦¬ì— ë…¸ë“œë¥¼ ì‚½ì…
 	public void addLast(E obj) {
-		crnt = head.prev;			// ²¿¸® ³ëµå head.prevÀÇ ¹Ù·Î µÚ¿¡ »ğÀÔ
+		crnt = head.prev;			// ê¼¬ë¦¬ ë…¸ë“œ head.prevì˜ ë°”ë¡œ ë’¤ì— ì‚½ì…
 		add(obj);
 	}
 
-	// ¼±ÅÃ ³ëµå¸¦ »èÁ¦
+	// ì„ íƒ ë…¸ë“œë¥¼ ì‚­ì œ
 	public void removeCurrentNode() {
 		if (!isEmpty()) {
 			crnt.prev.next = crnt.next;
@@ -123,12 +123,12 @@ public class DblLinkedList<E> {
 		}
 	}
 
-	// ³ëµå p¸¦ »èÁ¦
+	// ë…¸ë“œ pë¥¼ ì‚­ì œ
 	public void remove(Node p) {
 		Node<E> ptr = head.next;
 
 		while (ptr != head) {
-			if (ptr == p) {			// p¸¦ Ã£À½
+			if (ptr == p) {			// pë¥¼ ì°¾ìŒ
 				crnt = p;
 				removeCurrentNode();
 				break;
@@ -137,21 +137,21 @@ public class DblLinkedList<E> {
 		}
 	}
 
-	// ¸Ó¸® ³ëµå¸¦ »èÁ¦
+	// ë¨¸ë¦¬ ë…¸ë“œë¥¼ ì‚­ì œ
 	public void removeFirst() {
-		crnt = head.next;			// ¸Ó¸® ³ëµå head.next¸¦ »èÁ¦
+		crnt = head.next;			// ë¨¸ë¦¬ ë…¸ë“œ head.nextë¥¼ ì‚­ì œ
 		removeCurrentNode();
 	}
 
-	// ²¿¸® ³ëµå¸¦ »èÁ¦
+	// ê¼¬ë¦¬ ë…¸ë“œë¥¼ ì‚­ì œ
 	public void removeLast() {
-		crnt = head.prev;			// ²¿¸® ³ëµå head.prev¸¦ »èÁ¦
+		crnt = head.prev;			// ê¼¬ë¦¬ ë…¸ë“œ head.prevë¥¼ ì‚­ì œ
 		removeCurrentNode();
 	}
 
-	// ¸ğµç ³ëµå¸¦ »èÁ¦
+	// ëª¨ë“  ë…¸ë“œë¥¼ ì‚­ì œ
 	public void clear() {
-		while (!isEmpty())			// ÅÖ ºô ¶§±îÁö
-			removeFirst();			// ¸Ó¸® ³ëµå¸¦ »èÁ¦
+		while (!isEmpty())			// í…… ë¹Œ ë•Œê¹Œì§€
+			removeFirst();			// ë¨¸ë¦¬ ë…¸ë“œë¥¼ ì‚­ì œ
 	}
 }

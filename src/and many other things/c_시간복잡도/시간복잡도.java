@@ -1,11 +1,11 @@
-package c_½Ã°£º¹Àâµµ;
-public class ½Ã°£º¹Àâµµ {
+ï»¿package c_ì‹œê°„ë³µì¡ë„;
+public class ì‹œê°„ë³µì¡ë„ {
 
 	public static void main(String[] args) {
-		long start = System.currentTimeMillis(); //½ÃÀÛÇÏ´Â ½ÃÁ¡ °è»ê
+		long start = System.currentTimeMillis(); //ì‹œì‘í•˜ëŠ” ì‹œì  ê³„ì‚°
 
-		long end = System.currentTimeMillis(); //ÇÁ·Î±×·¥ÀÌ ³¡³ª´Â ½ÃÁ¡ °è»ê
-		System.out.println( "½ÇÇà ½Ã°£ : " + ( end - start )/1000.0 +"ÃÊ");//½ÇÇà ½Ã°£ °è»ê ¹× Ãâ·Â
+		long end = System.currentTimeMillis(); //í”„ë¡œê·¸ë¨ì´ ëë‚˜ëŠ” ì‹œì  ê³„ì‚°
+		System.out.println( "ì‹¤í–‰ ì‹œê°„ : " + ( end - start )/1000.0 +"ì´ˆ");//ì‹¤í–‰ ì‹œê°„ ê³„ì‚° ë° ì¶œë ¥
 		
 	}
 }

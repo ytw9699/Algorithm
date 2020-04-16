@@ -1,4 +1,4 @@
-package j_10000¹ø´ë;
+ï»¿package j_10000ë²ˆëŒ€;
 
 import java.util.Scanner;
 public class Main10809 {
@@ -6,7 +6,7 @@ public class Main10809 {
 	static String word;
 	static char[] charARR ;
 	
-	static boolean checkAlphabet() {//¼Ò¹®ÀÚ Ã¼Å©
+	static boolean checkAlphabet() {//ì†Œë¬¸ì ì²´í¬
 		for(int i=0; i< charARR.length; i++) {
 		 if(charARR[i] < 'a' || charARR[i] > 'z')
 		    return true;
@@ -23,13 +23,13 @@ public class Main10809 {
        
        charARR = word.toCharArray();
        
-       while(word.length() > 100 || checkAlphabet() ) {//´Ü¾îÀÇ ±æÀÌ´Â 100À» ³ÑÁö ¾Ê´Â´Ù
+       while(word.length() > 100 || checkAlphabet() ) {//ë‹¨ì–´ì˜ ê¸¸ì´ëŠ” 100ì„ ë„˜ì§€ ì•ŠëŠ”ë‹¤
     	   word = sc.nextLine();
     	   word.trim();
     	   charARR = word.toCharArray();
        }
-       for(int i='a'; i<='z'; i++) {//97Àº a 122Àº z
-    	   int output = word.indexOf(i);   //À§Ä¡¸¦ ¹İÈ¯, ¾øÀ¸¸é -1¹İÈ¯
+       for(int i='a'; i<='z'; i++) {//97ì€ a 122ì€ z
+    	   int output = word.indexOf(i);   //ìœ„ì¹˜ë¥¼ ë°˜í™˜, ì—†ìœ¼ë©´ -1ë°˜í™˜
     	   System.out.print(output+" ");
        }
     }

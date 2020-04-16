@@ -1,8 +1,8 @@
-package b_±âº»ÀÚ·á±¸Á¶;
+ï»¿package b_ê¸°ë³¸ìë£Œêµ¬ì¡°;
 import java.util.Scanner;
-// ¹è¿­ bÀÇ ¸ğµç ¿ä¼Ò¸¦ ¹è¿­ a¿¡ º¹»çÇÔ
-class k_Copy_02_04¹è¿­¿ä¼Òº¹»ç {
-	// ¹è¿­ bÀÇ ¸ğµç ¿ä¼Ò¸¦ ¹è¿­ a¿¡ º¹»ç
+// ë°°ì—´ bì˜ ëª¨ë“  ìš”ì†Œë¥¼ ë°°ì—´ aì— ë³µì‚¬í•¨
+class k_Copy_02_04ë°°ì—´ìš”ì†Œë³µì‚¬ {
+	// ë°°ì—´ bì˜ ëª¨ë“  ìš”ì†Œë¥¼ ë°°ì—´ aì— ë³µì‚¬
 	static void copy(int[] a, int[] b) {
 		int num = a.length <= b.length ? a.length : b.length;
 		for (int i = 0; i < num; i++)
@@ -11,28 +11,28 @@ class k_Copy_02_04¹è¿­¿ä¼Òº¹»ç {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		System.out.print("aÀÇ ¿ä¼Ú¼ö´Â £º");
+		System.out.print("aì˜ ìš”ì†Ÿìˆ˜ëŠ” ï¼š");
 		
-		int numa = stdIn.nextInt(); // ¿ä¼Ú¼ö
+		int numa = stdIn.nextInt(); // ìš”ì†Ÿìˆ˜
 		
-		int[] a = new int[numa]; // ¿ä¼Ú¼ö numaÀÎ ¹è¿­
+		int[] a = new int[numa]; // ìš”ì†Ÿìˆ˜ numaì¸ ë°°ì—´
 		
 		for (int i = 0; i < numa; i++) {
 			System.out.print("a[" + i + "] : ");
 			a[i] = stdIn.nextInt();
 		}
 		
-		System.out.print("bÀÇ ¿ä¼Ú¼ö´Â £º");
+		System.out.print("bì˜ ìš”ì†Ÿìˆ˜ëŠ” ï¼š");
 		
-		int numb = stdIn.nextInt(); // ¿ä¼Ú¼ö
-		int[] b = new int[numb]; // ¿ä¼Ú¼ö numbÀÎ ¹è¿­
+		int numb = stdIn.nextInt(); // ìš”ì†Ÿìˆ˜
+		int[] b = new int[numb]; // ìš”ì†Ÿìˆ˜ numbì¸ ë°°ì—´
 		for (int i = 0; i < numb; i++) {
 			System.out.print("b[" + i + "] : ");
 			b[i] = stdIn.nextInt();
 		}
-		copy(a, b); // ¹è¿­ bÀÇ ¸ğµç ¿ä¼Ò¸¦ ¹è¿­ a¿¡ º¹»ç
+		copy(a, b); // ë°°ì—´ bì˜ ëª¨ë“  ìš”ì†Œë¥¼ ë°°ì—´ aì— ë³µì‚¬
 
-		System.out.println("¹è¿­ bÀÇ ¸ğµç ¿ä¼Ò¸¦ ¹è¿­ a¿¡ º¹»çÇß½À´Ï´Ù.");
+		System.out.println("ë°°ì—´ bì˜ ëª¨ë“  ìš”ì†Œë¥¼ ë°°ì—´ aì— ë³µì‚¬í–ˆìŠµë‹ˆë‹¤.");
 		for (int i = 0; i < numa; i++)
 			System.out.println("a[" + i + "] = " + a[i]);
 	}

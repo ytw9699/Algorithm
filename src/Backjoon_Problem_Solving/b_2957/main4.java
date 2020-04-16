@@ -1,4 +1,4 @@
-package b_2957;
+ï»¿package b_2957;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
@@ -30,11 +30,11 @@ public class main4 {
 	
 	for(int k=0; k<arrCount; k++) {
 		if(k==0) {
-			HashMap.put((arr[k]),0);//µ¥ÀÌÅÍ Ãß°¡
+			HashMap.put((arr[k]),0);//ë°ì´í„° ì¶”ê°€
 			arr2[k]=arr[k];
 		}
 		else if(k==1) {
-			HashMap.put((arr[k]),1);//µ¥ÀÌÅÍ Ãß°¡
+			HashMap.put((arr[k]),1);//ë°ì´í„° ì¶”ê°€
 			arr2[k]=arr[k];
 			Arrays.sort(arr2);
 		}

@@ -1,4 +1,4 @@
-package j_10000¹ø´ë;
+ï»¿package j_10000ë²ˆëŒ€;
 
 import java.util.Scanner;
 public class Main10809_2 {
@@ -12,8 +12,8 @@ public class Main10809_2 {
        
        char[] charARR = word.toCharArray();
        
-       for(int i='a'; i<='z'; i++) {//97Àº a 122Àº z
-    	   int output = word.indexOf(i);   //À§Ä¡¸¦ ¹ÝÈ¯, ¾øÀ¸¸é -1¹ÝÈ¯
+       for(int i='a'; i<='z'; i++) {//97ì€ a 122ì€ z
+    	   int output = word.indexOf(i);   //ìœ„ì¹˜ë¥¼ ë°˜í™˜, ì—†ìœ¼ë©´ -1ë°˜í™˜
     	   System.out.print(output+" ");
        }
     }

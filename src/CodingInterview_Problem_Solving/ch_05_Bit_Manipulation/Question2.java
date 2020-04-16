@@ -1,4 +1,4 @@
-package ch_05_Bit_Manipulation;
+﻿package ch_05_Bit_Manipulation;
 
 public class Question2 {
 	public static String printBinary(double num) {

@@ -1,41 +1,41 @@
-package Arraylist;
-import java.util.ArrayList;//ÀÓÆ÷Æ® ÇØÁÖÀÚ
+ï»¿package Arraylist;
+import java.util.ArrayList;//ì„í¬íŠ¸ í•´ì£¼ì
 
 public class ArrayListApi1 {
   public static void main(String[] args) {
-    ArrayList<Integer> numbers = new ArrayList<>();//ArrayList °´Ã¼ »ı¼º
+    ArrayList<Integer> numbers = new ArrayList<>();//ArrayList ê°ì²´ ìƒì„±
 
-    numbers.add(10);//add´Â ¹è¿­¿¡ ´Ü¼øÈ÷ ´õÇØÁö´Â °ÍÀÌ±â ¶§¹®¿¡ ºü¸£°Ô µ¿ÀÛÇÑ´Ù.
-    numbers.add(20);//¸¶Áö¸·¿¡ Ãß°¡
+    numbers.add(10);//addëŠ” ë°°ì—´ì— ë‹¨ìˆœíˆ ë”í•´ì§€ëŠ” ê²ƒì´ê¸° ë•Œë¬¸ì— ë¹ ë¥´ê²Œ ë™ì‘í•œë‹¤.
+    numbers.add(20);//ë§ˆì§€ë§‰ì— ì¶”ê°€
     numbers.add(30);
     
-    System.out.println("add(°ª)");
+    System.out.println("add(ê°’)");
     System.out.println(numbers);
     
-    numbers.add(0, 35);//0¹øÂ°¿¡ Ãß°¡
-    System.out.println("add(°ª)");
+    numbers.add(0, 35);//0ë²ˆì§¸ì— ì¶”ê°€
+    System.out.println("add(ê°’)");
     System.out.println(numbers);
     
-    numbers.add(1, 50);//1¹øÂ°¿¡ Ãß°¡
-    System.out.println("add(ÀÎµ¦½º, °ª)");
+    numbers.add(1, 50);//1ë²ˆì§¸ì— ì¶”ê°€
+    System.out.println("add(ì¸ë±ìŠ¤, ê°’)");
     System.out.println(numbers);
     System.out.println();
 
-    System.out.println(numbers.remove(2));//»èÁ¦ÈÄ »èÁ¦°ª 10 ¸®ÅÏ
-    System.out.println("remove(ÀÎµ¦½º)");
+    System.out.println(numbers.remove(2));//ì‚­ì œí›„ ì‚­ì œê°’ 10 ë¦¬í„´
+    System.out.println("remove(ì¸ë±ìŠ¤)");
     System.out.println(numbers);
 
-    System.out.println("\nget(ÀÎµ¦½º)");
-    System.out.println(numbers.get(2));//ÀÎµ¦½º2¹øÂ° °¡Á®¿À±â
+    System.out.println("\nget(ì¸ë±ìŠ¤)");
+    System.out.println(numbers.get(2));//ì¸ë±ìŠ¤2ë²ˆì§¸ ê°€ì ¸ì˜¤ê¸°
 
     System.out.println("\nsize()");
-    System.out.println(numbers.size());//¿¤¸®¸ÕÆ®ÀÇ °¹¼ö °¡Á®¿À±â
+    System.out.println(numbers.size());//ì—˜ë¦¬ë¨¼íŠ¸ì˜ ê°¯ìˆ˜ ê°€ì ¸ì˜¤ê¸°
 
     System.out.println("\nindexOf()");
-    System.out.println(numbers.indexOf(30));//30ÀÇ ÀÎµ¦½º À§Ä¡ °¡Á®¿À±â
+    System.out.println(numbers.indexOf(30));//30ì˜ ì¸ë±ìŠ¤ ìœ„ì¹˜ ê°€ì ¸ì˜¤ê¸°
     
     System.out.println("remove(numbers.size()-1))");
-    System.out.println(numbers.remove(numbers.size()-1));//¸¶Áö¸· »èÁ¦
+    System.out.println(numbers.remove(numbers.size()-1));//ë§ˆì§€ë§‰ ì‚­ì œ
     
 }
 }

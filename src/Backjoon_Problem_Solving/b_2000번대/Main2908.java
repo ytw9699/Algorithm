@@ -1,4 +1,4 @@
-package b_2000¹ø´ë;
+ï»¿package b_2000ë²ˆëŒ€;
 
 import java.util.Scanner;
 public class Main2908 {
@@ -13,7 +13,7 @@ public class Main2908 {
        while(second[0].equals(second[1]) || second[0].length() != 3 || second[1].length() != 3 || second[0].contains("0") || second[1].contains("0")) {
     	   first = sc.nextLine();
     	   second = first.split(" ");
-       }//µÎ¼ö°¡ °°°Å³ª 3ÀÚ¸®¼ö°¡ ¾Æ´Ò°æ¿ì ¶Ç´Â 0ÀÌ Æ÷ÇÔµÉ°æ¿ì ´Ù½Ã ¹İº¹ÇÑ´Ù.
+       }//ë‘ìˆ˜ê°€ ê°™ê±°ë‚˜ 3ìë¦¬ìˆ˜ê°€ ì•„ë‹ê²½ìš° ë˜ëŠ” 0ì´ í¬í•¨ë ê²½ìš° ë‹¤ì‹œ ë°˜ë³µí•œë‹¤.
      
        String output1[] = second[0].split("");
        String finals1= "";
@@ -32,11 +32,11 @@ public class Main2908 {
         int front = Integer.parseInt(finals1);
         int rear  = Integer.parseInt(finals2);
         
-        if(front > rear) {//Å«°ÍÀ» Ãâ·ÂÇÏÀÚ
+        if(front > rear) {//í°ê²ƒì„ ì¶œë ¥í•˜ì
         	System.out.println(front);
 		}
 		else {
-			System.out.println(rear);//Å«°ÍÀ» Ãâ·ÂÇÏÀÚ
+			System.out.println(rear);//í°ê²ƒì„ ì¶œë ¥í•˜ì
 		}
     }
 }

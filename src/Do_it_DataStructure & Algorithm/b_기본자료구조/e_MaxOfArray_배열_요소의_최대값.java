@@ -1,8 +1,8 @@
-package b_±âº»ÀÚ·á±¸Á¶;
+ï»¿package b_ê¸°ë³¸ìë£Œêµ¬ì¡°;
 import java.util.Scanner;
-// ¹è¿­ ¿ä¼ÒÀÇ ÃÖ´ñ°ªÀ» ³ªÅ¸³À´Ï´Ù(°ªÀ» ÀÔ·Â ¹ŞÀ½).
-class e_MaxOfArray_¹è¿­_¿ä¼ÒÀÇ_ÃÖ´ë°ª {
-	// ¹è¿­ aÀÇ ÃÖ´ñ°ªÀ» ±¸ÇÏ¿© ¹İÈ¯ÇÕ´Ï´Ù.
+// ë°°ì—´ ìš”ì†Œì˜ ìµœëŒ“ê°’ì„ ë‚˜íƒ€ëƒ…ë‹ˆë‹¤(ê°’ì„ ì…ë ¥ ë°›ìŒ).
+class e_MaxOfArray_ë°°ì—´_ìš”ì†Œì˜_ìµœëŒ€ê°’ {
+	// ë°°ì—´ aì˜ ìµœëŒ“ê°’ì„ êµ¬í•˜ì—¬ ë°˜í™˜í•©ë‹ˆë‹¤.
 	static int maxOf(int[] a) {
 		int max = a[0];
 		for (int i = 1; i < a.length; i++) {
@@ -15,17 +15,17 @@ class e_MaxOfArray_¹è¿­_¿ä¼ÒÀÇ_ÃÖ´ë°ª {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		System.out.println("Å°ÀÇ ÃÖ´ñ°ªÀ» ±¸ÇÕ´Ï´Ù.");
-		System.out.print("»ç¶÷ ¼ö : ");
-		int num = stdIn.nextInt();				// ¹è¿­ÀÇ ¿ä¼Ú¼ö¸¦ ÀÔ·Â ¹ŞÀ½
+		System.out.println("í‚¤ì˜ ìµœëŒ“ê°’ì„ êµ¬í•©ë‹ˆë‹¤.");
+		System.out.print("ì‚¬ëŒ ìˆ˜ : ");
+		int num = stdIn.nextInt();				// ë°°ì—´ì˜ ìš”ì†Ÿìˆ˜ë¥¼ ì…ë ¥ ë°›ìŒ
 
-		int[] height = new int[num];			// ¿ä¼Ú¼ö°¡ numÀÎ ¹è¿­À» »ı¼º
+		int[] height = new int[num];			// ìš”ì†Ÿìˆ˜ê°€ numì¸ ë°°ì—´ì„ ìƒì„±
 
 		for (int i = 0; i < num; i++) {
-			System.out.print("height[" + i + "]£º");
+			System.out.print("height[" + i + "]ï¼š");
 			height[i] = stdIn.nextInt();
 		}
 	
-		System.out.println("ÃÖ´ñ°ªÀº " + maxOf(height) + "ÀÔ´Ï´Ù.");
+		System.out.println("ìµœëŒ“ê°’ì€ " + maxOf(height) + "ì…ë‹ˆë‹¤.");
 	}
 }

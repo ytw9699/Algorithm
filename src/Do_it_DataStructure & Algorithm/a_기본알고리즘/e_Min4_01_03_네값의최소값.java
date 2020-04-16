@@ -1,11 +1,11 @@
-package a_±âº»¾Ë°í¸®Áò;
+ï»¿package a_ê¸°ë³¸ì•Œê³ ë¦¬ì¦˜;
 
 import java.util.Scanner;
-// 4°³ÀÇ °ªÀÇ ÃÖ¼Ú°ªÀ» ±¸ÇÏ¿© Ãâ·Â
-class e_Min4_01_03_³×°ªÀÇÃÖ¼Ò°ª {
-   // a, b, c, dÀÇ ÃÖ¼Ú°ªÀ» ±¸ÇÏ¿© ¹İÈ¯
+// 4ê°œì˜ ê°’ì˜ ìµœì†Ÿê°’ì„ êµ¬í•˜ì—¬ ì¶œë ¥
+class e_Min4_01_03_ë„¤ê°’ì˜ìµœì†Œê°’ {
+   // a, b, c, dì˜ ìµœì†Ÿê°’ì„ êµ¬í•˜ì—¬ ë°˜í™˜
    static int min4(int a, int b, int c, int d) {
-      int min = a;         // ÃÖ¼Ú°ª
+      int min = a;         // ìµœì†Ÿê°’
       if (b < min) min = b;
       if (c < min) min = c;
       if (d < min) min = d;
@@ -17,14 +17,14 @@ class e_Min4_01_03_³×°ªÀÇÃÖ¼Ò°ª {
       Scanner stdIn = new Scanner(System.in);
       int a, b, c, d;
 
-      System.out.println("³× Á¤¼öÀÇ ÃÖ¼Ú°ªÀ» ±¸ÇÕ´Ï´Ù.");
-      System.out.print("aÀÇ °ª£º");  a = stdIn.nextInt();
-      System.out.print("bÀÇ °ª£º");  b = stdIn.nextInt();
-      System.out.print("cÀÇ °ª£º");  c = stdIn.nextInt();
-      System.out.print("dÀÇ °ª£º");  d = stdIn.nextInt();
+      System.out.println("ë„¤ ì •ìˆ˜ì˜ ìµœì†Ÿê°’ì„ êµ¬í•©ë‹ˆë‹¤.");
+      System.out.print("aì˜ ê°’ï¼š");  a = stdIn.nextInt();
+      System.out.print("bì˜ ê°’ï¼š");  b = stdIn.nextInt();
+      System.out.print("cì˜ ê°’ï¼š");  c = stdIn.nextInt();
+      System.out.print("dì˜ ê°’ï¼š");  d = stdIn.nextInt();
 
-      int min = min4(a, b, c, d);      // a, b, c, dÀÇ ÃÖ¼Ú°ª
+      int min = min4(a, b, c, d);      // a, b, c, dì˜ ìµœì†Ÿê°’
 
-      System.out.println("ÃÖ¼Ú°ªÀº " + min + "ÀÔ´Ï´Ù.");
+      System.out.println("ìµœì†Ÿê°’ì€ " + min + "ì…ë‹ˆë‹¤.");
    }
 }

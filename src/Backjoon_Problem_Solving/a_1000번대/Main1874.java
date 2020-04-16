@@ -1,4 +1,4 @@
-package a_1000¹ø´ë;
+ï»¿package a_1000ë²ˆëŒ€;
 import java.util.Scanner;
 import java.util.Stack;
 public class Main1874 {
@@ -7,7 +7,7 @@ public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
 		int length = sc.nextInt();
-		int yesNo = 1;//yes´Â1 no´Â0
+		int yesNo = 1;//yesëŠ”1 noëŠ”0
 		StringBuilder sb = new StringBuilder();
 			
 		int[] outputArr = new int[length];
@@ -22,24 +22,24 @@ public static void main(String[] args) {
 		
 		Stack stack = new Stack();
 		
-		int maxValue = 0;//ÇöÀç ½ºÅÃ¾È¿¡ µé¾î°£ ÃÖ´ë°ª º¯¼ö
+		int maxValue = 0;//í˜„ì¬ ìŠ¤íƒì•ˆì— ë“¤ì–´ê°„ ìµœëŒ€ê°’ ë³€ìˆ˜
 		int k=0;
 		
 		for(int i=0; i<length; i++) {
-			if(outputArr[i] > maxValue) {//ÇöÀç ½ºÅÃ¾È¿¡ µé¾î°£ ÃÖ´ë°ªº¸´Ù Ãâ·ÂÇÏ°íÀÚ ÇÏ´Â °ªÀÌ Å©´Ù¸é
+			if(outputArr[i] > maxValue) {//í˜„ì¬ ìŠ¤íƒì•ˆì— ë“¤ì–´ê°„ ìµœëŒ€ê°’ë³´ë‹¤ ì¶œë ¥í•˜ê³ ì í•˜ëŠ” ê°’ì´ í¬ë‹¤ë©´
 				for (k = maxValue; k < outputArr[i]; k++) {
-                    stack.push(inputArr[k]);//½ºÅÃ¿¡ °ªÀ» Ãß°¡
+                    stack.push(inputArr[k]);//ìŠ¤íƒì— ê°’ì„ ì¶”ê°€
                     sb.append("+\n");
                 }
-				maxValue = (int)stack.peek();//ÇöÀç ½ºÅÃÀÇ ¸ÇÀ§°ªÀ» ÃÖ´ë°ªÀ¸·Î ¹Ù²ãÁÜ 
+				maxValue = (int)stack.peek();//í˜„ì¬ ìŠ¤íƒì˜ ë§¨ìœ„ê°’ì„ ìµœëŒ€ê°’ìœ¼ë¡œ ë°”ê¿”ì¤Œ 
 			}
-			else if(((int)stack.peek()) != outputArr[i] ){//ÇöÀç ½ºÅÃÀÇ ¸ÇÀ§°ª°ú Ãâ·ÂÇÏ°íÀÚÇÏ´Â°ªÀÌ °°Áö ¾Ê´Ù¸é
-				yesNo =0; //no´Â0
-				break;//¹İº¹¹® ºüÁ®³ª°¡¼­ noÃâ·Â
+			else if(((int)stack.peek()) != outputArr[i] ){//í˜„ì¬ ìŠ¤íƒì˜ ë§¨ìœ„ê°’ê³¼ ì¶œë ¥í•˜ê³ ìí•˜ëŠ”ê°’ì´ ê°™ì§€ ì•Šë‹¤ë©´
+				yesNo =0; //noëŠ”0
+				break;//ë°˜ë³µë¬¸ ë¹ ì ¸ë‚˜ê°€ì„œ noì¶œë ¥
 			}
 			stack.pop();
 			sb.append("-\n");
-		 }//for¹®³¡
+		 }//forë¬¸ë
 		    if(yesNo == 0) {
 	        	System.out.print("NO");
 	        }else {

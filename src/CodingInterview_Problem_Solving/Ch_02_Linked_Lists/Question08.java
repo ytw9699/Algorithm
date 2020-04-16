@@ -1,24 +1,24 @@
-package Ch_02_Linked_Lists;
+ï»¿package Ch_02_Linked_Lists;
 public class Question08 {
 	public static void main(String[] args) {
-		int list_length = 11;//¿¬°á ¸®½ºÆ® Å©±â
-		int k = 3 % list_length; //¼øÈ¯ ½ÃÀÛ ÁöÁ¡
+		int list_length = 11;//ì—°ê²° ë¦¬ìŠ¤íŠ¸ í¬ê¸°
+		int k = 3 % list_length; //ìˆœí™˜ ì‹œì‘ ì§€ì 
 		
-		LinkedList cyclelist = new LinkedList();//´ÜÀÏ ¿¬°á ¸®½ºÆ® »ı¼º
+		LinkedList cyclelist = new LinkedList();//ë‹¨ì¼ ì—°ê²° ë¦¬ìŠ¤íŠ¸ ìƒì„±
 		
 		for (int i = 0; i < list_length; i++) {
-			cyclelist.addLast(i);//³ëµå »ı¼º
+			cyclelist.addLast(i);//ë…¸ë“œ ìƒì„±
 			//System.out.println(cyclelist);
 		}
-		if (!cyclelist.appendToTail(k)) {//¼øÈ¯¿¬°á¸®½ºÆ® »ı¼º - tailÀ» ¼øÈ¯½ÃÀÛÀ¸·Î ¿¬°á
+		if (!cyclelist.appendToTail(k)) {//ìˆœí™˜ì—°ê²°ë¦¬ìŠ¤íŠ¸ ìƒì„± - tailì„ ìˆœí™˜ì‹œì‘ìœ¼ë¡œ ì—°ê²°
 			System.out.println("No Cycle.");
 		}
 		Object result = cyclelist.FindBeginning();
 		
-		if(result == null){//¼øÈ¯ ±¸Á¶°¡ ¸Â´Â °Ë»ç
+		if(result == null){//ìˆœí™˜ êµ¬ì¡°ê°€ ë§ëŠ” ê²€ì‚¬
 			System.out.println("No Cycle.");
 		}else {
-			System.out.println(result);//3Ãâ·Â //¼øÈ¯ ½ÃÀÛ ºÎºĞ ³ëµå ¹İÈ¯
+			System.out.println(result);//3ì¶œë ¥ //ìˆœí™˜ ì‹œì‘ ë¶€ë¶„ ë…¸ë“œ ë°˜í™˜
 		}
 	}
 }

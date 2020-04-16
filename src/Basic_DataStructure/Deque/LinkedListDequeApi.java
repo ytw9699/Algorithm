@@ -1,10 +1,10 @@
-package Deque;
+ï»¿package Deque;
 import java.util.LinkedList;
 import java.util.Deque;
 public class LinkedListDequeApi {
     public static void main(String[] args) {
     	Deque<String> Deque = new LinkedList();
-    	//Deque ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÑ LinkedList
+    	//Deque ì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•œ LinkedList
     	System.out.println("= java Deque api offer=");
     	
     	Deque.offerLast("3");

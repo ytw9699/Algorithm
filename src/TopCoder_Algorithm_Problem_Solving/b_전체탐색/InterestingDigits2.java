@@ -1,4 +1,4 @@
-package b_ÀüÃ¼Å½»ö;
+ï»¿package b_ì „ì²´íƒìƒ‰;
 import java.util.*;
  public class InterestingDigits2 {
 	public static void main(String[] args) {

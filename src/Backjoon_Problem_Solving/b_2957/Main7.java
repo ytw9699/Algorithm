@@ -1,4 +1,4 @@
-package b_2957;
+ï»¿package b_2957;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Arrays;
@@ -7,10 +7,10 @@ public class Main7 {
 	public static void main(String[] args) throws Exception {
 		
 	HashMap<Integer, Integer> HashMap = new HashMap<Integer, Integer>();
-	//³ëµå¿¡ ÇØ´çÇÏ´Â µ¥ÀÌÅÍ¿Í ³ôÀÌ¸¦  Å°¿Í °ªÀ¸·Î ÀúÀå
+	//ë…¸ë“œì— í•´ë‹¹í•˜ëŠ” ë°ì´í„°ì™€ ë†’ì´ë¥¼  í‚¤ì™€ ê°’ìœ¼ë¡œ ì €ì¥
 	
-	HashMap.put(0,0);//¹è¿­°ªÀ» ³Ñ¾î°¥¶§¸¦ ´ëºñ
-	HashMap.put(3000001,0);//¹è¿­°ªÀ» ³Ñ¾î°¥¶§¸¦ ´ëºñ
+	HashMap.put(0,0);//ë°°ì—´ê°’ì„ ë„˜ì–´ê°ˆë•Œë¥¼ ëŒ€ë¹„
+	HashMap.put(3000001,0);//ë°°ì—´ê°’ì„ ë„˜ì–´ê°ˆë•Œë¥¼ ëŒ€ë¹„
 	
 	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	
@@ -25,44 +25,44 @@ public class Main7 {
 	br.close();
 	
 	for(int k=0; k<arrCount; k++) {
-		if(k==0) {//Ã¹¹øÂ° ·çÆ®°ªÃß°¡½Ã
-			HashMap.put((arr[k]),0);//Ã¹¹øÂ° °ª, ³ôÀÌ 0
+		if(k==0) {//ì²«ë²ˆì§¸ ë£¨íŠ¸ê°’ì¶”ê°€ì‹œ
+			HashMap.put((arr[k]),0);//ì²«ë²ˆì§¸ ê°’, ë†’ì´ 0
 			arr2[k]=arr[k];
 		}
 		else if(k==1) {
-			HashMap.put((arr[k]),1);//µÎ¹øÂ° °ª, ³ôÀÌ 1
+			HashMap.put((arr[k]),1);//ë‘ë²ˆì§¸ ê°’, ë†’ì´ 1
 			arr2[k]=arr[k];
-			Arrays.sort(arr2);//Á¤·ÄÀ¯Áö
+			Arrays.sort(arr2);//ì •ë ¬ìœ ì§€
 		}
 		else {
-		arr2[0]=arr[k];//arr2ÀÇ Ã¹¹øÂ° ¿ä¼Ò¿¡ Ãß°¡
-		Arrays.sort(arr2);//Á¤·ÄÀ¯Áö
+		arr2[0]=arr[k];//arr2ì˜ ì²«ë²ˆì§¸ ìš”ì†Œì— ì¶”ê°€
+		Arrays.sort(arr2);//ì •ë ¬ìœ ì§€
 		
-		int key1;//¸ÊÀÇ Å°°ªÀ» ±¸ÇÏÀÚ
+		int key1;//ë§µì˜ í‚¤ê°’ì„ êµ¬í•˜ì
 		
 		int mid = Arrays.binarySearch(arr2, arr[k]);
 		
-			if(mid == arr2.length-1) {//ÀÌÁøÅ½»öÀ¸·Î Ã£¾Æ¿Â ÀÎµ¦½º°¡ ¹è¿­ÀÇ ³¡ÀÎµ¦½º¶ó¸é
-				 key1 = 0;//ÇØ½Ã°ª KEY¿¡ ÇØ´çÇÏ´Â ³ôÀÌ´Â 0
+			if(mid == arr2.length-1) {//ì´ì§„íƒìƒ‰ìœ¼ë¡œ ì°¾ì•„ì˜¨ ì¸ë±ìŠ¤ê°€ ë°°ì—´ì˜ ëì¸ë±ìŠ¤ë¼ë©´
+				 key1 = 0;//í•´ì‹œê°’ KEYì— í•´ë‹¹í•˜ëŠ” ë†’ì´ëŠ” 0
 			}else {
-				 key1 = arr2[mid+1];//Ãß°¡ÇÒ ³ëµåÀÇ µ¥ÀÌÅÍº¸´Ù Å«°ÍµéÁß °¡Àå ÀÛÀº°ÍÀ» Å°·Î ÁöÁ¤
+				 key1 = arr2[mid+1];//ì¶”ê°€í•  ë…¸ë“œì˜ ë°ì´í„°ë³´ë‹¤ í°ê²ƒë“¤ì¤‘ ê°€ì¥ ì‘ì€ê²ƒì„ í‚¤ë¡œ ì§€ì •
 			}
 		
-		int key2 = arr2[mid-1];//Ãß°¡ÇÒ ³ëµåÀÇ µ¥ÀÌÅÍº¸´Ù ÀÛÀº°ÍµéÁß °¡Àå Å«°ÍÀ» Å°·Î ÁöÁ¤
+		int key2 = arr2[mid-1];//ì¶”ê°€í•  ë…¸ë“œì˜ ë°ì´í„°ë³´ë‹¤ ì‘ì€ê²ƒë“¤ì¤‘ ê°€ì¥ í°ê²ƒì„ í‚¤ë¡œ ì§€ì •
 		
-		int firstHeight = (int)HashMap.get(key1);//Ã¹¹øÀç ³ôÀÌ
-		int secondHeight = (int)HashMap.get(key2);//µÎ¹øÂ° ³ôÀÌ
+		int firstHeight = (int)HashMap.get(key1);//ì²«ë²ˆì¬ ë†’ì´
+		int secondHeight = (int)HashMap.get(key2);//ë‘ë²ˆì§¸ ë†’ì´
 		
 			if(firstHeight>secondHeight) {
-				HashMap.put((arr[k]),firstHeight+1);//³ôÀÌ¿¡ 1À» Ãß°¡
+				HashMap.put((arr[k]),firstHeight+1);//ë†’ì´ì— 1ì„ ì¶”ê°€
 			}else {
-				HashMap.put((arr[k]),secondHeight+1);//³ôÀÌ¿¡ 1À» Ãß°¡
+				HashMap.put((arr[k]),secondHeight+1);//ë†’ì´ì— 1ì„ ì¶”ê°€
 			}
 	}
 }
 	for (int i = 0; i < arr.length; i++)  {
 		count = count +HashMap.get(arr[i]);
-		System.out.println(count);//³ôÀÌ °ª ¹İº¹Ãâ·Â
+		System.out.println(count);//ë†’ì´ ê°’ ë°˜ë³µì¶œë ¥
 	}
 
 }

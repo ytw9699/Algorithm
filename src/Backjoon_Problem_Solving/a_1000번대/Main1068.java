@@ -1,4 +1,4 @@
-package a_1000¹ø´ë;
+ï»¿package a_1000ë²ˆëŒ€;
 import java.util.Scanner;
 public class Main1068 {
 	public static Node tree[];
@@ -7,32 +7,32 @@ public class Main1068 {
 	public static void main(String args[]) throws Exception{
 		
 		Scanner sc = new Scanner(System.in);
-		n = sc.nextInt();//³ëµåÀÇ °¹¼ö ¹Ş°í
+		n = sc.nextInt();//ë…¸ë“œì˜ ê°¯ìˆ˜ ë°›ê³ 
 		int i;
 		int pa;
 		tree = new Node[n];
-		delList = new int[n];//»èÁ¦¸®½ºÆ® ¹è¿­
+		delList = new int[n];//ì‚­ì œë¦¬ìŠ¤íŠ¸ ë°°ì—´
 		sc.nextLine();
 		String line[] = sc.nextLine().split(" ");
-		for(i=0; i<n; i++) {//³ëµå ÀÏ´Ü ÀüºÎ »ı¼º
+		for(i=0; i<n; i++) {//ë…¸ë“œ ì¼ë‹¨ ì „ë¶€ ìƒì„±
 			tree[i] = new Node();
 		}
 		for(i=0; i<n; i++) {
 			pa = Integer.parseInt(line[i]);
-			tree[i].num = i;//³ëµå ¹øÈ£ ºÎ¿©
-			tree[i].parent = pa;//³ëµåÀÇ ºÎ¸ğ ¹øÈ£ ºÎ¿©
+			tree[i].num = i;//ë…¸ë“œ ë²ˆí˜¸ ë¶€ì—¬
+			tree[i].parent = pa;//ë…¸ë“œì˜ ë¶€ëª¨ ë²ˆí˜¸ ë¶€ì—¬
 			if(pa != -1) {
-				tree[pa].setChild(i);//ºÎ¸ğÀÇ ³ëµå·Î°¡¼­ ÀÚ½ÄÀ» Ãß°¡ÇÑ´Ù
+				tree[pa].setChild(i);//ë¶€ëª¨ì˜ ë…¸ë“œë¡œê°€ì„œ ìì‹ì„ ì¶”ê°€í•œë‹¤
 			}
 		}
-		delete(sc.nextInt());//»èÁ¦ÇÒ ¹øÈ£ ¹Ş°í
+		delete(sc.nextInt());//ì‚­ì œí•  ë²ˆí˜¸ ë°›ê³ 
 		System.out.println(getLeaf());
 	}
 	private static int getLeaf(){
 		int i =0;
 		int cnt =0;
 		for(i=0; i<n; i++) {
-			if(tree[i] != null && tree[i].childCnt == 0) // ÀÚ½ÄÄ«¿îÆ®°¡ 0ÀÎ°Í¸¸ 
+			if(tree[i] != null && tree[i].childCnt == 0) // ìì‹ì¹´ìš´íŠ¸ê°€ 0ì¸ê²ƒë§Œ 
 				cnt++;
 		}
 		return cnt;
@@ -44,9 +44,9 @@ public class Main1068 {
 				k = tree[i].num;
 				if(delList[k] == 1) {
 					pa = tree[k].parent;
-					tree[k] =null;//³ëµå¸¦ ¾ø¾ÖÁØ´Ù
+					tree[k] =null;//ë…¸ë“œë¥¼ ì—†ì• ì¤€ë‹¤
 					if(pa != -1 && tree[pa]!=null) {
-						tree[pa].childCnt--;//³ëµå¾ø¾İÀ¸¸é ÀÚ½Ä¼ö¸¦ ÁÙÀÎ´Ù
+						tree[pa].childCnt--;//ë…¸ë“œì—†ì•´ìœ¼ë©´ ìì‹ìˆ˜ë¥¼ ì¤„ì¸ë‹¤
 						tree[pa].child[k]=0;
 					}
 				}
@@ -56,18 +56,18 @@ public class Main1068 {
 			delList[num] = 1;
 			for(int i=0; i<n; i++) {
 				if(tree[num].child[i] == 1)
-					makeDelList(i);//Àç±Í¸¦ È°¿ëÇØ »èÁ¦¸®½ºÆ®¸¦ ¸¸µé°í
+					makeDelList(i);//ì¬ê·€ë¥¼ í™œìš©í•´ ì‚­ì œë¦¬ìŠ¤íŠ¸ë¥¼ ë§Œë“¤ê³ 
 			}
 		}
 }
 class Node{
-	int num;//³ëµå¹øÈ£
-	int parent;//ºÎ¸ğ¹øÈ£
-	int child[] = new int[50];//ÀÚ½Ä¸®½ºÆ®
-	int childCnt;//ÀÚ½Ä¼ö Ä«¿îÆ®
+	int num;//ë…¸ë“œë²ˆí˜¸
+	int parent;//ë¶€ëª¨ë²ˆí˜¸
+	int child[] = new int[50];//ìì‹ë¦¬ìŠ¤íŠ¸
+	int childCnt;//ìì‹ìˆ˜ ì¹´ìš´íŠ¸
 	public void setChild(int childNum) {
-		child[childNum] = 1;//ÀÚ½ÄÀÌ ¹è¿­¿¡ ¸î°³ Ãß°¡µÈ´Ù´Â °³³äÀ¸·Î º¸ÀÚ
-		childCnt++;//ÀÚ½Ä Ä«¿îÆ®¼ö ¼¼°í
+		child[childNum] = 1;//ìì‹ì´ ë°°ì—´ì— ëª‡ê°œ ì¶”ê°€ëœë‹¤ëŠ” ê°œë…ìœ¼ë¡œ ë³´ì
+		childCnt++;//ìì‹ ì¹´ìš´íŠ¸ìˆ˜ ì„¸ê³ 
 	}
 }
 		

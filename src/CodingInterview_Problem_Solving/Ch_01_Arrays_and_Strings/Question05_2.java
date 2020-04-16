@@ -1,15 +1,15 @@
-package Ch_01_Arrays_and_Strings;
+ï»¿package Ch_01_Arrays_and_Strings;
 
 public class Question05_2 {	
 public static boolean oneEditAway(String first, String second) {
-		//±æÀÌÃ¼Å©
+		//ê¸¸ì´ì²´í¬
 		if (Math.abs(first.length() - second.length()) > 1) {
 			return false;
 		}
-		//±æÀÌ°¡ ÂªÀº ¹®ÀÚ¿­°ú ±ä ¹®ÀÚ¿­ Ã£±â
-		String s1 = first.length() < second.length() ? first : second;//ÂªÀº°Å
+		//ê¸¸ì´ê°€ ì§§ì€ ë¬¸ìì—´ê³¼ ê¸´ ë¬¸ìì—´ ì°¾ê¸°
+		String s1 = first.length() < second.length() ? first : second;//ì§§ì€ê±°
 	
-		String s2 = first.length() < second.length() ? second : first;//±ä°Å
+		String s2 = first.length() < second.length() ? second : first;//ê¸´ê±°
 		
 		//System.out.println(3 < 3 ? 1 : 2);
 		
@@ -18,24 +18,24 @@ public static boolean oneEditAway(String first, String second) {
 		boolean foundDifference = false;
 		while (index2 < s2.length() && index1 < s1.length()) {
 			if (s1.charAt(index1) != s2.charAt(index2)) {
-				//¹İµå½Ã Ã¹¹øÂ°·Î ´Ù¸¥ ¹®ÀÚ¿©¾ß ÇÑ´Ù
+				//ë°˜ë“œì‹œ ì²«ë²ˆì§¸ë¡œ ë‹¤ë¥¸ ë¬¸ìì—¬ì•¼ í•œë‹¤
 				if (foundDifference) 
 				return false;
 				
 				foundDifference = true;
 				
-				if (s1.length() == s2.length()) { // ±³Ã¼ÀÇ°æ¿ì ÂªÀº¹®ÀÚ¿­ Áõ°¡
+				if (s1.length() == s2.length()) { // êµì²´ì˜ê²½ìš° ì§§ì€ë¬¸ìì—´ ì¦ê°€
 					index1++;
 				}
 			} else {
-				index1++; // µ¿ÀÏÇÏ´Ù¸é ÂªÀº ¹®ÀÚ¿­ÀÇ Æ÷ÀÎÅÍ¸¦ Áõ°¡
+				index1++; // ë™ì¼í•˜ë‹¤ë©´ ì§§ì€ ë¬¸ìì—´ì˜ í¬ì¸í„°ë¥¼ ì¦ê°€
 			}
-			index2++; // ±ä¹®ÀÚ¿­ÀÇ Æ÷ÀÎÅÍ´Â ¾ğÁ¦³ª Áõ°¡
+			index2++; // ê¸´ë¬¸ìì—´ì˜ í¬ì¸í„°ëŠ” ì–¸ì œë‚˜ ì¦ê°€
 		}
 		return true;
 	}
 	public static void main(String[] args) {
-		//System.out.println(Math.abs(-2));//Àı´ë°ª ±¸ÇÏ±â
+		//System.out.println(Math.abs(-2));//ì ˆëŒ€ê°’ êµ¬í•˜ê¸°
 		String a = "ale";
 		String b = "pale";
 		boolean isOneEdit1 = oneEditAway(a, b);

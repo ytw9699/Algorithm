@@ -1,15 +1,15 @@
-package a_±âº»¾Ë°í¸®Áò;
+ï»¿package a_ê¸°ë³¸ì•Œê³ ë¦¬ì¦˜;
 import java.util.Scanner;
-// Á¤»ç°¢Çü ¸ğ¾çÀ» ³ªÅ¸³¿
+// ì •ì‚¬ê°í˜• ëª¨ì–‘ì„ ë‚˜íƒ€ëƒ„
 
-public class t_Square_01_14»ç°¢Çü {
+public class t_Square_01_14ì‚¬ê°í˜• {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 		int n;
 
-		System.out.println("Á¤»ç°¢Çü ¸ğ¾çÀ¸·Î ³ªÅ¸³À´Ï´Ù.");
+		System.out.println("ì •ì‚¬ê°í˜• ëª¨ì–‘ìœ¼ë¡œ ë‚˜íƒ€ëƒ…ë‹ˆë‹¤.");
 		do {
-			System.out.print("´Ü¼ö´Â£º");
+			System.out.print("ë‹¨ìˆ˜ëŠ”ï¼š");
 			n = stdIn.nextInt();
 		} while (n <= 0);
 

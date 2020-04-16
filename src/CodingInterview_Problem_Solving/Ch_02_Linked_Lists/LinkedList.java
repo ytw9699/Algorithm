@@ -1,52 +1,52 @@
-package Ch_02_Linked_Lists;
+ï»¿package Ch_02_Linked_Lists;
  public class LinkedList {
-    private Node head;// Ã¹¹øÂ° ³ëµå¸¦ °¡¸®Å°´Â ÇÊµå,º¯¼ö,ÂüÁ¶°ª
-    private Node tail;// ¸¶Áö¸· ³ëµå¸¦ °¡¸®Å°´Â ÇÊµå,º¯¼ö
-    private int size = 0; // ¸î°³ÀÇ ¿¤¸®¸ÕÆ®
+    private Node head;// ì²«ë²ˆì§¸ ë…¸ë“œë¥¼ ê°€ë¦¬í‚¤ëŠ” í•„ë“œ,ë³€ìˆ˜,ì°¸ì¡°ê°’
+    private Node tail;// ë§ˆì§€ë§‰ ë…¸ë“œë¥¼ ê°€ë¦¬í‚¤ëŠ” í•„ë“œ,ë³€ìˆ˜
+    private int size = 0; // ëª‡ê°œì˜ ì—˜ë¦¬ë¨¼íŠ¸
     
-    private class Node{//¸µÅ©µå ¸®½ºÆ®¿¡¼­´Â ÇÏ³ªÀÇ ¿¤¸®¸ÕÆ®°¡(³ëµå)ÇÏ³ªÀÇ °´Ã¼´Ù
-    	//±×°´Ã¼¸¦ LinkedListÀÇ innerclass·Î Á¤ÀÇ
+    private class Node{//ë§í¬ë“œ ë¦¬ìŠ¤íŠ¸ì—ì„œëŠ” í•˜ë‚˜ì˜ ì—˜ë¦¬ë¨¼íŠ¸ê°€(ë…¸ë“œ)í•˜ë‚˜ì˜ ê°ì²´ë‹¤
+    	//ê·¸ê°ì²´ë¥¼ LinkedListì˜ innerclassë¡œ ì •ì˜
     	
-        private Object data;//µ¥ÀÌÅÍ°¡ ÀúÀåµÉ º¯¼ö-½ÇÁ¦ ÀúÀå°ª
+        private Object data;//ë°ì´í„°ê°€ ì €ì¥ë  ë³€ìˆ˜-ì‹¤ì œ ì €ì¥ê°’
        
-        private Node next;//´ÙÀ½ ³ëµå¸¦ °¡¸®Å°´Â º¯¼ö,ÂüÁ¶°ª
+        private Node next;//ë‹¤ìŒ ë…¸ë“œë¥¼ ê°€ë¦¬í‚¤ëŠ” ë³€ìˆ˜,ì°¸ì¡°ê°’
         
-        public Node(Object input) {//°´Ã¼»ı¼º ÃÊ±âÈ­
+        public Node(Object input) {//ê°ì²´ìƒì„± ì´ˆê¸°í™”
             this.data = input;
-            this.next = null;//»ı¼º½Ã´Â ¹ÌÁ¤
+            this.next = null;//ìƒì„±ì‹œëŠ” ë¯¸ì •
         }
-        public String toString(){//³ëµåÀÇ °ªÀ» ½±°Ô Ãâ·ÂÀ§ÇØ
+        public String toString(){//ë…¸ë“œì˜ ê°’ì„ ì‰½ê²Œ ì¶œë ¥ìœ„í•´
             return String.valueOf(this.data);
         }
     }
-    public void addFirst(Object input){//¸Ó¸®¿¡ Ãß°¡
+    public void addFirst(Object input){//ë¨¸ë¦¬ì— ì¶”ê°€
        
-        Node newNode = new Node(input);//³ëµå¸¦ »ı¼º
+        Node newNode = new Node(input);//ë…¸ë“œë¥¼ ìƒì„±
         
-        newNode.next = head;//»õ·Î¿î ³ëµåÀÇ ´ÙÀ½ ³ëµå·Î ÇØµå ÁöÁ¤
+        newNode.next = head;//ìƒˆë¡œìš´ ë…¸ë“œì˜ ë‹¤ìŒ ë…¸ë“œë¡œ í•´ë“œ ì§€ì •
         
-        head = newNode;//Çìµå·Î »õ·Î¿î ³ëµå¸¦ ÁöÁ¤
+        head = newNode;//í—¤ë“œë¡œ ìƒˆë¡œìš´ ë…¸ë“œë¥¼ ì§€ì •
         size++;
         if(head.next == null){
             tail = head;
         }
     }
-    public void addLast(Object input){//²¿¸®¿¡ Ãß°¡
-        if(size == 0){//¸®½ºÆ®ÀÇ ³ëµå°¡ ÇÏ³ªµµ ¾ø´Ù¸é Ã¹¹øÂ° ³ëµå¸¦ Ãß°¡ÇÏ´Â ¸Ş¼Òµå¸¦ »ç¿ë.
+    public void addLast(Object input){//ê¼¬ë¦¬ì— ì¶”ê°€
+        if(size == 0){//ë¦¬ìŠ¤íŠ¸ì˜ ë…¸ë“œê°€ í•˜ë‚˜ë„ ì—†ë‹¤ë©´ ì²«ë²ˆì§¸ ë…¸ë“œë¥¼ ì¶”ê°€í•˜ëŠ” ë©”ì†Œë“œë¥¼ ì‚¬ìš©.
             addFirst(input);
-        } else {//±âÁ¸ ³ëµå°¡ ÇÏ³ª¶óµµ ÀÖ´Ù¸é 
+        } else {//ê¸°ì¡´ ë…¸ë“œê°€ í•˜ë‚˜ë¼ë„ ìˆë‹¤ë©´ 
         	Node newNode = new Node(input);
         	
-            tail.next = newNode;//¸¶Áö¸· ³ëµåÀÇ ´ÙÀ½ ³ëµå·Î »ı¼ºÇÑ ³ëµå¸¦ ÁöÁ¤.
+            tail.next = newNode;//ë§ˆì§€ë§‰ ë…¸ë“œì˜ ë‹¤ìŒ ë…¸ë“œë¡œ ìƒì„±í•œ ë…¸ë“œë¥¼ ì§€ì •.
            
-            tail = newNode; //¸¶Áö¸· ³ëµå¸¦ °»½Å.
+            tail = newNode; //ë§ˆì§€ë§‰ ë…¸ë“œë¥¼ ê°±ì‹ .
            
-            size++;//¿¤¸®¸ÕÆ® °³¼ö 1 Áõ°¡
+            size++;//ì—˜ë¦¬ë¨¼íŠ¸ ê°œìˆ˜ 1 ì¦ê°€
         }
     }
-    Node node(int index) {//¿©·¯°÷¿¡¼­ ³»ºÎÀûÀ¸·Î node¸¦ Á¶È¸ÇÏ±â À§ÇØ ¾¸
-    	//¿øÇÏ´Â ÀÎµ¦½ºÀÇ ³ëµå¸¦ °¡Á®¿À±â´Â ÇÏÁö¸¸ ¿ÜºÎ¿¡¼­ °¡Á®´Ù¾²Áö´Â ¸øÇÏ°Ô publicÇÏÁö¸»ÀÚ
-        Node x = head;//¾î¶²°ªÀ» Á¶È¸ÇÏ±â À§ÇØ¼± Ç×»ó headºÎÅÍ ½ÃÀÛÇÑ´Ù
+    Node node(int index) {//ì—¬ëŸ¬ê³³ì—ì„œ ë‚´ë¶€ì ìœ¼ë¡œ nodeë¥¼ ì¡°íšŒí•˜ê¸° ìœ„í•´ ì”€
+    	//ì›í•˜ëŠ” ì¸ë±ìŠ¤ì˜ ë…¸ë“œë¥¼ ê°€ì ¸ì˜¤ê¸°ëŠ” í•˜ì§€ë§Œ ì™¸ë¶€ì—ì„œ ê°€ì ¸ë‹¤ì“°ì§€ëŠ” ëª»í•˜ê²Œ publicí•˜ì§€ë§ì
+        Node x = head;//ì–´ë–¤ê°’ì„ ì¡°íšŒí•˜ê¸° ìœ„í•´ì„  í•­ìƒ headë¶€í„° ì‹œì‘í•œë‹¤
         for (int i = 0; i < index; i++)
             x = x.next;
         return x;
@@ -55,48 +55,48 @@ package Ch_02_Linked_Lists;
     	tail.next = node(index);
     	return tail.next != null; 
     }
-    public void add(int k, Object input){// Æ¯Á¤ À§Ä¡ °ª Ãß°¡
-        // ¸¸¾à k°¡ 0ÀÌ¶ó¸é Ã¹¹øÂ° ³ëµå¿¡ Ãß°¡ÇÏ´Â °ÍÀÌ±â ¶§¹®¿¡ addFirst¸¦ »ç¿ëÇÕ´Ï´Ù.
+    public void add(int k, Object input){// íŠ¹ì • ìœ„ì¹˜ ê°’ ì¶”ê°€
+        // ë§Œì•½ kê°€ 0ì´ë¼ë©´ ì²«ë²ˆì§¸ ë…¸ë“œì— ì¶”ê°€í•˜ëŠ” ê²ƒì´ê¸° ë•Œë¬¸ì— addFirstë¥¼ ì‚¬ìš©í•©ë‹ˆë‹¤.
         if(k == 0){
             addFirst(input);
         } else {
             Node temp1 = node(k-1);
            
-            Node temp2 = temp1.next;//k¹øÂ° ³ëµå¸¦ temp2·Î ÁöÁ¤
+            Node temp2 = temp1.next;//kë²ˆì§¸ ë…¸ë“œë¥¼ temp2ë¡œ ì§€ì •
         
-            Node newNode = new Node(input);//»õ·Î¿î ³ëµå¸¦ »ı¼º.
+            Node newNode = new Node(input);//ìƒˆë¡œìš´ ë…¸ë“œë¥¼ ìƒì„±.
             
-            temp1.next = newNode;// temp1ÀÇ ´ÙÀ½ ³ëµå·Î »õ·Î¿î ³ëµå¸¦ ÁöÁ¤
+            temp1.next = newNode;// temp1ì˜ ë‹¤ìŒ ë…¸ë“œë¡œ ìƒˆë¡œìš´ ë…¸ë“œë¥¼ ì§€ì •
             
-            newNode.next = temp2;// »õ·Î¿î ³ëµåÀÇ ´ÙÀ½ ³ëµå·Î temp2¸¦ ÁöÁ¤
+            newNode.next = temp2;// ìƒˆë¡œìš´ ë…¸ë“œì˜ ë‹¤ìŒ ë…¸ë“œë¡œ temp2ë¥¼ ì§€ì •
             
             size++;
             
-            if(newNode.next == null){//¸¶Áö¸· ²¿¸®¿¡ Ãß°¡½Ã °Ë»ç»çÇ×
+            if(newNode.next == null){//ë§ˆì§€ë§‰ ê¼¬ë¦¬ì— ì¶”ê°€ì‹œ ê²€ì‚¬ì‚¬í•­
                 tail = newNode;
-         //È¤½Ã³ª »õ·Î¿î ³ëµåÀÇ ´ÙÀ½ ³ëµå°¡ ¾ø´Ù¸é »õ·Î¿î ³ëµå°¡ ¸¶Áö¸· ³ëµåÀÌ±â ¶§¹®¿¡ tail·Î ÁöÁ¤.
+         //í˜¹ì‹œë‚˜ ìƒˆë¡œìš´ ë…¸ë“œì˜ ë‹¤ìŒ ë…¸ë“œê°€ ì—†ë‹¤ë©´ ìƒˆë¡œìš´ ë…¸ë“œê°€ ë§ˆì§€ë§‰ ë…¸ë“œì´ê¸° ë•Œë¬¸ì— tailë¡œ ì§€ì •.
             }
         }
     }
-    public String toString() {//¸®½ºÆ®¾È¿¡ µ¥ÀÌÅÍ ÀüºÎ Ãâ·Â
-        if(head == null){//¸®½ºÆ®¿¡ µ¥ÀÌÅÍ°¡ ¾ø´Ù¸é
+    public String toString() {//ë¦¬ìŠ¤íŠ¸ì•ˆì— ë°ì´í„° ì „ë¶€ ì¶œë ¥
+        if(head == null){//ë¦¬ìŠ¤íŠ¸ì— ë°ì´í„°ê°€ ì—†ë‹¤ë©´
             return "[]";
         }       
-        Node temp = head;//Ç×»ó ½ÃÀÛÀº Çìµå ÁöÁ¤
+        Node temp = head;//í•­ìƒ ì‹œì‘ì€ í—¤ë“œ ì§€ì •
         String str = "[";
-        while(temp.next != null){//headÀÇ ´ÙÀ½ ³ëµå°¡ ¾øÀ» ¶§±îÁö ¹İº¹¹®À» ½ÇÇà
+        while(temp.next != null){//headì˜ ë‹¤ìŒ ë…¸ë“œê°€ ì—†ì„ ë•Œê¹Œì§€ ë°˜ë³µë¬¸ì„ ì‹¤í–‰
             str += temp.data + ",";
             temp = temp.next;
-        }//¸¶Áö¸· ³ëµå´Â ´ÙÀ½ ³ëµå°¡ ¾ø±â ¶§¹®¿¡ ¾Æ·¡ÀÇ ±¸¹®Àº ¸¶Áö¸· ³ëµå´Â Á¦¿Ü.
-        str += temp.data;// ¸¶Áö¸· ³ëµå¸¦ Ãâ·Â°á°ú¿¡ Æ÷ÇÔ
+        }//ë§ˆì§€ë§‰ ë…¸ë“œëŠ” ë‹¤ìŒ ë…¸ë“œê°€ ì—†ê¸° ë•Œë¬¸ì— ì•„ë˜ì˜ êµ¬ë¬¸ì€ ë§ˆì§€ë§‰ ë…¸ë“œëŠ” ì œì™¸.
+        str += temp.data;// ë§ˆì§€ë§‰ ë…¸ë“œë¥¼ ì¶œë ¥ê²°ê³¼ì— í¬í•¨
         return str+"]";
     }
     
-    public Object removeFirst(){//Ã¹¹øÂ° ³ëµå »èÁ¦
-        Node temp = head;//Ã¹¹øÂ° ³ëµå¸¦ temp·Î ÁöÁ¤
-        head = temp.next;//headÀÇ °ªÀ» µÎ¹øÂ° ³ëµå·Î º¯°æ.
+    public Object removeFirst(){//ì²«ë²ˆì§¸ ë…¸ë“œ ì‚­ì œ
+        Node temp = head;//ì²«ë²ˆì§¸ ë…¸ë“œë¥¼ tempë¡œ ì§€ì •
+        head = temp.next;//headì˜ ê°’ì„ ë‘ë²ˆì§¸ ë…¸ë“œë¡œ ë³€ê²½.
         
-        Object returnData = temp.data;//µ¥ÀÌÅÍ »èÁ¦ Àü¿¡ ¸®ÅÏÇÒ °ªÀ» ÀÓ½Ã º¯¼ö¿¡ ´ãÀÚ.
+        Object returnData = temp.data;//ë°ì´í„° ì‚­ì œ ì „ì— ë¦¬í„´í•  ê°’ì„ ì„ì‹œ ë³€ìˆ˜ì— ë‹´ì.
         
         temp = null;
         
@@ -106,20 +106,20 @@ package Ch_02_Linked_Lists;
     }
     
     public Object remove(int k){
-        if(k == 0) {//»èÁ¦ÇÒ·Á´Â°ªÀÌ Ã¹¹øÂ°°ªÀÌ¶ó¸é
+        if(k == 0) {//ì‚­ì œí• ë ¤ëŠ”ê°’ì´ ì²«ë²ˆì§¸ê°’ì´ë¼ë©´
             return removeFirst();
         }
-        Node temp = node(k-1);//»èÁ¦ ³ëµå Àü ³ëµå¸¦ tempÀÇ °ªÀ¸·Î ÁöÁ¤
+        Node temp = node(k-1);//ì‚­ì œ ë…¸ë“œ ì „ ë…¸ë“œë¥¼ tempì˜ ê°’ìœ¼ë¡œ ì§€ì •
         
-        Node todoDeleted = temp.next;// »èÁ¦ ³ëµå¸¦ todoDeleted¿¡ ±â·Ï
-        // »èÁ¦ ³ëµå¸¦ Áö±İ Á¦°ÅÇÏ¸é »èÁ¦ ¾Õ ³ëµå¿Í »èÁ¦ µÚ ³ëµå¸¦ ¿¬°áÇÒ ¼ö ¾ø´Ù.  
+        Node todoDeleted = temp.next;// ì‚­ì œ ë…¸ë“œë¥¼ todoDeletedì— ê¸°ë¡
+        // ì‚­ì œ ë…¸ë“œë¥¼ ì§€ê¸ˆ ì œê±°í•˜ë©´ ì‚­ì œ ì• ë…¸ë“œì™€ ì‚­ì œ ë’¤ ë…¸ë“œë¥¼ ì—°ê²°í•  ìˆ˜ ì—†ë‹¤.  
         
         temp.next = temp.next.next;
         
-        // »èÁ¦µÈ µ¥ÀÌÅÍ¸¦ ¸®ÅÏÇÏ±â À§ÇØ¼­ returnData¿¡ µ¥ÀÌÅÍ¸¦ ÀúÀåÇÕ´Ï´Ù.
+        // ì‚­ì œëœ ë°ì´í„°ë¥¼ ë¦¬í„´í•˜ê¸° ìœ„í•´ì„œ returnDataì— ë°ì´í„°ë¥¼ ì €ì¥í•©ë‹ˆë‹¤.
         Object returnData = todoDeleted.data; 
         
-        if(todoDeleted == tail){//»èÁ¦ÇÒ·Á´Âµ¥ÀÌÅÍ°¡ ¸¶Áö¸·°ªÀÌ¶ó¸é
+        if(todoDeleted == tail){//ì‚­ì œí• ë ¤ëŠ”ë°ì´í„°ê°€ ë§ˆì§€ë§‰ê°’ì´ë¼ë©´
             tail = temp;
         }
         todoDeleted = null; 
@@ -129,73 +129,73 @@ package Ch_02_Linked_Lists;
     
     public Object removeLast(){
         return remove(size-1);
-        //tail°ª¸¸ »èÁ¦ÇØ¼­´Â ¾ÈµÊ
-        //ÀÌ·¸°Ô Ã³À½ºÎÅÍ ³ëµå °ªÀ» Ã£¾Æ°¡¼­ º¹ÀâÇÏ°Ô »èÁ¦¸¦ ÇØÁà¾ßÇÑ´Ù 
-        //¿Ö³Ä¸é »èÁ¦ÇÏ±â Àü ³ëµåÀÇ ¸µÅ© ¿¬°áÀ» ²÷¾îÁà¾ßÇÏ´Ï±î..
-        //ÀÌ°Å´Â ¾î·¹ÀÌ¸®½ºÆ®¶û Àå´ÜÁ¡ÀÌ ¹İ´ëÀÎ°Å´Ù//Ãß°¡»èÁ¦½Ã ³ëµå¸¦ °è¼ÓÃ£¾Æ°¡¾ßÇÔ..
-        //±×·¡¼­ ¾ç¹æÇâ ¿¬°á¸®½ºÆ®°¡ ³ª¿Â°Å
+        //tailê°’ë§Œ ì‚­ì œí•´ì„œëŠ” ì•ˆë¨
+        //ì´ë ‡ê²Œ ì²˜ìŒë¶€í„° ë…¸ë“œ ê°’ì„ ì°¾ì•„ê°€ì„œ ë³µì¡í•˜ê²Œ ì‚­ì œë¥¼ í•´ì¤˜ì•¼í•œë‹¤ 
+        //ì™œëƒë©´ ì‚­ì œí•˜ê¸° ì „ ë…¸ë“œì˜ ë§í¬ ì—°ê²°ì„ ëŠì–´ì¤˜ì•¼í•˜ë‹ˆê¹Œ..
+        //ì´ê±°ëŠ” ì–´ë ˆì´ë¦¬ìŠ¤íŠ¸ë‘ ì¥ë‹¨ì ì´ ë°˜ëŒ€ì¸ê±°ë‹¤//ì¶”ê°€ì‚­ì œì‹œ ë…¸ë“œë¥¼ ê³„ì†ì°¾ì•„ê°€ì•¼í•¨..
+        //ê·¸ë˜ì„œ ì–‘ë°©í–¥ ì—°ê²°ë¦¬ìŠ¤íŠ¸ê°€ ë‚˜ì˜¨ê±°
     }
-    public int size(){//¸®½ºÆ®°¡ °¡Áø µ¥ÀÌÅÍÀÇ¼ö
+    public int size(){//ë¦¬ìŠ¤íŠ¸ê°€ ê°€ì§„ ë°ì´í„°ì˜ìˆ˜
         return size;
     }
-    public Object get(int k){//Æ¯Á¤ ¿¤¸®¸ÕÆ® °ª Á¶È¸
+    public Object get(int k){//íŠ¹ì • ì—˜ë¦¬ë¨¼íŠ¸ ê°’ ì¡°íšŒ
         Node temp = node(k);
         return temp.data;
     }
     
-    public int indexOf(Object data){//Æ¯Á¤µ¥ÀÌÅÍ°¡ ¾î¶² À§Ä¡¿¡ ÀÖ´ÂÁö °Ë»ö
-        Node temp = head;//¸ÕÀú Ã¹¹øÂ° ³ëµå¸¦ ÅÛÇÁ·Î ÁöÁ¤
+    public int indexOf(Object data){//íŠ¹ì •ë°ì´í„°ê°€ ì–´ë–¤ ìœ„ì¹˜ì— ìˆëŠ”ì§€ ê²€ìƒ‰
+        Node temp = head;//ë¨¼ì € ì²«ë²ˆì§¸ ë…¸ë“œë¥¼ í…œí”„ë¡œ ì§€ì •
      
-        int index = 0;// Å½»ö ´ë»óÀÌ ¸î¹øÂ° ¿¤¸®¸ÕÆ®¿¡ ÀÖ´ÂÁö¸¦ ÀÇ¹ÌÇÏ´Â º¯¼ö·Î index¸¦ »ç¿ëÇÕ´Ï´Ù.
+        int index = 0;// íƒìƒ‰ ëŒ€ìƒì´ ëª‡ë²ˆì§¸ ì—˜ë¦¬ë¨¼íŠ¸ì— ìˆëŠ”ì§€ë¥¼ ì˜ë¯¸í•˜ëŠ” ë³€ìˆ˜ë¡œ indexë¥¼ ì‚¬ìš©í•©ë‹ˆë‹¤.
        
-        while(temp.data != data){//Å½»ö °ª°ú Å½»ö ´ë»óÀÇ °ªÀ» ºñ±³. 
-            temp = temp.next;//´ÙÀ½ ³ëµå¸¦ °è¼Ó °Ë»ö
+        while(temp.data != data){//íƒìƒ‰ ê°’ê³¼ íƒìƒ‰ ëŒ€ìƒì˜ ê°’ì„ ë¹„êµ. 
+            temp = temp.next;//ë‹¤ìŒ ë…¸ë“œë¥¼ ê³„ì† ê²€ìƒ‰
             
             index++;
          
-            if(temp == null)// tempÀÇ °ªÀÌ nullÀÌ¶ó´Â °ÍÀº ´õ ÀÌ»ó Å½»ö ´ë»óÀÌ ¾ø´Ù´Â °Í
+            if(temp == null)// tempì˜ ê°’ì´ nullì´ë¼ëŠ” ê²ƒì€ ë” ì´ìƒ íƒìƒ‰ ëŒ€ìƒì´ ì—†ë‹¤ëŠ” ê²ƒ
                 return -1;
         }
-        return index;// Å½»ö ´ë»óÀ» Ã£¾Ò´Ù¸é ´ë»óÀÇ ÀÎµ¦½º °ªÀ» ¸®ÅÏ
+        return index;// íƒìƒ‰ ëŒ€ìƒì„ ì°¾ì•˜ë‹¤ë©´ ëŒ€ìƒì˜ ì¸ë±ìŠ¤ ê°’ì„ ë¦¬í„´
     }
     
     public ListIterator listIterator() {
-        return new ListIterator(); // ¹İº¹ÀÚ¸¦ »ı¼ºÇØ¼­ ¸®ÅÏ
+        return new ListIterator(); // ë°˜ë³µìë¥¼ ìƒì„±í•´ì„œ ë¦¬í„´
     }
      
-    public class ListIterator{//ÀÌ³Ê Å¬·¡½º
-        private Node lastReturned;//¹İÈ¯ÇÏ´Â ³ëµå
-        private Node next;//head·Î ÃÊ±âÈ­
-        private int nextIndex;//¸î¹ø next ¸Ş¼Òµå°¡ È£Ãâ‰ç´ÂÁö
+    public class ListIterator{//ì´ë„ˆ í´ë˜ìŠ¤
+        private Node lastReturned;//ë°˜í™˜í•˜ëŠ” ë…¸ë“œ
+        private Node next;//headë¡œ ì´ˆê¸°í™”
+        private int nextIndex;//ëª‡ë²ˆ next ë©”ì†Œë“œê°€ í˜¸ì¶œÂ‰æ¦®ì©?
          
         ListIterator(){
-            next = head;//nextº¯¼ö ÃÊ±âÈ­
+            next = head;//nextë³€ìˆ˜ ì´ˆê¸°í™”
             nextIndex = 0;
         }
          
         public Object next() {
             lastReturned = next;
-            next = next.next; //nextÀÇ ÂüÁ¶°ªÀÌ ±âÁ¸ next.next·Î º¯°æ. 
+            next = next.next; //nextì˜ ì°¸ì¡°ê°’ì´ ê¸°ì¡´ next.nextë¡œ ë³€ê²½. 
             nextIndex++;
             return lastReturned.data;
         }
          
-        public boolean hasNext() {//´ÙÀ½ ³ëµå°¡ ÀÖ´Â°¡
+        public boolean hasNext() {//ë‹¤ìŒ ë…¸ë“œê°€ ìˆëŠ”ê°€
             return nextIndex < size();
         }
          
-        public void add(Object input){//ÀÌÅÍ·¹ÀÌÅÍ ¹İº¹ °úÁ¤Áß ³ëµå¸¦ Ãß°¡ÇÏ´Â °æ¿ì
-        	//ÀÌ ·ÎÁ÷Àº ´õÁÁÀº ·ÎÁ÷ÀÌ ÀÖÀ»¼ö ÀÖÀ½ ÀüÃ¼ÀûÀÎ Èå¸§,¾î·¹ÀÌ ¸®½ºÆ®¶û ¹¹°¡ ´Ù¸¥Áö ºñ±³Â÷¿ø Á¢±Ù
+        public void add(Object input){//ì´í„°ë ˆì´í„° ë°˜ë³µ ê³¼ì •ì¤‘ ë…¸ë“œë¥¼ ì¶”ê°€í•˜ëŠ” ê²½ìš°
+        	//ì´ ë¡œì§ì€ ë”ì¢‹ì€ ë¡œì§ì´ ìˆì„ìˆ˜ ìˆìŒ ì „ì²´ì ì¸ íë¦„,ì–´ë ˆì´ ë¦¬ìŠ¤íŠ¸ë‘ ë­ê°€ ë‹¤ë¥¸ì§€ ë¹„êµì°¨ì› ì ‘ê·¼
             Node newNode = new Node(input);
             
-            if(lastReturned == null){//Ã³À½À§Ä¡ Ãß°¡//ÇÑ¹øµµ next¸Ş¼Òµå ½ÇÇà ¾ÈÇÑ»óÅÂ
-            	head= newNode;//Ãß°¡³ëµå¸¦ Çìµå·Î ÁöÁ¤
-            	newNode.next = next;//¿ø·¡ Çìµå¸¦ Ãß°¡ÇÑ ³ëµåÀÇ ³×½ºÆ®·Î ÁöÁ¤
-            } else {//lastReturned°¡ ¼³Á¤µÇ¾ú´Ù¸é Áß°£ ¶Ç´Â ³¡¿¡ Ãß°¡ÇÏ´Â°æ¿ì
+            if(lastReturned == null){//ì²˜ìŒìœ„ì¹˜ ì¶”ê°€//í•œë²ˆë„ nextë©”ì†Œë“œ ì‹¤í–‰ ì•ˆí•œìƒíƒœ
+            	head= newNode;//ì¶”ê°€ë…¸ë“œë¥¼ í—¤ë“œë¡œ ì§€ì •
+            	newNode.next = next;//ì›ë˜ í—¤ë“œë¥¼ ì¶”ê°€í•œ ë…¸ë“œì˜ ë„¤ìŠ¤íŠ¸ë¡œ ì§€ì •
+            } else {//lastReturnedê°€ ì„¤ì •ë˜ì—ˆë‹¤ë©´ ì¤‘ê°„ ë˜ëŠ” ëì— ì¶”ê°€í•˜ëŠ”ê²½ìš°
                 lastReturned.next = newNode;
-                if(next != null) {//¸¶Áö¸·±îÁö Å½»öÀ» ¾ÈÇß´Ù¸é
+                if(next != null) {//ë§ˆì§€ë§‰ê¹Œì§€ íƒìƒ‰ì„ ì•ˆí–ˆë‹¤ë©´
                 newNode.next = next;
-                }else {//¸¶Áö¸·±îÁö Å½»öÀ» Çß´Ù¸é
+                }else {//ë§ˆì§€ë§‰ê¹Œì§€ íƒìƒ‰ì„ í–ˆë‹¤ë©´
                 	tail = newNode;
                 }
             }
@@ -205,34 +205,34 @@ package Ch_02_Linked_Lists;
         }
          
         public void remove(){
-            if(nextIndex == 0){ //³×½ºÆ® ¸Ş¼Òµå ÇÑ¹øµµ È£Ãâ¾ÈÇÑ»óÅÂ//»èÁ¦ÇÒ°ÍÀÌ ¾øÀ½
+            if(nextIndex == 0){ //ë„¤ìŠ¤íŠ¸ ë©”ì†Œë“œ í•œë²ˆë„ í˜¸ì¶œì•ˆí•œìƒíƒœ//ì‚­ì œí• ê²ƒì´ ì—†ìŒ
                 throw new IllegalStateException();
             }
-            LinkedList.this.remove(nextIndex-1);//LinkedList Å¬·¡½ºÀÇ removeÀÓ
-            //±×·¯³ª ÀÌ remove¸¦ ÀÌ¿ëÇÏ¸é node ¸Ş¼Òµå¸¦ ÅëÇØ ¶Ç ¹İº¹ÀûÀ¸·Î ¼øÈ¸¸¦ ÇØ¼­ Ã£¾Æ°¡¼­ ºñÈ¿À²Àû
-            nextIndex--;//´Ü¹æÇâ ¿¬°á¸®½ºÆ®¿¡¼­´Â prev°¡¾ø¾î¼­ ÀÌ·¸°Ô ºñÈ¿À²ÀûÀÏ ¼ö ¹Û¿¡ ¾ø´Â°Å
+            LinkedList.this.remove(nextIndex-1);//LinkedList í´ë˜ìŠ¤ì˜ removeì„
+            //ê·¸ëŸ¬ë‚˜ ì´ removeë¥¼ ì´ìš©í•˜ë©´ node ë©”ì†Œë“œë¥¼ í†µí•´ ë˜ ë°˜ë³µì ìœ¼ë¡œ ìˆœíšŒë¥¼ í•´ì„œ ì°¾ì•„ê°€ì„œ ë¹„íš¨ìœ¨ì 
+            nextIndex--;//ë‹¨ë°©í–¥ ì—°ê²°ë¦¬ìŠ¤íŠ¸ì—ì„œëŠ” prevê°€ì—†ì–´ì„œ ì´ë ‡ê²Œ ë¹„íš¨ìœ¨ì ì¼ ìˆ˜ ë°–ì— ì—†ëŠ”ê±°
         }
 	}
 	public Object FindBeginning() {
 		Node slow = head;
 		Node fast = head; 
-		while (fast != null && fast.next != null) {//¼øÈ¯¹® ÀÎÁö °Ë»ç
+		while (fast != null && fast.next != null) {//ìˆœí™˜ë¬¸ ì¸ì§€ ê²€ì‚¬
 			slow = slow.next; 
 			fast = fast.next.next;
-			if (slow == fast) {//¼øÈ¯¹® ÀÎÁö °Ë»ç
-				break;//¼øÈ¯¹®ÀÌ´Ù
+			if (slow == fast) {//ìˆœí™˜ë¬¸ ì¸ì§€ ê²€ì‚¬
+				break;//ìˆœí™˜ë¬¸ì´ë‹¤
 			}
 		}
-		if (fast == null || fast.next == null) {//¼øÈ¯¹® ÀÎÁö °Ë»ç
+		if (fast == null || fast.next == null) {//ìˆœí™˜ë¬¸ ì¸ì§€ ê²€ì‚¬
 			return null;
 		}
 		
-		slow = head; //SLOW¸¦ ¸®½ºÆ®ÀÇ ½ÃÀÛÁöÁ¡À¸·Î º¯°æ,FAST´Â ±×´ë·Î µÎ°í
-		while (slow != fast) { //¼øÈ¯ÀÇ ½ÃÀÛ ºÎºĞÀ» Ã£´Â ·ÎÁ÷
-			slow = slow.next; //¼Óµµ´Â °°¿¡ º¯°æÇÏ°í Ãâ¹ß
+		slow = head; //SLOWë¥¼ ë¦¬ìŠ¤íŠ¸ì˜ ì‹œì‘ì§€ì ìœ¼ë¡œ ë³€ê²½,FASTëŠ” ê·¸ëŒ€ë¡œ ë‘ê³ 
+		while (slow != fast) { //ìˆœí™˜ì˜ ì‹œì‘ ë¶€ë¶„ì„ ì°¾ëŠ” ë¡œì§
+			slow = slow.next; //ì†ë„ëŠ” ê°™ì— ë³€ê²½í•˜ê³  ì¶œë°œ
 			fast = fast.next; 
 		}
-		return fast.data;//¼øÈ¯ÀÇ ½ÃÀÛ ºÎºĞ ³ëµå ¹İÈ¯
+		return fast.data;//ìˆœí™˜ì˜ ì‹œì‘ ë¶€ë¶„ ë…¸ë“œ ë°˜í™˜
 	}
 }
  

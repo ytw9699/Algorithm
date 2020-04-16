@@ -1,43 +1,43 @@
-package DoublyLinkedList;
+ï»¿package DoublyLinkedList;
 
 public class DoublyMain {
     public static void main(String[] args) {
     	
         DoublyLinkedList numbers = new DoublyLinkedList();
-         numbers.addFirst(30);//¸Ç ¾Õ¿¡ Ãß°¡ 
+         numbers.addFirst(30);//ë§¨ ì•ì— ì¶”ê°€ 
          numbers.addFirst(20);
          numbers.addFirst(10);
          	System.out.println(numbers);
                   
-         System.out.println(numbers.removeLast());//¸ÇµÚ ¿ä¼Ò Á¦°Å
+         System.out.println(numbers.removeLast());//ë§¨ë’¤ ìš”ì†Œ ì œê±°
          	System.out.println(numbers);
            
-         numbers.addLast(30);//¸Ç µÚ¿¡ Ãß°¡
+         numbers.addLast(30);//ë§¨ ë’¤ì— ì¶”ê°€
          numbers.addLast(40);
          numbers.addLast(50);
          	System.out.println(numbers);
          
-         System.out.println(numbers.node(2));//ÀÎµ¦½º 2¹øÂ°°ªÀ»°¡Á®¿Íº¸ÀÚ
+         System.out.println(numbers.node(2));//ì¸ë±ìŠ¤ 2ë²ˆì§¸ê°’ì„ê°€ì ¸ì™€ë³´ì
          
-         numbers.add(2,25);//ÀÎµ¦½º 2À§Ä¡¿¡ 25Ãß°¡
+         numbers.add(2,25);//ì¸ë±ìŠ¤ 2ìœ„ì¹˜ì— 25ì¶”ê°€
          	System.out.println(numbers);
          	
-         System.out.println(numbers.removeFirst());//¸Ç¾Õ ¿ä¼Ò Á¦°Å
+         System.out.println(numbers.removeFirst());//ë§¨ì• ìš”ì†Œ ì œê±°
          System.out.println(numbers);
          
-         System.out.println(numbers.remove(2));//ÁöÁ¤µÈ À§Ä¡ÀÇ ¿ä¼Ò Á¦°Å
+         System.out.println(numbers.remove(2));//ì§€ì •ëœ ìœ„ì¹˜ì˜ ìš”ì†Œ ì œê±°
          System.out.println(numbers);
                  
-         System.out.println(numbers.size());//³ëµå ¼ö ¹İÈ¯
+         System.out.println(numbers.size());//ë…¸ë“œ ìˆ˜ ë°˜í™˜
          
-         System.out.println(numbers.get(1));//ÁöÁ¤µÈ À§Ä¡ÀÇ °´Ã¼¸¦ ¹İÈ¯
+         System.out.println(numbers.get(1));//ì§€ì •ëœ ìœ„ì¹˜ì˜ ê°ì²´ë¥¼ ë°˜í™˜
          
-         System.out.println(numbers.indexOf(40));//10ÀÇ °ª¿¡ ÇØ´çÇÏ´Â À§Ä¡ ¹İÈ¯
+         System.out.println(numbers.indexOf(40));//10ì˜ ê°’ì— í•´ë‹¹í•˜ëŠ” ìœ„ì¹˜ ë°˜í™˜
          
          DoublyLinkedList.ListIterator i = numbers.listIterator();
          
          System.out.println(numbers);
-         i.add(5);//next¸¦ ¾ÈÇÏ°í ±×³É 5¸¦ Ãß°¡ÇÏ¸é ¸Ç¾Õ¿¡ Ãß°¡µÊ
+         i.add(5);//nextë¥¼ ì•ˆí•˜ê³  ê·¸ëƒ¥ 5ë¥¼ ì¶”ê°€í•˜ë©´ ë§¨ì•ì— ì¶”ê°€ë¨
          i.next();
          i.add(15);
          System.out.println(numbers);

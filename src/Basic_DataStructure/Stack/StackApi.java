@@ -1,10 +1,10 @@
-package Stack;
+ï»¿package Stack;
 
 import java.util.Stack;
 
 public class StackApi {
     public static void main(String[] args) {
-    	Stack<String> st = new Stack();//º¤ÅÍ¸¦ ±¸ÇöÇÑ ½ºÅÃ
+    	Stack<String> st = new Stack();//ë²¡í„°ë¥¼ êµ¬í˜„í•œ ìŠ¤íƒ
     	
     	st.push("0");
 		st.push("1");
@@ -12,7 +12,7 @@ public class StackApi {
 		
 		System.out.println("= MyStack0 peek=");
 		
-		System.out.println(st.peek());//¸¶Áö¸· °ª ¸®ÅÏ
+		System.out.println(st.peek());//ë§ˆì§€ë§‰ ê°’ ë¦¬í„´
 		
 		System.out.println("= MyStack0 pop=");
 		

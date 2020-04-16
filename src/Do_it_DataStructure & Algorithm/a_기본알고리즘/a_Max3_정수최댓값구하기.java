@@ -1,8 +1,8 @@
-package a_±âº»¾Ë°í¸®Áò;
+ï»¿package a_ê¸°ë³¸ì•Œê³ ë¦¬ì¦˜;
 
 import java.util.Scanner;
-//¾Ë°í¸®Áò: ¹®Á¦¸¦ ÇØ°áÇÏ±â À§ÇÑ °ÍÀ¸·Î ¸íÈ®ÇÏ°Ô Á¤ÀÇµÇ°í ¼ø¼­°¡ ÀÖ´Â À¯ÇÑ °³ÀÇ ±ÔÄ¢À¸·Î ÀÌ·ç¾îÁø ÁýÇÕ
-class a_Max3_Á¤¼öÃÖ´ñ°ª±¸ÇÏ±â {// 3°³ÀÇ Á¤¼ý°ªÀ» ÀÔ·ÂÇÏ°í ÃÖ´ñ°ªÀ» ±¸ÇÕ´Ï´Ù.
+//ì•Œê³ ë¦¬ì¦˜: ë¬¸ì œë¥¼ í•´ê²°í•˜ê¸° ìœ„í•œ ê²ƒìœ¼ë¡œ ëª…í™•í•˜ê²Œ ì •ì˜ë˜ê³  ìˆœì„œê°€ ìžˆëŠ” ìœ í•œ ê°œì˜ ê·œì¹™ìœ¼ë¡œ ì´ë£¨ì–´ì§„ ì§‘í•©
+class a_Max3_ì •ìˆ˜ìµœëŒ“ê°’êµ¬í•˜ê¸° {// 3ê°œì˜ ì •ìˆ«ê°’ì„ ìž…ë ¥í•˜ê³  ìµœëŒ“ê°’ì„ êµ¬í•©ë‹ˆë‹¤.
 	public static void main(String[] args) {
 		int[] score = new int[5];
 		int k = 1;
@@ -15,13 +15,13 @@ class a_Max3_Á¤¼öÃÖ´ñ°ª±¸ÇÏ±â {// 3°³ÀÇ Á¤¼ý°ªÀ» ÀÔ·ÂÇÏ°í ÃÖ´ñ°ªÀ» ±¸ÇÕ´Ï´Ù.
 
 		int tmp = score[k+2] + score[4];  // int tmp = score[3] + score[4]
 
-	    // for¹®À¸·Î ¹è¿­ÀÇ ¸ðµç ¿ä¼Ò¸¦ Ãâ·ÂÇÑ´Ù.
+	    // forë¬¸ìœ¼ë¡œ ë°°ì—´ì˜ ëª¨ë“  ìš”ì†Œë¥¼ ì¶œë ¥í•œë‹¤.
 		for(int i=0; i < 5; i++) {
 			System.out.printf("score[%d]:%d%n",i, score[i]);		
 		}
 
 		System.out.printf("tmp:%d%n", tmp);
-		System.out.printf("score[%d]:%d%n",7,score[7]); //indexÀÇ ¹üÀ§¸¦ ¹þ¾î³­ °ª
+		System.out.printf("score[%d]:%d%n",7,score[7]); //indexì˜ ë²”ìœ„ë¥¼ ë²—ì–´ë‚œ ê°’
 		
 		
 	}

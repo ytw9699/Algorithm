@@ -1,17 +1,17 @@
-package Recursive;
+ï»¿package Recursive;
 public class b_01_Recursive 
 {
 	static void Recursive(int num) 
 	{
-		if(num <=0)//Å»ÃâÁ¶°Ç
-			return;//Å»Ãâ
+		if(num <=0)//íƒˆì¶œì¡°ê±´
+			return;//íƒˆì¶œ
 		
 		System.out.printf("Recursive call! %d \n", num);
-		Recursive(num-1);//ÀÚ±âÀÚ½ÅÀ» ´Ù½Ã È£Ãâ
+		Recursive(num-1);//ìžê¸°ìžì‹ ì„ ë‹¤ì‹œ í˜¸ì¶œ
 		
 	}
 		public static void main(String[] args) 
 		{
-			Recursive(3);//Á¦ÀÏ Ã¹¹øÂ°·Î È£ÃâµÈ ¸Þ¼Òµå °¡Àå ¸¶Áö¸·¿¡ Á¾·á
+			Recursive(3);//ì œì¼ ì²«ë²ˆì§¸ë¡œ í˜¸ì¶œëœ ë©”ì†Œë“œ ê°€ìž¥ ë§ˆì§€ë§‰ì— ì¢…ë£Œ
 		}
 }

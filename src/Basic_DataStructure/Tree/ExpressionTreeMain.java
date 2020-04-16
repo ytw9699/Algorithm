@@ -1,4 +1,4 @@
-package Tree;
+ï»¿package Tree;
 
 public class ExpressionTreeMain {
 	public static void main(String[] args) {
@@ -9,13 +9,13 @@ public class ExpressionTreeMain {
 		
 		ExpressionTree.Node newNode = ETree.MakeExpTree(exp);
 
-		/*printf("ÀüÀ§ Ç¥±â¹ıÀÇ ¼ö½Ä: ");
+		/*printf("ì „ìœ„ í‘œê¸°ë²•ì˜ ìˆ˜ì‹: ");
 		ShowPrefixTypeExp(eTree); printf("\n");
 
-		printf("ÁßÀ§ Ç¥±â¹ıÀÇ ¼ö½Ä: ");
+		printf("ì¤‘ìœ„ í‘œê¸°ë²•ì˜ ìˆ˜ì‹: ");
 		ShowInfixTypeExp(eTree); printf("\n");
 
-		printf("ÈÄÀ§ Ç¥±â¹ıÀÇ ¼ö½Ä: ");
+		printf("í›„ìœ„ í‘œê¸°ë²•ì˜ ìˆ˜ì‹: ");
 		ShowPostfixTypeExp(eTree); printf("\n");*/
 		System.out.println(ETree.EvaluateExpTree(newNode));
 	

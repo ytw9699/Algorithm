@@ -1,8 +1,8 @@
-package b_±âº»ÀÚ·á±¸Á¶;
+ï»¿package b_ê¸°ë³¸ìë£Œêµ¬ì¡°;
 import java.util.Scanner;	
-// µÎ ¹è¿­ÀÌ °°Àº°¡¸¦ ÆÇ´Ü
-class j_ArrayEqualµÎ¹è¿­ÀÇ¿ä¼Ò°¡°°Àº°¡ {
-	// µÎ ¹è¿­ a, bÀÇ ¸ğµç ¿ä¼Ò°¡ °°Àº°¡?
+// ë‘ ë°°ì—´ì´ ê°™ì€ê°€ë¥¼ íŒë‹¨
+class j_ArrayEqualë‘ë°°ì—´ì˜ìš”ì†Œê°€ê°™ì€ê°€ {
+	// ë‘ ë°°ì—´ a, bì˜ ëª¨ë“  ìš”ì†Œê°€ ê°™ì€ê°€?
 	static boolean equals(int[] a, int[] b) {
 		if (a.length != b.length)
 			return false;
@@ -16,25 +16,25 @@ class j_ArrayEqualµÎ¹è¿­ÀÇ¿ä¼Ò°¡°°Àº°¡ {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		System.out.print("¹è¿­ aÀÇ ¿ä¼Ú¼ö£º");
-		int na = stdIn.nextInt();		// ¹è¿­ aÀÇ ¿ä¼Ú¼ö
+		System.out.print("ë°°ì—´ aì˜ ìš”ì†Ÿìˆ˜ï¼š");
+		int na = stdIn.nextInt();		// ë°°ì—´ aì˜ ìš”ì†Ÿìˆ˜
 
-		int[] a = new int[na];			// ¿ä¼Ú¼ö°¡ naÀÎ ¹è¿­
+		int[] a = new int[na];			// ìš”ì†Ÿìˆ˜ê°€ naì¸ ë°°ì—´
 
 		for (int i = 0; i < na; i++) {
 			System.out.print("a[" + i + "] : ");
 			a[i] = stdIn.nextInt();
 		}
-		System.out.print("¹è¿­ bÀÇ ¿ä¼Ú¼ö£º");
-		int nb = stdIn.nextInt();		// ¹è¿­ bÀÇ ¿ä¼Ú¼ö
+		System.out.print("ë°°ì—´ bì˜ ìš”ì†Ÿìˆ˜ï¼š");
+		int nb = stdIn.nextInt();		// ë°°ì—´ bì˜ ìš”ì†Ÿìˆ˜
 
-		int[] b = new int[nb];			// ¿ä¼Ú¼ö°¡ nbÀÎ ¹è¿­
+		int[] b = new int[nb];			// ìš”ì†Ÿìˆ˜ê°€ nbì¸ ë°°ì—´
 
 		for (int i = 0; i < nb; i++) {
 			System.out.print("b[" + i + "] : ");
 			b[i] = stdIn.nextInt();
 		}
-		System.out.println("¹è¿­ a¿Í b´Â " + 
-								 (equals(a, b) ? "°°½À´Ï´Ù." : "°°Áö ¾Ê½À´Ï´Ù."));
+		System.out.println("ë°°ì—´ aì™€ bëŠ” " + 
+								 (equals(a, b) ? "ê°™ìŠµë‹ˆë‹¤." : "ê°™ì§€ ì•ŠìŠµë‹ˆë‹¤."));
 	}
 }

@@ -1,11 +1,11 @@
-package c_3000¹ø´ë;
+ï»¿package c_3000ë²ˆëŒ€;
 
 import java.util.Scanner;
 import java.util.Stack;
 public class Main3986 {
 public static void main(String[] args) {
 		
-		int goodWordCount=0;//ÁÁÀº´Ü¾î Ä«¿îÆ®
+		int goodWordCount=0;//ì¢‹ì€ë‹¨ì–´ ì¹´ìš´íŠ¸
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -25,7 +25,7 @@ public static void main(String[] args) {
 		
 			for(int j=0; j<word.length; j++){ 
 				if (!stack.isEmpty()){
-						if (stack.peek().equals(word[j])) {//½ºÅÃ »ó´ÜÀÇ °ª°ú ¹è¿­ÀÇ °ªºñ±³
+						if (stack.peek().equals(word[j])) {//ìŠ¤íƒ ìƒë‹¨ì˜ ê°’ê³¼ ë°°ì—´ì˜ ê°’ë¹„êµ
 							stack.pop();
 						}else {
 							 stack.push(word[j]); 
@@ -34,11 +34,11 @@ public static void main(String[] args) {
 					stack.push(word[j]);	
 				} 
 			}
-			if(stack.isEmpty()) {//½ºÅÃÀÌ ºñ¾îÀÖ´Ù¸é ÁÁÀº´Ü¾îÀÓ
+			if(stack.isEmpty()) {//ìŠ¤íƒì´ ë¹„ì–´ìˆë‹¤ë©´ ì¢‹ì€ë‹¨ì–´ì„
 				goodWordCount++;
 			}
 		}
-		System.out.println(goodWordCount);//ÁÁÀº´Ü¾î Ä«¿îÆ® Ãâ·Â
+		System.out.println(goodWordCount);//ì¢‹ì€ë‹¨ì–´ ì¹´ìš´íŠ¸ ì¶œë ¥
 	}
 }
 

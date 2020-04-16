@@ -1,32 +1,32 @@
-package Stack;
+ï»¿package Stack;
 import java.util.ArrayList;
 import java.util.EmptyStackException;
 
-public class ArrayListStack extends ArrayList{//¾î·¹ÀÌ ¸®½ºÆ® ±â¹İ
+public class ArrayListStack extends ArrayList{//ì–´ë ˆì´ ë¦¬ìŠ¤íŠ¸ ê¸°ë°˜
 	public Object push(Object data) {
 		add(data);
 		return data;
 	}
 	
 	public Object pop() {
-		Object data = peek();// Stack¿¡ ÀúÀåµÈ ¸¶Áö¸· ¿ä¼Ò¸¦ ÀĞ¾î¿Â´Ù.
+		Object data = peek();// Stackì— ì €ì¥ëœ ë§ˆì§€ë§‰ ìš”ì†Œë¥¼ ì½ì–´ì˜¨ë‹¤.
 		
-		remove(size() - 1);//¸¶Áö¸· ¿ä¼Ò¸¦ »èÁ¦ÇÑ´Ù
+		remove(size() - 1);//ë§ˆì§€ë§‰ ìš”ì†Œë¥¼ ì‚­ì œí•œë‹¤
 		
 		return data;
 	}
 	
 	public Object peek() {
-		int	len = size();//ÀüÃ¼ µ¥ÀÌÅÍ °¹¼ö
+		int	len = size();//ì „ì²´ ë°ì´í„° ê°¯ìˆ˜
 		
-		if (len == 0) {//ÀüÃ¼ µ¥ÀÌÅÍ °¹¼ö°¡ ¾ø´Ù¸é
+		if (len == 0) {//ì „ì²´ ë°ì´í„° ê°¯ìˆ˜ê°€ ì—†ë‹¤ë©´
 			throw new EmptyStackException();
-			//EmptyStackExceptionÀ» ¹ß»ı
+			//EmptyStackExceptionì„ ë°œìƒ
 		}
-		return get(len - 1);//¸¶Áö¸· ¸®½ºÆ® ¿¤¸®¸ÕÆ® ¸®ÅÏ	
+		return get(len - 1);//ë§ˆì§€ë§‰ ë¦¬ìŠ¤íŠ¸ ì—˜ë¦¬ë¨¼íŠ¸ ë¦¬í„´	
 		}
 	
 	public boolean empty() {
-		return size() == 0;//°¹¼ö°¡ 0°³¶ó¸é Åõ¸£
+		return size() == 0;//ê°¯ìˆ˜ê°€ 0ê°œë¼ë©´ íˆ¬ë¥´
 		}
 }

@@ -1,22 +1,22 @@
-package Stack;
+ï»¿package Stack;
 
 public class ArrayStackMain {
     public static void main(String[] args) {
     	
     	ArrayStack st = new ArrayStack();
     	
-    	st.push("0");//»ðÀÔ
+    	st.push("0");//ì‚½ìž…
 		st.push("1");
 		st.push("2");
 		
 		System.out.println("= MyStack1 peek=");
 		
-		System.out.println(st.peek());//¸¶Áö¸· °ª ¸®ÅÏ
+		System.out.println(st.peek());//ë§ˆì§€ë§‰ ê°’ ë¦¬í„´
 		
 		System.out.println("= MyStack1 pop=");
 		
 		while(!st.empty()) {
-			System.out.println(st.pop());//»èÁ¦ÈÄ ¸®ÅÏ
+			System.out.println(st.pop());//ì‚­ì œí›„ ë¦¬í„´
 		}
 		
     }

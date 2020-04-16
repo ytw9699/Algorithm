@@ -1,4 +1,4 @@
-package PriorityQueue;
+ï»¿package PriorityQueue;
 
 import java.util.*;
 
@@ -11,10 +11,10 @@ class PriorityQueueEx {
 		pq.offer(2);
 		pq.offer(4);
 
-		//System.out.println(pq); // pqÀÇ ³»ºÎ ¹è¿­À» Ãâ·Â
+		//System.out.println(pq); // pqì˜ ë‚´ë¶€ ë°°ì—´ì„ ì¶œë ¥
 		Object obj = null;
 
-		// PriorityQueue¿¡ ÀúÀåµÈ ¿ä¼Ò¸¦ ÇÏ³ª¾¿ ²¨³½´Ù.
+		// PriorityQueueì— ì €ì¥ëœ ìš”ì†Œë¥¼ í•˜ë‚˜ì”© êº¼ë‚¸ë‹¤.
 		while((obj = pq.poll())!=null) 
 			System.out.println(obj);
 	}

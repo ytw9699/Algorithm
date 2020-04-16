@@ -1,65 +1,65 @@
-package LinkedList;
+ï»¿package LinkedList;
 public class LinkedListMain {
     public static void main(String[] args) {
     	
         LinkedList numbers = new LinkedList();
         
-         numbers.addFirst(30);//¸Ç ¾Õ¿¡ Ãß°¡ 
+         numbers.addFirst(30);//ë§¨ ì•ì— ì¶”ê°€ 
          numbers.addFirst(20);
          numbers.addFirst(10);
-         	System.out.println(numbers);//Ãâ·Â
-         numbers.addLast(40);//¸Ç µÚ¿¡ Ãß°¡
+         	System.out.println(numbers);//ì¶œë ¥
+         numbers.addLast(40);//ë§¨ ë’¤ì— ì¶”ê°€
          numbers.addLast(50);
          numbers.addLast(60);
          	System.out.println(numbers);
          
-         numbers.add(2,25);//ÀÎµ¦½º 2À§Ä¡¿¡ 25Ãß°¡
-         System.out.println(numbers.node(2));//ÀÎµ¦½º 2¹øÂ°°ªÀ»°¡Á®¿Íº¸ÀÚ
+         numbers.add(2,25);//ì¸ë±ìŠ¤ 2ìœ„ì¹˜ì— 25ì¶”ê°€
+         System.out.println(numbers.node(2));//ì¸ë±ìŠ¤ 2ë²ˆì§¸ê°’ì„ê°€ì ¸ì™€ë³´ì
          
          	System.out.println(numbers);
-         System.out.println(numbers.removeFirst());//¸Ç¾Õ ¿ä¼Ò Á¦°Å
+         System.out.println(numbers.removeFirst());//ë§¨ì• ìš”ì†Œ ì œê±°
          	System.out.println(numbers);
-         System.out.println(numbers.remove(2));//ÁöÁ¤µÈ À§Ä¡ÀÇ ¿ä¼Ò Á¦°Å
+         System.out.println(numbers.remove(2));//ì§€ì •ëœ ìœ„ì¹˜ì˜ ìš”ì†Œ ì œê±°
          	System.out.println(numbers);
-         System.out.println(numbers.removeLast());//¸ÇµÚ ¿ä¼Ò Á¦°Å
+         System.out.println(numbers.removeLast());//ë§¨ë’¤ ìš”ì†Œ ì œê±°
          	System.out.println(numbers);
-         System.out.println(numbers.size());//³ëµå ¼ö ¹İÈ¯
-         System.out.println(numbers.get(1));//ÁöÁ¤µÈ À§Ä¡ÀÇ °´Ã¼¸¦ ¹İÈ¯
-         System.out.println("ÀÎµ¦½º");
-         System.out.println(numbers.get(numbers.size()-1));//¸ÇµÚÀÇ À§Ä¡ÀÇ °ªÀ» ¹İÈ¯
-         System.out.println(numbers.indexOf((Object)10));//10ÀÇ °ª¿¡ ÇØ´çÇÏ´Â À§Ä¡ ¹İÈ¯
+         System.out.println(numbers.size());//ë…¸ë“œ ìˆ˜ ë°˜í™˜
+         System.out.println(numbers.get(1));//ì§€ì •ëœ ìœ„ì¹˜ì˜ ê°ì²´ë¥¼ ë°˜í™˜
+         System.out.println("ì¸ë±ìŠ¤");
+         System.out.println(numbers.get(numbers.size()-1));//ë§¨ë’¤ì˜ ìœ„ì¹˜ì˜ ê°’ì„ ë°˜í™˜
+         System.out.println(numbers.indexOf((Object)10));//10ì˜ ê°’ì— í•´ë‹¹í•˜ëŠ” ìœ„ì¹˜ ë°˜í™˜
 
-         System.out.println("¹İº¹ÀÚ");
+         System.out.println("ë°˜ë³µì");
          LinkedList.ListIterator i = numbers.listIterator();
          
          	System.out.println(numbers);
-         i.add(5);//°ª Ãß°¡
+         i.add(5);//ê°’ ì¶”ê°€
          	System.out.println(numbers);
          i.add(4);
          	System.out.println(numbers);
-         System.out.println(i.next());//Å½»ö
+         System.out.println(i.next());//íƒìƒ‰
          	System.out.println(numbers);
          i.add(15);
          	System.out.println(numbers);
          
-         while(i.hasNext()){//¸ğµç ³ëµå ¼øÂ÷Àû Á¶È¸
+         while(i.hasNext()){//ëª¨ë“  ë…¸ë“œ ìˆœì°¨ì  ì¡°íšŒ
       	    System.out.println(i.next());
       	 }
          /* 
           	for(int i=0; i<numbers.size(); i++){
  	    		System.out.println(numbers.get(i));
  			}
-	         À§¿Í °°Àº ¹æ¹ıÀ¸·Î ¹İº¹À» »ç¿ëÇØµµµÇÁö¸¸ linkedlist¿¡¼­´Â ÀÌ°ÍÀº ¹Ù¶÷Á÷ÇÏÁö ¾ÊÀº ¹æ¹ıÀÌ´Ù
-	         ¿Ö³ÄÇÏ¸é ArrayList¿Í ´Ù¸£°Ô LinkedList¿¡¼­ getÀº È¿À²ÀûÀÌÁö ¾Ê±â ¶§¹®
-		 getÀ» È£ÃâÇÒ ¶§¸¶´Ù ³»ºÎÀûÀ¸·Î´Â ¹İº¹¹®ÀÌ ½ÇÇà. ÀÌ·± °æ¿ì Iterator¸¦ »ç¿ëÇÏ´Â °ÍÀÌ À¯¸®
-		 Iterator´Â ³»ºÎÀûÀ¸·Î ¹İº¹ Ã³¸®µÈ ³ëµå°¡ ¹«¾ùÀÎÁö¿¡ ´ëÇÑ Á¤º¸¸¦ À¯ÁöÇÏ±â ¶§¹®
+	         ìœ„ì™€ ê°™ì€ ë°©ë²•ìœ¼ë¡œ ë°˜ë³µì„ ì‚¬ìš©í•´ë„ë˜ì§€ë§Œ linkedlistì—ì„œëŠ” ì´ê²ƒì€ ë°”ëŒì§í•˜ì§€ ì•Šì€ ë°©ë²•ì´ë‹¤
+	         ì™œëƒí•˜ë©´ ArrayListì™€ ë‹¤ë¥´ê²Œ LinkedListì—ì„œ getì€ íš¨ìœ¨ì ì´ì§€ ì•Šê¸° ë•Œë¬¸
+		 getì„ í˜¸ì¶œí•  ë•Œë§ˆë‹¤ ë‚´ë¶€ì ìœ¼ë¡œëŠ” ë°˜ë³µë¬¸ì´ ì‹¤í–‰. ì´ëŸ° ê²½ìš° Iteratorë¥¼ ì‚¬ìš©í•˜ëŠ” ê²ƒì´ ìœ ë¦¬
+		 IteratorëŠ” ë‚´ë¶€ì ìœ¼ë¡œ ë°˜ë³µ ì²˜ë¦¬ëœ ë…¸ë“œê°€ ë¬´ì—‡ì¸ì§€ì— ëŒ€í•œ ì •ë³´ë¥¼ ìœ ì§€í•˜ê¸° ë•Œë¬¸
 		 */
          i = numbers.listIterator();
          
-         while(i.hasNext()) {//´õºí¸µÅ©µå ¸®½ºÅ©°¡ ¾Æ´Ï¶ó¼­ ÀÌ ¹æ¹ıÀº È¿À²ÀûÀÌÁö¾ÊÀ½
-        	 if((int)i.next()==20){//¿©±â¼­ ³ëµå¸¦ Ã£´Â°úÁ¤À» ÇØ¿Ô´Âµ¥ 
-        	       i.remove();//¿©±â¼­ ¶Ç node¸Ş¼Òµå¸¦ ÅëÇØ ³ëµå Å½»öÀ»ÇØ¼­ ºñÈ¿À²
-        	 }//±×·¡¼­ ´Ü¹æÇâ¿¡¼­ ¾ç¹æÇâ ¿¬°á ¸®½ºÆ®°¡ ³ª¿Â°ÍÀÌ´Ù.
+         while(i.hasNext()) {//ë”ë¸”ë§í¬ë“œ ë¦¬ìŠ¤í¬ê°€ ì•„ë‹ˆë¼ì„œ ì´ ë°©ë²•ì€ íš¨ìœ¨ì ì´ì§€ì•ŠìŒ
+        	 if((int)i.next()==20){//ì—¬ê¸°ì„œ ë…¸ë“œë¥¼ ì°¾ëŠ”ê³¼ì •ì„ í•´ì™”ëŠ”ë° 
+        	       i.remove();//ì—¬ê¸°ì„œ ë˜ nodeë©”ì†Œë“œë¥¼ í†µí•´ ë…¸ë“œ íƒìƒ‰ì„í•´ì„œ ë¹„íš¨ìœ¨
+        	 }//ê·¸ë˜ì„œ ë‹¨ë°©í–¥ì—ì„œ ì–‘ë°©í–¥ ì—°ê²° ë¦¬ìŠ¤íŠ¸ê°€ ë‚˜ì˜¨ê²ƒì´ë‹¤.
          }
          System.out.println(numbers);
     }

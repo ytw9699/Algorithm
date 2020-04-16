@@ -1,24 +1,24 @@
-package BinarySearch;
+ï»¿package BinarySearch;
 public class BinarySearchTreeMain {
 	public static void main(String[] args) {
 		
 	BinarySearchTree sTree = new BinarySearchTree();
 	
-	sTree.BSTInsert(9);//µ¥ÀÌÅÍ Ãß°¡
-	sTree.BSTInsert(1);//µ¥ÀÌÅÍ Ãß°¡
-	sTree.BSTInsert(2);//µ¥ÀÌÅÍ Ãß°¡
-	sTree.BSTInsert(3);//µ¥ÀÌÅÍ Ãß°¡
-	sTree.BSTInsert(4);//µ¥ÀÌÅÍ Ãß°¡
+	sTree.BSTInsert(9);//ë°ì´í„° ì¶”ê°€
+	sTree.BSTInsert(1);//ë°ì´í„° ì¶”ê°€
+	sTree.BSTInsert(2);//ë°ì´í„° ì¶”ê°€
+	sTree.BSTInsert(3);//ë°ì´í„° ì¶”ê°€
+	sTree.BSTInsert(4);//ë°ì´í„° ì¶”ê°€
 	
 	System.out.println(sTree.GetData(sTree.rootReturn()));
 	System.out.println(sTree.GetHeightDiff(sTree.rootReturn()));
-	//sTree.InorderTraverse(sTree.root);//¸ğµç µ¥ÀÌÅÍ ¼øÈ¸
-	sTree.PreorderTraverse(sTree.root);//¸ğµç µ¥ÀÌÅÍ ¼øÈ¸
-	//sTree.PostorderTraverse(sTree.root);//¸ğµç µ¥ÀÌÅÍ ¼øÈ¸
-	//BinarySearchTree.Node value = sTree.BSTSearch(3);//3¹ø Å°°ª¿¡ ÇØ´çÇÏ´Â ³ëµå ¹İÈ¯
-	//System.out.println(sTree.GetData(value));//³ëµåÀÇ µ¥ÀÌÅÍ¹İÈ¯
-	//BinarySearchTree.Node value9 = sTree.BSTSearch(9);//3¹ø Å°°ª¿¡ ÇØ´çÇÏ´Â ³ëµå ¹İÈ¯
-	//System.out.println(sTree.GetData(value9));//³ëµåÀÇ µ¥ÀÌÅÍ ¹İÈ¯
+	//sTree.InorderTraverse(sTree.root);//ëª¨ë“  ë°ì´í„° ìˆœíšŒ
+	sTree.PreorderTraverse(sTree.root);//ëª¨ë“  ë°ì´í„° ìˆœíšŒ
+	//sTree.PostorderTraverse(sTree.root);//ëª¨ë“  ë°ì´í„° ìˆœíšŒ
+	//BinarySearchTree.Node value = sTree.BSTSearch(3);//3ë²ˆ í‚¤ê°’ì— í•´ë‹¹í•˜ëŠ” ë…¸ë“œ ë°˜í™˜
+	//System.out.println(sTree.GetData(value));//ë…¸ë“œì˜ ë°ì´í„°ë°˜í™˜
+	//BinarySearchTree.Node value9 = sTree.BSTSearch(9);//3ë²ˆ í‚¤ê°’ì— í•´ë‹¹í•˜ëŠ” ë…¸ë“œ ë°˜í™˜
+	//System.out.println(sTree.GetData(value9));//ë…¸ë“œì˜ ë°ì´í„° ë°˜í™˜
 	
 	}
 }

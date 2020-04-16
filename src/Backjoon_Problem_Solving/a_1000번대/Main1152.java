@@ -1,4 +1,4 @@
-package a_1000¹ø´ë;
+ï»¿package a_1000ë²ˆëŒ€;
 import java.util.Scanner;
 public class Main1152 {
 	public static void main(String[] args)
@@ -7,14 +7,14 @@ public class Main1152 {
 		
 		Scanner sc= new Scanner(System.in);
 
-		words = sc.nextLine().trim();//nextLineÀº °³Çàµµ ÀÔ·Â¹Ş´ÂÆ¯¼º
+		words = sc.nextLine().trim();//nextLineì€ ê°œí–‰ë„ ì…ë ¥ë°›ëŠ”íŠ¹ì„±
 		
 		if (!words.isEmpty()) {
 			String[] output = words.split(" ");
 			
 			System.out.println(output.length);
         } else {
-        	System.out.println(0);//°³ÇàÀ» ÀÔ·Â¹Ş´Â´Ù¸é 0Ãâ·Â
+        	System.out.println(0);//ê°œí–‰ì„ ì…ë ¥ë°›ëŠ”ë‹¤ë©´ 0ì¶œë ¥
         }
 	}
 }

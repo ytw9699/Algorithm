@@ -1,4 +1,4 @@
-package a_1000¹ø´ë;
+ï»¿package a_1000ë²ˆëŒ€;
 import java.util.Scanner;
 public class Main1991 {
 	public static void main(String[] args) {
@@ -15,38 +15,38 @@ public class Main1991 {
 			makeSubtreeName[i]=sc.nextLine();
 		}
 		
-	BinaryTree BTree = new BinaryTree();//ÀÌÁøÆ®¸® »ı¼º
+	BinaryTree BTree = new BinaryTree();//ì´ì§„íŠ¸ë¦¬ ìƒì„±
 	String names[];
 	names=makeSubtreeName[0].split(" ");
-	BTree.FirstMakeTree(names[0],names[1],names[2]);//Ã¹¹øÂ° Æ®¸®¸¸µé±â
+	BTree.FirstMakeTree(names[0],names[1],names[2]);//ì²«ë²ˆì§¸ íŠ¸ë¦¬ë§Œë“¤ê¸°
 	
 	for(int i=1; i<nodes; i++) {
 		names=makeSubtreeName[i].split(" ");
-		BTree.MakeTree(names[0],names[1],names[2]);//µÎ¹øÀçºÎÅÍ ¼­ºê Æ®¸®¸¸µé±â
+		BTree.MakeTree(names[0],names[1],names[2]);//ë‘ë²ˆì¬ë¶€í„° ì„œë¸Œ íŠ¸ë¦¬ë§Œë“¤ê¸°
 	}
 	
-	BTree.PreorderTraverse(BTree.root);//ÀüÀ§¼øÈ¸
+	BTree.PreorderTraverse(BTree.root);//ì „ìœ„ìˆœíšŒ
 	System.out.println();
-	BTree.InorderTraverse(BTree.root);//ÁßÀ§¼øÈ¸
+	BTree.InorderTraverse(BTree.root);//ì¤‘ìœ„ìˆœíšŒ
 	System.out.println();
-	BTree.PostorderTraverse(BTree.root);//ÈÄÀ§¼øÈ¸
+	BTree.PostorderTraverse(BTree.root);//í›„ìœ„ìˆœíšŒ
 	
 	}
 }
   class BinaryTree {
-	 Node root;//·çÆ®³ëµå
-	 int size=0;//ÀÌÁøÆ®¸®ÀÇ »çÀÌÁî
+	 Node root;//ë£¨íŠ¸ë…¸ë“œ
+	 int size=0;//ì´ì§„íŠ¸ë¦¬ì˜ ì‚¬ì´ì¦ˆ
 	 Node searchNode = null;
 	 
 	 public class Node{
-	        private Object data;//µ¥ÀÌÅÍ°¡ ÀúÀåµÉ º¯¼ö-½ÇÁ¦ ÀúÀå°ª
+	        private Object data;//ë°ì´í„°ê°€ ì €ì¥ë  ë³€ìˆ˜-ì‹¤ì œ ì €ì¥ê°’
 	       
-	        private Node left;//¿ŞÂÊ ³ëµå¸¦ °¡¸®Å°´Â º¯¼ö,ÂüÁ¶°ª
-	        private Node right;//¿À¸¥ÂÊ ³ëµå
+	        private Node left;//ì™¼ìª½ ë…¸ë“œë¥¼ ê°€ë¦¬í‚¤ëŠ” ë³€ìˆ˜,ì°¸ì¡°ê°’
+	        private Node right;//ì˜¤ë¥¸ìª½ ë…¸ë“œ
 	        
-	        public Node(Object input) {//°´Ã¼»ı¼º ÃÊ±âÈ­
+	        public Node(Object input) {//ê°ì²´ìƒì„± ì´ˆê¸°í™”
 	            this.data = input;
-	            this.left = null;//»ı¼º½Ã´Â ¹ÌÁ¤
+	            this.left = null;//ìƒì„±ì‹œëŠ” ë¯¸ì •
 	            this.right = null;
 	        }
 	 }
@@ -81,16 +81,16 @@ public class Main1991 {
 		 	return searchNode;
 		 }
 	 
-	   public void SearchNodeStart(Node temp,String name)//¼­Ä¡ ÁßÀ§¼øÈ¸
+	   public void SearchNodeStart(Node temp,String name)//ì„œì¹˜ ì¤‘ìœ„ìˆœíšŒ
 		{
-			if(temp == null) {   // temp°¡ NULLÀÌ¸é Àç±Í Å»Ãâ!
+			if(temp == null) {   // tempê°€ NULLì´ë©´ ì¬ê·€ íƒˆì¶œ!
 				return;
 		   }
 			SearchNodeStart(temp.left,name);
 
 			if(temp.data.equals(name)) {
 			searchNode = temp;
-			return;//Ã£¾Æµµ Å»Ãâ
+			return;//ì°¾ì•„ë„ íƒˆì¶œ
 			}
 			SearchNodeStart(temp.right,name); 
 		}
@@ -103,27 +103,27 @@ public class Main1991 {
 		main.right = sub;
 	}
 	
-	public void InorderTraverse(Node temp)//ÁßÀ§¼øÈ¸
+	public void InorderTraverse(Node temp)//ì¤‘ìœ„ìˆœíšŒ
 	{
-		if(temp == null) {   // temp°¡ NULLÀÌ¸é Àç±Í Å»Ãâ!
+		if(temp == null) {   // tempê°€ NULLì´ë©´ ì¬ê·€ íƒˆì¶œ!
 			return;
 	  }
 		InorderTraverse(temp.left); 
 		System.out.print(temp.data);
 		InorderTraverse(temp.right); 
 	}
-	public void PreorderTraverse(Node temp)//ÀüÀ§¼øÈ¸
+	public void PreorderTraverse(Node temp)//ì „ìœ„ìˆœíšŒ
 	{
-		if(temp == null) {   // temp°¡ NULLÀÌ¸é Àç±Í Å»Ãâ!
+		if(temp == null) {   // tempê°€ NULLì´ë©´ ì¬ê·€ íƒˆì¶œ!
 			return;
 	   }
 		System.out.print(temp.data);
 		PreorderTraverse(temp.left); 
 		PreorderTraverse(temp.right); 
 	}
-	public void PostorderTraverse(Node temp)//ÈÄÀ§¼øÈ¸
+	public void PostorderTraverse(Node temp)//í›„ìœ„ìˆœíšŒ
 	{
-		if(temp == null) {   // temp°¡ NULLÀÌ¸é Àç±Í Å»Ãâ!
+		if(temp == null) {   // tempê°€ NULLì´ë©´ ì¬ê·€ íƒˆì¶œ!
 			return;
 	   }
 		PostorderTraverse(temp.left); 

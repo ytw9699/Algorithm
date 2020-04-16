@@ -1,7 +1,7 @@
-package ch_04_Queue_via_Stacks;
+ï»¿package ch_04_Queue_via_Stacks;
 import java.util.LinkedList;
 
-public class MyStack7 {//´õºí ¸µÅ©µå ¸®½ºÆ® api ½ºÅÃ2°³±â¹İ Å¥
+public class MyStack7 {//ë”ë¸” ë§í¬ë“œ ë¦¬ìŠ¤íŠ¸ api ìŠ¤íƒ2ê°œê¸°ë°˜ í
 	
 	LinkedList firstStack;
 	LinkedList secondStack;

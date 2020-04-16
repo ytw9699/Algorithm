@@ -1,4 +1,4 @@
-package Sort;
+ï»¿package Sort;
 
 public class SelectionSort {
 
@@ -15,17 +15,17 @@ public class SelectionSort {
 	static void SelSort(int[] arr, int n)
 	{
 		int i, j;
-		int temp;//ÀÓ½Ã
+		int temp;//ì„ì‹œ
 		int min;
 		
 		for(i=0; i<n-1; i++) {
 			 min = i;
-			for(j=i+1; j<n; j++) {// ÃÖ¼Ò°ª Å½»ö
-				if(arr[min] > arr[j]) {//¼±ÅÃÁ¤·ÄÀÇ ºñ±³¿¬»ê
+			for(j=i+1; j<n; j++) {// ìµœì†Œê°’ íƒìƒ‰
+				if(arr[min] > arr[j]) {//ì„ íƒì •ë ¬ì˜ ë¹„êµì—°ì‚°
 					min = j;
 				}
 			}
-			/* ±³È¯ */
+			/* êµí™˜ */
 			temp = arr[i];
 			arr[i]= arr[min];
 			arr[min] = temp;

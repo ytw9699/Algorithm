@@ -1,4 +1,4 @@
-package Stack;
+ï»¿package Stack;
 public class LinkedListStackMain {
     public static void main(String[] args) {
     	
@@ -10,7 +10,7 @@ public class LinkedListStackMain {
 		
 		System.out.println("= LinkedListStack peek=");
 		
-		System.out.println(st.peek());//¸¶Áö¸· °ª ¸®ÅÏ
+		System.out.println(st.peek());//ë§ˆì§€ë§‰ ê°’ ë¦¬í„´
 		
 		System.out.println("= LinkedListStack pop=");
 		

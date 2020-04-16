@@ -1,10 +1,10 @@
-package Stack;
+ï»¿package Stack;
 import java.util.EmptyStackException;
 public class ArrayStack {
 	
-	int topIndex = -1;//ÇöÀç Å¾ÀÇ ÀÎµ¦½º¸¦ -1 ÃÊ±âÈ­//µ¥ÀÌÅÍ°¡ ¾ø´Â »óÅÂ
+	int topIndex = -1;//í˜„ì¬ íƒ‘ì˜ ì¸ë±ìŠ¤ë¥¼ -1 ì´ˆê¸°í™”//ë°ì´í„°ê°€ ì—†ëŠ” ìƒíƒœ
 	
-    private Object[] StackArr = new Object[100];//¹è¿­ÀÇ Å©±â´Â 100À¸·Î ÀÏ´Ü Á¦ÇÑ
+    private Object[] StackArr = new Object[100];//ë°°ì—´ì˜ í¬ê¸°ëŠ” 100ìœ¼ë¡œ ì¼ë‹¨ ì œí•œ
     
 	public Object push(Object data) {
 		StackArr[++topIndex] = data;
@@ -13,20 +13,20 @@ public class ArrayStack {
 	}
 	
 	public Object pop() {
-		Object data = peek();// Stack¿¡ ÀúÀåµÈ ¸¶Áö¸· ¿ä¼Ò¸¦ ÀĞ¾î¿Â´Ù.
+		Object data = peek();// Stackì— ì €ì¥ëœ ë§ˆì§€ë§‰ ìš”ì†Œë¥¼ ì½ì–´ì˜¨ë‹¤.
 		
-		topIndex--;//Å¾ ÀÎµ¦½ºÀÇ ¿¬»êÀ» ÅëÇØ »èÁ¦¸¦ ÇØÁÖ´Â°Í°ú °°Àº °á°ú¸¦ ³½´Ù
+		topIndex--;//íƒ‘ ì¸ë±ìŠ¤ì˜ ì—°ì‚°ì„ í†µí•´ ì‚­ì œë¥¼ í•´ì£¼ëŠ”ê²ƒê³¼ ê°™ì€ ê²°ê³¼ë¥¼ ë‚¸ë‹¤
 		return data;
 	}
 	
 	public Object peek() {
-		if (topIndex == -1) {//ÇöÀç µ¥ÀÌÅÍ°¡ ¾ø´Ù¸é
+		if (topIndex == -1) {//í˜„ì¬ ë°ì´í„°ê°€ ì—†ë‹¤ë©´
 			throw new EmptyStackException();
 		}
-		return StackArr[topIndex];//ÇöÀç Å¾ÀÇ °ªÀ» ¸®ÅÏ	
+		return StackArr[topIndex];//í˜„ì¬ íƒ‘ì˜ ê°’ì„ ë¦¬í„´	
 		}
 	
 	public boolean empty() {
-		return topIndex == -1;//-1ÀÌ¶ó¸é µ¥ÀÌÅÍ°¡ ¾øÀ½
+		return topIndex == -1;//-1ì´ë¼ë©´ ë°ì´í„°ê°€ ì—†ìŒ
 	}
 }

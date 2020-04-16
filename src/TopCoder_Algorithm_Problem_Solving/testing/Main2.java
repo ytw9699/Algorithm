@@ -1,4 +1,4 @@
-package testing;
+ï»¿package testing;
 import java.util.*;
  public class Main2 {
 	public static void main(String[] args) {
@@ -26,8 +26,8 @@ import java.util.*;
 						 for(int k3 = 0; k3<base; k3++ )
 						 {
 						 if( (k1 + k2*base + k3*base*base) % n == 0 && (k1 + k2 + k3) % n != 0 ) {
-							 // nÀÇ ¹è¼ö ¼ýÀÚ·Î °¢ ¼ýÀÚÀÇ ÇÕÀÌ nÀÇ ¹è¼ö°¡ ¾Æ´Ï¸é
-							// nÀ» Á¦¿ÜÇÕ´Ï´Ù.
+							 // nì˜ ë°°ìˆ˜ ìˆ«ìžë¡œ ê° ìˆ«ìžì˜ í•©ì´ nì˜ ë°°ìˆ˜ê°€ ì•„ë‹ˆë©´
+							// nì„ ì œì™¸í•©ë‹ˆë‹¤.
 							 ok = false;
 							 break;
 							 }

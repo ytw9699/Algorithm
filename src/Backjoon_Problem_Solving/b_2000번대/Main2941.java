@@ -1,4 +1,4 @@
-package b_2000¹ø´ë;
+ï»¿package b_2000ë²ˆëŒ€;
 import java.util.Scanner;
 public class Main2941 {
 	public static void main(String[] args)
@@ -8,20 +8,20 @@ public class Main2941 {
 		Scanner sc= new Scanner(System.in);
 
 		String croWords[] = new String[]{"c=","c-","dz=","d-","lj","nj","s=","z="};
-									//Å©·Î¾ÆÆ¼¾Æ ¹®ÀÚµé
+									//í¬ë¡œì•„í‹°ì•„ ë¬¸ìë“¤
 		
 		words = sc.nextLine().trim();
 			
 		int k =0;
 		for(int i=0; i<croWords.length; i++){
-			while(words.contains(croWords[i])) {//Å©·Î¾ÆÆ¼¾Æ ¹®ÀÚ°¡ Æ÷ÇÔµÇ¾îÀÖ´Ù¸é
-				words = words.replaceFirst(croWords[i],"*");//ÀüºÎ *¹®ÀÚ·Î ¹Ù²Û´Ù
-				k=k+1;//¹Ù²Û È½¼ö¸¦ ¼¾´Ù
+			while(words.contains(croWords[i])) {//í¬ë¡œì•„í‹°ì•„ ë¬¸ìê°€ í¬í•¨ë˜ì–´ìˆë‹¤ë©´
+				words = words.replaceFirst(croWords[i],"*");//ì „ë¶€ *ë¬¸ìë¡œ ë°”ê¾¼ë‹¤
+				k=k+1;//ë°”ê¾¼ íšŸìˆ˜ë¥¼ ì„¼ë‹¤
 			}
 		}
 		while(words.contains("*")) {
-			words = words.replace("*","");//Å©·Î¾ÆÆ¼¾Æ ¹®ÀÚµéÀ» ÀüºÎ °ø¹éÀ¸·Î ¹Ù²ãÁØ´Ù
+			words = words.replace("*","");//í¬ë¡œì•„í‹°ì•„ ë¬¸ìë“¤ì„ ì „ë¶€ ê³µë°±ìœ¼ë¡œ ë°”ê¿”ì¤€ë‹¤
 		}
-		System.out.println(words.length()+k);//³²¾ÆÀÖ´Â ¹®ÀÚÀÇ °¹¼ö¿Í + Å©·Î¾ÆÆ¼¾Æ È½¼ö¸¦ ´õÇØ¼­ Ãâ·Â
+		System.out.println(words.length()+k);//ë‚¨ì•„ìˆëŠ” ë¬¸ìì˜ ê°¯ìˆ˜ì™€ + í¬ë¡œì•„í‹°ì•„ íšŸìˆ˜ë¥¼ ë”í•´ì„œ ì¶œë ¥
 	}
 }

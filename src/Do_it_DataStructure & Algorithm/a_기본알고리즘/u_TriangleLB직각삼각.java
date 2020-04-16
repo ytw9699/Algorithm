@@ -1,15 +1,15 @@
-package a_±âº»¾Ë°í¸®Áò;
+ï»¿package a_ê¸°ë³¸ì•Œê³ ë¦¬ì¦˜;
 import java.util.Scanner;
-// ¿ŞÂÊ ¾Æ·¡°¡ Á÷°¢ÀÎ ÀÌµîº¯ »ï°¢ÇüÀ» Ãâ·ÂÇÕ´Ï´Ù.
-public class u_TriangleLBÁ÷°¢»ï°¢ {
+// ì™¼ìª½ ì•„ë˜ê°€ ì§ê°ì¸ ì´ë“±ë³€ ì‚¼ê°í˜•ì„ ì¶œë ¥í•©ë‹ˆë‹¤.
+public class u_TriangleLBì§ê°ì‚¼ê° {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 		int n;
 
-		System.out.println("¿ŞÂÊ ¾Æ·¡°¡ Á÷°¢ÀÎ ÀÌµîº¯ »ï°¢ÇüÀ» Ãâ·ÂÇÕ´Ï´Ù.");
+		System.out.println("ì™¼ìª½ ì•„ë˜ê°€ ì§ê°ì¸ ì´ë“±ë³€ ì‚¼ê°í˜•ì„ ì¶œë ¥í•©ë‹ˆë‹¤.");
 
 		do {
-			System.out.print("¸î ´Ü »ï°¢ÇüÀÔ´Ï±î? : ");
+			System.out.print("ëª‡ ë‹¨ ì‚¼ê°í˜•ì…ë‹ˆê¹Œ? : ");
 			n = stdIn.nextInt();
 		} while (n <= 0);
 

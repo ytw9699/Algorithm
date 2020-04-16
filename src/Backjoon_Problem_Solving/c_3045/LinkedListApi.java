@@ -1,4 +1,4 @@
-package c_3045;
+ï»¿package c_3045;
 
 import java.util.LinkedList;
 import java.util.ListIterator;
@@ -26,10 +26,10 @@ public class LinkedListApi {
 		
 		boolean a = LinkedList.remove((Object)2);
 		
-		int index = LinkedList.indexOf(1);//x°ªÀÇ ÀÎµ¦½º¸¦ ¹İÈ¯
+		int index = LinkedList.indexOf(1);//xê°’ì˜ ì¸ë±ìŠ¤ë¥¼ ë°˜í™˜
 		
-		LinkedList.add(index,2);//index¿¡ ÇØ´çÇÏ´Â °ªÀÇ ¾ÕÂÊ¿¡ 2¸¦ Ãß°¡
-		LinkedList.add(index+1,2);//index¿¡ ÇØ´çÇÏ´Â °ªÀÇ µÚÂÊ¿¡ 2¸¦ Ãß°¡
+		LinkedList.add(index,2);//indexì— í•´ë‹¹í•˜ëŠ” ê°’ì˜ ì•ìª½ì— 2ë¥¼ ì¶”ê°€
+		LinkedList.add(index+1,2);//indexì— í•´ë‹¹í•˜ëŠ” ê°’ì˜ ë’¤ìª½ì— 2ë¥¼ ì¶”ê°€
 		
 		
 		ListIterator k = LinkedList.listIterator();

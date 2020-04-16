@@ -1,6 +1,6 @@
-package Ch_01_Arrays_and_Strings;
+ï»¿package Ch_01_Arrays_and_Strings;
 
-public class Question02_3 {	//¹®ÀÚ¿­ ÀÔ·Â°ª ¸ğµç ¼ø¿­ ±¸ÇÏ±â
+public class Question02_3 {	//ë¬¸ìì—´ ì…ë ¥ê°’ ëª¨ë“  ìˆœì—´ êµ¬í•˜ê¸°
 	
 	public static void permutation(String str) { 
 	    permutation("", str); 

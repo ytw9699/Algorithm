@@ -1,22 +1,22 @@
-package a_±âº»¾Ë°í¸®Áò;
+ï»¿package a_ê¸°ë³¸ì•Œê³ ë¦¬ì¦˜;
 import java.util.Scanner;
-// ÀÔ·Â ¹ŞÀº Á¤¼ö°ªÀÇ ¾ç¼ö/À½¼ö/0À» ÆÇ´Ü
+// ì…ë ¥ ë°›ì€ ì •ìˆ˜ê°’ì˜ ì–‘ìˆ˜/ìŒìˆ˜/0ì„ íŒë‹¨
 
-class i_Judge123A_Á¤¼öÀÇ¼ö_ÆÇ´Ü {
+class i_Judge123A_ì •ìˆ˜ì˜ìˆ˜_íŒë‹¨ {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		System.out.print("1~3»çÀÌÀÇ Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä.£º");
+		System.out.print("1~3ì‚¬ì´ì˜ ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”.ï¼š");
 		int n = stdIn.nextInt();
 		
 
 		if (n == 1)
-			System.out.println("ÀÌ ¼ö´Â 1ÀÔ´Ï´Ù.");
+			System.out.println("ì´ ìˆ˜ëŠ” 1ì…ë‹ˆë‹¤.");
 		else if (n == 2)
-			System.out.println("ÀÌ ¼ö´Â 2ÀÔ´Ï´Ù.");
+			System.out.println("ì´ ìˆ˜ëŠ” 2ì…ë‹ˆë‹¤.");
 		else if (n == 3)
-			System.out.println("ÀÌ ¼ö´Â 3ÀÔ´Ï´Ù.");
+			System.out.println("ì´ ìˆ˜ëŠ” 3ì…ë‹ˆë‹¤.");
 		else
-			System.out.println("1~3ÀÇ »çÀÌÀÇ ¼ö°¡ ¾Æ´Õ´Ï´Ù");
+			System.out.println("1~3ì˜ ì‚¬ì´ì˜ ìˆ˜ê°€ ì•„ë‹™ë‹ˆë‹¤");
 	}
 }

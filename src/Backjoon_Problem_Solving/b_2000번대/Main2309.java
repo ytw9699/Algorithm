@@ -1,4 +1,4 @@
-package b_2000¹ø´ë;
+ï»¿package b_2000ë²ˆëŒ€;
 import java.util.Arrays;
 import java.util.Scanner;
  public class Main2309 {
@@ -13,7 +13,7 @@ import java.util.Scanner;
 	while(count-- > 0) {
 		arr[count] = sc.nextInt();	
 	}
-	Arrays.sort(arr);//¹è¿­À» ¹Ì¸® ¿À¸§Â÷¼ø Á¤·Ä
+	Arrays.sort(arr);//ë°°ì—´ì„ ë¯¸ë¦¬ ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬
 	
 	outerLoop:	
 	for (int a=0; a<8; a++) { 
@@ -24,7 +24,7 @@ import java.util.Scanner;
 					   for (int f=e+1; f<9; f++) { 
 						   for (int g=f+1; g<9; g++) { 
 							   if(arr[a]+arr[b]+arr[c]+arr[d]+arr[e]+arr[f]+arr[g] == 100) {
-								   //ÇÕÀÌ 100ÀÌ¶ó¸é Ãâ·ÂÈÄ
+								   //í•©ì´ 100ì´ë¼ë©´ ì¶œë ¥í›„
 			 System.out.println(arr[a]);
 			 System.out.println(arr[b]);
 			 System.out.println(arr[c]);
@@ -32,7 +32,7 @@ import java.util.Scanner;
 			 System.out.println(arr[e]);
 			 System.out.println(arr[f]);
 			 System.out.println(arr[g]);
-			 break outerLoop;//¹İº¹¹® ÀüÃ¼ Å»Ãâ
+			 break outerLoop;//ë°˜ë³µë¬¸ ì „ì²´ íƒˆì¶œ
 				 }
 			   } 
 			}

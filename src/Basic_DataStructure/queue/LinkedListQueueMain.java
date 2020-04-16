@@ -1,4 +1,4 @@
-package queue;
+ï»¿package queue;
 public class LinkedListQueueMain {
     public static void main(String[] args) {
     	LinkedListQueue queue = new LinkedListQueue();
@@ -9,7 +9,7 @@ public class LinkedListQueueMain {
 		
 		System.out.println("=peek=");
 		
-		System.out.println(queue.peek());//¸¶Áö¸· °ª ¸®ÅÏ
+		System.out.println(queue.peek());//ë§ˆì§€ë§‰ ê°’ ë¦¬í„´
 		
 		System.out.println("=poll=");
 		

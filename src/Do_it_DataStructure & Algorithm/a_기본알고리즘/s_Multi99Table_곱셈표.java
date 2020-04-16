@@ -1,8 +1,8 @@
-package a_±âº»¾Ë°í¸®Áò;
-//°ö¼ÀÇ¥¸¦ Ãâ·ÂÇÕ´Ï´Ù.
-public class s_Multi99Table_°ö¼ÀÇ¥ {
+ï»¿package a_ê¸°ë³¸ì•Œê³ ë¦¬ì¦˜;
+//ê³±ì…ˆí‘œë¥¼ ì¶œë ¥í•©ë‹ˆë‹¤.
+public class s_Multi99Table_ê³±ì…ˆí‘œ {
 	public static void main(String[] args) {
-		System.out.println("----- °ö¼ÀÇ¥ -----");
+		System.out.println("----- ê³±ì…ˆí‘œ -----");
 
 		for (int i = 1; i <= 9; i++) {
 			for (int j = 1; j <= 9; j++) {

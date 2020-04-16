@@ -1,4 +1,4 @@
-package DoublyLinkedList;
+ï»¿package DoublyLinkedList;
 
 //import java.util.Collections;
 import java.util.LinkedList;
@@ -16,7 +16,7 @@ public class DoublyLinkedListApi {
 		LinkedList.add(4);
 		LinkedList.add(5);
 		
-		//Collections.sort(LinkedList);//Á¤·Ä±â´É
+		//Collections.sort(LinkedList);//ì •ë ¬ê¸°ëŠ¥
 		ListIterator i = LinkedList.listIterator();
 		
 		while(i.hasNext()){
@@ -24,11 +24,11 @@ public class DoublyLinkedListApi {
      	 }
 		System.out.println();
 		
-		boolean a = LinkedList.remove((Object)2);//2°ªÀ» °¡Áø ³ëµå »èÁ¦
+		boolean a = LinkedList.remove((Object)2);//2ê°’ì„ ê°€ì§„ ë…¸ë“œ ì‚­ì œ
 		
-		int index = LinkedList.indexOf(1);//x°ªÀÇ °¡Áø ³ëµåÀÇ ÀÎµ¦½º¸¦ ¹İÈ¯, 0¹øÂ° À§Ä¡ ¹İÈ¯
+		int index = LinkedList.indexOf(1);//xê°’ì˜ ê°€ì§„ ë…¸ë“œì˜ ì¸ë±ìŠ¤ë¥¼ ë°˜í™˜, 0ë²ˆì§¸ ìœ„ì¹˜ ë°˜í™˜
 		
-		LinkedList.add(index,0);//index¿¡ ÇØ´çÇÏ´Â À§Ä¡¿¡ °ª0À» °¡Áø ³ëµå¸¦ Ãß°¡ÇÑ´Ù
+		LinkedList.add(index,0);//indexì— í•´ë‹¹í•˜ëŠ” ìœ„ì¹˜ì— ê°’0ì„ ê°€ì§„ ë…¸ë“œë¥¼ ì¶”ê°€í•œë‹¤
 		LinkedList.add(index,2);
 		
 		ListIterator k = LinkedList.listIterator();

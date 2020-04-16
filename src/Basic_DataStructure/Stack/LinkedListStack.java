@@ -1,4 +1,4 @@
-package Stack;
+ï»¿package Stack;
 import java.util.EmptyStackException;
 public class LinkedListStack {
     private Node head;
@@ -45,7 +45,7 @@ public class LinkedListStack {
 		       
 		       return returnData;
 		   }else 
-			   return (Object)"Stack¿¡ °ªÀÌ ¾ø½À´Ï´Ù";
+			   return (Object)"Stackì— ê°’ì´ ì—†ìŠµë‹ˆë‹¤";
 	   }
 	
 	public boolean empty() {

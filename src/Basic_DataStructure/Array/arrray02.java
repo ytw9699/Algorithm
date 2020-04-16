@@ -1,13 +1,13 @@
-package Array;
+ï»¿package Array;
 	public class arrray02 {
 	public static void main(String[] args) {
 	    
 	    String[] student = new String[5];
-	    student[0] = "ÃÖÁøÇõ";
-	    student[1] = "ÇÑÀÌ¶÷";
-	    student[2] = "ÃÖÀ¯ºó";
-	    student[3] = "ÇÑÀÌÀº";
-	    student[4] = "±èÁÖÇÑ";
+	    student[0] = "ìµœì§„í˜";
+	    student[1] = "í•œì´ëŒ";
+	    student[2] = "ìµœìœ ë¹ˆ";
+	    student[3] = "í•œì´ì€";
+	    student[4] = "ê¹€ì£¼í•œ";
 	    
 	    student[3] = null;
 	    

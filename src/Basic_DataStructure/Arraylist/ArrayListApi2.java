@@ -1,6 +1,6 @@
-package Arraylist;
+ï»¿package Arraylist;
 	import java.util.ArrayList;
-	import java.util.Iterator;//ÀÓÆ÷Æ® ÇØÁÖÀÚ
+	import java.util.Iterator;//ì„í¬íŠ¸ í•´ì£¼ì
 	
 	public class ArrayListApi2 {
 	  public static void main(String[] args) {
@@ -12,27 +12,27 @@ package Arraylist;
         System.out.println(numbers);
                 
         Iterator it = numbers.iterator();
-        /*Iterator °´Ã¼´Â numbers °´Ã¼ ³»ºÎ¿¡ ÀúÀåµÈ °ªÀ» ÇÏ³ª¾¿
-        	¼øÈ¸ÇÏ¸é¼­ Å½»öÇÒ ¼ö ÀÖµµ·Ï µ½´Â °´Ã¼ÀÌ´Ù*/
+        /*Iterator ê°ì²´ëŠ” numbers ê°ì²´ ë‚´ë¶€ì— ì €ì¥ëœ ê°’ì„ í•˜ë‚˜ì”©
+        	ìˆœíšŒí•˜ë©´ì„œ íƒìƒ‰í•  ìˆ˜ ìˆë„ë¡ ë•ëŠ” ê°ì²´ì´ë‹¤*/
         System.out.println("iterator");
         
         while (it.hasNext()) {
-        //¸¸¾à ´õ ÀÌ»ó ¼øÈ¸ÇÒ ¿¤¸®¸ÕÆ®°¡ ¾ø´Ù¸é it.hasNext()ÀÇ ¸®ÅÏ°ªÀº false°¡ µÇ¸é¼­ while¹®ÀÌ Á¾·á
+        //ë§Œì•½ ë” ì´ìƒ ìˆœíšŒí•  ì—˜ë¦¬ë¨¼íŠ¸ê°€ ì—†ë‹¤ë©´ it.hasNext()ì˜ ë¦¬í„´ê°’ì€ falseê°€ ë˜ë©´ì„œ whileë¬¸ì´ ì¢…ë£Œ
             int value = (int) it.next();
-            //it.next()¸Ş¼Òµå¸¦ È£ÃâÇÒ ¶§¸¶´Ù ¿¤¸®¸ÕÆ®¸¦ ¼ø¼­´ë·Î ¸®ÅÏ
+            //it.next()ë©”ì†Œë“œë¥¼ í˜¸ì¶œí•  ë•Œë§ˆë‹¤ ì—˜ë¦¬ë¨¼íŠ¸ë¥¼ ìˆœì„œëŒ€ë¡œ ë¦¬í„´
             if (value == 30) {
-                it.remove();//¼øÈ¸ °úÁ¤¿¡¼­ Á¶°Ç¿¡ µû¶ó ¿¤¸®¸ÕÆ®¸¦ »èÁ¦
+                it.remove();//ìˆœíšŒ ê³¼ì •ì—ì„œ ì¡°ê±´ì— ë”°ë¼ ì—˜ë¦¬ë¨¼íŠ¸ë¥¼ ì‚­ì œ
             }
-            System.out.println(value);//¼øÈ¸ Ãâ·Â
+            System.out.println(value);//ìˆœíšŒ ì¶œë ¥
         }
         System.out.println(numbers);
  
         System.out.println("for each");
-	        for (int value : numbers) {//Á¶±İ ´õ Æí¸®ÇÑ ¹æ¹ıÀ¸·Î Å½»ö
+	        for (int value : numbers) {//ì¡°ê¸ˆ ë” í¸ë¦¬í•œ ë°©ë²•ìœ¼ë¡œ íƒìƒ‰
 	            System.out.println(value);
 	        }
 	        
-        System.out.println("for");//Á¶±İ ´õ Æí¸®ÇÑ ¹æ¹ıÀ¸·Î Å½»ö
+        System.out.println("for");//ì¡°ê¸ˆ ë” í¸ë¦¬í•œ ë°©ë²•ìœ¼ë¡œ íƒìƒ‰
 	        for (int i = 0; i < numbers.size(); i++) {
 	            System.out.println(numbers.get(i));
 	        }

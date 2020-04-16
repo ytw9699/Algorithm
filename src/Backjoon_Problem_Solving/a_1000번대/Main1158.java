@@ -1,50 +1,50 @@
-package a_1000¹ø´ë;
+ï»¿package a_1000ë²ˆëŒ€;
 
 import java.util.Scanner;
 
 public class Main1158 {
 	public static void main(String[] args) {
 		
-	     int n;//¿øÇü ¿¬°á ¸®½ºÆ® Å©±â  N Àº ÀüÃ¼ »ç¶÷ ¼ö
-	     int m;//M¹øÂ° »ç¶÷¸¶´Ù Á¦°Å
+	     int n;//ì›í˜• ì—°ê²° ë¦¬ìŠ¤íŠ¸ í¬ê¸°  N ì€ ì „ì²´ ì‚¬ëŒ ìˆ˜
+	     int m;//Më²ˆì§¸ ì‚¬ëŒë§ˆë‹¤ ì œê±°
 		
 		Scanner sc = new Scanner(System.in);
 		
 		n = sc.nextInt();
 		m = sc.nextInt();
 		
-		circular_linked_list cyclelist = new circular_linked_list();//¿øÇü ¿¬°á  ¸®½ºÆ® »ı¼º
+		circular_linked_list cyclelist = new circular_linked_list();//ì›í˜• ì—°ê²°  ë¦¬ìŠ¤íŠ¸ ìƒì„±
 		
 		for (int i = 1; i <= n; i++) {
-			cyclelist.addLast(i);//³ëµå »ı¼º
+			cyclelist.addLast(i);//ë…¸ë“œ ìƒì„±
 		}
-		cyclelist.startDelete(n,m);//»èÁ¦ ½ÃÀÛ
+		cyclelist.startDelete(n,m);//ì‚­ì œ ì‹œì‘
 	}
 }
 
- class circular_linked_list {//¿øÇö ¿¬°á ¸®½ºÆ®
-     Node head;// Ã¹¹øÂ° ³ëµå¸¦ °¡¸®Å°´Â ÇÊµå,º¯¼ö,ÂüÁ¶°ª
-     Node tail;// ¸¶Áö¸· ³ëµå¸¦ °¡¸®Å°´Â ÇÊµå,º¯¼ö
-     int size = 0; // ¿¤¸®¸ÕÆ® °¹¼ö
+ class circular_linked_list {//ì›í˜„ ì—°ê²° ë¦¬ìŠ¤íŠ¸
+     Node head;// ì²«ë²ˆì§¸ ë…¸ë“œë¥¼ ê°€ë¦¬í‚¤ëŠ” í•„ë“œ,ë³€ìˆ˜,ì°¸ì¡°ê°’
+     Node tail;// ë§ˆì§€ë§‰ ë…¸ë“œë¥¼ ê°€ë¦¬í‚¤ëŠ” í•„ë“œ,ë³€ìˆ˜
+     int size = 0; // ì—˜ë¦¬ë¨¼íŠ¸ ê°¯ìˆ˜
     
      class Node{
     	
-         Object data;//µ¥ÀÌÅÍ°¡ ÀúÀåµÉ º¯¼ö-½ÇÁ¦ ÀúÀå°ª
+         Object data;//ë°ì´í„°ê°€ ì €ì¥ë  ë³€ìˆ˜-ì‹¤ì œ ì €ì¥ê°’
        
-         Node next;//´ÙÀ½ ³ëµå¸¦ °¡¸®Å°´Â º¯¼ö,ÂüÁ¶°ª
+         Node next;//ë‹¤ìŒ ë…¸ë“œë¥¼ ê°€ë¦¬í‚¤ëŠ” ë³€ìˆ˜,ì°¸ì¡°ê°’
         
-        public Node(Object input) {//°´Ã¼»ı¼º ÃÊ±âÈ­
+        public Node(Object input) {//ê°ì²´ìƒì„± ì´ˆê¸°í™”
             this.data = input;
-            this.next = null;//»ı¼º½Ã´Â ¹ÌÁ¤
+            this.next = null;//ìƒì„±ì‹œëŠ” ë¯¸ì •
         }
     }
-    public void addFirst(Object input){//¸Ó¸®¿¡ Ãß°¡
+    public void addFirst(Object input){//ë¨¸ë¦¬ì— ì¶”ê°€
        
-        Node newNode = new Node(input);//³ëµå¸¦ »ı¼º
+        Node newNode = new Node(input);//ë…¸ë“œë¥¼ ìƒì„±
         
-        newNode.next = head;//»õ·Î¿î ³ëµåÀÇ ´ÙÀ½ ³ëµå·Î ÇØµå ÁöÁ¤
+        newNode.next = head;//ìƒˆë¡œìš´ ë…¸ë“œì˜ ë‹¤ìŒ ë…¸ë“œë¡œ í•´ë“œ ì§€ì •
         
-        head = newNode;//Çìµå·Î »õ·Î¿î ³ëµå¸¦ ÁöÁ¤
+        head = newNode;//í—¤ë“œë¡œ ìƒˆë¡œìš´ ë…¸ë“œë¥¼ ì§€ì •
         size++;
         if(head.next == null){
             tail = head;
@@ -56,27 +56,27 @@ public class Main1158 {
         }
     }
     
-    public void addLast(Object input){//²¿¸®¿¡ Ãß°¡
-        if(size == 0){//¸®½ºÆ®ÀÇ ³ëµå°¡ ÇÏ³ªµµ ¾ø´Ù¸é Ã¹¹øÂ° ³ëµå¸¦ Ãß°¡ÇÏ´Â ¸Ş¼Òµå¸¦ »ç¿ë.
+    public void addLast(Object input){//ê¼¬ë¦¬ì— ì¶”ê°€
+        if(size == 0){//ë¦¬ìŠ¤íŠ¸ì˜ ë…¸ë“œê°€ í•˜ë‚˜ë„ ì—†ë‹¤ë©´ ì²«ë²ˆì§¸ ë…¸ë“œë¥¼ ì¶”ê°€í•˜ëŠ” ë©”ì†Œë“œë¥¼ ì‚¬ìš©.
             addFirst(input);
-        } else {//±âÁ¸ ³ëµå°¡ ÇÏ³ª¶óµµ ÀÖ´Ù¸é 
+        } else {//ê¸°ì¡´ ë…¸ë“œê°€ í•˜ë‚˜ë¼ë„ ìˆë‹¤ë©´ 
         	Node newNode = new Node(input);
         	
-            tail.next = newNode;//¸¶Áö¸· ³ëµåÀÇ ´ÙÀ½ ³ëµå·Î »ı¼ºÇÑ ³ëµå¸¦ ÁöÁ¤.
+            tail.next = newNode;//ë§ˆì§€ë§‰ ë…¸ë“œì˜ ë‹¤ìŒ ë…¸ë“œë¡œ ìƒì„±í•œ ë…¸ë“œë¥¼ ì§€ì •.
            
-            tail = newNode; //¸¶Áö¸· ³ëµå¸¦ °»½Å.
+            tail = newNode; //ë§ˆì§€ë§‰ ë…¸ë“œë¥¼ ê°±ì‹ .
             
             tail.next = head;
            
-            size++;//¿¤¸®¸ÕÆ® °³¼ö 1 Áõ°¡
+            size++;//ì—˜ë¦¬ë¨¼íŠ¸ ê°œìˆ˜ 1 ì¦ê°€
         }
     }
     
-    public int size(){//¸®½ºÆ®°¡ °¡Áø µ¥ÀÌÅÍÀÇ¼ö
+    public int size(){//ë¦¬ìŠ¤íŠ¸ê°€ ê°€ì§„ ë°ì´í„°ì˜ìˆ˜
         return size;
     }
 
-	public void startDelete(int n, int m) {//Á¶¼¼ÆÛ½º »èÁ¦ ½ÃÀÛ
+	public void startDelete(int n, int m) {//ì¡°ì„¸í¼ìŠ¤ ì‚­ì œ ì‹œì‘
 		
 		StringBuilder sb;
 		sb = new StringBuilder();
@@ -102,13 +102,13 @@ public class Main1158 {
 			}
 				Node todoDeleted = currentNode.next;
 				Object returnData = todoDeleted.data;
-				if(todoDeleted == tail){//»èÁ¦ÇÒ·Á´Âµ¥ÀÌÅÍ°¡ ¸¶Áö¸·°ªÀÌ¶ó¸é
+				if(todoDeleted == tail){//ì‚­ì œí• ë ¤ëŠ”ë°ì´í„°ê°€ ë§ˆì§€ë§‰ê°’ì´ë¼ë©´
 		            tail = currentNode;
 		            tail.next = head;
 		         }
 				else {
 					currentNode.next = currentNode.next.next;
-					if(todoDeleted == head) {//»èÁ¦ÇÒ·Á´Â µ¥ÀÌÅÍ°¡ Çìµå¶ó¸é
+					if(todoDeleted == head) {//ì‚­ì œí• ë ¤ëŠ” ë°ì´í„°ê°€ í—¤ë“œë¼ë©´
 						head = currentNode.next;
 					}
 				}

@@ -1,10 +1,10 @@
-package a_±âº»¾Ë°í¸®Áò;
+ï»¿package a_ê¸°ë³¸ì•Œê³ ë¦¬ì¦˜;
 import java.util.Scanner;
-// Á¤¼öa, b¸¦ Æ÷ÇÔÇÏ¿© ±× »çÀÌÀÇ ¸ğµç Á¤¼öÀÇ ÇÕÀ» ±¸ÇÕ´Ï´Ù. 
-class n_SumOf_01_09_Á¤¼ö»çÀÌÀÇÇÕ {
+// ì •ìˆ˜a, bë¥¼ í¬í•¨í•˜ì—¬ ê·¸ ì‚¬ì´ì˜ ëª¨ë“  ì •ìˆ˜ì˜ í•©ì„ êµ¬í•©ë‹ˆë‹¤. 
+class n_SumOf_01_09_ì •ìˆ˜ì‚¬ì´ì˜í•© {
 	static int sumof(int a, int b) {
-		int min; // a, bÀÇ ÀÛÀº ÂÊÀÇ °ª
-		int max; // a, bÀÇ Å« ÂÊÀÇ °ª
+		int min; // a, bì˜ ì‘ì€ ìª½ì˜ ê°’
+		int max; // a, bì˜ í° ìª½ì˜ ê°’
 
 		if (a < b) {
 			min = a;
@@ -14,7 +14,7 @@ class n_SumOf_01_09_Á¤¼ö»çÀÌÀÇÇÕ {
 			max = a;
 		}
 
-		int sum = 0; // ÇÕ
+		int sum = 0; // í•©
 		for (int i = min; i <= max; i++) {
 			sum += i;
 		}
@@ -25,12 +25,12 @@ class n_SumOf_01_09_Á¤¼ö»çÀÌÀÇÇÕ {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		System.out.println("a¿Í b¸¦ Æ÷ÇÔÇÏ¿© ±× »çÀÌÀÇ ¸ğµç Á¤¼öÀÇ ÇÕÀ» ±¸ÇÕ´Ï´Ù.");
-		System.out.print("aÀÇ °ª£º");
+		System.out.println("aì™€ bë¥¼ í¬í•¨í•˜ì—¬ ê·¸ ì‚¬ì´ì˜ ëª¨ë“  ì •ìˆ˜ì˜ í•©ì„ êµ¬í•©ë‹ˆë‹¤.");
+		System.out.print("aì˜ ê°’ï¼š");
 		int a = stdIn.nextInt();
-		System.out.print("bÀÇ °ª£º");
+		System.out.print("bì˜ ê°’ï¼š");
 		int b = stdIn.nextInt();
 
-		System.out.println("Á¤¼ö a, b »çÀÌÀÇ ¸ğµç Á¤¼öÀÇ ÇÕÀº " + sumof(a, b) + "ÀÔ´Ï´Ù.");
+		System.out.println("ì •ìˆ˜ a, b ì‚¬ì´ì˜ ëª¨ë“  ì •ìˆ˜ì˜ í•©ì€ " + sumof(a, b) + "ì…ë‹ˆë‹¤.");
 	}
 }

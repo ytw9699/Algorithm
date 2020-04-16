@@ -1,62 +1,62 @@
-package Arraylist;
+ï»¿package Arraylist;
   public class ArrayListMain {
   public static void main(String[] args) {
 	ArrayList numbers = new ArrayList();
 	
-	    numbers.add(10);//¸¶Áö¸· Ãß°¡
+	    numbers.add(10);//ë§ˆì§€ë§‰ ì¶”ê°€
 	    numbers.add(20);
 	    numbers.add(30);
 	    numbers.add(40);
-	    numbers.add(1,15);//Ã¹¹øÂ°¿¡ Ãß°¡
-	    numbers.add(0,5);//¸Ç¾Õ Ãß°¡
+	    numbers.add(1,15);//ì²«ë²ˆì§¸ì— ì¶”ê°€
+	    numbers.add(0,5);//ë§¨ì• ì¶”ê°€
    
     System.out.println(numbers);
-    //¿©±â¼­ °´Ã¼¸¦ ºÒ·¯¿À¸é ÀÌ¾È¿¡ tostring¸Ş¼Òµå¸¦ °¡Á®¿Àµµ·Ï ¼³Á¤µÇÀÖÀ½
+    //ì—¬ê¸°ì„œ ê°ì²´ë¥¼ ë¶ˆëŸ¬ì˜¤ë©´ ì´ì•ˆì— tostringë©”ì†Œë“œë¥¼ ê°€ì ¸ì˜¤ë„ë¡ ì„¤ì •ë˜ìˆìŒ
     
-    System.out.println(numbers.remove(1));//ÀÎµ¦½º 1¹øÂ° »èÁ¦
-    System.out.println(numbers.remove(0));//Ã³À½»èÁ¦
-    System.out.println(numbers.remove(numbers.size()-1));//¸¶Áö¸· »èÁ¦
+    System.out.println(numbers.remove(1));//ì¸ë±ìŠ¤ 1ë²ˆì§¸ ì‚­ì œ
+    System.out.println(numbers.remove(0));//ì²˜ìŒì‚­ì œ
+    System.out.println(numbers.remove(numbers.size()-1));//ë§ˆì§€ë§‰ ì‚­ì œ
     System.out.println(numbers);
-    System.out.println(numbers.get(0));//0¹øÂ° °ª °¡Á®¿À±â
-    System.out.println(numbers.size());//¸®½ºÆ®ÀÇ ¿¤¸®¸ÕÆ® ¼ö ¹İÈ¯
-    System.out.println(numbers.indexOf(20));//20°ªÀÌ ÀÖ´Â ÀÎµ¦½º ¹İÈ¯
+    System.out.println(numbers.get(0));//0ë²ˆì§¸ ê°’ ê°€ì ¸ì˜¤ê¸°
+    System.out.println(numbers.size());//ë¦¬ìŠ¤íŠ¸ì˜ ì—˜ë¦¬ë¨¼íŠ¸ ìˆ˜ ë°˜í™˜
+    System.out.println(numbers.indexOf(20));//20ê°’ì´ ìˆëŠ” ì¸ë±ìŠ¤ ë°˜í™˜
     System.out.println();
     
-	    for(int i=0; i<numbers.size(); i++) {//¹İº¹ 1¹øÂ° ¹æ¹ı
+	    for(int i=0; i<numbers.size(); i++) {//ë°˜ë³µ 1ë²ˆì§¸ ë°©ë²•
 	     System.out.println(numbers.get(i));
 	    }
 
-    ArrayList.ListIterator li = numbers.listIterator();//¹İº¹ 2¹øÂ° ¹æ¹ı
-    //ArrayList.ListIterator´Â ArrayListÅ¬·¡½º¾È¿¡ istIterator¶ó´Â Å¬·¡½º¸¦ °¡¸®Å´
-    //±× Å¬·¡½º¸¦ µ¥ÀÌÅÍ Å¸ÀÔÀ¸·Î ÇÏ´Â li°´Ã¼ »ı¼º
+    ArrayList.ListIterator li = numbers.listIterator();//ë°˜ë³µ 2ë²ˆì§¸ ë°©ë²•
+    //ArrayList.ListIteratorëŠ” ArrayListí´ë˜ìŠ¤ì•ˆì— istIteratorë¼ëŠ” í´ë˜ìŠ¤ë¥¼ ê°€ë¦¬í‚´
+    //ê·¸ í´ë˜ìŠ¤ë¥¼ ë°ì´í„° íƒ€ì…ìœ¼ë¡œ í•˜ëŠ” liê°ì²´ ìƒì„±
     
-    System.out.println("ÀÌÈÄ°ª ¼øÂ÷Àû Ãâ·Â");
-	    while(li.hasNext()){//ÀÌÈÄ°ª ¼øÂ÷Àû Ãâ·Â
+    System.out.println("ì´í›„ê°’ ìˆœì°¨ì  ì¶œë ¥");
+	    while(li.hasNext()){//ì´í›„ê°’ ìˆœì°¨ì  ì¶œë ¥
 		    int value = (int) li.next();
 		   	 System.out.println(value);
 	    }
     
-    System.out.println("ÀÌÀü°ª ¼øÂ÷Àû Ãâ·Â");
+    System.out.println("ì´ì „ê°’ ìˆœì°¨ì  ì¶œë ¥");
     
-	    while(li.hasPrevious()) {//ÀÌÀü°ª ¼øÂ÷Àû Ãâ·Â
+	    while(li.hasPrevious()) {//ì´ì „ê°’ ìˆœì°¨ì  ì¶œë ¥
 		   System.out.println(li.previous());
 	    }
        
     System.out.println(numbers);
        
 	    while(li.hasNext()) {
-		   int number = (int)li.next();//Áß°£¿¡ °ªÀ» Ãß°¡ÇØº¸ÀÚ
-		   if(number == 20) {//20´ÙÀ½ 35
+		   int number = (int)li.next();//ì¤‘ê°„ì— ê°’ì„ ì¶”ê°€í•´ë³´ì
+		   if(number == 20) {//20ë‹¤ìŒ 35
 			   li.add(35);
 		   }
 	     }
     System.out.println(numbers);
        
-    li = numbers.listIterator();//°´Ã¼»ı¼º½Ã nextIndex = 0;À¸·Î ´Ù½Ã ÃÊ±âÈ­
+    li = numbers.listIterator();//ê°ì²´ìƒì„±ì‹œ nextIndex = 0;ìœ¼ë¡œ ë‹¤ì‹œ ì´ˆê¸°í™”
     
-    while(li.hasNext()) {//±×¸®°í ´Ù½Ã ¼øÂ÷ ¹İº¹
+    while(li.hasNext()) {//ê·¸ë¦¬ê³  ë‹¤ì‹œ ìˆœì°¨ ë°˜ë³µ
 	   int number = (int)li.next();
-			   if(number == 30) {//ÀÌÅÍ·¹ÀÌÅÍ¸¦ ÅëÇØ Å½»öÇÒ¶§ ÇÊ¿äÇÑ À§Ä¡ÀÇ ¿¤¸®¸ÕÆ® »èÁ¦
+			   if(number == 30) {//ì´í„°ë ˆì´í„°ë¥¼ í†µí•´ íƒìƒ‰í• ë•Œ í•„ìš”í•œ ìœ„ì¹˜ì˜ ì—˜ë¦¬ë¨¼íŠ¸ ì‚­ì œ
 				   li.remove();
 			   }
 	         }

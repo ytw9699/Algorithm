@@ -1,11 +1,11 @@
-package a_½Ã¹Ä·¹ÀÌ¼Ç;
+ï»¿package a_ì‹œë®¬ë ˆì´ì…˜;
 
  public class KiwiJuiceEasy3 {
 	public static void main(String[] args) {
-		int[] capacities=new int[]{10,10,10};//ÀüÃ¼ º´ÀÇ Å©±â
-		int[] bottles=new int[]{3,7,3};//ÇöÀçµé¾îÀÖ´Â ¿ë·®
-		int[] fromld=new int[]{1,0,1};//¿Å±â°í ½ÍÀº°÷ÀÇ º´
-		int[] told=new int[]{0,1,0};//¿Å±èÀ» ¹Ş¾Æ¾ßÇÏ´Â °÷ÀÇ º´
+		int[] capacities=new int[]{10,10,10};//ì „ì²´ ë³‘ì˜ í¬ê¸°
+		int[] bottles=new int[]{3,7,3};//í˜„ì¬ë“¤ì–´ìˆëŠ” ìš©ëŸ‰
+		int[] fromld=new int[]{1,0,1};//ì˜®ê¸°ê³  ì‹¶ì€ê³³ì˜ ë³‘
+		int[] told=new int[]{0,1,0};//ì˜®ê¹€ì„ ë°›ì•„ì•¼í•˜ëŠ” ê³³ì˜ ë³‘
 		
 		int[] a = thePouring(capacities,bottles,fromld,told);
 		

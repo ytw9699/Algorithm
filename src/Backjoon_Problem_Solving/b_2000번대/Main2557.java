@@ -1,4 +1,4 @@
-package b_2000¹ø´ë;
+ï»¿package b_2000ë²ˆëŒ€;
 public class Main2557{
 public static void main(String[] args){
     System.out.println("Hello World!");

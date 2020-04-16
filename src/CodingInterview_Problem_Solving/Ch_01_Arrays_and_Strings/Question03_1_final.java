@@ -1,4 +1,4 @@
-package Ch_01_Arrays_and_Strings;
+ï»¿package Ch_01_Arrays_and_Strings;
 import CtCILibrary.AssortedMethods;
 
 public class Question03_1_final {
@@ -6,43 +6,43 @@ public class Question03_1_final {
 	public static void replaceSpaces(char[] str, int trueLength) {
 		int spaceCount = 0, index, i = 0;
 		for (i = 0; i < trueLength; i++) {
-			if (str[i] == ' ') {//6.ÀÎµ¦½º0~12 ¹®ÀÚ ¹è¿­¿¡¼­ °ø¹éÀ» ¼¾´Ù
+			if (str[i] == ' ') {//6.ì¸ë±ìŠ¤0~12 ë¬¸ì ë°°ì—´ì—ì„œ ê³µë°±ì„ ì„¼ë‹¤
 				spaceCount++;
 			}
 		}
-		index = trueLength + spaceCount * 2;//13+2*2=17//7.±× °ø¹éÀ» Æ÷ÇÔÇØ¼­ ¹è¿­ÀÇ ÀÎµ¦½º¸¦¸¸µé¾îÁÖ°í 
+		index = trueLength + spaceCount * 2;//13+2*2=17//7.ê·¸ ê³µë°±ì„ í¬í•¨í•´ì„œ ë°°ì—´ì˜ ì¸ë±ìŠ¤ë¥¼ë§Œë“¤ì–´ì£¼ê³  
 		/*if (trueLength < str.length) {
-			str[trueLength] = '\0';//¹è¿­ÀÇ³¡
+			str[trueLength] = '\0';//ë°°ì—´ì˜ë
 		}*/
 		for (i = trueLength - 1; i >= 0; i--) {
 			if (str[i] == ' ') {
-				str[index - 1] = '0';//9.°ø¹é°ú ÇÔ²² Ã¤¿ö¿Â´Ù
+				str[index - 1] = '0';//9.ê³µë°±ê³¼ í•¨ê»˜ ì±„ì›Œì˜¨ë‹¤
 				str[index - 2] = '2';
 				str[index - 3] = '%';
 				index = index - 3;
 			} else {
-				str[index - 1] = str[i];//8.ÀÎµ¦½º¸¦ È°¿ëÇØ ¹è¿­À» ³¡¿¡¼­ ºÎÅÍ ´Ù½Ã Ã¤¿ö¿À°í
+				str[index - 1] = str[i];//8.ì¸ë±ìŠ¤ë¥¼ í™œìš©í•´ ë°°ì—´ì„ ëì—ì„œ ë¶€í„° ë‹¤ì‹œ ì±„ì›Œì˜¤ê³ 
 				index--;
 			}
 		}
 	}
 	public static int findLastCharacter(char[] str) {
 		for (int i = str.length - 1; i >= 0; i--) {
-			if (str[i] != ' ') {//4.¹è¿­¿¡¼­ °ø¹éÀÌ ¾Æ´Ñ ÀÎµ¦½º¸¦ ¸ÕÀú µÚ¿¡¼­ ºÎÅÍ Ã£°í
+			if (str[i] != ' ') {//4.ë°°ì—´ì—ì„œ ê³µë°±ì´ ì•„ë‹Œ ì¸ë±ìŠ¤ë¥¼ ë¨¼ì € ë’¤ì—ì„œ ë¶€í„° ì°¾ê³ 
 				return i;
 			}
 		}
 		return -1;
 	}
 	public static void main(String[] args) {
-		String str = "Mr John Smith    ";//1.ÃÖÁ¾ÀûÀ¸·Î ¸ğµç ¹®ÀÚ¸¦ ´Ù ´ãÀ»¼ö ÀÖÀ» ¸¸Å­ ÃæºĞÇÑ °ø°£ È®º¸
+		String str = "Mr John Smith    ";//1.ìµœì¢…ì ìœ¼ë¡œ ëª¨ë“  ë¬¸ìë¥¼ ë‹¤ ë‹´ì„ìˆ˜ ìˆì„ ë§Œí¼ ì¶©ë¶„í•œ ê³µê°„ í™•ë³´
 					//"Mr%20John%20Smith"
-		char[] arr = str.toCharArray();//2.¹®ÀÚ ¹è¿­ ÀÌ¿ë
+		char[] arr = str.toCharArray();//2.ë¬¸ì ë°°ì—´ ì´ìš©
 		
-		int trueLength = findLastCharacter(arr) + 1;//3.µÚ °ø¹éÀ» Á¦¿ÜÇÑ ½ÇÁ¦ÀûÀÎ ¹è¿­ÀÇ Å©±â
+		int trueLength = findLastCharacter(arr) + 1;//3.ë’¤ ê³µë°±ì„ ì œì™¸í•œ ì‹¤ì œì ì¸ ë°°ì—´ì˜ í¬ê¸°
 		
-		replaceSpaces(arr, trueLength);//5.°ø¹éÀ» Ã¤¿ò+¹®ÀÚ¸¦ Àç¹èÄ¡	
+		replaceSpaces(arr, trueLength);//5.ê³µë°±ì„ ì±„ì›€+ë¬¸ìë¥¼ ì¬ë°°ì¹˜	
 		
-		System.out.println("\"" + AssortedMethods.charArrayToString(arr) + "\"");//10.ÃÖÁ¾ ¹®ÀÚ¹è¿­ ½ºÆ®¸µÀ¸·Î º¯È¯ Ãâ·Â
+		System.out.println("\"" + AssortedMethods.charArrayToString(arr) + "\"");//10.ìµœì¢… ë¬¸ìë°°ì—´ ìŠ¤íŠ¸ë§ìœ¼ë¡œ ë³€í™˜ ì¶œë ¥
 	}
 }

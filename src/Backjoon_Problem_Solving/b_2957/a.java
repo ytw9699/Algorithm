@@ -1,4 +1,4 @@
-package b_2957;
+ï»¿package b_2957;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.TreeMap;
@@ -13,16 +13,16 @@ public class a {
       map.put(names[i], diameters[i]); 
     }
     
-    Iterator it = map.keySet().iterator(); // Iterator ·Î KeyµéÀ» »Ì¾Æ³½´Ù 
+    Iterator it = map.keySet().iterator(); // Iterator ë¡œ Keyë“¤ì„ ë½‘ì•„ë‚¸ë‹¤ 
     Map.Entry e = map.higherEntry(1);
     Map.Entry f = map.lowerEntry(3);
     System.out.println(e.getKey() + " : " + e.getValue());
     System.out.println(f.getKey() + " : " + f.getValue());
     
     Object obj;
-    while (it.hasNext()) {  // Key¸¦ »Ì¾Æ³½ Iterator ¸¦ µ¹·Á°¡¸ç
-      obj = it.next(); // Key ¸¦ ÇÏ³ª¾¿ »Ì¾Æ
-      System.out.println(obj + ": " + map.get(obj)); // Value ¸¦ Ãâ·Â
+    while (it.hasNext()) {  // Keyë¥¼ ë½‘ì•„ë‚¸ Iterator ë¥¼ ëŒë ¤ê°€ë©°
+      obj = it.next(); // Key ë¥¼ í•˜ë‚˜ì”© ë½‘ì•„
+      System.out.println(obj + ": " + map.get(obj)); // Value ë¥¼ ì¶œë ¥
     }
   }
 }

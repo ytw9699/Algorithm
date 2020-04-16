@@ -1,10 +1,10 @@
-package a_±âº»¾Ë°í¸®Áò;
+ï»¿package a_ê¸°ë³¸ì•Œê³ ë¦¬ì¦˜;
 import java.util.Scanner;
-//³× °ªÀÇ ÃÖ´ñ°ªÀ» ±¸ÇÏ¿© ³ªÅ¸³¿
-class c_Max4_01_01_³×°ªÀÇÃÖ´ñ°ª {
-	// a, b, c, dÀÇ ÃÖ´ñ°ªÀ» ±¸ÇÏ¿© ¹İÈ¯
+//ë„¤ ê°’ì˜ ìµœëŒ“ê°’ì„ êµ¬í•˜ì—¬ ë‚˜íƒ€ëƒ„
+class c_Max4_01_01_ë„¤ê°’ì˜ìµœëŒ“ê°’ {
+	// a, b, c, dì˜ ìµœëŒ“ê°’ì„ êµ¬í•˜ì—¬ ë°˜í™˜
 	static int max4(int a, int b, int c, int d) {
-		int max = a; 	// ÃÖ´ñ°ª
+		int max = a; 	// ìµœëŒ“ê°’
 		if (b > max)
 			max = b;
 		if (c > max)
@@ -21,22 +21,22 @@ class c_Max4_01_01_³×°ªÀÇÃÖ´ñ°ª {
 		
 		int a, b, c, d;
 
-		System.out.println("³× Á¤¼öÀÇ ÃÖ´ñ°ªÀ» ±¸ÇÕ´Ï´Ù.");
+		System.out.println("ë„¤ ì •ìˆ˜ì˜ ìµœëŒ“ê°’ì„ êµ¬í•©ë‹ˆë‹¤.");
 		
-		System.out.print("aÀÇ °ª£º");
+		System.out.print("aì˜ ê°’ï¼š");
 			a = stdIn.nextInt();
 			
-		System.out.print("bÀÇ °ª£º");
+		System.out.print("bì˜ ê°’ï¼š");
 			b = stdIn.nextInt();
 			
-		System.out.print("cÀÇ °ª£º");
+		System.out.print("cì˜ ê°’ï¼š");
 			c = stdIn.nextInt();
 			
-		System.out.print("dÀÇ °ª£º");
+		System.out.print("dì˜ ê°’ï¼š");
 			d = stdIn.nextInt();
 
-		int max = max4(a, b, c, d); 	// a, b, c, dÀÇ ÃÖ´ñ°ª
+		int max = max4(a, b, c, d); 	// a, b, c, dì˜ ìµœëŒ“ê°’
 
-		System.out.println("ÃÖ´ñ°ªÀº " + max + "ÀÔ´Ï´Ù.");
+		System.out.println("ìµœëŒ“ê°’ì€ " + max + "ì…ë‹ˆë‹¤.");
 	}
 }

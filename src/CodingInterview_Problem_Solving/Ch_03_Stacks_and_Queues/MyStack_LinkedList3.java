@@ -1,8 +1,8 @@
-package Ch_03_Stacks_and_Queues;
+ï»¿package Ch_03_Stacks_and_Queues;
 
 import java.util.EmptyStackException;
 import java.util.LinkedList;
-//½ºÅÃ 2°³¸¦ ÀÌ¿ëÇØ¼­ ¸Ş¸ğ¸® °ø°£À» ÁÙÀÓ
+//ìŠ¤íƒ 2ê°œë¥¼ ì´ìš©í•´ì„œ ë©”ëª¨ë¦¬ ê³µê°„ì„ ì¤„ì„
 public class MyStack_LinkedList3<T> extends LinkedList {
 	
 	LinkedList minSaveStack;
@@ -12,7 +12,7 @@ public class MyStack_LinkedList3<T> extends LinkedList {
 	}
 	
 	private StackNode<T> top;
-	private StackNode<T> min;//Ãß°¡
+	private StackNode<T> min;//ì¶”ê°€
 	
 	private static class StackNode<T> {
 		private T data;
@@ -38,7 +38,7 @@ public class MyStack_LinkedList3<T> extends LinkedList {
 			if(!minSaveStack.isEmpty()) {
 			min.data = (T) minSaveStack.peek();
 			}
-			else {//ºñ¾îÀÖ´Ù¸é ÃÖ¼Ò°ªÀ» nullÇÏÀÚ
+			else {//ë¹„ì–´ìˆë‹¤ë©´ ìµœì†Œê°’ì„ nullí•˜ì
 				min = null;
 			}
 		}
@@ -50,7 +50,7 @@ public class MyStack_LinkedList3<T> extends LinkedList {
 	public void mypush(T item) { 
 		StackNode<T> t = new StackNode<T>(item);
 		
-		if(top == null || (int)t.data <= (int)min.data) {////Ãß°¡
+		if(top == null || (int)t.data <= (int)min.data) {////ì¶”ê°€
 			min = t;
 			minSaveStack.push((int)t.data);
 		}

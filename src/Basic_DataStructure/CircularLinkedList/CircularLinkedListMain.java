@@ -1,37 +1,37 @@
-package CircularLinkedList;
+ï»¿package CircularLinkedList;
 public class CircularLinkedListMain {
 	static CircularLinkedList numbers = new CircularLinkedList();
-	// ¿øÇü ¿¬°á ¸®½ºÆ®ÀÇ »ı¼º
-	static Object first;//µ¥ÀÌÅÍ Á¶È¸¸¦ À§ÇÑ º¯¼ö ¼±¾ğ1
-	static Object next;//µ¥ÀÌÅÍ Á¶È¸¸¦ À§ÇÑ º¯¼ö ¼±¾ğ2
+	// ì›í˜• ì—°ê²° ë¦¬ìŠ¤íŠ¸ì˜ ìƒì„±
+	static Object first;//ë°ì´í„° ì¡°íšŒë¥¼ ìœ„í•œ ë³€ìˆ˜ ì„ ì–¸1
+	static Object next;//ë°ì´í„° ì¡°íšŒë¥¼ ìœ„í•œ ë³€ìˆ˜ ì„ ì–¸2
 	 
     public static void main(String[] args) {
     	
-         numbers.addFirst(20);//¸Ç ¾Õ¿¡ Ãß°¡ 
+         numbers.addFirst(20);//ë§¨ ì•ì— ì¶”ê°€ 
          numbers.addFirst(10);
-         	System.out.println(numbers);//Ãâ·Â
-         numbers.addLast(30);//¸Ç µÚ¿¡ Ãß°¡
+         	System.out.println(numbers);//ì¶œë ¥
+         numbers.addLast(30);//ë§¨ ë’¤ì— ì¶”ê°€
          numbers.addLast(40);
          	System.out.println(numbers);
           	
-         	getAllNode();//ÀüÃ¼ µ¥ÀÌÅÍ Á¶È¸
+         	getAllNode();//ì „ì²´ ë°ì´í„° ì¡°íšŒ
          	
-         	remove(20);//¸®½ºÆ®¿¡¼­ 20 »èÁ¦ 
+         	remove(20);//ë¦¬ìŠ¤íŠ¸ì—ì„œ 20 ì‚­ì œ 
          	
          	getAllNode();
          	
          System.out.println(numbers);
     }
     
-    public static void getAllNode() {//ÀüÃ¼ µ¥ÀÌÅÍ Á¶È¸
+    public static void getAllNode() {//ì „ì²´ ë°ì´í„° ì¡°íšŒ
 		 first = numbers.getFirst();
       	
       	if((int)first != 1) {
-      		System.out.println(first);//¸Ç ¾Õ Ãâ·Â
+      		System.out.println(first);//ë§¨ ì• ì¶œë ¥
       		
       		for(int i=0; i<numbers.size()-1; i++)
      		{
-      			next = numbers.getNext();//¸Ç ¾Õ µÚ·Î Âß Ãâ·Â
+      			next = numbers.getNext();//ë§¨ ì• ë’¤ë¡œ ì­‰ ì¶œë ¥
       			
       			if((int)next != 1) {
       				System.out.println(next);
@@ -40,22 +40,22 @@ public class CircularLinkedListMain {
       	}
 	 }
     
-    public static void remove(int target) {//Å¸°Ù¿¡ ÇØ´çÇÏ´Â ³ëµå »èÁ¦
+    public static void remove(int target) {//íƒ€ê²Ÿì— í•´ë‹¹í•˜ëŠ” ë…¸ë“œ ì‚­ì œ
     	first = numbers.getFirst();
       	
       	if((int)first != 1) {
-      			if((int)first == target) {//¸Ç ¾ÕÀÇ µ¥ÀÌÅÍ°¡ Å¸°ÙÀÌ¶ó¸é
+      			if((int)first == target) {//ë§¨ ì•ì˜ ë°ì´í„°ê°€ íƒ€ê²Ÿì´ë¼ë©´
 					numbers.remove();
-					return;//»èÁ¦µÇ¸é ºüÁ®³ª°¡ÀÚ
+					return;//ì‚­ì œë˜ë©´ ë¹ ì ¸ë‚˜ê°€ì
 				}
-      		for(int i=0; i<numbers.size()-1; i++)//ÀüÃ¼ Å½»ö
+      		for(int i=0; i<numbers.size()-1; i++)//ì „ì²´ íƒìƒ‰
      		{
       			next = numbers.getNext();
       			
       			if((int)next != 1) {
-      				if((int)next == target) {//µÚÀÇ °ªÁß¿¡ Å¸°Ù°ú °ªÀÌ ÀÏÄ¡ÇÏ¸é
-      					numbers.remove();//»èÁ¦ ¸Ş¼Òµå ½ÇÇà
-      					return;//»èÁ¦µÇ¸é ºüÁ®³ª°¡ÀÚ
+      				if((int)next == target) {//ë’¤ì˜ ê°’ì¤‘ì— íƒ€ê²Ÿê³¼ ê°’ì´ ì¼ì¹˜í•˜ë©´
+      					numbers.remove();//ì‚­ì œ ë©”ì†Œë“œ ì‹¤í–‰
+      					return;//ì‚­ì œë˜ë©´ ë¹ ì ¸ë‚˜ê°€ì
       				}
       			}
      		}

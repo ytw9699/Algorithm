@@ -1,4 +1,4 @@
-package b_2957;
+ï»¿package b_2957;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Map;
@@ -22,7 +22,7 @@ public class Main10 {
 	br.close();
 	
 	for(int k=0; k<arrCount; k++) {
-		if(k==0) {//Ã¹¹øÂ° ·çÆ®°ªÃß°¡½Ã
+		if(k==0) {//ì²«ë²ˆì§¸ ë£¨íŠ¸ê°’ì¶”ê°€ì‹œ
 			 map.put(arr[k], 0); 
 		}
 		else if(k==1) {
@@ -34,8 +34,8 @@ public class Main10 {
 		Map.Entry key1 = map.higherEntry(arr[k]);
 	    Map.Entry key2 = map.lowerEntry(arr[k]);
 		
-		int firstHeight = (int) key1.getValue(); //Ã¹¹øÀç ³ôÀÌ
-		int secondHeight = (int) key2.getValue();  //µÎ¹øÂ° ³ôÀÌ
+		int firstHeight = (int) key1.getValue(); //ì²«ë²ˆìž¬ ë†’ì´
+		int secondHeight = (int) key2.getValue();  //ë‘ë²ˆì§¸ ë†’ì´
 		
 			if(firstHeight>secondHeight) {
 				map.put(arr[k], firstHeight+1); 

@@ -1,4 +1,4 @@
-package j_10000¹ø´ë;
+ï»¿package j_10000ë²ˆëŒ€;
 import java.util.Scanner;
 public class Main10950 {
 	public static void main(String[] args) {

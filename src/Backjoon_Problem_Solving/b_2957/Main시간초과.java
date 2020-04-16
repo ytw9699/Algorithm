@@ -1,7 +1,7 @@
-package b_2957;
+ï»¿package b_2957;
 
 import java.util.Scanner;
-public class Main½Ã°£ÃÊ°ú {
+public class Mainì‹œê°„ì´ˆê³¼ {
 	public static void main(String[] args) {
 	
 	Scanner sc = new Scanner(System.in);	
@@ -17,7 +17,7 @@ public class Main½Ã°£ÃÊ°ú {
 	BinarySearchTree sTree = new BinarySearchTree();
 	
 	for(int k=0; k<arrCount; k++) {
-		sTree.BSTInsert(arr[k],sTree.root);//µ¥ÀÌÅÍ Ãß°¡
+		sTree.BSTInsert(arr[k],sTree.root);//ë°ì´í„° ì¶”ê°€
 		System.out.println(sTree.outputCount);
 	}
 	}
@@ -27,11 +27,11 @@ public class Main½Ã°£ÃÊ°ú {
 	int outputCount=0;
 	
 	public BinarySearchTree(){
-		root = new Node();//·çÆ® ³ëµå¸¦ »ý¼º
+		root = new Node();//ë£¨íŠ¸ ë…¸ë“œë¥¼ ìƒì„±
 	}
 	public void BSTInsert(Object data,Node cNode){
 		Node nNode = null;    // new node
-		if(root.data == null)// »õ ³ëµå°¡ ·çÆ® ³ëµå¶ó¸é,
+		if(root.data == null)// ìƒˆ ë…¸ë“œê°€ ë£¨íŠ¸ ë…¸ë“œë¼ë©´,
 		{	
 		root.data = data;
 		return;
@@ -40,7 +40,7 @@ public class Main½Ã°£ÃÊ°ú {
 		outputCount++;
 		if((int)data<(int)cNode.data){
 			if(cNode.left == null){
-				nNode = new Node(data);    // »õ ³ëµåÀÇ »ý¼º
+				nNode = new Node(data);    // ìƒˆ ë…¸ë“œì˜ ìƒì„±
 				cNode.left = nNode;
 			}else {
 				BSTInsert(data,cNode.left);
@@ -48,7 +48,7 @@ public class Main½Ã°£ÃÊ°ú {
 		}
 		else {
 			if(cNode.right == null){
-				nNode = new Node(data);     // »õ ³ëµåÀÇ »ý¼º
+				nNode = new Node(data);     // ìƒˆ ë…¸ë“œì˜ ìƒì„±
 				cNode.right = nNode;
 			}else {
 				BSTInsert(data,cNode.right);
@@ -56,13 +56,13 @@ public class Main½Ã°£ÃÊ°ú {
 		}
 	}
 	public class Node{
-	    private Object data;//µ¥ÀÌÅÍ°¡ ÀúÀåµÉ º¯¼ö-½ÇÁ¦ ÀúÀå°ª
-	    private Node left;//¿ÞÂÊ ³ëµå¸¦ °¡¸®Å°´Â º¯¼ö,ÂüÁ¶°ª
-	    private Node right;//¿À¸¥ÂÊ ³ëµå
+	    private Object data;//ë°ì´í„°ê°€ ì €ìž¥ë  ë³€ìˆ˜-ì‹¤ì œ ì €ìž¥ê°’
+	    private Node left;//ì™¼ìª½ ë…¸ë“œë¥¼ ê°€ë¦¬í‚¤ëŠ” ë³€ìˆ˜,ì°¸ì¡°ê°’
+	    private Node right;//ì˜¤ë¥¸ìª½ ë…¸ë“œ
 	    
-	    public Node(Object input) {//°´Ã¼»ý¼º ÃÊ±âÈ­
+	    public Node(Object input) {//ê°ì²´ìƒì„± ì´ˆê¸°í™”
 	        this.data = input;
-	        this.left = null;//»ý¼º½Ã´Â ¹ÌÁ¤
+	        this.left = null;//ìƒì„±ì‹œëŠ” ë¯¸ì •
 	        this.right = null;
 	    }
 	    public Node() {

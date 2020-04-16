@@ -1,11 +1,11 @@
-package a_±âº»¾Ë°í¸®Áò;
+ï»¿package a_ê¸°ë³¸ì•Œê³ ë¦¬ì¦˜;
 
 import java.util.Scanner;
-//3°³ÀÇ °ªÀÇ ÃÖ¼Ú°ªÀ» ±¸ÇÏ¿© Ãâ·Â
-class d_Min3_01_02¼¼°ªÀÇÃÖ¼Ò°ª {
-// a, b, cÀÇ ÃÖ¼Ú°ªÀ» ±¸ÇÏ¿© ¹İÈ¯
+//3ê°œì˜ ê°’ì˜ ìµœì†Ÿê°’ì„ êµ¬í•˜ì—¬ ì¶œë ¥
+class d_Min3_01_02ì„¸ê°’ì˜ìµœì†Œê°’ {
+// a, b, cì˜ ìµœì†Ÿê°’ì„ êµ¬í•˜ì—¬ ë°˜í™˜
 static int min3(int a, int b, int c) {
-   int min = a;         			// ÃÖ¼Ú°ª
+   int min = a;         			// ìµœì†Ÿê°’
    
    if (b < min) 
 	   min = b;
@@ -20,19 +20,19 @@ public static void main(String[] args) {
    Scanner stdIn = new Scanner(System.in);
    int a, b, c;
 
-   System.out.println("¼¼ Á¤¼öÀÇ ÃÖ¼Ú°ªÀ» ±¸ÇÕ´Ï´Ù.");
+   System.out.println("ì„¸ ì •ìˆ˜ì˜ ìµœì†Ÿê°’ì„ êµ¬í•©ë‹ˆë‹¤.");
    
-   System.out.print("aÀÇ °ª£º");  
+   System.out.print("aì˜ ê°’ï¼š");  
    a = stdIn.nextInt();
    
-   System.out.print("bÀÇ °ª£º");  
+   System.out.print("bì˜ ê°’ï¼š");  
    b = stdIn.nextInt();
    
-   System.out.print("cÀÇ °ª£º");  
+   System.out.print("cì˜ ê°’ï¼š");  
    c = stdIn.nextInt();
 
-   int min = min3(a, b, c);   	// a, b, cÀÇ ÃÖ¼Ú°ª
+   int min = min3(a, b, c);   	// a, b, cì˜ ìµœì†Ÿê°’
 
-   System.out.println("ÃÖ¼Ú°ªÀº " + min + "ÀÔ´Ï´Ù.");
+   System.out.println("ìµœì†Ÿê°’ì€ " + min + "ì…ë‹ˆë‹¤.");
 }
 }

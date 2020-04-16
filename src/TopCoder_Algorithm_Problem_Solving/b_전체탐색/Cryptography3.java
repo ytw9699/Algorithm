@@ -1,20 +1,20 @@
-package b_ÀüÃ¼Å½»ö;
+ï»¿package b_ì „ì²´íƒìƒ‰;
 import java.util.Arrays;
 public class Cryptography3 {
 	
 	public static void main(String[] args) {
 		
-		int[] numbers=new int[]{1,2,3};//ÀÔ·Â°ª
-		System.out.println(encrypt(numbers));//Ãâ·Â
+		int[] numbers=new int[]{1,2,3};//ì…ë ¥ê°’
+		System.out.println(encrypt(numbers));//ì¶œë ¥
 		
 	}
 	public static long encrypt(int[] numbers){
 		long temp = 1;
-		Arrays.sort(numbers);//¸ÕÀú Á¤·Ä
-		numbers[0]++;//°¡Àå ÀÛÀº ÃÖ¼Ò°ªÀ» +1ÇØÁØ´Ù
+		Arrays.sort(numbers);//ë¨¼ì € ì •ë ¬
+		numbers[0]++;//ê°€ì¥ ì‘ì€ ìµœì†Œê°’ì„ +1í•´ì¤€ë‹¤
 		
 			for( int j = 0; j<numbers.length; j++ ) {
-				temp *= numbers[j];//¸ğµç°ªÀ» °öÇÑ´Ù
+				temp *= numbers[j];//ëª¨ë“ ê°’ì„ ê³±í•œë‹¤
 			}
 			
 		return temp;

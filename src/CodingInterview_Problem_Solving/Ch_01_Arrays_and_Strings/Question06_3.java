@@ -1,4 +1,4 @@
-package Ch_01_Arrays_and_Strings;
+ï»¿package Ch_01_Arrays_and_Strings;
 
 public class Question06_3 {	
 	public static String compress(String str) {
@@ -7,11 +7,11 @@ public class Question06_3 {
 		if (finalLength >= str.length()) 
 			return str;
 		
-		StringBuffer compressed = new StringBuffer(finalLength); // initialize capacity Ã³À½Å©±â
+		StringBuffer compressed = new StringBuffer(finalLength); // initialize capacity ì²˜ìŒí¬ê¸°
 		int countConsecutive = 0;
 		for (int i = 0; i < str.length(); i++) {
 			countConsecutive++;
-			//´ÙÀ½¹®ÀÚ¿Í ÇöÀç¹®ÀÚ°¡ °°Áö ¾Ê´Ù¸é ÇöÀç ¹®ÀÚ¸¦ °á°ú ¹®ÀÚ¿­¿¡ Ãß°¡ÇÑ´Ù
+			//ë‹¤ìŒë¬¸ìì™€ í˜„ì¬ë¬¸ìê°€ ê°™ì§€ ì•Šë‹¤ë©´ í˜„ì¬ ë¬¸ìë¥¼ ê²°ê³¼ ë¬¸ìì—´ì— ì¶”ê°€í•œë‹¤
 			/* If next character is different than current, append this char to result.*/
 			if (i + 1 >= str.length() || str.charAt(i) != str.charAt(i + 1)) {
 				compressed.append(str.charAt(i));
@@ -27,17 +27,17 @@ public class Question06_3 {
 		int countConsecutive = 0;
 		for (int i = 0; i < str.length(); i++) {
 			countConsecutive++;
-			//´ÙÀ½¹®ÀÚ¿Í ÇöÀç¹®ÀÚ°¡ °°Áö ¾Ê´Ù¸é ±æÀÌ¸¦ Áõ°¡½ÃÅ²´Ù
+			//ë‹¤ìŒë¬¸ìì™€ í˜„ì¬ë¬¸ìê°€ ê°™ì§€ ì•Šë‹¤ë©´ ê¸¸ì´ë¥¼ ì¦ê°€ì‹œí‚¨ë‹¤
 			/* If next character is different than current, append this char to result.*/
 			if (i + 1 >= str.length() || str.charAt(i) != str.charAt(i + 1)) {
 				compressedLength += 1 + String.valueOf(countConsecutive).length();
-				//¹«Á¶°Ç ±æÀÌ¸¦ ¿©±â´Â 2Áõ°¡½ÃÅ²´Ù°í ºÁ¾ßÇÔ
-				//System.out.println("ÀÏ"+String.valueOf(countConsecutive).length());
-				//System.out.println("ÀÌ"+compressedLength);
+				//ë¬´ì¡°ê±´ ê¸¸ì´ë¥¼ ì—¬ê¸°ëŠ” 2ì¦ê°€ì‹œí‚¨ë‹¤ê³  ë´ì•¼í•¨
+				//System.out.println("ì¼"+String.valueOf(countConsecutive).length());
+				//System.out.println("ì´"+compressedLength);
 				countConsecutive = 0;
 			}
 		}
-	//	System.out.println("°á°ú"+compressedLength);
+	//	System.out.println("ê²°ê³¼"+compressedLength);
 		return compressedLength;
 	}		
 	

@@ -1,4 +1,4 @@
-package b_ÀüÃ¼Å½»ö;
+ï»¿package b_ì „ì²´íƒìƒ‰;
 
  public class bestInvitation2 {
 	public static void main(String[] args) {

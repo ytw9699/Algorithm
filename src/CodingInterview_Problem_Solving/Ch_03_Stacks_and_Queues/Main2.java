@@ -1,4 +1,4 @@
-package Ch_03_Stacks_and_Queues;
+ï»¿package Ch_03_Stacks_and_Queues;
 
 public class Main2 {
     public static void main(String[] args) {
@@ -16,7 +16,7 @@ public class Main2 {
 		
 		System.out.println("= MyStack2 peek=");
 		
-		System.out.println(st.peek());//¸¶Áö¸· °ª ¸®ÅÏ
+		System.out.println(st.peek());//ë§ˆì§€ë§‰ ê°’ ë¦¬í„´
 		
 		System.out.println("= MyStack2 pop=");
 		

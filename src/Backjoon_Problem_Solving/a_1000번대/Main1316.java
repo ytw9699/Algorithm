@@ -1,4 +1,4 @@
-package a_1000¹ø´ë;
+ï»¿package a_1000ë²ˆëŒ€;
 
 import java.util.Scanner;
 public class Main1316 
@@ -8,9 +8,9 @@ public class Main1316
 	
     Scanner sc= new Scanner(System.in);
    
-    int wordCount = sc.nextInt();//ÀÔ·Â ´Ü¾î °¹¼ö
+    int wordCount = sc.nextInt();//ì…ë ¥ ë‹¨ì–´ ê°¯ìˆ˜
     
-    int output = wordCount;//ÀÏ´Ü ÀÔ·Â¹ŞÀº ´Ü¾îµéÀÌ ÀüºÎ ±×·ì´Ü¾î¶ó°í °¡Á¤
+    int output = wordCount;//ì¼ë‹¨ ì…ë ¥ë°›ì€ ë‹¨ì–´ë“¤ì´ ì „ë¶€ ê·¸ë£¹ë‹¨ì–´ë¼ê³  ê°€ì •
     
     sc.nextLine();
     
@@ -18,33 +18,33 @@ public class Main1316
     
     for(int i=0; i<wordCount; i++) {
     	words = sc.nextLine().trim();
-    	output = output - groupCheck(words);//±×·ì´Ü¾î Ã¼Å©
+    	output = output - groupCheck(words);//ê·¸ë£¹ë‹¨ì–´ ì²´í¬
     }
-    System.out.println(output);//±×·ì´Ü¾î¼ö Ãâ·Â
+    System.out.println(output);//ê·¸ë£¹ë‹¨ì–´ìˆ˜ ì¶œë ¥
    }
 	
 	static int groupCheck(String words) 
-   {//±×·ì´Ü¾î¶ó¸é 0¸®ÅÏ, ¾Æ´Ï¶ó¸é 1¸®ÅÏ
+   {//ê·¸ë£¹ë‹¨ì–´ë¼ë©´ 0ë¦¬í„´, ì•„ë‹ˆë¼ë©´ 1ë¦¬í„´
 		
 		char temp;
 		
-		int groupWord = 0;//ÀÏ´Ü 0À»ÁÖ°í ±×·ì´Ü¾î·Î °¡Á¤ÇÏ°í ½ÃÀÛ 
+		int groupWord = 0;//ì¼ë‹¨ 0ì„ì£¼ê³  ê·¸ë£¹ë‹¨ì–´ë¡œ ê°€ì •í•˜ê³  ì‹œì‘ 
 		
-		char[] currentWord = words.toCharArray();//¹®ÀÚ ¹è¿­·Î ´ã´Â´Ù
+		char[] currentWord = words.toCharArray();//ë¬¸ì ë°°ì—´ë¡œ ë‹´ëŠ”ë‹¤
 		temp = currentWord[0];
 		
 		outerLoop:
-		for(int k=1; k<currentWord.length; k++) {//´Ü¾îÇÏ³ª¾¿ Á¢±Ù
-			if(temp != currentWord[k]) {//ºñ±³¸¦ ÅëÇØ tempÀÇ °ª°ú ´Ù¸¥°ªÀÌ ³ª¿Â´Ù¸é
-				for(int j=k+1; j<currentWord.length; j++) {//±×·ì´Ü¾îÀÎÁö Ã¼Å© ¹İº¹
-					if(temp == currentWord[j]) {//±×·ì´Ü¾î°¡ ¾Æ´Ï¶ó¸é
-						groupWord = groupWord+1;//1À» ´õÇÏ°í Ãâ·Â
-						break outerLoop;//¹İº¹¹® 2°³ ºüÁ®³ª°¡ÀÚ
+		for(int k=1; k<currentWord.length; k++) {//ë‹¨ì–´í•˜ë‚˜ì”© ì ‘ê·¼
+			if(temp != currentWord[k]) {//ë¹„êµë¥¼ í†µí•´ tempì˜ ê°’ê³¼ ë‹¤ë¥¸ê°’ì´ ë‚˜ì˜¨ë‹¤ë©´
+				for(int j=k+1; j<currentWord.length; j++) {//ê·¸ë£¹ë‹¨ì–´ì¸ì§€ ì²´í¬ ë°˜ë³µ
+					if(temp == currentWord[j]) {//ê·¸ë£¹ë‹¨ì–´ê°€ ì•„ë‹ˆë¼ë©´
+						groupWord = groupWord+1;//1ì„ ë”í•˜ê³  ì¶œë ¥
+						break outerLoop;//ë°˜ë³µë¬¸ 2ê°œ ë¹ ì ¸ë‚˜ê°€ì
 					}
 				}
-				temp=currentWord[k];//ºñ±³ °ªÀ» ¹Ù²ãÁØ´Ù
+				temp=currentWord[k];//ë¹„êµ ê°’ì„ ë°”ê¿”ì¤€ë‹¤
 			}
 		}
-	   return groupWord;//±×·ì´Ü¾î°¡ ¾Æ´Ï¶ó¸é 1Ãâ·Â ¸ÂÀ¸¸é 0Ãâ·Â
+	   return groupWord;//ê·¸ë£¹ë‹¨ì–´ê°€ ì•„ë‹ˆë¼ë©´ 1ì¶œë ¥ ë§ìœ¼ë©´ 0ì¶œë ¥
 	}
 }

@@ -1,28 +1,28 @@
-package CircularLinkedList;
+ï»¿package CircularLinkedList;
 public class CircularLinkedList {
-   private Node tail;// ¸¶Áö¸· ³ëµå¸¦ °¡¸®Å°´Â ÇÊµå,º¯¼ö
-   private Node cur;// ÇöÀçÀÇ ³ëµå¸¦ °¡¸®Å°´Â º¯¼ö
+   private Node tail;// ë§ˆì§€ë§‰ ë…¸ë“œë¥¼ ê°€ë¦¬í‚¤ëŠ” í•„ë“œ,ë³€ìˆ˜
+   private Node cur;// í˜„ì¬ì˜ ë…¸ë“œë¥¼ ê°€ë¦¬í‚¤ëŠ” ë³€ìˆ˜
    private Node before;
    private Node temp;
-   private int size = 0; //¿¤¸®¸ÕÆ® °¹¼ö
+   private int size = 0; //ì—˜ë¦¬ë¨¼íŠ¸ ê°¯ìˆ˜
    
    private class Node{
    	
-       private Object data;//µ¥ÀÌÅÍ°¡ ÀúÀåµÉ º¯¼ö-½ÇÁ¦ ÀúÀå°ª
+       private Object data;//ë°ì´í„°ê°€ ì €ì¥ë  ë³€ìˆ˜-ì‹¤ì œ ì €ì¥ê°’
       
-       private Node next;//´ÙÀ½ ³ëµå¸¦ °¡¸®Å°´Â º¯¼ö,ÂüÁ¶°ª
+       private Node next;//ë‹¤ìŒ ë…¸ë“œë¥¼ ê°€ë¦¬í‚¤ëŠ” ë³€ìˆ˜,ì°¸ì¡°ê°’
        
-       public Node(Object input) {//°´Ã¼»ı¼º ÃÊ±âÈ­
+       public Node(Object input) {//ê°ì²´ìƒì„± ì´ˆê¸°í™”
            this.data = input;
-           this.next = null;//»ı¼º½Ã´Â ¹ÌÁ¤
+           this.next = null;//ìƒì„±ì‹œëŠ” ë¯¸ì •
        }
-       public String toString(){//³ëµåÀÇ °ªÀ» ½±°Ô Ãâ·ÂÀ§ÇØ
+       public String toString(){//ë…¸ë“œì˜ ê°’ì„ ì‰½ê²Œ ì¶œë ¥ìœ„í•´
            return String.valueOf(this.data);
        }
    }
-   public void addFirst(Object input){//¸Ó¸®¿¡ Ãß°¡
+   public void addFirst(Object input){//ë¨¸ë¦¬ì— ì¶”ê°€
       
-      Node newNode = new Node(input);//³ëµå¸¦ »ı¼º
+      Node newNode = new Node(input);//ë…¸ë“œë¥¼ ìƒì„±
        
       if(tail == null) 
       {
@@ -36,11 +36,11 @@ public class CircularLinkedList {
       }
        size++;
    }
-   public void addLast(Object input){//²¿¸®¿¡ Ãß°¡
-       if(size == 0){//¸®½ºÆ®ÀÇ ³ëµå°¡ ÇÏ³ªµµ ¾ø´Ù¸é Ã¹¹øÂ° ³ëµå¸¦ Ãß°¡ÇÏ´Â ¸Ş¼Òµå¸¦ »ç¿ë.
+   public void addLast(Object input){//ê¼¬ë¦¬ì— ì¶”ê°€
+       if(size == 0){//ë¦¬ìŠ¤íŠ¸ì˜ ë…¸ë“œê°€ í•˜ë‚˜ë„ ì—†ë‹¤ë©´ ì²«ë²ˆì§¸ ë…¸ë“œë¥¼ ì¶”ê°€í•˜ëŠ” ë©”ì†Œë“œë¥¼ ì‚¬ìš©.
            addFirst(input);
        } 
-       else //±âÁ¸ ³ëµå°¡ ÇÏ³ª¶óµµ ÀÖ´Ù¸é 
+       else //ê¸°ì¡´ ë…¸ë“œê°€ í•˜ë‚˜ë¼ë„ ìˆë‹¤ë©´ 
        {
        		Node newNode = new Node(input);
        	
@@ -56,19 +56,19 @@ public class CircularLinkedList {
 				tail = newNode;
 		    }
           
-           size++;//¿¤¸®¸ÕÆ® °³¼ö 1 Áõ°¡
+           size++;//ì—˜ë¦¬ë¨¼íŠ¸ ê°œìˆ˜ 1 ì¦ê°€
        }
    }
-   public Object getFirst(){//Ã¹¹øÀç ¿¤¸®¸ÕÆ® °ª Á¶È¸
-	   if(tail == null)    // ÀúÀåµÈ ³ëµå°¡ ¾ø´Ù¸é
+   public Object getFirst(){//ì²«ë²ˆì¬ ì—˜ë¦¬ë¨¼íŠ¸ ê°’ ì¡°íšŒ
+	   if(tail == null)    // ì €ì¥ëœ ë…¸ë“œê°€ ì—†ë‹¤ë©´
 			return 1;
 
 		before = tail;
 		cur = tail.next;
        return cur.data;
    }
-   public Object getNext(){//´ÙÀ½ ¿¤¸®¸ÕÆ® °ª Á¶È¸
-	   if(tail == null)    // ÀúÀåµÈ ³ëµå°¡ ¾ø´Ù¸é
+   public Object getNext(){//ë‹¤ìŒ ì—˜ë¦¬ë¨¼íŠ¸ ê°’ ì¡°íšŒ
+	   if(tail == null)    // ì €ì¥ëœ ë…¸ë“œê°€ ì—†ë‹¤ë©´
 			return 1;
 
 		before = cur;
@@ -76,8 +76,8 @@ public class CircularLinkedList {
        return cur.data;
    }
   
-   public String toString() {//¸®½ºÆ®¾È¿¡ µ¥ÀÌÅÍ ÀüºÎ Ãâ·Â
-       if(tail == null){//¸®½ºÆ®¿¡ µ¥ÀÌÅÍ°¡ ¾ø´Ù¸é
+   public String toString() {//ë¦¬ìŠ¤íŠ¸ì•ˆì— ë°ì´í„° ì „ë¶€ ì¶œë ¥
+       if(tail == null){//ë¦¬ìŠ¤íŠ¸ì— ë°ì´í„°ê°€ ì—†ë‹¤ë©´
            return "[]";
        }       
        Node temp = tail.next;
@@ -86,15 +86,15 @@ public class CircularLinkedList {
            str += temp.data + ",";
            temp = temp.next;
        }
-       str += temp.data;//¸¶Áö¸· ³ëµå¸¦ Ãâ·Â°á°ú¿¡ Æ÷ÇÔ
+       str += temp.data;//ë§ˆì§€ë§‰ ë…¸ë“œë¥¼ ì¶œë ¥ê²°ê³¼ì— í¬í•¨
        return str+"]";
    }
    
    public Object remove(){
 	   temp = cur;
 	   Object returnData = temp.data;
-	   if(temp == tail) {// »èÁ¦ ´ë»óÀ» tailÀÌ °¡¸®Å²´Ù¸é
-		   if(tail == tail.next) // ±×¸®°í ¸¶Áö¸· ³²Àº ³ëµå¶ó¸é
+	   if(temp == tail) {// ì‚­ì œ ëŒ€ìƒì„ tailì´ ê°€ë¦¬í‚¨ë‹¤ë©´
+		   if(tail == tail.next) // ê·¸ë¦¬ê³  ë§ˆì§€ë§‰ ë‚¨ì€ ë…¸ë“œë¼ë©´
 			   tail = null;
 		   else 
 			   tail = before;
@@ -105,7 +105,7 @@ public class CircularLinkedList {
        return returnData;
    }
    
-   public int size(){//¸®½ºÆ®°¡ °¡Áø µ¥ÀÌÅÍÀÇ¼ö
+   public int size(){//ë¦¬ìŠ¤íŠ¸ê°€ ê°€ì§„ ë°ì´í„°ì˜ìˆ˜
        return size;
    }
   }

@@ -1,20 +1,20 @@
-package a_±âº»¾Ë°í¸®Áò;
+ï»¿package a_ê¸°ë³¸ì•Œê³ ë¦¬ì¦˜;
 import java.util.Scanner;
-// 1, 2, ¡¦, nÀÇ ÇÕÀ» ±¸ÇÕ´Ï´Ù(¾ç¼ö¸¸ ÀÔ·Â).
+// 1, 2, â€¦, nì˜ í•©ì„ êµ¬í•©ë‹ˆë‹¤(ì–‘ìˆ˜ë§Œ ì…ë ¥).
 class p_Difference_01_10_2 {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 		int a;
 		int b;
-		System.out.print("aÀÇ °ª£º");
+		System.out.print("aì˜ ê°’ï¼š");
 		a = stdIn.nextInt();
 		
 		do {
-			System.out.print("bÀÇ °ª£º");
+			System.out.print("bì˜ ê°’ï¼š");
 			b = stdIn.nextInt();
 		} while (b < a);
 		
 
-		System.out.println("b-a´Â" +(b-a)+ "ÀÔ´Ï´Ù.");
+		System.out.println("b-aëŠ”" +(b-a)+ "ì…ë‹ˆë‹¤.");
 	}
 }

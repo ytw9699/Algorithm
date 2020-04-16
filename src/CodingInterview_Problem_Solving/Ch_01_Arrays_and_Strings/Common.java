@@ -1,8 +1,8 @@
-package Ch_01_Arrays_and_Strings;
+ï»¿package Ch_01_Arrays_and_Strings;
 
 public class Common {
 
-	public static int getCharNumber(Character c) {//°¢ ¹®ÀÚ¿¡ ¼ıÀÚ¸¦ ´ëÀÀ½ÃÅ²´Ù//´ë¼Ò¹®ÀÚ ±¸¹®ÀÌ¾ø°í
+	public static int getCharNumber(Character c) {//ê° ë¬¸ìì— ìˆ«ìë¥¼ ëŒ€ì‘ì‹œí‚¨ë‹¤//ëŒ€ì†Œë¬¸ì êµ¬ë¬¸ì´ì—†ê³ 
 		int a = Character.getNumericValue('a');
 		int z = Character.getNumericValue('z');
 		
@@ -11,10 +11,10 @@ public class Common {
 			//System.out.println(val - a);
 			return val - a;
 		}
-		return -1;//¹®ÀÚ°¡ ¾Æ´Ñ°æ¿ì¿¡´Â -1·Î ´ëÀÀ½ÃÅ²´Ù
+		return -1;//ë¬¸ìê°€ ì•„ë‹Œê²½ìš°ì—ëŠ” -1ë¡œ ëŒ€ì‘ì‹œí‚¨ë‹¤
 	}
 	
-	public static int[] buildCharFrequencyTable(String phrase) {//°¢ ¹®ÀÚ°¡ ¸î¹ø µîÀåÇß´ÂÁö ¼¾´Ù
+	public static int[] buildCharFrequencyTable(String phrase) {//ê° ë¬¸ìê°€ ëª‡ë²ˆ ë“±ì¥í–ˆëŠ”ì§€ ì„¼ë‹¤
 	//System.out.println(Character.getNumericValue('z') - Character.getNumericValue('a') + 1);
 		int[] table = new int[Character.getNumericValue('z') - Character.getNumericValue('a') + 1];
 		for (char c : phrase.toCharArray()) {

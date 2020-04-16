@@ -1,19 +1,19 @@
-package Recursive;
+ï»¿package Recursive;
 public class b_04_RecursiveBinarySearch 
 {
 	static int BSearchRecur(int ar[], int first, int last, int target) 
 	{
-	if(first > last)//Àç±Í Å»Ãâ Á¶°Ç
-		return -1;// -1ÀÇ ¹İÈ¯Àº Å½»öÀÇ ½ÇÆĞ¸¦ ÀÇ¹Ì
+	if(first > last)//ì¬ê·€ íƒˆì¶œ ì¡°ê±´
+		return -1;// -1ì˜ ë°˜í™˜ì€ íƒìƒ‰ì˜ ì‹¤íŒ¨ë¥¼ ì˜ë¯¸
 	
-	int mid = (first+last) / 2;// Å½»ö´ë»óÀÇ Áß¾ÓÀ» Ã£´Â´Ù.
+	int mid = (first+last) / 2;// íƒìƒ‰ëŒ€ìƒì˜ ì¤‘ì•™ì„ ì°¾ëŠ”ë‹¤.
 	
 	if(ar[mid] == target)
-		return mid;// °Ë»öµÈ Å¸°ÙÀÇ ÀÎµ¦½º °ª ¹İÈ¯
+		return mid;// ê²€ìƒ‰ëœ íƒ€ê²Ÿì˜ ì¸ë±ìŠ¤ ê°’ ë°˜í™˜
 	else if(target < ar[mid])
-		return BSearchRecur(ar, first, mid-1, target);//ÀÚ±âÀÚ½ÅÀ» ´Ù½Ã È£Ãâ
+		return BSearchRecur(ar, first, mid-1, target);//ìê¸°ìì‹ ì„ ë‹¤ì‹œ í˜¸ì¶œ
 	else
-		return BSearchRecur(ar, mid+1, last, target);//ÀÚ±âÀÚ½ÅÀ» ´Ù½Ã È£Ãâ
+		return BSearchRecur(ar, mid+1, last, target);//ìê¸°ìì‹ ì„ ë‹¤ì‹œ í˜¸ì¶œ
 	}
 		public static void main(String[] args) 
 		{
@@ -23,9 +23,9 @@ public class b_04_RecursiveBinarySearch
 			idx = BSearchRecur(arr, 0, arr.length-1, 7);
 			
 			if(idx == -1)
-				System.out.printf("Å½»ö ½ÇÆĞ \n");
+				System.out.printf("íƒìƒ‰ ì‹¤íŒ¨ \n");
 			else
-				System.out.printf("Å¸°Ù ÀúÀå ÀÎµ¦½º: %d \n", idx);
+				System.out.printf("íƒ€ê²Ÿ ì €ì¥ ì¸ë±ìŠ¤: %d \n", idx);
 		}
 }
 	

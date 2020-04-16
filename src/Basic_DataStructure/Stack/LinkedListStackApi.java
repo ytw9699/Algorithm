@@ -1,7 +1,7 @@
-package Stack;
+ï»¿package Stack;
 import java.util.LinkedList;
 public class LinkedListStackApi {
-    public static void main(String[] args) {//±âÁ¸ÀÇ ´õºí¸µÅ©µå ¸®½ºÆ® api¸¦ ÀÌ¿ëÇÑ stack
+    public static void main(String[] args) {//ê¸°ì¡´ì˜ ë”ë¸”ë§í¬ë“œ ë¦¬ìŠ¤íŠ¸ apië¥¼ ì´ìš©í•œ stack
     	LinkedList<String> st = new LinkedList();
     	
     	st.addFirst("1");
@@ -16,7 +16,7 @@ public class LinkedListStackApi {
 		
 		while(!(st.size()==0)) {
 			System.out.println(st.removeFirst());
-			//Stack¿¡ ÀúÀåµÈ Ã¹¹øÂ° ¿ä¼Ò¸¦ ÀĞ¾î¿À°í »èÁ¦ÇÑ´Ù
+			//Stackì— ì €ì¥ëœ ì²«ë²ˆì§¸ ìš”ì†Œë¥¼ ì½ì–´ì˜¤ê³  ì‚­ì œí•œë‹¤
 		}
 		
     	st.push("1");
@@ -25,7 +25,7 @@ public class LinkedListStackApi {
 		
 		System.out.println("= LinkedList peek=");
 		
-		System.out.println(st.peek());//¸¶Áö¸· °ª ¸®ÅÏ
+		System.out.println(st.peek());//ë§ˆì§€ë§‰ ê°’ ë¦¬í„´
 		
 		System.out.println("= LinkedList pop=");
 		

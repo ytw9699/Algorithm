@@ -1,19 +1,19 @@
-package BinarySearch;
+ï»¿package BinarySearch;
 
 public class BinarySearchTree {
 	Node root;
 	
 	public BinarySearchTree(){
-		root = new Node();//·çÆ® ³ëµå¸¦ »ı¼º
+		root = new Node();//ë£¨íŠ¸ ë…¸ë“œë¥¼ ìƒì„±
 	}
 	
 	public Node rootReturn(){
         return root;
    }
 	 
-	 public Node MakeNode(Object input){//¸Ó¸®¿¡ Ãß°¡
+	 public Node MakeNode(Object input){//ë¨¸ë¦¬ì— ì¶”ê°€
 	       
-	        Node newNode = new Node(input);//³ëµå¸¦ »ı¼º
+	        Node newNode = new Node(input);//ë…¸ë“œë¥¼ ìƒì„±
 	        
 	        return newNode;
 	   }
@@ -26,7 +26,7 @@ public class BinarySearchTree {
 		main.right = sub;
 	}
 	
-	public Object GetData(Node temp){//Æ¯Á¤ ¿¤¸®¸ÕÆ® °ª Á¶È¸
+	public Object GetData(Node temp){//íŠ¹ì • ì—˜ë¦¬ë¨¼íŠ¸ ê°’ ì¡°íšŒ
         return temp.data;
     }
 	
@@ -39,27 +39,27 @@ public class BinarySearchTree {
 		return temp.right;
 	}
 	
-	public void InorderTraverse(Node temp)//ÁßÀ§¼øÈ¸
+	public void InorderTraverse(Node temp)//ì¤‘ìœ„ìˆœíšŒ
 	{
-		if(temp == null) {   // temp°¡ NULLÀÌ¸é Àç±Í Å»Ãâ!
+		if(temp == null) {   // tempê°€ NULLì´ë©´ ì¬ê·€ íƒˆì¶œ!
 			return;
 	  }
 		InorderTraverse(temp.left); 
 		System.out.println(temp.data);
 		InorderTraverse(temp.right); 
 	}
-	public void PreorderTraverse(Node temp)//ÀüÀ§¼øÈ¸
+	public void PreorderTraverse(Node temp)//ì „ìœ„ìˆœíšŒ
 	{
-		if(temp == null) {   // temp°¡ NULLÀÌ¸é Àç±Í Å»Ãâ!
+		if(temp == null) {   // tempê°€ NULLì´ë©´ ì¬ê·€ íƒˆì¶œ!
 			return;
 	   }
 		System.out.println(temp.data);
 		PreorderTraverse(temp.left); 
 		PreorderTraverse(temp.right); 
 	}
-	public void PostorderTraverse(Node temp)//ÈÄÀ§¼øÈ¸
+	public void PostorderTraverse(Node temp)//í›„ìœ„ìˆœíšŒ
 	{
-		if(temp == null) {   // temp°¡ NULLÀÌ¸é Àç±Í Å»Ãâ!
+		if(temp == null) {   // tempê°€ NULLì´ë©´ ì¬ê·€ íƒˆì¶œ!
 			return;
 	   }
 		PostorderTraverse(temp.left); 
@@ -72,15 +72,15 @@ public void BSTInsert(Object data){
 	Node pNode = null;    // parent node
 	Node cNode = root;    // current node
 	Node nNode = null;    // new node
-	// »õ·Î¿î ³ëµå°¡ Ãß°¡µÉ À§Ä¡¸¦ Ã£´Â´Ù.
-	if(root.data == null)// »õ ³ëµå°¡ ·çÆ® ³ëµå¶ó¸é,
+	// ìƒˆë¡œìš´ ë…¸ë“œê°€ ì¶”ê°€ë  ìœ„ì¹˜ë¥¼ ì°¾ëŠ”ë‹¤.
+	if(root.data == null)// ìƒˆ ë…¸ë“œê°€ ë£¨íŠ¸ ë…¸ë“œë¼ë©´,
 	{	
 	root.data = data;
 	return;
 	}
 	
 	while(cNode != null) {
-		if(data == cNode.data) {//Å°ÀÇ Áßº¹À» Çã¿ëÇÏÁö ¾ÊÀ½
+		if(data == cNode.data) {//í‚¤ì˜ ì¤‘ë³µì„ í—ˆìš©í•˜ì§€ ì•ŠìŒ
 			return;    
 		}
 		pNode = cNode;
@@ -90,9 +90,9 @@ public void BSTInsert(Object data){
 		else
 			cNode = cNode.right;
 	}
-	// pNodeÀÇ ¼­ºê ³ëµå¿¡ Ãß°¡ÇÒ »õ ³ëµåÀÇ »ı¼º
-	nNode = MakeNode(data);    // »õ ³ëµåÀÇ »ı¼º
-	// pNodeÀÇ ¼­ºê ³ëµå¿¡ »õ ³ëµå¸¦ Ãß°¡
+	// pNodeì˜ ì„œë¸Œ ë…¸ë“œì— ì¶”ê°€í•  ìƒˆ ë…¸ë“œì˜ ìƒì„±
+	nNode = MakeNode(data);    // ìƒˆ ë…¸ë“œì˜ ìƒì„±
+	// pNodeì˜ ì„œë¸Œ ë…¸ë“œì— ìƒˆ ë…¸ë“œë¥¼ ì¶”ê°€
 	if((int)data < (int)pNode.data)
 		MakeLeftSubTree(pNode, nNode);
 	else
@@ -118,7 +118,7 @@ public Node BSTSearch(int key)
 	return null;
 }
 
-//Æ®¸®ÀÇ ³ôÀÌ¸¦ °è»êÇÏ¿© ¹İÈ¯
+//íŠ¸ë¦¬ì˜ ë†’ì´ë¥¼ ê³„ì‚°í•˜ì—¬ ë°˜í™˜
 public int GetHeight(Node Cnode)
 {
 	int leftH;		// left height
@@ -127,20 +127,20 @@ public int GetHeight(Node Cnode)
 	if(Cnode == null)
 		return 0;
 
-	// ¿ŞÂÊ ¼­ºê Æ®¸® ³ôÀÌ °è»ê
+	// ì™¼ìª½ ì„œë¸Œ íŠ¸ë¦¬ ë†’ì´ ê³„ì‚°
 	leftH = GetHeight(GetLeftSubTree(Cnode));
 
-	// ¿À¸¥ÂÊ ¼­ºê Æ®¸® ³ôÀÌ °è»ê
+	// ì˜¤ë¥¸ìª½ ì„œë¸Œ íŠ¸ë¦¬ ë†’ì´ ê³„ì‚°
 	rightH = GetHeight(GetRightSubTree(Cnode));
 
-	// Å« °ªÀÇ ³ôÀÌ¸¦ ¹İÈ¯ÇÑ´Ù.
+	// í° ê°’ì˜ ë†’ì´ë¥¼ ë°˜í™˜í•œë‹¤.
 	if(leftH > rightH)
 		return leftH + 1;
 	else
 		return rightH + 1;
 }
 
-//µÎ ¼­ºê Æ®¸®ÀÇ ³ôÀÌÀÇ Â÷¸¦ ¹İÈ¯
+//ë‘ ì„œë¸Œ íŠ¸ë¦¬ì˜ ë†’ì´ì˜ ì°¨ë¥¼ ë°˜í™˜
 public boolean GetHeightDiff(Node Croot)
 {
 	int lsh;    // left sub tree height
@@ -164,14 +164,14 @@ public boolean GetHeightDiff(Node Croot)
 
 
 public class Node{
-    private Object data;//µ¥ÀÌÅÍ°¡ ÀúÀåµÉ º¯¼ö-½ÇÁ¦ ÀúÀå°ª
+    private Object data;//ë°ì´í„°ê°€ ì €ì¥ë  ë³€ìˆ˜-ì‹¤ì œ ì €ì¥ê°’
    
-    private Node left;//¿ŞÂÊ ³ëµå¸¦ °¡¸®Å°´Â º¯¼ö,ÂüÁ¶°ª
-    private Node right;//¿À¸¥ÂÊ ³ëµå
+    private Node left;//ì™¼ìª½ ë…¸ë“œë¥¼ ê°€ë¦¬í‚¤ëŠ” ë³€ìˆ˜,ì°¸ì¡°ê°’
+    private Node right;//ì˜¤ë¥¸ìª½ ë…¸ë“œ
     
-    public Node(Object input) {//°´Ã¼»ı¼º ÃÊ±âÈ­
+    public Node(Object input) {//ê°ì²´ìƒì„± ì´ˆê¸°í™”
         this.data = input;
-        this.left = null;//»ı¼º½Ã´Â ¹ÌÁ¤
+        this.left = null;//ìƒì„±ì‹œëŠ” ë¯¸ì •
         this.right = null;
     }
     public Node() {

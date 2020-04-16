@@ -1,24 +1,24 @@
-package a_±âº»¾Ë°í¸®Áò;
+ï»¿package a_ê¸°ë³¸ì•Œê³ ë¦¬ì¦˜;
 import java.util.Scanner;
-// 1, 2, ¡¦, nÀÇ ÇÕÀ» ±¸ÇÕ´Ï´Ù.
-class j_SumWhile_1ºÎÅÍn±îÁöÀÇÇÕ {
+// 1, 2, â€¦, nì˜ í•©ì„ êµ¬í•©ë‹ˆë‹¤.
+class j_SumWhile_1ë¶€í„°nê¹Œì§€ì˜í•© {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		System.out.println("1ºÎÅÍ n±îÁöÀÇ ÇÕÀ»±¸ÇÕ´Ï´Ù.");
+		System.out.println("1ë¶€í„° nê¹Œì§€ì˜ í•©ì„êµ¬í•©ë‹ˆë‹¤.");
 		
- 		System.out.print("nÀÇ Á¤¼ö °ªÀ» ÀÔ·ÂÇÏ¼¼¿ä£º");
+ 		System.out.print("nì˜ ì •ìˆ˜ ê°’ì„ ì…ë ¥í•˜ì„¸ìš”ï¼š");
  		
 		int n = stdIn.nextInt();
 
-		int sum = 0;				// ÇÕ
+		int sum = 0;				// í•©
 		int i = 1;
 
-		while (i <= n) {			// i°¡ n ÀÌÇÏ¸é ¹İº¹ÇÕ´Ï´Ù.
-			sum += i;				// sum¿¡ i¸¦ ´õÇÕ´Ï´Ù.
-			i++;					// i °ªÀ» 1¸¸Å­ Áõ°¡½ÃÅµ´Ï´Ù.
+		while (i <= n) {			// iê°€ n ì´í•˜ë©´ ë°˜ë³µí•©ë‹ˆë‹¤.
+			sum += i;				// sumì— ië¥¼ ë”í•©ë‹ˆë‹¤.
+			i++;					// i ê°’ì„ 1ë§Œí¼ ì¦ê°€ì‹œí‚µë‹ˆë‹¤.
 		}
-		System.out.println("1ºÎÅÍ " + n + "±îÁöÀÇ ÇÕÀº " + sum + "ÀÔ´Ï´Ù.");
-		System.out.println("iÀÇ °ªÀº " + i + "°¡(ÀÌ) µÇ¾ú½À´Ï´Ù.");
+		System.out.println("1ë¶€í„° " + n + "ê¹Œì§€ì˜ í•©ì€ " + sum + "ì…ë‹ˆë‹¤.");
+		System.out.println("iì˜ ê°’ì€ " + i + "ê°€(ì´) ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	}
 }

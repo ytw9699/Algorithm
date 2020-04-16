@@ -1,16 +1,16 @@
-package Array;
+ï»¿package Array;
 
 public class a01_array_sum {
 	
 public static void main(String[] args) {
 		
-		int [] arr = {1,2,3,4,5,6,7,8,9,10};//¹è¿­µµ ÀÚ·á±¸Á¶ 1~10±îÁöÀÇ Á¤¼ö¸¦ ÀúÀå
+		int [] arr = {1,2,3,4,5,6,7,8,9,10};//ë°°ì—´ë„ ìë£Œêµ¬ì¡° 1~10ê¹Œì§€ì˜ ì •ìˆ˜ë¥¼ ì €ì¥
 
 		int sum = 0;
 		
-		for(int i=0; i<10; i++) //for¹®À» ÀÌ¿ë, 1~10±îÁöÀÇ ÇÕÀ» ±¸ÇÏ´Â ¾Ë°í¸®Áò
+		for(int i=0; i<10; i++) //forë¬¸ì„ ì´ìš©, 1~10ê¹Œì§€ì˜ í•©ì„ êµ¬í•˜ëŠ” ì•Œê³ ë¦¬ì¦˜
 			sum = sum + arr[i];
 		
-		System.out.println(sum);//55 Ãâ·Â
+		System.out.println(sum);//55 ì¶œë ¥
 	}
 }

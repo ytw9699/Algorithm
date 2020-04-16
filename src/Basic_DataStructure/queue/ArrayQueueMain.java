@@ -1,6 +1,6 @@
-package queue;
+﻿package queue;
 public class ArrayQueueMain {
-    public static void main(String[] args) {//�迭 ��� ť
+    public static void main(String[] args) {//배열 기반 큐
     	ArrayQueue queue = new ArrayQueue();
     	
     	System.out.println("=offer=");

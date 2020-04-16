@@ -1,4 +1,4 @@
-package b_2000¹ø´ë;
+ï»¿package b_2000ë²ˆëŒ€;
 
 import java.util.LinkedList;
 import java.util.Scanner;

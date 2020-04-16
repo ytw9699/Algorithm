@@ -1,4 +1,4 @@
-package Ch_01_Arrays_and_Strings;
+ï»¿package Ch_01_Arrays_and_Strings;
 
 public class Question05_1 {
 
@@ -9,17 +9,17 @@ public class Question05_1 {
 				if (foundDifference) {
 					return false;
 				}
-				foundDifference = true;//´Ü ÇÑÂ÷·ÊÀÇ true¸¸ ³ª¿Í¾ßÇÔ//ÇÏ³ª¸¸ ±³Ã¼µÇ¾ßÇÔ
+				foundDifference = true;//ë‹¨ í•œì°¨ë¡€ì˜ trueë§Œ ë‚˜ì™€ì•¼í•¨//í•˜ë‚˜ë§Œ êµì²´ë˜ì•¼í•¨
 			}
 		}
 		return true;
 	}
-	//s1¿¡ ¹®ÀÚÇÏ³ª¸¦ »ğÀÔÇØ¼­ s2¸¦¸¸µé¼öÀÖ´ÂÁö È®ÀÎ//»èÁ¦´Â ¹İ´ë·Î »ğÀÔÀ¸·Î ´ë½ÅÇØµµµÊ
+	//s1ì— ë¬¸ìí•˜ë‚˜ë¥¼ ì‚½ì…í•´ì„œ s2ë¥¼ë§Œë“¤ìˆ˜ìˆëŠ”ì§€ í™•ì¸//ì‚­ì œëŠ” ë°˜ëŒ€ë¡œ ì‚½ì…ìœ¼ë¡œ ëŒ€ì‹ í•´ë„ë¨
 	public static boolean oneEditInsert(String s1, String s2) {
 		int index1 = 0;
 		int index2 = 0;
 		while (index2 < s2.length() && index1 < s1.length()) {
-			if (s1.charAt(index1) != s2.charAt(index2)) {//2°³ÀÌ»ó ´Ù¸¥¹®ÀÚ¸¦ °¡Áö°íÀÖ´ÂÁöÈ®ÀÎ
+			if (s1.charAt(index1) != s2.charAt(index2)) {//2ê°œì´ìƒ ë‹¤ë¥¸ë¬¸ìë¥¼ ê°€ì§€ê³ ìˆëŠ”ì§€í™•ì¸
 				if (index1 != index2) {
 					return false;
 				}		
@@ -49,9 +49,9 @@ public class Question05_1 {
 		boolean isOneEdit = oneEditAway(a, b);
 		//System.out.println(a.charAt(0) == a.charAt(0));
 		if(isOneEdit) {
-			System.out.println(a + ", " + b + " (true) "+" ¹®ÀÚ¿­À» °°°Ô ÇÏ±â À§ÇÑ ÆíÁıÀÇ È½¼ö°¡ 1È¸ ÀÌÇÏÀÔ´Ï´Ù"); 
+			System.out.println(a + ", " + b + " (true) "+" ë¬¸ìì—´ì„ ê°™ê²Œ í•˜ê¸° ìœ„í•œ í¸ì§‘ì˜ íšŸìˆ˜ê°€ 1íšŒ ì´í•˜ì…ë‹ˆë‹¤"); 
 		}else {
-			System.out.println(a + ", " + b + " (false) "+" ¹®ÀÚ¿­À» °°°Ô ÇÏ±â À§ÇÑ ÆíÁıÀÇ È½¼ö°¡ 2È¸ ÀÌ»óÀÔ´Ï´Ù");
+			System.out.println(a + ", " + b + " (false) "+" ë¬¸ìì—´ì„ ê°™ê²Œ í•˜ê¸° ìœ„í•œ í¸ì§‘ì˜ íšŸìˆ˜ê°€ 2íšŒ ì´ìƒì…ë‹ˆë‹¤");
 		}
 	}
 

@@ -1,14 +1,14 @@
-package Search;
+ï»¿package Search;
 public class a03_LinearSearch {
 	static int LSearch(int arr[], int length, int target)
 	{
 		int i;
-		for(i=0; i<length; i++) {//ÁÖº¯¿¬»êÀÚµéÀÇ ¿¬»êÈ½¼ö´Â Áß½ÉÀÌ µÇ´Â ¿¬»êÈ½¼ö¿¡ ÀÇÁ¸ÀûÀÌ´Ù
-		//À§ ¿¬»êÀÚÀÇ < ¿Í ++´Â   ¹Ø if¹®ÀÇ ¿¬»êÀÚ ==ÀÌ true¸¦ ¹ÝÈ¯ÇÒ¶§±îÁö ¼öÇàµÇ±â ¶§¹®¿¡ ÀÇÁ¸ÀûÀÌ´Ù.
-			if(arr[i]==target)//Áß½ÉÀÌ µÇ´Â ¿¬»ê //´ë»óÀÌ ¸Â´ÂÁö ¼øÂ÷Àû È®ÀÎ ÀÛ¾÷
-				return i;    // Ã£Àº ´ë»óÀÇ ÀÎµ¦½º °ª ¹ÝÈ¯
+		for(i=0; i<length; i++) {//ì£¼ë³€ì—°ì‚°ìžë“¤ì˜ ì—°ì‚°íšŸìˆ˜ëŠ” ì¤‘ì‹¬ì´ ë˜ëŠ” ì—°ì‚°íšŸìˆ˜ì— ì˜ì¡´ì ì´ë‹¤
+		//ìœ„ ì—°ì‚°ìžì˜ < ì™€ ++ëŠ”   ë°‘ ifë¬¸ì˜ ì—°ì‚°ìž ==ì´ trueë¥¼ ë°˜í™˜í• ë•Œê¹Œì§€ ìˆ˜í–‰ë˜ê¸° ë•Œë¬¸ì— ì˜ì¡´ì ì´ë‹¤.
+			if(arr[i]==target)//ì¤‘ì‹¬ì´ ë˜ëŠ” ì—°ì‚° //ëŒ€ìƒì´ ë§žëŠ”ì§€ ìˆœì°¨ì  í™•ì¸ ìž‘ì—…
+				return i;    // ì°¾ì€ ëŒ€ìƒì˜ ì¸ë±ìŠ¤ ê°’ ë°˜í™˜
 		}
-		return -1;    // Ã£Áö ¸øÇßÀ½À» ÀÇ¹ÌÇÏ´Â °ª ¹ÝÈ¯
+		return -1;    // ì°¾ì§€ ëª»í–ˆìŒì„ ì˜ë¯¸í•˜ëŠ” ê°’ ë°˜í™˜
 	}
 	public static void main(String[] args) {
 		int arr[]={3, 5, 2, 4, 9};
@@ -16,8 +16,8 @@ public class a03_LinearSearch {
 
 		idx=LSearch(arr, arr.length, 4);
 		if(idx==-1)
-			System.out.println("Å½»ö ½ÇÆÐ");
+			System.out.println("íƒìƒ‰ ì‹¤íŒ¨");
 		else
-			System.out.printf("Å¸°ÙÀÌ ÀúÀåµÈ ÀÎµ¦½º: %d \n", idx);
+			System.out.printf("íƒ€ê²Ÿì´ ì €ìž¥ëœ ì¸ë±ìŠ¤: %d \n", idx);
 	}
 }

@@ -1,9 +1,9 @@
-package Ch_01_Arrays_and_Strings;
+ï»¿package Ch_01_Arrays_and_Strings;
 
 import CtCILibrary.AssortedMethods;
 
 public class Question08_2 {
-	public static void nullifyRow(int[][] matrix, int row) {//11.±× ÇàÀ» ÀüºÎ 0À¸·Î ¹Ù²Û´Ù
+	public static void nullifyRow(int[][] matrix, int row) {//11.ê·¸ í–‰ì„ ì „ë¶€ 0ìœ¼ë¡œ ë°”ê¾¼ë‹¤
 		for (int j = 0; j < matrix[0].length; j++) {
 			matrix[row][j] = 0;
 		}		
@@ -18,24 +18,24 @@ public class Question08_2 {
 		boolean colHasZero = false;		
 		
 		for (int j = 0; j < matrix[0].length; j++) {//
-			if (matrix[0][j] == 0) {//3.Ã¹¹øÂ° Çà¿¡ 0ÀÌÀÖ´ÂÁö È®ÀÎ
-				rowHasZero = true;//4.ÇÏ³ª¶óµµ ÀÖ´Ù¸é 
+			if (matrix[0][j] == 0) {//3.ì²«ë²ˆì§¸ í–‰ì— 0ì´ìˆëŠ”ì§€ í™•ì¸
+				rowHasZero = true;//4.í•˜ë‚˜ë¼ë„ ìˆë‹¤ë©´ 
 				break;
 			}
 		}		
 		
 		for (int i = 0; i < matrix.length; i++) {
-			if (matrix[i][0] == 0) {//5.Ã¹¹øÂ° ¿­¿¡ 0ÀÌÀÖ´ÂÁö È®ÀÎ
-				colHasZero = true;//6.ÇÏ³ª¶óµµ ÀÖ´Ù¸é 
+			if (matrix[i][0] == 0) {//5.ì²«ë²ˆì§¸ ì—´ì— 0ì´ìˆëŠ”ì§€ í™•ì¸
+				colHasZero = true;//6.í•˜ë‚˜ë¼ë„ ìˆë‹¤ë©´ 
 				break;
 			}
 		}		
 		
 		for (int i = 1; i < matrix.length; i++) {
 			for (int j = 1; j < matrix[0].length;j++) {
-				if (matrix[i][j] == 0) {//7.³ª¸ÓÁö ¹è¿­¿¡ 0ÀÌÀÖ´ÂÁö È®ÀÎÈÄ
-					matrix[i][0] = 0; //8.Ã¹Â° ¿­À» 0À¸·Î ¹Ù²Û´Ù..
-					matrix[0][j] = 0;//9. Ã¹Â° ÇàÀ» 0À¸·Î ¹Ù²Û´Ù
+				if (matrix[i][j] == 0) {//7.ë‚˜ë¨¸ì§€ ë°°ì—´ì— 0ì´ìˆëŠ”ì§€ í™•ì¸í›„
+					matrix[i][0] = 0; //8.ì²«ì§¸ ì—´ì„ 0ìœ¼ë¡œ ë°”ê¾¼ë‹¤..
+					matrix[0][j] = 0;//9. ì²«ì§¸ í–‰ì„ 0ìœ¼ë¡œ ë°”ê¾¼ë‹¤
 		 		}
 			}
 		}		
@@ -44,14 +44,14 @@ public class Question08_2 {
 		
 		for (int i = 1; i < matrix.length; i++) {
 			if (matrix[i][0] == 0) {
-				nullifyRow(matrix, i);//10.Ã¹¹øÂ° ¿­¿¡¼­ 0ÀÌÀÖ´Â ÇàÀ» ¸ğµÎ 0À¸·Î ¹Ù²Û´Ù
+				nullifyRow(matrix, i);//10.ì²«ë²ˆì§¸ ì—´ì—ì„œ 0ì´ìˆëŠ” í–‰ì„ ëª¨ë‘ 0ìœ¼ë¡œ ë°”ê¾¼ë‹¤
 			}
 		}		
 		 	System.out.println();
 		 	AssortedMethods.printMatrix(matrix);
 			
 		for (int j = 1; j < matrix[0].length; j++) {
-			if (matrix[0][j] == 0) {//11.Ã¹¹øÂ° Çà¿¡¼­ 0ÀÌÀÖ´Â ¿­À» ¸ğµÎ 0À¸·Î ¹Ù²Û´Ù
+			if (matrix[0][j] == 0) {//11.ì²«ë²ˆì§¸ í–‰ì—ì„œ 0ì´ìˆëŠ” ì—´ì„ ëª¨ë‘ 0ìœ¼ë¡œ ë°”ê¾¼ë‹¤
 				nullifyColumn(matrix, j);
 			}
 		}	
@@ -59,21 +59,21 @@ public class Question08_2 {
 			System.out.println();
 		 	AssortedMethods.printMatrix(matrix);
 		
-		if (rowHasZero) {//12.Ã¹¹øÂ°Çà¿¡ 0ÀÌ ÇÏ³ª¶óµµÀÖ¾ú´Ù¸é
-			nullifyRow(matrix, 0);//13. Ã¹¹øÂ° ÇàÀ» ¸ğµÎ 0À¸·Î ¹Ù²Û´Ù
+		if (rowHasZero) {//12.ì²«ë²ˆì§¸í–‰ì— 0ì´ í•˜ë‚˜ë¼ë„ìˆì—ˆë‹¤ë©´
+			nullifyRow(matrix, 0);//13. ì²«ë²ˆì§¸ í–‰ì„ ëª¨ë‘ 0ìœ¼ë¡œ ë°”ê¾¼ë‹¤
 		}
 		
 			System.out.println();
 		 	AssortedMethods.printMatrix(matrix);
 		
-		if (colHasZero) {//14.Ã¹¹øÂ° ¿­¿¡ 0ÀÌ ÇÏ³ª¶óµµ ÀÖ´Ù¸é 
-			nullifyColumn(matrix, 0);//15. Ã¹¹øÂ° ¿­À» ¸ğµÎ 0À¸·Î ¹Ù²Û´Ù
+		if (colHasZero) {//14.ì²«ë²ˆì§¸ ì—´ì— 0ì´ í•˜ë‚˜ë¼ë„ ìˆë‹¤ë©´ 
+			nullifyColumn(matrix, 0);//15. ì²«ë²ˆì§¸ ì—´ì„ ëª¨ë‘ 0ìœ¼ë¡œ ë°”ê¾¼ë‹¤
 		}
 	}	
 	public static void main(String[] args) {
 		int nrows = 4;
 		int ncols = 4;
-		int[][] matrix = AssortedMethods.randomMatrix(nrows, ncols, -3, 3);//1.¹è¿­¸¸µé°í	
+		int[][] matrix = AssortedMethods.randomMatrix(nrows, ncols, -3, 3);//1.ë°°ì—´ë§Œë“¤ê³ 	
 
 		AssortedMethods.printMatrix(matrix);
 		
@@ -81,8 +81,8 @@ public class Question08_2 {
 		
 		System.out.println();
 		
-		AssortedMethods.printMatrix(matrix);//16.ÃÖÁ¾Ãâ·Â
+		AssortedMethods.printMatrix(matrix);//16.ìµœì¢…ì¶œë ¥
 	}
 }
-//ÀÌ·¯ÇÑ ¼ø¼­·ÎÇØ¾ß ¸ğµç °÷ÀÌ ´Ù 0À¸·Î ¾È¹Ù²ï´Ù
-//°ø°£º¹Àâµµ´Â O(1) ¹è¿­ÀÌ¾Æ´Ñ º¯¼ö¸¦ »ç¿ëÇØ¼­?
+//ì´ëŸ¬í•œ ìˆœì„œë¡œí•´ì•¼ ëª¨ë“  ê³³ì´ ë‹¤ 0ìœ¼ë¡œ ì•ˆë°”ë€ë‹¤
+//ê³µê°„ë³µì¡ë„ëŠ” O(1) ë°°ì—´ì´ì•„ë‹Œ ë³€ìˆ˜ë¥¼ ì‚¬ìš©í•´ì„œ?

@@ -1,25 +1,25 @@
-package Search;
-public class a04_BinarySearch {//ÀÌÁøÅ½»ö
+ï»¿package Search;
+public class a04_BinarySearch {//ì´ì§„íƒìƒ‰
 	static int BSearch(int ar[], int len, int target)	{
-		int first=0;   // Å½»ö ´ë»óÀÇ ½ÃÀÛ ÀÎµ¦½º °ª
-		int last=len-1;   // Å½»ö ´ë»óÀÇ ¸¶Áö¸· ÀÎµ¦½º °ª
+		int first=0;   // íƒìƒ‰ ëŒ€ìƒì˜ ì‹œì‘ ì¸ë±ìŠ¤ ê°’
+		int last=len-1;   // íƒìƒ‰ ëŒ€ìƒì˜ ë§ˆì§€ë§‰ ì¸ë±ìŠ¤ ê°’
 		int mid; 
 
 		while(first<=last){
-			mid=(first+last)/2;   // Å½»ö ´ë»óÀÇ Áß¾ÓÀ» Ã£´Â´Ù. 
+			mid=(first+last)/2;   // íƒìƒ‰ ëŒ€ìƒì˜ ì¤‘ì•™ì„ ì°¾ëŠ”ë‹¤. 
 
-			if(target==ar[mid]){//Áß½ÉÀÌ µÇ´Â ÇÙ½É ¿¬»ê -¿¬»êÈ½¼ö¿Í °ü·ÃµÈ°Í
-				// Áß¾Ó¿¡ ÀúÀåµÈ °ÍÀÌ Å¸°ÙÀÌ¶ó¸é
-				return mid;//Å½»ö¿Ï·á,ÀÎµ¦½º ¹İÈ¯
+			if(target==ar[mid]){//ì¤‘ì‹¬ì´ ë˜ëŠ” í•µì‹¬ ì—°ì‚° -ì—°ì‚°íšŸìˆ˜ì™€ ê´€ë ¨ëœê²ƒ
+				// ì¤‘ì•™ì— ì €ì¥ëœ ê²ƒì´ íƒ€ê²Ÿì´ë¼ë©´
+				return mid;//íƒìƒ‰ì™„ë£Œ,ì¸ë±ìŠ¤ ë°˜í™˜
 			}
-			else  {  // Å¸°ÙÀÌ ¾Æ´Ï¶ó¸é 
+			else  {  // íƒ€ê²Ÿì´ ì•„ë‹ˆë¼ë©´ 
 				if(target<ar[mid])   
-					last=mid-1;   // µŞºÎºĞÀ» Å½»ö ´ë»ó¿¡¼­ Á¦¿Ü
+					last=mid-1;   // ë’·ë¶€ë¶„ì„ íƒìƒ‰ ëŒ€ìƒì—ì„œ ì œì™¸
 				else
-					first=mid+1;   // ¾ÕºÎºĞÀ» Å½»ö ´ë»ó¿¡¼­ Á¦¿Ü
+					first=mid+1;   // ì•ë¶€ë¶„ì„ íƒìƒ‰ ëŒ€ìƒì—ì„œ ì œì™¸
 			}
 		}
-		return -1;   // Ã£Áö ¸øÇßÀ» ¶§ ¹İÈ¯µÇ´Â °ª -1
+		return -1;   // ì°¾ì§€ ëª»í–ˆì„ ë•Œ ë°˜í™˜ë˜ëŠ” ê°’ -1
 	} 
 	public static void main(String[] args) {
 		int arr[]={1, 3, 5, 7, 9, 12, 21, 23, 27};
@@ -27,9 +27,9 @@ public class a04_BinarySearch {//ÀÌÁøÅ½»ö
 		
 		idx=BSearch(arr, arr.length, 3);
 		if(idx==-1)
-			System.out.println("¹è¿­¾È¿¡ Ã£°íÀÚ ÇÏ´Â°ªÀÌ ¾ø½À´Ï´Ù.");
+			System.out.println("ë°°ì—´ì•ˆì— ì°¾ê³ ì í•˜ëŠ”ê°’ì´ ì—†ìŠµë‹ˆë‹¤.");
 		else
-			System.out.printf("Å¸°ÙÀÌ ÀúÀåµÈ ÀÎµ¦½º: %d \n", idx);
+			System.out.printf("íƒ€ê²Ÿì´ ì €ì¥ëœ ì¸ë±ìŠ¤: %d \n", idx);
 	}
 }
 	

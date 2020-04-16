@@ -1,16 +1,16 @@
-package queue;
-public class ArrayQueue {//¹è¿­ ±â¹İ ¿øÇü Å¥
+ï»¿package queue;
+public class ArrayQueue {//ë°°ì—´ ê¸°ë°˜ ì›í˜• í
 
-		int front=0;//Ãâ±¸ 0À¸·Î ÃÊ±âÈ­
-		int rear=0;//ÀÔ±¸ 0À¸·Î ÃÊ±âÈ­
-		int QUE_LEN=4;//¹è¿­ Å©±â
+		int front=0;//ì¶œêµ¬ 0ìœ¼ë¡œ ì´ˆê¸°í™”
+		int rear=0;//ì…êµ¬ 0ìœ¼ë¡œ ì´ˆê¸°í™”
+		int QUE_LEN=4;//ë°°ì—´ í¬ê¸°
 		
 		Object[] queArr = new Object[QUE_LEN];
 		
-	public boolean offer(Object data) {//Ãß°¡
-		if(NextIdx(rear) == front)//ÀÔ±¸¿Í Ãâ±¸ÀÇ ÀÎµ¦½º°¡ ÇÏ³ª Â÷ÀÌ¶ó¸é
+	public boolean offer(Object data) {//ì¶”ê°€
+		if(NextIdx(rear) == front)//ì…êµ¬ì™€ ì¶œêµ¬ì˜ ì¸ë±ìŠ¤ê°€ í•˜ë‚˜ ì°¨ì´ë¼ë©´
 		{
-			System.out.println("Å¥°¡ ²ËÃ£½À´Ï´Ù.");
+			System.out.println("íê°€ ê½‰ì°¾ìŠµë‹ˆë‹¤.");
 			return false;
 		}
 		rear = NextIdx(rear);
@@ -18,34 +18,34 @@ public class ArrayQueue {//¹è¿­ ±â¹İ ¿øÇü Å¥
 		return true;
 	}
 	
-	public Object poll() {//»èÁ¦+¹İÈ¯
+	public Object poll() {//ì‚­ì œ+ë°˜í™˜
 		if(isEmpty())
 		{
-			System.out.println("Å¥°¡ ºñ¾îÀÖ½À´Ï´Ù.");
+			System.out.println("íê°€ ë¹„ì–´ìˆìŠµë‹ˆë‹¤.");
 			return null;
 		}
 		front = NextIdx(front);
 		return queArr[front];
 	}
 	
-	public Object peek() {//¹İÈ¯
+	public Object peek() {//ë°˜í™˜
 		if(isEmpty())
 		{
-			System.out.println("Å¥°¡ ºñ¾îÀÖ½À´Ï´Ù.");
+			System.out.println("íê°€ ë¹„ì–´ìˆìŠµë‹ˆë‹¤.");
 			return null;
-			//System.exit(0);//½Ã½ºÅÛÁ¾·á
+			//System.exit(0);//ì‹œìŠ¤í…œì¢…ë£Œ
 		}
 		return queArr[NextIdx(front)];	
 	}
 	
 	public int NextIdx(int Idx)
 	{
-		if(Idx == QUE_LEN-1)//¹è¿­Å©±â-1
-			return 0;//¹è¿­ÀÇ Ã¹¹øÂ° ÀÎµ¦½º
+		if(Idx == QUE_LEN-1)//ë°°ì—´í¬ê¸°-1
+			return 0;//ë°°ì—´ì˜ ì²«ë²ˆì§¸ ì¸ë±ìŠ¤
 		else
 			return Idx+1;
 	}
 	public boolean isEmpty() {
-		return front == rear;//ÀÎµ¦½ºÀÇ À§Ä¡°¡ °°´Ù¸é Å¥°¡ ºñ¾îÀÖ´Â°ÍÀÌ´Ù.
+		return front == rear;//ì¸ë±ìŠ¤ì˜ ìœ„ì¹˜ê°€ ê°™ë‹¤ë©´ íê°€ ë¹„ì–´ìˆëŠ”ê²ƒì´ë‹¤.
 	}
 }

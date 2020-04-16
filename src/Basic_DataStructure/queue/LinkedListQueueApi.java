@@ -1,17 +1,17 @@
-package queue;
+ï»¿package queue;
 import java.util.LinkedList;
 
 public class LinkedListQueueApi {
     public static void main(String[] args) {
     	LinkedList<String> queue = new LinkedList();
-    	//Å¥ ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÑ LinkedList
+    	//í ì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•œ LinkedList
     	queue.offer("0");
     	queue.offer("1");
     	queue.offer("2");
 		
 		System.out.println("= java queue api peek=");
 		
-		System.out.println(queue.peek());//¸¶Áö¸· °ª ¸®ÅÏ
+		System.out.println(queue.peek());//ë§ˆì§€ë§‰ ê°’ ë¦¬í„´
 		
 		System.out.println("= java queue api poll=");
 		

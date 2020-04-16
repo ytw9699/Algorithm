@@ -1,4 +1,4 @@
-package Ch_01_Arrays_and_Strings;
+ï»¿package Ch_01_Arrays_and_Strings;
 
 public class Question06_1 {	
 	public static String compressBad(String str) {
@@ -7,7 +7,7 @@ public class Question06_1 {
 		for (int i = 0; i < str.length(); i++) {
 			countConsecutive++;
 			
-			//´ÙÀ½ ¹®ÀÚ¿Í ÇöÀç¹®ÀÚ°¡ °°Áö ¾Ê´Ù¸é ÇöÀç ¹®ÀÚ¸¦ °á°ú ¹®ÀÚ¿­¿¡ Ãß°¡ÇØÁØ´Ù
+			//ë‹¤ìŒ ë¬¸ìžì™€ í˜„ìž¬ë¬¸ìžê°€ ê°™ì§€ ì•Šë‹¤ë©´ í˜„ìž¬ ë¬¸ìžë¥¼ ê²°ê³¼ ë¬¸ìžì—´ì— ì¶”ê°€í•´ì¤€ë‹¤
 			if (i + 1 >= str.length() || str.charAt(i) != str.charAt(i + 1)) {
 				compressedString += "" + str.charAt(i) + countConsecutive;
 				countConsecutive = 0;

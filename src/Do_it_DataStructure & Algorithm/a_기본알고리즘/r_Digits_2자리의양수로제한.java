@@ -1,19 +1,19 @@
-package a_±âº»¾Ë°í¸®Áò;
+ï»¿package a_ê¸°ë³¸ì•Œê³ ë¦¬ì¦˜;
 import java.util.Scanner;
-// 2ÀÚ¸®ÀÇ ¾ç¼ö(10 ~ 99)¸¦ ÀÔ·ÂÇÕ´Ï´Ù.
-class r_Digits_2ÀÚ¸®ÀÇ¾ç¼ö·ÎÁ¦ÇÑ {
+// 2ìë¦¬ì˜ ì–‘ìˆ˜(10 ~ 99)ë¥¼ ì…ë ¥í•©ë‹ˆë‹¤.
+class r_Digits_2ìë¦¬ì˜ì–‘ìˆ˜ë¡œì œí•œ {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 		
 		int no;
 
-		System.out.println("2ÀÚ¸®ÀÇ Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("2ìë¦¬ì˜ ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 
 		do {
-			System.out.print("ÀÔ·Â£º");
+			System.out.print("ì…ë ¥ï¼š");
 			no = stdIn.nextInt();
 		} while (no < 10 || no > 99);
 
-		System.out.println("º¯¼ö noÀÇ °ªÀº " + no + "°¡(ÀÌ) µÇ¾ú½À´Ï´Ù.");
+		System.out.println("ë³€ìˆ˜ noì˜ ê°’ì€ " + no + "ê°€(ì´) ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	}
 }

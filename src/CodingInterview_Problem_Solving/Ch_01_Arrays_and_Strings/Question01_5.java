@@ -1,4 +1,4 @@
-package Ch_01_Arrays_and_Strings;
+ï»¿package Ch_01_Arrays_and_Strings;
 
 public class Question01_5 {
 
@@ -14,7 +14,7 @@ public class Question01_5 {
 			if ((checker & (1 << val)) > 0) 
 				return false;
 			
-			checker |= (1 << val);//1,3,7,15 ¿ÞÂÊ°ú ¿À¸¥ÂÊÀ» ¿¬»êÇÑÈÄ ¿ÞÂÊ¿¡ ´ëÀÔ
+			checker |= (1 << val);//1,3,7,15 ì™¼ìª½ê³¼ ì˜¤ë¥¸ìª½ì„ ì—°ì‚°í•œí›„ ì™¼ìª½ì— ëŒ€ìž…
 		}
 		return true;
 	}

@@ -1,4 +1,4 @@
-package Ch_01_Arrays_and_Strings;
+ï»¿package Ch_01_Arrays_and_Strings;
 
 public class Question02_2 {	
 		public static boolean permutation(String s, String t) {
@@ -6,17 +6,17 @@ public class Question02_2 {
 			if (s.length() != t.length()) 
 				return false; // Permutations must be same length
 			
-			int[] letters = new int[128]; // Assumption: ASCII//¸éÁ¢°ü Áú¹®ÇÊ¿ä ¾Æ½ºÅ°ÄÚµåÀÎÁö À¯´ÏÄÚµåÀÎÁö
+			int[] letters = new int[128]; // Assumption: ASCII//ë©´ì ‘ê´€ ì§ˆë¬¸í•„ìš” ì•„ìŠ¤í‚¤ì½”ë“œì¸ì§€ ìœ ë‹ˆì½”ë“œì¸ì§€
 			
 			for (int i = 0; i < s.length(); i++) {
 				//System.out.println((int)s.charAt(i));
-				letters[s.charAt(i)]++;//charÀÌ int·Î ¹Ù²î´Âµí
+				letters[s.charAt(i)]++;//charì´ intë¡œ ë°”ë€ŒëŠ”ë“¯
 			}
 			  
 			for (int i = 0; i < t.length(); i++) {
 				int c = (int) t.charAt(i);
 				letters[c]--;
-			    if (letters[c] < 0) {//+¸¦ ÇØÁØ´ÙÀ½¿¡ -¸¦ÇØÁÖ¸é 0ÀÌµÇ¾ß ÇÏ´Âµ¥ 0º¸´Ù ÀÛ´Ù´Â°Ç °°Àº ¹®ÀÚ¿­ÀÌ ¾Æ´Ñ°Å
+			    if (letters[c] < 0) {//+ë¥¼ í•´ì¤€ë‹¤ìŒì— -ë¥¼í•´ì£¼ë©´ 0ì´ë˜ì•¼ í•˜ëŠ”ë° 0ë³´ë‹¤ ì‘ë‹¤ëŠ”ê±´ ê°™ì€ ë¬¸ìì—´ì´ ì•„ë‹Œê±°
 			    	return false;
 			    }
 			}

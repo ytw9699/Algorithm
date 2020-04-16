@@ -1,12 +1,12 @@
-package Recursive;
+ï»¿package Recursive;
 	public class b_02_Factorial 
 {
 	static int Factorial(int n)
 	{
-		   if(n==0)//Å»Ãâ Á¶°Ç
-		       return 1;//Å»Ãâ
+		   if(n==0)//íƒˆì¶œ ì¡°ê±´
+		       return 1;//íƒˆì¶œ
 		   else
-		       return n * Factorial(n-1);//ÀÚ±âÀÚ½ÅÀ» ´Ù½Ã È£Ãâ
+		       return n * Factorial(n-1);//ìê¸°ìì‹ ì„ ë‹¤ì‹œ í˜¸ì¶œ
 	}
 		public static void main(String[] args) 
 		{

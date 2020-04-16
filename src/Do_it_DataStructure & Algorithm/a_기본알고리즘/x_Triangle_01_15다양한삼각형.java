@@ -1,62 +1,62 @@
-package a_±âº»¾Ë°í¸®Áò;
+ï»¿package a_ê¸°ë³¸ì•Œê³ ë¦¬ì¦˜;
 import java.util.Scanner;
-// 4°¡ÁöÀÇ Á÷°¢»ï°¢Çü ¸ğ¾çÀ¸·Î ³ªÅ¸³¿
-public class x_Triangle_01_15´Ù¾çÇÑ»ï°¢Çü {
-	static void triangleLB(int n) {// ¿ŞÂÊ ¾Æ·¡°¡ Á÷°¢ÀÎ ÀÌµîº¯»ï°¢ÇüÀ» Ãâ·Â
-		for (int i = 1; i <= n; i++) { 				// iÇà (i = 1, 2, ¡¦ ,n)
-			for (int j = 1; j <= i; j++) 			// i°³ÀÇ '*'¸¦ ³ªÅ¸³¿
+// 4ê°€ì§€ì˜ ì§ê°ì‚¼ê°í˜• ëª¨ì–‘ìœ¼ë¡œ ë‚˜íƒ€ëƒ„
+public class x_Triangle_01_15ë‹¤ì–‘í•œì‚¼ê°í˜• {
+	static void triangleLB(int n) {// ì™¼ìª½ ì•„ë˜ê°€ ì§ê°ì¸ ì´ë“±ë³€ì‚¼ê°í˜•ì„ ì¶œë ¥
+		for (int i = 1; i <= n; i++) { 				// ií–‰ (i = 1, 2, â€¦ ,n)
+			for (int j = 1; j <= i; j++) 			// iê°œì˜ '*'ë¥¼ ë‚˜íƒ€ëƒ„
 				System.out.print('*');
-			System.out.println(); 					// °³Çà(ÁÙº¯È¯)
+			System.out.println(); 					// ê°œí–‰(ì¤„ë³€í™˜)
 		}
 	}
-	static void triangleLU(int n) {	// ¿ŞÂÊ À§°¡ Á÷°¢ÀÎ ÀÌµîº¯»ï°¢ÇüÀ» Ãâ·Â
-		for (int i = 1; i <= n; i++) { 				// iÇà (i = 1, 2, ¡¦ ,n)
-			for (int j = 1; j <= n - i + 1; j++) 	// n-i+1°³ÀÇ '*'¸¦ ³ªÅ¸³¿
+	static void triangleLU(int n) {	// ì™¼ìª½ ìœ„ê°€ ì§ê°ì¸ ì´ë“±ë³€ì‚¼ê°í˜•ì„ ì¶œë ¥
+		for (int i = 1; i <= n; i++) { 				// ií–‰ (i = 1, 2, â€¦ ,n)
+			for (int j = 1; j <= n - i + 1; j++) 	// n-i+1ê°œì˜ '*'ë¥¼ ë‚˜íƒ€ëƒ„
 				System.out.print('*');
-			System.out.println(); 					// °³Çà(ÁÙº¯È¯)
+			System.out.println(); 					// ê°œí–‰(ì¤„ë³€í™˜)
 		}
 	}
-	static void triangleRU(int n) {// ¿À¸¥ÂÊ À§°¡ Á÷°¢ÀÎ ÀÌµîº¯»ï°¢ÇüÀ» Ãâ·Â
-		for (int i = 1; i <= n; i++) { 				// iÇà (i = 1, 2, ¡¦ ,n)
-			for (int j = 1; j <= i - 1; j++) { 		// i-1°³ÀÇ ' '¸¦ ³ªÅ¸³¿
+	static void triangleRU(int n) {// ì˜¤ë¥¸ìª½ ìœ„ê°€ ì§ê°ì¸ ì´ë“±ë³€ì‚¼ê°í˜•ì„ ì¶œë ¥
+		for (int i = 1; i <= n; i++) { 				// ií–‰ (i = 1, 2, â€¦ ,n)
+			for (int j = 1; j <= i - 1; j++) { 		// i-1ê°œì˜ ' 'ë¥¼ ë‚˜íƒ€ëƒ„
 				System.out.print(' ');
 			}
-			for (int j = 1; j <= n - i + 1; j++) { 	// n-i+1°³ÀÇ '*'¸¦ ³ªÅ¸³¿
+			for (int j = 1; j <= n - i + 1; j++) { 	// n-i+1ê°œì˜ '*'ë¥¼ ë‚˜íƒ€ëƒ„
 				System.out.print('*');
 			}
-			System.out.println();					// °³Çà(ÁÙº¯È¯)
-		}//for¹® ³¡
-	}//¸Ş¼Òµå ³¡
-	static void triangleRB(int n) {// ¿À¸¥ÂÊ ¾Æ·¡°¡ Á÷°¢ÀÎ ÀÌµîº¯»ï°¢ÇüÀ» Ãâ·Â
-		for (int i = 1; i <= n; i++) { 				// iÇà (i = 1, 2, ¡¦ ,ln)
-			for (int j = 1; j <= n - i; j++) 		// n-i°³ÀÇ ' '¸¦ ³ªÅ¸³¿
+			System.out.println();					// ê°œí–‰(ì¤„ë³€í™˜)
+		}//forë¬¸ ë
+	}//ë©”ì†Œë“œ ë
+	static void triangleRB(int n) {// ì˜¤ë¥¸ìª½ ì•„ë˜ê°€ ì§ê°ì¸ ì´ë“±ë³€ì‚¼ê°í˜•ì„ ì¶œë ¥
+		for (int i = 1; i <= n; i++) { 				// ií–‰ (i = 1, 2, â€¦ ,ln)
+			for (int j = 1; j <= n - i; j++) 		// n-iê°œì˜ ' 'ë¥¼ ë‚˜íƒ€ëƒ„
 				System.out.print(' ');
-			for (int j = 1; j <= i; j++) 			// i°³ÀÇ '*'¸¦ ³ªÅ¸³¿
+			for (int j = 1; j <= i; j++) 			// iê°œì˜ '*'ë¥¼ ë‚˜íƒ€ëƒ„
 				System.out.print('*');
-			System.out.println(); 					// °³Çà(ÁÙº¯È¯)
+			System.out.println(); 					// ê°œí–‰(ì¤„ë³€í™˜)
 		}
 	}
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 		int n;
 
-		System.out.println("»ï°¢Çü ¸ğ¾çÀ¸·Î ³ªÅ¸³À´Ï´Ù.");
+		System.out.println("ì‚¼ê°í˜• ëª¨ì–‘ìœ¼ë¡œ ë‚˜íƒ€ëƒ…ë‹ˆë‹¤.");
 
 		do {
-			System.out.print("´Ü¼ö´Â £º");
+			System.out.print("ë‹¨ìˆ˜ëŠ” ï¼š");
 			n = stdIn.nextInt();
 		} while (n <= 0);
 
-		System.out.println("¿ŞÂÊ ¾Æ·¡°¡ Á÷°¢ÀÎ »ï°¢Çü");
-		triangleLB(n); // ¿ŞÂÊ ¾Æ·¡°¡ Á÷°¢ÀÎ ÀÌµîº¯»ï°¢Çü
+		System.out.println("ì™¼ìª½ ì•„ë˜ê°€ ì§ê°ì¸ ì‚¼ê°í˜•");
+		triangleLB(n); // ì™¼ìª½ ì•„ë˜ê°€ ì§ê°ì¸ ì´ë“±ë³€ì‚¼ê°í˜•
 
-		System.out.println("¿ŞÂÊ À§°¡ Á÷°¢ÀÎ »ï°¢Çü");
-		triangleLU(n); // ¿ŞÂÊ À§°¡ Á÷°¢ÀÎ ÀÌµîº¯»ï°¢Çü
+		System.out.println("ì™¼ìª½ ìœ„ê°€ ì§ê°ì¸ ì‚¼ê°í˜•");
+		triangleLU(n); // ì™¼ìª½ ìœ„ê°€ ì§ê°ì¸ ì´ë“±ë³€ì‚¼ê°í˜•
 
-		System.out.println("¿À¸¥ÂÊ À§°¡ Á÷°¢ÀÎ »ï°¢Çü");
-		triangleRU(n); // ¿À¸¥ÂÊ À§°¡ Á÷°¢ÀÎ ÀÌµîº¯»ï°¢Çü
+		System.out.println("ì˜¤ë¥¸ìª½ ìœ„ê°€ ì§ê°ì¸ ì‚¼ê°í˜•");
+		triangleRU(n); // ì˜¤ë¥¸ìª½ ìœ„ê°€ ì§ê°ì¸ ì´ë“±ë³€ì‚¼ê°í˜•
 
-		System.out.println("¿À¸¥ÂÊ ¾Æ·¡°¡ Á÷°¢ÀÎ »ï°¢Çü");
-		triangleRB(n); // ¿À¸¥ÂÊ ¾Æ·¡°¡ Á÷°¢ÀÎ ÀÌµîº¯»ï°¢Çü
+		System.out.println("ì˜¤ë¥¸ìª½ ì•„ë˜ê°€ ì§ê°ì¸ ì‚¼ê°í˜•");
+		triangleRB(n); // ì˜¤ë¥¸ìª½ ì•„ë˜ê°€ ì§ê°ì¸ ì´ë“±ë³€ì‚¼ê°í˜•
 	}
 }

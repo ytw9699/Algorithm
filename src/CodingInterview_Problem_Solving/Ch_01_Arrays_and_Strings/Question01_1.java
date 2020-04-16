@@ -1,34 +1,34 @@
-package Ch_01_Arrays_and_Strings;
+ï»¿package Ch_01_Arrays_and_Strings;
 
 import java.util.Arrays;
 import java.util.Scanner;
-//https://blog.naver.com/zozokjs/221206994617 ¾Æ½ºÅ°¿Í À¯´ÏÄÚµå¿¡´ëÇÑ ¼³¸í
+//https://blog.naver.com/zozokjs/221206994617 ì•„ìŠ¤í‚¤ì™€ ìœ ë‹ˆì½”ë“œì—ëŒ€í•œ ì„¤ëª…
 public class Question01_1 {
     public static void main(String[] args) {
     	
     	Scanner StringValue = new Scanner(System.in);
     	
-    	System.out.println("¹®ÀÚ¿­À» ÀÔ·ÂÇØÁÖ¼¼¿ä");
+    	System.out.println("ë¬¸ìì—´ì„ ì…ë ¥í•´ì£¼ì„¸ìš”");
     	
     	String value = StringValue.nextLine();
     			
     	boolean result = isUniqueChars(value);
     	
     	if (result) {
-    		System.out.println("¹®ÀÚ¿­ÀÌ Áßº¹µÇÁö ¾Ê¾Ò½À´Ï´Ù.");
+    		System.out.println("ë¬¸ìì—´ì´ ì¤‘ë³µë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
     	}else {
-    		System.out.println("¹®ÀÚ¿­ÀÌ Áßº¹µÇ¾ú½À´Ï´Ù.");
+    		System.out.println("ë¬¸ìì—´ì´ ì¤‘ë³µë˜ì—ˆìŠµë‹ˆë‹¤.");
     	}
     	  
     }
-    static boolean isUniqueChars(String str) { //ASCII °¡Á¤ 
+    static boolean isUniqueChars(String str) { //ASCII ê°€ì • 
     	
         if(str.length() > 128) 
-        	return false;//false´Â Áßº¹µÇ´Â°Í
+        	return false;//falseëŠ” ì¤‘ë³µë˜ëŠ”ê²ƒ
         
-        boolean[] char_set = new boolean[128];//ÃÊ±â°ª false
+        boolean[] char_set = new boolean[128];//ì´ˆê¸°ê°’ false
         
-       // System.out.println(char_set[0]);//ÃÊ±â°ª false
+       // System.out.println(char_set[0]);//ì´ˆê¸°ê°’ false
         
         for (int i = 0; i < str.length(); i++) {
         	
@@ -36,12 +36,12 @@ public class Question01_1 {
             
             //System.out.println(val);
             
-            if(char_set[val]) {//¹®ÀÚ°¡ Ã¼Å©µÈ°ÇÁö ¾Æ´ÑÁö ÆÇ´Ü
-                return false; //Ã¼Å©µÈ°Å¶ó¸é Áßº¹µÇ´Â°Í
+            if(char_set[val]) {//ë¬¸ìê°€ ì²´í¬ëœê±´ì§€ ì•„ë‹Œì§€ íŒë‹¨
+                return false; //ì²´í¬ëœê±°ë¼ë©´ ì¤‘ë³µë˜ëŠ”ê²ƒ
             }
-            char_set[val] = true;//¿©±â¼­ true¸¦ ÁÖ´Â°Ç ¹®ÀÚÇÏ³ª¸¦ Ãß°¡Ã¼Å© ÇØ°¡´Â°Í
+            char_set[val] = true;//ì—¬ê¸°ì„œ trueë¥¼ ì£¼ëŠ”ê±´ ë¬¸ìí•˜ë‚˜ë¥¼ ì¶”ê°€ì²´í¬ í•´ê°€ëŠ”ê²ƒ
         }
-        return true;//for¹®ÀÌ ³¡³ª°í ¾Æ¹«¹®Á¦¾ø´Ù¸é true¹İÈ¯ Áßº¹¾ÈµÊÀ¸·Î ³¡³²
+        return true;//forë¬¸ì´ ëë‚˜ê³  ì•„ë¬´ë¬¸ì œì—†ë‹¤ë©´ trueë°˜í™˜ ì¤‘ë³µì•ˆë¨ìœ¼ë¡œ ëë‚¨
     }
 
 }

@@ -1,4 +1,4 @@
-package a_1000¹ø´ë;
+ï»¿package a_1000ë²ˆëŒ€;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -7,7 +7,7 @@ public class Main1874_2 {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
-        int yesNo = 1;//yes´Â1 no´Â0
+        int yesNo = 1;//yesëŠ”1 noëŠ”0
         int n = Integer.parseInt(br.readLine());
         
         int i, temp, max = 0, top = 0;

@@ -1,4 +1,4 @@
-package Ch_03_Stacks_and_Queues;
+ï»¿package Ch_03_Stacks_and_Queues;
 
 import java.util.EmptyStackException;
 
@@ -6,7 +6,7 @@ public class MyStack_LinkedList2<T> {
 	
 	
 	private StackNode<T> top;
-	private StackNode<T> min;//Ãß°¡
+	private StackNode<T> min;//ì¶”ê°€
 	
 	private static class StackNode<T> {
 		private T data;
@@ -47,7 +47,7 @@ public class MyStack_LinkedList2<T> {
 		t.minPrev = min.data; 
 		}		
 		
-		if(top == null || (int)t.data <= (int)min.data) {////Ãß°¡
+		if(top == null || (int)t.data <= (int)min.data) {////ì¶”ê°€
 			min = t;
 		}
 		

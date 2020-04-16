@@ -1,7 +1,7 @@
-package a_±âº»¾Ë°í¸®Áò;
+ï»¿package a_ê¸°ë³¸ì•Œê³ ë¦¬ì¦˜;
 import java.util.Scanner;
-// 3°³ÀÇ Á¤¼ı°ªÀ» ÀÔ·ÂÇÏ°í Áß¾Ó°ªÀ» ±¸ÇÑ ´ÙÀ½ Ãâ·ÂÇÕ´Ï´Ù.
-class f_Median_¼¼_Á¤¼öÀÇ_Áß¾Ó°ª {
+// 3ê°œì˜ ì •ìˆ«ê°’ì„ ì…ë ¥í•˜ê³  ì¤‘ì•™ê°’ì„ êµ¬í•œ ë‹¤ìŒ ì¶œë ¥í•©ë‹ˆë‹¤.
+class f_Median_ì„¸_ì •ìˆ˜ì˜_ì¤‘ì•™ê°’ {
 	static int med3(int a, int b, int c) {
 		if (a >= b){
 			if (b >= c) {
@@ -28,17 +28,17 @@ class f_Median_¼¼_Á¤¼öÀÇ_Áß¾Ó°ª {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		System.out.println("¼¼ Á¤¼öÀÇ Áß¾Ó°ªÀ»±¸ÇÕ´Ï´Ù.");
+		System.out.println("ì„¸ ì •ìˆ˜ì˜ ì¤‘ì•™ê°’ì„êµ¬í•©ë‹ˆë‹¤.");
 		
-		System.out.print("aÀÇ °ª£º");	
+		System.out.print("aì˜ ê°’ï¼š");	
 		int a = stdIn.nextInt();
 		
-		System.out.print("bÀÇ °ª£º");	
+		System.out.print("bì˜ ê°’ï¼š");	
 		int b = stdIn.nextInt();
 		
-		System.out.print("cÀÇ °ª£º");	
+		System.out.print("cì˜ ê°’ï¼š");	
 		int c = stdIn.nextInt();
 
-		System.out.println("Áß¾Ó°ªÀº " + med3(a, b, c) + "ÀÔ´Ï´Ù.");
+		System.out.println("ì¤‘ì•™ê°’ì€ " + med3(a, b, c) + "ì…ë‹ˆë‹¤.");
 	}
 }

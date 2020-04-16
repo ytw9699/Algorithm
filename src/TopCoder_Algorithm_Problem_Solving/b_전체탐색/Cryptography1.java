@@ -1,14 +1,14 @@
-package b_ÀüÃ¼Å½»ö;
+ï»¿package b_ì „ì²´íƒìƒ‰;
 
 public class Cryptography1 {
 	
 	public static void main(String[] args) {
 		
-		int[] input=new int[]{1,2,3};//ÀÔ·Â°ª
-		System.out.println(maxReturn(input));//Ãâ·Â
+		int[] input=new int[]{1,2,3};//ì…ë ¥ê°’
+		System.out.println(maxReturn(input));//ì¶œë ¥
 		
 	}
-	private static long maxReturn(int[] input) {//¸ğµç°öÀÇ °æ¿ìÀÇ¼öÁß °¡Àå Å«°ÍÀ» ¸®ÅÏ
+	private static long maxReturn(int[] input) {//ëª¨ë“ ê³±ì˜ ê²½ìš°ì˜ìˆ˜ì¤‘ ê°€ì¥ í°ê²ƒì„ ë¦¬í„´
 		long max = 0;
 		long value = 1;
 		
@@ -16,15 +16,15 @@ public class Cryptography1 {
 			value=1;
 			for(int k=0; k<input.length; k++) {
 				if(i == k) {
-					value *= (input[k]+1);	//°¢ ¿ä¼Ò¸¶´Ù ¹ø°¥¾Æ°¡¸ç 1¾¿ ³ôÀº°ªÀ» °öÇØÁÜ
+					value *= (input[k]+1);	//ê° ìš”ì†Œë§ˆë‹¤ ë²ˆê°ˆì•„ê°€ë©° 1ì”© ë†’ì€ê°’ì„ ê³±í•´ì¤Œ
 				}else {
-					value *= input[k];	//³ª¸ÓÁö ¿ä¼Ò ¸ğµÎ °öÇØÁÜ
+					value *= input[k];	//ë‚˜ë¨¸ì§€ ìš”ì†Œ ëª¨ë‘ ê³±í•´ì¤Œ
 				}
 			}
 			if(value > max) {
 				max = value;
 			}
 		}
-		return max;//°¡Àå Å« °öÀÇ °æ¿ì ¸®ÅÏ
+		return max;//ê°€ì¥ í° ê³±ì˜ ê²½ìš° ë¦¬í„´
 	}
 }

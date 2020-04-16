@@ -1,11 +1,11 @@
-package b_±âº»ÀÚ·á±¸Á¶;
+ï»¿package b_ê¸°ë³¸ìë£Œêµ¬ì¡°;
 
-class d_CloneArray {//¹è¿­À» º¹Á¦ÇÕ´Ï´Ù.
+class d_CloneArray {//ë°°ì—´ì„ ë³µì œí•©ë‹ˆë‹¤.
 	public static void main(String[] args) {
 		int[] a = {1, 2, 3, 4, 5};
-		int[] b = a.clone();			// b´Â aÀÇ º¹Á¦¸¦ ÂüÁ¶
+		int[] b = a.clone();			// bëŠ” aì˜ ë³µì œë¥¼ ì°¸ì¡°
 
-		b[3] = 0;						// ÇÑ ¿ä¼Ò¿¡¸¸ 0 ´ëÀÔ
+		b[3] = 0;						// í•œ ìš”ì†Œì—ë§Œ 0 ëŒ€ì…
 
 		System.out.print("a =");
 		for (int i = 0; i < a.length; i++)

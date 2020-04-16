@@ -1,4 +1,4 @@
-package Stack;
+ï»¿package Stack;
 
 public class ArrayListStackMain {
     public static void main(String[] args) {
@@ -11,7 +11,7 @@ public class ArrayListStackMain {
 		
 		System.out.println("= MyStack2 peek=");
 		
-		System.out.println(st.peek());//¸¶Áö¸· °ª ¸®ÅÏ
+		System.out.println(st.peek());//ë§ˆì§€ë§‰ ê°’ ë¦¬í„´
 		
 		System.out.println("= MyStack2 pop=");
 		

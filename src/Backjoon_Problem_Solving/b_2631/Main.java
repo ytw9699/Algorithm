@@ -1,4 +1,4 @@
-package b_2631;
+ï»¿package b_2631;
 import java.util.Scanner;
 import java.util.ArrayList;
 	public class Main {
@@ -6,12 +6,12 @@ import java.util.ArrayList;
 	Scanner sc = new Scanner(System.in);
 	int n = sc.nextInt();
 	int max=0;
-	int maxindex=0;//ÃÖÀå¼ö¿­ÀÇ ¸¶Áö¸·¼ö¿­°ª ÀÎµ¦½º°ª
-	int[] dp = new int[n];//Áõ°¡ ¼ö¿­ÀÇ ±æÀÌ
-	int[] array = new int[n];//¼ö¿­
+	int maxindex=0;//ìµœì¥ìˆ˜ì—´ì˜ ë§ˆì§€ë§‰ìˆ˜ì—´ê°’ ì¸ë±ìŠ¤ê°’
+	int[] dp = new int[n];//ì¦ê°€ ìˆ˜ì—´ì˜ ê¸¸ì´
+	int[] array = new int[n];//ìˆ˜ì—´
 	int ans = 0;
 	int k=0;
-	ArrayList sequence = new ArrayList<>();//Áõ°¡ ¼ö¿­ ÀÎµ¦½º
+	ArrayList sequence = new ArrayList<>();//ì¦ê°€ ìˆ˜ì—´ ì¸ë±ìŠ¤
 	
 	for (int i = 0; i < n; i++) {
 	  array[i] = sc.nextInt();
@@ -25,10 +25,10 @@ import java.util.ArrayList;
 	  for (int j = 0; j < i; j++) {
 	    if (array[j] < array[i] && dp[j] + 1 > dp[i]) {
 	      dp[i] = dp[j] + 1;
-	      temp[k++] = j;//I¸¶´Ù J¸¦ ±â·Ï
+	      temp[k++] = j;//Ië§ˆë‹¤ Jë¥¼ ê¸°ë¡
 	      if(dp[j] + 1 > max) {
 	    	  max = dp[j] + 1 ;
-	    	  maxindex = i;//ÃÖÀå¼ö¿­ÀÇ ¸¶Áö¸·¼ö¿­°ª ÀÎµ¦½º°ª
+	    	  maxindex = i;//ìµœì¥ìˆ˜ì—´ì˜ ë§ˆì§€ë§‰ìˆ˜ì—´ê°’ ì¸ë±ìŠ¤ê°’
 	      }
 	    }
 	  }
@@ -44,7 +44,7 @@ import java.util.ArrayList;
 	int[] changearr = (int[])sequence.get(maxindex-1);
 	
 	for(int i=0; i<changearr.length; i++) {
-		array[changearr[i]]=0;//array¹è¿­¿¡¼­ ¿Å±âÁö ¸»¾Æ¾ß ¼ö¿­ÀÇ °ªÀ» Ã£¾Æ ÀüºÎ 0À¸·Î ¹Ù²Ş
+		array[changearr[i]]=0;//arrayë°°ì—´ì—ì„œ ì˜®ê¸°ì§€ ë§ì•„ì•¼ ìˆ˜ì—´ì˜ ê°’ì„ ì°¾ì•„ ì „ë¶€ 0ìœ¼ë¡œ ë°”ê¿ˆ
 	}
 	}
 	}

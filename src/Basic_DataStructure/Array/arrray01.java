@@ -1,16 +1,16 @@
-package Array;
+ï»¿package Array;
  public class arrray01 {
     public static void main(String[] args) {
     
         String[] student = new String[5];
-        //student ¶ó´Â ÇÏ³ªÀÇ º¯¼ö¿¡ ¿©·¯ µ¥ÀÌÅÍ¸¦ ´ã¾Æº¸ÀÚ
-        student[0] = "ÃÖÁøÇõ";
-        student[1] = "ÇÑÀÌ¶÷";
-        student[2] = "ÃÖÀ¯ºó";
-        student[3] = "ÇÑÀÌÀº";
-        student[4] = "±èÁÖÇÑ";
-       //À§´Â ¾Æ·¡¿Í °°Àº Ç¥Çö
-       //String[] student = {"ÃÖÁøÇõ","ÇÑÀÌ¶÷","ÃÖÀ¯ºó","ÇÑÀÌÀº","±èÁÖÇÑ"};
+        //student ë¼ëŠ” í•˜ë‚˜ì˜ ë³€ìˆ˜ì— ì—¬ëŸ¬ ë°ì´í„°ë¥¼ ë‹´ì•„ë³´ì
+        student[0] = "ìµœì§„í˜";
+        student[1] = "í•œì´ëŒ";
+        student[2] = "ìµœìœ ë¹ˆ";
+        student[3] = "í•œì´ì€";
+        student[4] = "ê¹€ì£¼í•œ";
+       //ìœ„ëŠ” ì•„ë˜ì™€ ê°™ì€ í‘œí˜„
+       //String[] student = {"ìµœì§„í˜","í•œì´ëŒ","ìµœìœ ë¹ˆ","í•œì´ì€","ê¹€ì£¼í•œ"};
         for(int i = 0; i < student.length; i++){
             System.out.println(student[i]);
         }

@@ -1,4 +1,4 @@
-package b_2000¹ø´ë;
+ï»¿package b_2000ë²ˆëŒ€;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -21,7 +21,7 @@ public class Main2309_2 {
         boolean checked = false;
         for(int i=0; i < size; i++) {
             for(int j = i+1; j < size; j++) {
-                if(sum - (input[i] + input[j]) == max) {//ÀüÃ¼ÇÕ¿¡¼­ µÎ¼ö¸¦ »«°ÍÀÌ 100ÀÌ¶ó¸é
+                if(sum - (input[i] + input[j]) == max) {//ì „ì²´í•©ì—ì„œ ë‘ìˆ˜ë¥¼ ëº€ê²ƒì´ 100ì´ë¼ë©´
                 	input[i] = Integer.MIN_VALUE;
                 	input[j] = Integer.MIN_VALUE;
                     checked = true;
