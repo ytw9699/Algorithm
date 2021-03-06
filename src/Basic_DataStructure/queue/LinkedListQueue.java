@@ -22,7 +22,7 @@ public class LinkedListQueue {
         	head=newNode;
         	tail=newNode;
         }else {
-        	 tail.next = newNode;
+        	 tail.next = newNode;//이부분이 계속 연결을 시켜준다.
              tail = newNode;
         }
         size++;
